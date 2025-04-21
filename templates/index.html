@@ -10,6 +10,11 @@
     <div class="container">
         <header>
             <h1>Top Research Papers</h1>
+            <div class="topic-input-container">
+                <label for="topic-input">Enter Topic:</label>
+                <input type="text" id="topic-input" placeholder="Enter topic keywords">
+                <button id="search-btn">Search</button>
+            </div>
             <div class="topic-container">
                 <span>Current Topic: </span>
                 <span id="current-topic" class="topic-badge">Loading...</span>
@@ -19,7 +24,7 @@
         
         <div class="paper-container">
             <div id="loading" class="loading">Loading papers...</div>
-            <div id="papers-list" class="papers-list"></div>
+            <ul id="papers-list" class="papers-list"></ul>
         </div>
     </div>
 

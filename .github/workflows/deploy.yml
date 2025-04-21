@@ -72,12 +72,15 @@ jobs:
           script_tag.string = f'''
           document.addEventListener('DOMContentLoaded', function() {{
               const refreshBtn = document.getElementById('refresh-btn');
+              const searchBtn = document.getElementById('search-btn');
+              const topicInput = document.getElementById('topic-input');
               const papersList = document.getElementById('papers-list');
               const loading = document.getElementById('loading');
               const currentTopic = document.getElementById('current-topic');
               
               // Initial paper data
               const initialData = {json.dumps({'papers': papers, 'topic': topic})};
+              let allPapersData = null;
               
               // Function to display papers
               function displayPapers(data) {{
@@ -88,67 +91,131 @@ jobs:
                   papersList.innerHTML = '';
                   
                   // Add papers
-                  data.papers.forEach(paper => {{
-                      const paperItem = document.createElement('div');
-                      paperItem.className = 'paper-item';
-                      
-                      const paperTitle = document.createElement('div');
-                      paperTitle.className = 'paper-title';
-                      paperTitle.textContent = paper.title;
-                      
-                      const paperMeta = document.createElement('div');
-                      paperMeta.className = 'paper-meta';
-                      
-                      const confBadge = document.createElement('span');
-                      confBadge.className = 'conference-badge';
-                      confBadge.textContent = paper.conference.toUpperCase();
-                      
-                      paperMeta.appendChild(confBadge);
-                      paperMeta.appendChild(document.createTextNode(paper.year));
-                      
-                      paperItem.appendChild(paperTitle);
-                      paperItem.appendChild(paperMeta);
-                      
-                      papersList.appendChild(paperItem);
+                  if (data.papers.length === 0) {{
+                      const noResults = document.createElement('li');
+                      noResults.textContent = 'No papers found for this topic';
+                      papersList.appendChild(noResults);
+                  }} else {{
+                      data.papers.forEach(paper => {{
+                          const paperItem = document.createElement('li');
+                          paperItem.className = 'paper-item';
+                          
+                          const paperTitle = document.createElement('div');
+                          paperTitle.className = 'paper-title';
+                          paperTitle.textContent = paper.title;
+                          
+                          const paperMeta = document.createElement('div');
+                          paperMeta.className = 'paper-meta';
+                          
+                          const confBadge = document.createElement('span');
+                          confBadge.className = 'conference-badge';
+                          confBadge.textContent = paper.conference.toUpperCase();
+                          
+                          paperMeta.appendChild(confBadge);
+                          paperMeta.appendChild(document.createTextNode(paper.year));
+                          
+                          paperItem.appendChild(paperTitle);
+                          paperItem.appendChild(paperMeta);
+                          
+                          papersList.appendChild(paperItem);
+                      }});
+                  }}
+              }}
+              
+              // Function to load all papers
+              function loadAllPapers() {{
+                  return fetch('papers.json')
+                      .then(response => response.json())
+                      .then(data => {{
+                          allPapersData = data;
+                          return data;
+                      }});
+              }}
+              
+              // Function to filter papers by topic
+              function filterPapersByTopic(topic) {{
+                  if (!allPapersData) return [];
+                  
+                  const normalizedTopic = topic.toLowerCase().trim();
+                  return allPapersData.papers.filter(paper => 
+                      paper.title.toLowerCase().includes(normalizedTopic)
+                  );
+              }}
+              
+              // Function to get new random papers
+              function getNewPapers() {{
+                  if (!allPapersData) {{
+                      loadAllPapers().then(getRandomPapers);
+                  }} else {{
+                      getRandomPapers(allPapersData);
+                  }}
+              }}
+              
+              // Function to get random papers with random topic
+              function getRandomPapers(data) {{
+                  // Randomly select a subset
+                  const allPapersArray = data.papers;
+                  const shuffled = [...allPapersArray].sort(() => 0.5 - Math.random());
+                  const selected = shuffled.slice(0, 20);
+                  
+                  // Update topic randomly
+                  const topics = ['diffusion', 'transformer', 'attention', 'detection', 
+                                'segmentation', 'reconstruction', 'generation', '3d', 'video', 'gan'];
+                  const newTopic = topics[Math.floor(Math.random() * topics.length)];
+                  
+                  // Filter by topic if possible
+                  const topicFiltered = selected.filter(paper => 
+                      paper.title.toLowerCase().includes(newTopic.toLowerCase())
+                  );
+                  
+                  // Use filtered if sufficient, otherwise use random selection
+                  const finalSelection = topicFiltered.length >= 5 ? topicFiltered : selected;
+                  
+                  // Display the papers
+                  displayPapers({{
+                      papers: finalSelection.slice(0, 20),
+                      topic: newTopic
                   }});
               }}
               
-              // Function to shuffle and display a subset of papers
-              function getNewPapers() {{
-                  // Get a JSON file with all papers
-                  fetch('papers.json')
-                      .then(response => response.json())
-                      .then(allPapers => {{
-                          // Randomly select a subset
-                          const allPapersArray = allPapers.papers;
-                          const shuffled = [...allPapersArray].sort(() => 0.5 - Math.random());
-                          const selected = shuffled.slice(0, 20);
-                          
-                          // Update topic randomly
-                          const topics = ['diffusion', 'transformer', 'attention', 'detection', 
-                                        'segmentation', 'reconstruction', 'generation', '3d', 'video', 'gan'];
-                          const newTopic = topics[Math.floor(Math.random() * topics.length)];
-                          
-                          // Filter by topic if possible
-                          const topicFiltered = selected.filter(paper => 
-                              paper.title.toLowerCase().includes(newTopic.toLowerCase())
-                          );
-                          
-                          // Use filtered if sufficient, otherwise use random selection
-                          const finalSelection = topicFiltered.length >= 5 ? topicFiltered : selected;
-                          
-                          // Display the papers
-                          displayPapers({{
-                              papers: finalSelection.slice(0, 20),
-                              topic: newTopic
-                          }});
+              // Function to search by user input
+              function searchByTopic() {{
+                  const topic = topicInput.value.trim();
+                  if (!topic) return;
+                  
+                  // Show loading
+                  loading.style.display = 'block';
+                  papersList.style.display = 'none';
+                  searchBtn.disabled = true;
+                  
+                  // Get papers for topic
+                  const searchPromise = allPapersData ? 
+                      Promise.resolve() : 
+                      loadAllPapers();
+                  
+                  searchPromise.then(() => {{
+                      const filteredPapers = filterPapersByTopic(topic);
+                      
+                      // Display results
+                      displayPapers({{
+                          papers: filteredPapers.slice(0, 20),
+                          topic: topic
                       }});
+                      
+                      // Reset UI
+                      loading.style.display = 'none';
+                      papersList.style.display = 'block';
+                      searchBtn.disabled = false;
+                  }});
               }}
               
               // Display initial papers
               loading.style.display = 'none';
               papersList.style.display = 'block';
               displayPapers(initialData);
+              
+              // Load all papers data for searching
+              loadAllPapers();
               
               // Add click event to refresh button
               refreshBtn.addEventListener('click', function() {{
@@ -166,6 +233,16 @@ jobs:
                       refreshBtn.disabled = false;
                       refreshBtn.innerText = 'Get New Papers';
                   }}, 500);
+              }});
+              
+              // Add click event to search button
+              searchBtn.addEventListener('click', searchByTopic);
+              
+              // Add enter key event to topic input
+              topicInput.addEventListener('keypress', function(e) {{
+                  if (e.key === 'Enter') {{
+                      searchByTopic();
+                  }}
               }});
           }});
           '''

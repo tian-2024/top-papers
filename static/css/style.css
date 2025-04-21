@@ -39,6 +39,32 @@ h1 {
     font-size: 18px;
 }
 
+.topic-input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 10px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.topic-input-container label {
+    font-weight: bold;
+}
+
+.topic-input-container input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.topic-input-container button {
+    padding: 8px 15px;
+    font-size: 14px;
+}
+
 .topic-badge {
     background-color: #3498db;
     color: white;
@@ -84,6 +110,21 @@ button:disabled {
 
 .papers-list {
     display: none;
+    list-style-type: none;
+}
+
+.papers-list li {
+    border-bottom: 1px solid #eee;
+    padding: 15px;
+    transition: background-color 0.2s;
+}
+
+.papers-list li:hover {
+    background-color: #f8f9fa;
+}
+
+.papers-list li:last-child {
+    border-bottom: none;
 }
 
 .paper-item {
