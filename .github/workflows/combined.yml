@@ -324,17 +324,24 @@ jobs:
           </body>
           </html>
           EOF
+
+      # 创建简单的.nojekyll文件确保GitHub Pages不使用Jekyll处理
+      - name: Create .nojekyll file
+        run: touch .nojekyll
       
       - name: Setup Pages
+        id: pages
         uses: actions/configure-pages@v3
         with:
           enablement: true
+          token: ${{ github.token }}
+          static_site_generator: false
       
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v1
         with:
           path: '.'
       
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2 
+        uses: actions/deploy-pages@v1 
