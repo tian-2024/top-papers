@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const refreshBtn = document.getElementById('refresh-btn');
     const papersList = document.getElementById('papers-list');
     const loading = document.getElementById('loading');
-    const currentTopic = document.getElementById('current-topic');
     const themeToggle = document.getElementById('theme-toggle-input');
     const toggleIcon = document.querySelector('.toggle-icon');
+    const searchBtn = document.getElementById('search-btn');
+    const topicInput = document.getElementById('topic-input');
+    const papersTable = document.getElementById('papers-table');
 
     // Theme toggle functionality
     function setTheme(isDark) {
@@ -35,82 +36,42 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Listen for system theme changes
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
-        // Only apply if user hasn't set a preference
-        if (localStorage.getItem('darkMode') === null) {
-            setTheme(e.matches);
-        }
-    });
-
-    // Function to fetch papers
-    async function fetchPapers() {
-        try {
-            // Show loading, hide papers list
-            loading.style.display = 'block';
-            papersList.style.display = 'none';
-            
-            // Disable button during fetch
-            refreshBtn.disabled = true;
-            refreshBtn.innerText = 'Loading...';
-            
-            // Fetch new papers
-            const response = await fetch('/get_papers', {
-                method: 'POST'
-            });
-            
-            if (!response.ok) {
-                throw new Error('Failed to fetch papers');
+    try {
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            // Only apply if user hasn't set a preference
+            if (localStorage.getItem('darkMode') === null) {
+                setTheme(e.matches);
             }
-            
-            const data = await response.json();
-            
-            // Update topic badge
-            currentTopic.textContent = data.topic;
-            
-            // Clear previous papers
-            papersList.innerHTML = '';
-            
-            // Add new papers
-            data.papers.forEach(paper => {
-                const paperItem = document.createElement('div');
-                paperItem.className = 'paper-item';
-                
-                const paperTitle = document.createElement('div');
-                paperTitle.className = 'paper-title';
-                paperTitle.textContent = paper.title;
-                
-                const paperMeta = document.createElement('div');
-                paperMeta.className = 'paper-meta';
-                
-                const confBadge = document.createElement('span');
-                confBadge.className = 'conference-badge';
-                confBadge.textContent = paper.conference.toUpperCase();
-                
-                paperMeta.appendChild(confBadge);
-                paperMeta.appendChild(document.createTextNode(paper.year));
-                
-                paperItem.appendChild(paperTitle);
-                paperItem.appendChild(paperMeta);
-                
-                papersList.appendChild(paperItem);
-            });
-            
-            // Hide loading, show papers list
-            loading.style.display = 'none';
-            papersList.style.display = 'block';
-        } catch (error) {
-            console.error('Error:', error);
-            loading.textContent = 'Failed to load papers. Try again.';
-        } finally {
-            // Re-enable button
-            refreshBtn.disabled = false;
-            refreshBtn.innerText = 'Get New Papers';
-        }
+        });
+    } catch (e) {
+        console.log('Browser does not support matchMedia listener');
     }
-    
-    // Fetch papers on page load
-    fetchPapers();
-    
-    // Add click event to refresh button
-    refreshBtn.addEventListener('click', fetchPapers);
+
+    // Search functionality
+    if (searchBtn && topicInput) {
+        searchBtn.addEventListener('click', function() {
+            const searchTerm = topicInput.value.trim();
+            if (searchTerm) {
+                console.log('Searching for:', searchTerm);
+                // 这里实现搜索功能
+                
+                // 示例显示加载状态
+                if (loading) loading.style.display = 'block';
+                if (papersTable) papersTable.style.display = 'none';
+                
+                // 模拟搜索完成
+                setTimeout(() => {
+                    if (loading) loading.style.display = 'none';
+                    if (papersTable) papersTable.style.display = 'table';
+                }, 1000);
+            }
+        });
+        
+        // 支持按回车键搜索
+        topicInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchBtn.click();
+            }
+        });
+    }
 }); 

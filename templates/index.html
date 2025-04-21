@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
+    <div class="theme-toggle">
+        <span class="toggle-icon">🌙</span>
+        <label class="toggle-switch">
+            <input type="checkbox" id="theme-toggle-input">
+            <span class="toggle-slider"></span>
+        </label>
+    </div>
+
     <div class="container">
         <header>
             <h1>Top Research Papers</h1>
@@ -14,13 +22,6 @@
                 <label for="topic-input">Enter Topic:</label>
                 <input type="text" id="topic-input" placeholder="Enter topic keywords">
                 <button id="search-btn">Search</button>
-            </div>
-            <div class="theme-toggle">
-                <span class="toggle-icon">🌙</span>
-                <label class="toggle-switch">
-                    <input type="checkbox" id="theme-toggle-input">
-                    <span class="toggle-slider"></span>
-                </label>
             </div>
         </header>
         
