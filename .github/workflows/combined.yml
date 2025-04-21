@@ -1,0 +1,96 @@
+name: Select Papers and Deploy Pages
+
+on:
+  workflow_dispatch:
+    inputs:
+      topics:
+        description: 'Topics to filter papers (comma-separated)'
+        required: false
+        default: 'diffusion'
+      num_papers:
+        description: 'Number of papers to select'
+        required: false
+        default: '50'
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  select-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      
+      - name: Run select_papers.py
+        run: |
+          python select_papers.py
+        env:
+          TOPIC_POOL: ${{ github.event.inputs.topics }}
+          NUM_PAPERS: ${{ github.event.inputs.num_papers }}
+      
+      - name: Generate HTML
+        run: |
+          # 创建简单的index.html页面
+          echo "<html><head><title>Selected Papers</title><style>body{font-family:Arial,sans-serif;max-width:1000px;margin:0 auto;padding:20px;line-height:1.6}h1,h2{color:#333}table{border-collapse:collapse;width:100%;margin:20px 0}table,th,td{border:1px solid #ddd}th,td{padding:8px;text-align:left}th{background-color:#f2f2f2}</style></head><body>" > index.html
+          
+          # 添加标题
+          echo "<h1>Selected Papers on ${{ github.event.inputs.topics }}</h1>" >> index.html
+          
+          # 添加统计信息
+          echo "<h2>Statistics</h2>" >> index.html
+          cat statistics.md | sed 's/^#.*$//' | python -c "import sys,re; data=sys.stdin.read(); print(re.sub(r'(\n\n|\n)', '\n', data))" >> index.html
+          
+          # 添加论文列表
+          echo "<h2>Paper List</h2><ul>" >> index.html
+          cat selected_papers.txt | grep -v "用 markdown 表格" | python -c "
+import sys
+import re
+
+for line in sys.stdin:
+    line = line.strip()
+    if line:
+        # 匹配 [会议/年份] 论文标题 格式
+        match = re.match(r'^\[(.*?)/(.*?)\]\s+(.*?)$', line)
+        if match:
+            conf, year, title = match.groups()
+            print(f'<li><strong>[{conf}/{year}]</strong> {title}</li>')
+          " >> index.html
+          
+          echo "</ul></body></html>" >> index.html
+      
+      - name: Commit results
+        run: |
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'actions@github.com'
+          git add selected_papers.txt statistics.md index.html
+          git commit -m "Update selected papers and generate website [skip ci]"
+          git push
+      
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+        with:
+          enablement: true
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+      
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2 
