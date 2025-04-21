@@ -3,6 +3,44 @@ document.addEventListener('DOMContentLoaded', function() {
     const papersList = document.getElementById('papers-list');
     const loading = document.getElementById('loading');
     const currentTopic = document.getElementById('current-topic');
+    const themeToggle = document.getElementById('theme-toggle-input');
+    const toggleIcon = document.querySelector('.toggle-icon');
+
+    // Theme toggle functionality
+    function setTheme(isDark) {
+        if (isDark) {
+            document.body.classList.add('dark-mode');
+            toggleIcon.textContent = '☀️';
+            themeToggle.checked = true;
+        } else {
+            document.body.classList.remove('dark-mode');
+            toggleIcon.textContent = '🌙';
+            themeToggle.checked = false;
+        }
+        localStorage.setItem('darkMode', isDark);
+    }
+
+    // Check for saved theme preference
+    const savedDarkMode = localStorage.getItem('darkMode') === 'true';
+    
+    // Check if user prefers dark mode
+    const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    // Set initial theme (priority: saved preference > system preference)
+    setTheme(savedDarkMode !== null ? savedDarkMode : prefersDarkMode);
+    
+    // Listen for theme toggle changes
+    themeToggle.addEventListener('change', function() {
+        setTheme(this.checked);
+    });
+
+    // Listen for system theme changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+        // Only apply if user hasn't set a preference
+        if (localStorage.getItem('darkMode') === null) {
+            setTheme(e.matches);
+        }
+    });
 
     // Function to fetch papers
     async function fetchPapers() {
