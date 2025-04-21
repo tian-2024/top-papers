@@ -1,0 +1,49 @@
+name: Select Papers
+
+on:
+  workflow_dispatch:
+    inputs:
+      topics:
+        description: 'Topics to filter papers (comma-separated)'
+        required: false
+        default: 'diffusion'
+      num_papers:
+        description: 'Number of papers to select'
+        required: false
+        default: '50'
+
+jobs:
+  select-papers:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      
+      - name: Run select_papers.py
+        run: |
+          python select_papers.py
+        env:
+          TOPIC_POOL: ${{ github.event.inputs.topics }}
+          NUM_PAPERS: ${{ github.event.inputs.num_papers }}
+      
+      - name: Upload results as artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: selected-papers
+          path: |
+            selected_papers.txt
+            statistics.md
+      
+      - name: Commit and push results
+        run: |
+          git config --global user.name 'tian-2024'
+          git config --global user.email 'sleeptian@hotmail.com'
+          git add selected_papers.txt statistics.md
+          git commit -m "Update selected papers [skip ci]"
+          git push 
