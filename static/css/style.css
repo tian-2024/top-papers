@@ -12,8 +12,9 @@
     --footer-color: #7f8c8d;
 }
 
+/* Dark mode class with direct colors */
 .dark-mode {
-    /* Dark mode */
+    /* 设置变量 */
     --bg-color: #1a1a1a;
     --container-bg: #2d2d2d;
     --text-color: #e0e0e0;
@@ -24,6 +25,43 @@
     --table-border: #444;
     --table-hover: #3a3a3a;
     --footer-color: #a0a0a0;
+    
+    /* 直接应用样式 */
+    background-color: #1a1a1a !important;
+    color: #e0e0e0 !important;
+}
+
+/* 直接为.dark-mode设置内部元素样式 */
+.dark-mode header,
+.dark-mode .paper-container,
+.dark-mode .theme-toggle {
+    background-color: #2d2d2d !important;
+}
+
+.dark-mode h1 {
+    color: #e0e0e0 !important;
+}
+
+.dark-mode .papers-table th {
+    background-color: #333 !important;
+    color: #f0f0f0 !important;
+    border-bottom: 2px solid #444 !important;
+}
+
+.dark-mode .papers-list tr {
+    border-bottom: 1px solid #444 !important;
+}
+
+.dark-mode .papers-list tr:hover {
+    background-color: #3a3a3a !important;
+}
+
+.dark-mode input,
+.dark-mode select,
+.dark-mode textarea {
+    background-color: #2d2d2d !important;
+    color: #e0e0e0 !important;
+    border-color: #444 !important;
 }
 
 * {
@@ -217,8 +255,15 @@ footer {
     background-color: var(--container-bg);
     padding: 8px 12px;
     border-radius: 30px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     z-index: 1000;
+    transition: all 0.3s ease;
+    border: 2px solid #3498db;
+}
+
+.theme-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 .toggle-switch {

@@ -7,37 +7,69 @@ document.addEventListener('DOMContentLoaded', function() {
     const topicInput = document.getElementById('topic-input');
     const papersTable = document.getElementById('papers-table');
 
-    // Theme toggle functionality
+    console.log("Theme toggle loaded:", themeToggle); // 调试信息
+
+    // 直接添加夜间模式切换按钮点击事件
+    document.querySelector('.theme-toggle').addEventListener('click', function() {
+        console.log("Theme toggle clicked!"); // 调试信息
+        
+        const isDarkMode = document.body.classList.contains('dark-mode');
+        if (isDarkMode) {
+            // 切换到亮模式
+            document.body.classList.remove('dark-mode');
+            if (toggleIcon) toggleIcon.textContent = '🌙';
+            if (themeToggle) themeToggle.checked = false;
+            localStorage.setItem('darkMode', 'false');
+            console.log("Switched to light mode"); // 调试信息
+        } else {
+            // 切换到暗模式
+            document.body.classList.add('dark-mode');
+            if (toggleIcon) toggleIcon.textContent = '☀️';
+            if (themeToggle) themeToggle.checked = true;
+            localStorage.setItem('darkMode', 'true');
+            console.log("Switched to dark mode"); // 调试信息
+        }
+    });
+
+    // Theme toggle functionality - 保留原始代码但增加调试信息
     function setTheme(isDark) {
+        console.log("Setting theme, dark mode:", isDark); // 调试信息
         if (isDark) {
             document.body.classList.add('dark-mode');
-            toggleIcon.textContent = '☀️';
-            themeToggle.checked = true;
+            if (toggleIcon) toggleIcon.textContent = '☀️';
+            if (themeToggle) themeToggle.checked = true;
         } else {
             document.body.classList.remove('dark-mode');
-            toggleIcon.textContent = '🌙';
-            themeToggle.checked = false;
+            if (toggleIcon) toggleIcon.textContent = '🌙';
+            if (themeToggle) themeToggle.checked = false;
         }
         localStorage.setItem('darkMode', isDark);
+        console.log("Theme applied, body classes:", document.body.className); // 调试信息
     }
 
     // Check for saved theme preference
     const savedDarkMode = localStorage.getItem('darkMode') === 'true';
+    console.log("Saved dark mode preference:", savedDarkMode); // 调试信息
     
     // Check if user prefers dark mode
     const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    console.log("System prefers dark mode:", prefersDarkMode); // 调试信息
     
     // Set initial theme (priority: saved preference > system preference)
     setTheme(savedDarkMode !== null ? savedDarkMode : prefersDarkMode);
     
     // Listen for theme toggle changes
-    themeToggle.addEventListener('change', function() {
-        setTheme(this.checked);
-    });
+    if (themeToggle) {
+        themeToggle.addEventListener('change', function() {
+            console.log("Toggle changed, new value:", this.checked); // 调试信息
+            setTheme(this.checked);
+        });
+    }
 
     // Listen for system theme changes
     try {
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            console.log("System theme changed:", e.matches); // 调试信息
             // Only apply if user hasn't set a preference
             if (localStorage.getItem('darkMode') === null) {
                 setTheme(e.matches);
