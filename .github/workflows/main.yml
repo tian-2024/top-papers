@@ -33,7 +33,7 @@ jobs:
           NUM_PAPERS: ${{ github.event.inputs.num_papers }}
       
       - name: Upload results as artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: selected-papers
           path: |
