@@ -7,6 +7,10 @@ on:
     - cron: '0 0 * * 0'  # Run every week on Sunday at midnight UTC
   workflow_dispatch:  # Allow manual triggering
 
+# Add permissions block here
+permissions:
+  contents: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
