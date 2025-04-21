@@ -1,52 +1,52 @@
-[cvpr/2025] A Unified Latent Schrödinger Bridge Diffusion Model for Unsupervised Anomaly Detection and Localization
-[cvpr/2023] Ambiguous Medical Image Segmentation Using Diffusion Models
-[cvpr/2025] Bridging the Gap between Diffusion Models and Universal Quantization for Image Compression
-[cvpr/2022] Come-Closer-Diffuse-Faster: Accelerating Conditional Diffusion Models for Inverse Problems through Stochastic Contraction
+[cvpr/2025] BEVDiffuser: Plug-and-Play Diffusion Model for BEV Denoising with Ground-Truth Guidance
+[cvpr/2023] Binary Latent Diffusion
 [cvpr/2025] Concept Lancet: Representation Decomposition and Transplant for Diffusion-Based Image Editing
-[cvpr/2023] Conditional Image-to-Video Generation With Latent Flow Diffusion Models
-[cvpr/2025] Consistent and Controllable Image Animation with Motion Diffusion Models
 [cvpr/2025] Decentralized Diffusion Models
-[cvpr/2025] DesignDiffusion: High-Quality Text-to-Design Image  Generation with Diffusion Models
-[cvpr/2025] DiffSensei: Bridging Multi-Modal LLMs and Diffusion Models for Customized Manga Generation
-[cvpr/2023] Diffusion-Based Signed Distance Fields for 3D Shape Generation
-[cvpr/2025] DiN: Diffusion Model for Robust Medical VQA with Semantic Noisy Labels
-[cvpr/2024] DreamSalon: A Staged Diffusion Framework for Preserving Identity-Context in Editable Face Generation
-[cvpr/2024] Egocentric Whole-Body Motion Capture with FisheyeViT and Diffusion-Based Motion Refinement
-[cvpr/2024] ElasticDiffusion: Training-free Arbitrary Size Image Generation through Global-Local Content Separation
-[cvpr/2025] Finding Local Diffusion Schrödinger Bridge using Kolmogorov-Arnold Network
-[cvpr/2024] FlashEval: Towards Fast and Accurate Evaluation of Text-to-image Diffusion Generative Models
-[cvpr/2025] GaussianIP: Identity-Preserving Realistic 3D Human Generation via Human-Centric Diffusion Prior
-[cvpr/2025] GLASS: Guided Latent Slot Diffusion for Object-Centric Learning
-[cvpr/2022] Global Context with Discrete Diffusion in Vector Quantised Modelling for Image Generation
+[cvpr/2025] Decouple Distortion from Perception: Region Adaptive Diffusion for Extreme-low Bitrate Perception Image Compression
+[cvpr/2024] Deep Equilibrium Diffusion Restoration with Parallel Sampling
+[cvpr/2025] DexDiffuser: Interaction-aware Diffusion Planning for Adaptive Dexterous Manipulation
+[cvpr/2024] DiffPerformer: Iterative Learning of Consistent Latent Guidance for Diffusion-based Human Video Generation
+[cvpr/2022] Diffusion Autoencoders: Toward a Meaningful and Decodable Representation
+[cvpr/2024] Diffusion Model Alignment Using Direct Preference Optimization
+[cvpr/2024] Diffusion Models Without Attention
+[cvpr/2025] DiffusionDrive: Truncated Diffusion Model for End-to-End Autonomous Driving
+[cvpr/2024] DiffusionTrack: Point Set Diffusion Model for Visual Object Tracking
+[cvpr/2025] DiSRT-In-Bed: Diffusion-Based Sim-to-Real Transfer Framework for In-Bed Human Mesh Recovery
+[cvpr/2024] Distilling ODE Solvers of Diffusion Models into Smaller Steps
+[cvpr/2024] DistriFusion: Distributed Parallel Inference for High-Resolution Diffusion Models
+[cvpr/2025] Dual Prompting for Image Restoration across Full-Scene with Diffusion Transformers
+[cvpr/2025] Dual-Granularity Semantic Guided Sparse Routing Diffusion Model for General Pansharpening
+[cvpr/2024] EasyDrag: Efficient Point-based Manipulation on Diffusion Models
+[cvpr/2024] Enhance Image Classification via Inter-Class Image Mixup with Diffusion Model
+[cvpr/2025] Enhancing Privacy-Utility Trade-offs to Mitigate Memorization in Diffusion Models
+[cvpr/2025] FADE: Frequency-Aware Diffusion Model Factorization for Video Editing
+[cvpr/2024] Fixed Point Diffusion Models
+[cvpr/2025] FreeScene: Mixed Graph Diffusion for 3D Scene Synthesis from Free Prompts
+[cvpr/2024] GenTron: Diffusion Transformers for Image and Video Generation
 [cvpr/2024] HandDiff: 3D Hand Pose Estimation with Diffusion on Image-Point Cloud
-[cvpr/2024] HOIDiffusion: Generating Realistic 3D Hand-Object Interaction Data
-[cvpr/2023] Inversion-Based Style Transfer With Diffusion Models
-[cvpr/2024] Learning Spatial Adaptation and Temporal Coherence in Diffusion Models for Video Super-Resolution
-[cvpr/2025] LEDiff:Latent Exposure Diffusion for HDR Generation
-[cvpr/2025] MEAT: Multiview Diffusion Model for Human Generation on Megapixels with Mesh Attention
-[cvpr/2023] MM-Diffusion: Learning Multi-Modal Diffusion Models for Joint Audio and Video Generation
-[cvpr/2025] MVGenMaster: Scaling Multi-View Generation from Any Image via 3D Priors Enhanced Diffusion Model
+[cvpr/2025] Highly Dynamic and Realistic Portrait Image Animation with Diffusion Transformer Networks
+[cvpr/2025] Improved Video VAE for Latent Video Diffusion Model
+[cvpr/2024] Learning Diffusion Texture Priors for Image Restoration
+[cvpr/2025] Learning Temporally Consistent Video Depth from Video Diffusion Priors
+[cvpr/2025] MANTA: Diffusion Mamba for Efficient and Effective Stochastic Long-Term Dense Anticipation
+[cvpr/2025] MixerMDM: Learnable Mixing of Human Motion Diffusion Models
+[cvpr/2023] Mofusion: A Framework for Denoising-Diffusion-Based Motion Synthesis
+[cvpr/2025] Neural LightRig: Unlocking Accurate Object Normal and Material Estimation with Multi-Light Diffusion
+[cvpr/2023] NULL-Text Inversion for Editing Real Images Using Guided Diffusion Models
 [cvpr/2025] PartGen: Part-level 3D Generation and Reconstruction with Multi-view Diffusion Models
-[cvpr/2024] PEEKABOO: Interactive Video Generation via Masked-Diffusion
-[cvpr/2025] Prompt2Perturb (P2P): Text-Guided Diffusion-Based Adversarial Attack on Breast Ultrasound Images
-[cvpr/2025] Rectified Diffusion Guidance for Conditional Generation
-[cvpr/2025] Satellite Observations-guided Diffusion Model for Accurate Meteorological States at Arbitrary Resolution
-[cvpr/2025] Schedule On the Fly: Diffusion Time Prediction for Faster and Better Image Generation
-[cvpr/2024] SD4Match: Learning to Prompt Stable Diffusion Model for Semantic Matching
-[cvpr/2025] Shining Yourself: High-Fidelity Ornaments Virtual Try-on with Diffusion Model
-[cvpr/2023] SINE: SINgle Image Editing With Text-to-Image Diffusion Models
-[cvpr/2025] Spherical Manifold Guided Diffusion Model for Panoramic Image Generation
+[cvpr/2025] RaSS: Improving Denoising Diffusion Samplers with Reinforced Active Sampling Scheduler
+[cvpr/2023] RGBD2: Generative Scene Synthesis via Incremental View Inpainting Using RGBD Diffusion Models
+[cvpr/2023] RODIN: A Generative Model for Sculpting 3D Digital Avatars Using Diffusion
+[cvpr/2025] RoomPainter: View-Integrated Diffusion for Consistent Indoor Scene Texturing
+[cvpr/2025] SceneFactor: Factored Latent 3D Diffusion for Controllable 3D Scene Generation
+[cvpr/2023] Self-Guided Diffusion Models
+[cvpr/2023] Solving 3D Inverse Problems Using Pre-Trained 2D Diffusion Models
+[cvpr/2025] Spatial-Temporal Graph Diffusion Policy with Kinematics Modeling for Bimanual Robotic Manipulation
+[cvpr/2025] Spatiotemporal Skip Guidance for Enhanced Video Diffusion Sampling
 [cvpr/2025] StarGen: A Spatiotemporal Autoregression Framework with Video Diffusion Model for Scalable and Controllable Scene Generation
-[cvpr/2023] Taming Diffusion Models for Audio-Driven Co-Speech Gesture Generation
-[cvpr/2025] Taming Video Diffusion Prior with Scene-Grounding Guidance for 3D Gaussian Splatting from Sparse Inputs
-[cvpr/2024] TIGER: Time-Varying Denoising Model for 3D Point Cloud Generation with Diffusion Process
-[cvpr/2024] Towards Effective Usage of Human-Centric Priors in Diffusion Models for Text-based Human Image Generation
-[cvpr/2023] Trace and Pace: Controllable Pedestrian Animation via Guided Trajectory Diffusion
-[cvpr/2024] UDiFF: Generating Conditional Unsigned Distance Fields with Optimal Wavelet Diffusion
-[cvpr/2023] Unite and Conquer: Plug & Play Multi-Modal Synthesis Using Diffusion Models
-[cvpr/2024] Unsupervised Keypoints from Pretrained Diffusion Models
-[cvpr/2025] Video Motion Transfer with Diffusion Transformers
-[cvpr/2025] VideoScene: Distilling Video Diffusion Model to Generate 3D Scenes in One Step
-[cvpr/2024] X-Adapter: Adding Universal Compatibility of Plugins for Upgraded Diffusion Model
+[cvpr/2025] VasTSD: Learning 3D Vascular Tree-state Space Diffusion Model for Angiography Synthesis
+[cvpr/2025] VLOGGER: Multimodal Diffusion for Embodied Avatar Synthesis
+[cvpr/2024] Watermark-embedded Adversarial Examples for Copyright Protection against Diffusion Models
+[cvpr/2025] WeatherGen: A Unified Diverse Weather Generator for LiDAR Point Clouds via Spider Mamba Diffusion
 
 用 markdown 表格，列出task，idea，论文标题，会议，年份。回答用中文，不需要搜索。把论文根据应用类型大概分类排序，在同一个表格里，不要分表。
