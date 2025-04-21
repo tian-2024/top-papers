@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top CVPR Papers</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Top Research Papers</h1>
+            <div class="topic-container">
+                <span>Current Topic: </span>
+                <span id="current-topic" class="topic-badge">Loading...</span>
+            </div>
+            <button id="refresh-btn">Get New Papers</button>
+        </header>
+        
+        <div class="paper-container">
+            <div id="loading" class="loading">Loading papers...</div>
+            <div id="papers-list" class="papers-list"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Generated with Python and GitHub Actions</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html> 

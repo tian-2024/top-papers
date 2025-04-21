@@ -1,0 +1,215 @@
+name: Deploy Paper List Web App
+
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: '0 0 * * 0'  # Run every week on Sunday at midnight UTC
+  workflow_dispatch:  # Allow manual triggering
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install beautifulsoup4
+      
+      - name: Generate initial paper list
+        run: |
+          python select_papers.py
+      
+      - name: Create static site directory
+        run: |
+          mkdir -p site
+          cp -r static site/
+          cp templates/index.html site/index.html
+      
+      - name: Modify index.html for static site
+        run: |
+          python -c "
+          import json
+          import os
+          from bs4 import BeautifulSoup
+          
+          # Read selected papers
+          papers = []
+          topic = 'diffusion'  # Default topic
+          with open('selected_papers.txt', 'r') as f:
+              for line in f:
+                  line = line.strip()
+                  if line and not line.startswith('用 markdown'):
+                      if line.startswith('[') and ']' in line:
+                          conf_year, title = line.split('] ', 1)
+                          conf_year = conf_year[1:]
+                          conf, year = conf_year.split('/')
+                          papers.append({
+                              'title': title,
+                              'conference': conf,
+                              'year': year
+                          })
+          
+          # Read the HTML file
+          with open('site/index.html', 'r') as f:
+              soup = BeautifulSoup(f, 'html.parser')
+          
+          # Update the template to use static data
+          script_tag = soup.new_tag('script')
+          script_tag.string = f'''
+          document.addEventListener('DOMContentLoaded', function() {{
+              const refreshBtn = document.getElementById('refresh-btn');
+              const papersList = document.getElementById('papers-list');
+              const loading = document.getElementById('loading');
+              const currentTopic = document.getElementById('current-topic');
+              
+              // Initial paper data
+              const initialData = {json.dumps({'papers': papers, 'topic': topic})};
+              
+              // Function to display papers
+              function displayPapers(data) {{
+                  // Update topic badge
+                  currentTopic.textContent = data.topic;
+                  
+                  // Clear previous papers
+                  papersList.innerHTML = '';
+                  
+                  // Add papers
+                  data.papers.forEach(paper => {{
+                      const paperItem = document.createElement('div');
+                      paperItem.className = 'paper-item';
+                      
+                      const paperTitle = document.createElement('div');
+                      paperTitle.className = 'paper-title';
+                      paperTitle.textContent = paper.title;
+                      
+                      const paperMeta = document.createElement('div');
+                      paperMeta.className = 'paper-meta';
+                      
+                      const confBadge = document.createElement('span');
+                      confBadge.className = 'conference-badge';
+                      confBadge.textContent = paper.conference.toUpperCase();
+                      
+                      paperMeta.appendChild(confBadge);
+                      paperMeta.appendChild(document.createTextNode(paper.year));
+                      
+                      paperItem.appendChild(paperTitle);
+                      paperItem.appendChild(paperMeta);
+                      
+                      papersList.appendChild(paperItem);
+                  }});
+              }}
+              
+              // Function to shuffle and display a subset of papers
+              function getNewPapers() {{
+                  // Get a JSON file with all papers
+                  fetch('papers.json')
+                      .then(response => response.json())
+                      .then(allPapers => {{
+                          // Randomly select a subset
+                          const allPapersArray = allPapers.papers;
+                          const shuffled = [...allPapersArray].sort(() => 0.5 - Math.random());
+                          const selected = shuffled.slice(0, 20);
+                          
+                          // Update topic randomly
+                          const topics = ['diffusion', 'transformer', 'attention', 'detection', 
+                                        'segmentation', 'reconstruction', 'generation', '3d', 'video', 'gan'];
+                          const newTopic = topics[Math.floor(Math.random() * topics.length)];
+                          
+                          // Filter by topic if possible
+                          const topicFiltered = selected.filter(paper => 
+                              paper.title.toLowerCase().includes(newTopic.toLowerCase())
+                          );
+                          
+                          // Use filtered if sufficient, otherwise use random selection
+                          const finalSelection = topicFiltered.length >= 5 ? topicFiltered : selected;
+                          
+                          // Display the papers
+                          displayPapers({{
+                              papers: finalSelection.slice(0, 20),
+                              topic: newTopic
+                          }});
+                      }});
+              }}
+              
+              // Display initial papers
+              loading.style.display = 'none';
+              papersList.style.display = 'block';
+              displayPapers(initialData);
+              
+              // Add click event to refresh button
+              refreshBtn.addEventListener('click', function() {{
+                  // Show loading status
+                  loading.style.display = 'block';
+                  papersList.style.display = 'none';
+                  refreshBtn.disabled = true;
+                  refreshBtn.innerText = 'Loading...';
+                  
+                  // Simulate loading delay for better UX
+                  setTimeout(() => {{
+                      getNewPapers();
+                      loading.style.display = 'none';
+                      papersList.style.display = 'block';
+                      refreshBtn.disabled = false;
+                      refreshBtn.innerText = 'Get New Papers';
+                  }}, 500);
+              }});
+          }});
+          '''
+          
+          # Find existing script tags and replace
+          for script in soup.find_all('script'):
+              if 'script.js' in str(script):
+                  script.decompose()
+          
+          # Add our new script
+          soup.body.append(script_tag)
+          
+          # Update CSS links
+          for link in soup.find_all('link'):
+              if 'url_for' in str(link.get('href')):
+                  link['href'] = 'css/style.css'
+          
+          # Write the updated HTML
+          with open('site/index.html', 'w') as f:
+              f.write(str(soup))
+          
+          # Create a JSON file with all papers for client-side filtering
+          all_papers = []
+          paper_dirs = os.path.join('papers')
+          for conf_dir in os.listdir(paper_dirs):
+              conf_path = os.path.join(paper_dirs, conf_dir)
+              if os.path.isdir(conf_path):
+                  for year_file in os.listdir(conf_path):
+                      if year_file.endswith('.txt'):
+                          year = year_file.replace('.txt', '')
+                          with open(os.path.join(conf_path, year_file), 'r') as f:
+                              for line in f:
+                                  line = line.strip()
+                                  if line:
+                                      all_papers.append({
+                                          'title': line,
+                                          'conference': conf_dir,
+                                          'year': year
+                                      })
+          
+          # Write all papers to a JSON file
+          with open('site/papers.json', 'w') as f:
+              json.dump({'papers': all_papers}, f)
+          "
+      
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          force_orphan: true 
