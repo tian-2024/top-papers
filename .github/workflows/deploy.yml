@@ -71,53 +71,59 @@ jobs:
           script_tag = soup.new_tag('script')
           script_tag.string = f'''
           document.addEventListener('DOMContentLoaded', function() {{
-              const refreshBtn = document.getElementById('refresh-btn');
               const searchBtn = document.getElementById('search-btn');
               const topicInput = document.getElementById('topic-input');
               const papersList = document.getElementById('papers-list');
               const loading = document.getElementById('loading');
-              const currentTopic = document.getElementById('current-topic');
               
               // Initial paper data
-              const initialData = {json.dumps({'papers': papers, 'topic': topic})};
+              const initialData = {json.dumps({'papers': papers})};
               let allPapersData = null;
               
               // Function to display papers
-              function displayPapers(data) {{
-                  // Update topic badge
-                  currentTopic.textContent = data.topic;
-                  
+              function displayPapers(papers) {{
                   // Clear previous papers
                   papersList.innerHTML = '';
                   
+                  // Show/hide table based on results
+                  const papersTable = document.getElementById('papers-table');
+                  
                   // Add papers
-                  if (data.papers.length === 0) {{
-                      const noResults = document.createElement('li');
+                  if (papers.length === 0) {{
+                      papersTable.style.display = 'none';
+                      const noResults = document.createElement('div');
                       noResults.textContent = 'No papers found for this topic';
-                      papersList.appendChild(noResults);
+                      noResults.style.textAlign = 'center';
+                      noResults.style.padding = '20px';
+                      papersList.parentNode.insertBefore(noResults, papersTable);
                   }} else {{
-                      data.papers.forEach(paper => {{
-                          const paperItem = document.createElement('li');
-                          paperItem.className = 'paper-item';
+                      papersTable.style.display = 'table';
+                      papers.forEach(paper => {{
+                          const row = document.createElement('tr');
                           
-                          const paperTitle = document.createElement('div');
-                          paperTitle.className = 'paper-title';
-                          paperTitle.textContent = paper.title;
-                          
-                          const paperMeta = document.createElement('div');
-                          paperMeta.className = 'paper-meta';
-                          
+                          // Conference cell
+                          const confCell = document.createElement('td');
                           const confBadge = document.createElement('span');
                           confBadge.className = 'conference-badge';
                           confBadge.textContent = paper.conference.toUpperCase();
+                          confCell.appendChild(confBadge);
                           
-                          paperMeta.appendChild(confBadge);
-                          paperMeta.appendChild(document.createTextNode(paper.year));
+                          // Year cell
+                          const yearCell = document.createElement('td');
+                          yearCell.textContent = paper.year;
                           
-                          paperItem.appendChild(paperTitle);
-                          paperItem.appendChild(paperMeta);
+                          // Title cell
+                          const titleCell = document.createElement('td');
+                          titleCell.className = 'paper-title';
+                          titleCell.textContent = paper.title;
                           
-                          papersList.appendChild(paperItem);
+                          // Add cells to row
+                          row.appendChild(confCell);
+                          row.appendChild(yearCell);
+                          row.appendChild(titleCell);
+                          
+                          // Add row to table
+                          papersList.appendChild(row);
                       }});
                   }}
               }}
@@ -132,50 +138,24 @@ jobs:
                       }});
               }}
               
-              // Function to filter papers by topic
-              function filterPapersByTopic(topic) {{
+              // Function to get random papers matching topic
+              function getRandomPapersByTopic(topic) {{
                   if (!allPapersData) return [];
                   
                   const normalizedTopic = topic.toLowerCase().trim();
-                  return allPapersData.papers.filter(paper => 
+                  
+                  // Filter papers by topic
+                  const filteredPapers = allPapersData.papers.filter(paper => 
                       paper.title.toLowerCase().includes(normalizedTopic)
                   );
-              }}
-              
-              // Function to get new random papers
-              function getNewPapers() {{
-                  if (!allPapersData) {{
-                      loadAllPapers().then(getRandomPapers);
-                  }} else {{
-                      getRandomPapers(allPapersData);
+                  
+                  // If we have enough papers, shuffle them
+                  if (filteredPapers.length > 0) {{
+                      // Randomize paper order
+                      return [...filteredPapers].sort(() => 0.5 - Math.random());
                   }}
-              }}
-              
-              // Function to get random papers with random topic
-              function getRandomPapers(data) {{
-                  // Randomly select a subset
-                  const allPapersArray = data.papers;
-                  const shuffled = [...allPapersArray].sort(() => 0.5 - Math.random());
-                  const selected = shuffled.slice(0, 20);
                   
-                  // Update topic randomly
-                  const topics = ['diffusion', 'transformer', 'attention', 'detection', 
-                                'segmentation', 'reconstruction', 'generation', '3d', 'video', 'gan'];
-                  const newTopic = topics[Math.floor(Math.random() * topics.length)];
-                  
-                  // Filter by topic if possible
-                  const topicFiltered = selected.filter(paper => 
-                      paper.title.toLowerCase().includes(newTopic.toLowerCase())
-                  );
-                  
-                  // Use filtered if sufficient, otherwise use random selection
-                  const finalSelection = topicFiltered.length >= 5 ? topicFiltered : selected;
-                  
-                  // Display the papers
-                  displayPapers({{
-                      papers: finalSelection.slice(0, 20),
-                      topic: newTopic
-                  }});
+                  return filteredPapers;
               }}
               
               // Function to search by user input
@@ -185,7 +165,7 @@ jobs:
                   
                   // Show loading
                   loading.style.display = 'block';
-                  papersList.style.display = 'none';
+                  document.getElementById('papers-table').style.display = 'none';
                   searchBtn.disabled = true;
                   
                   // Get papers for topic
@@ -194,46 +174,23 @@ jobs:
                       loadAllPapers();
                   
                   searchPromise.then(() => {{
-                      const filteredPapers = filterPapersByTopic(topic);
+                      const randomFilteredPapers = getRandomPapersByTopic(topic);
                       
-                      // Display results
-                      displayPapers({{
-                          papers: filteredPapers.slice(0, 20),
-                          topic: topic
-                      }});
+                      // Display results (limit to 20 papers)
+                      displayPapers(randomFilteredPapers.slice(0, 20));
                       
                       // Reset UI
                       loading.style.display = 'none';
-                      papersList.style.display = 'block';
                       searchBtn.disabled = false;
                   }});
               }}
               
-              // Display initial papers
-              loading.style.display = 'none';
-              papersList.style.display = 'block';
-              displayPapers(initialData);
-              
-              // Load all papers data for searching
+              // Load all papers data on page load
               loadAllPapers();
               
-              // Add click event to refresh button
-              refreshBtn.addEventListener('click', function() {{
-                  // Show loading status
-                  loading.style.display = 'block';
-                  papersList.style.display = 'none';
-                  refreshBtn.disabled = true;
-                  refreshBtn.innerText = 'Loading...';
-                  
-                  // Simulate loading delay for better UX
-                  setTimeout(() => {{
-                      getNewPapers();
-                      loading.style.display = 'none';
-                      papersList.style.display = 'block';
-                      refreshBtn.disabled = false;
-                      refreshBtn.innerText = 'Get New Papers';
-                  }}, 500);
-              }});
+              // Hide initial loading and table 
+              loading.style.display = 'none';
+              document.getElementById('papers-table').style.display = 'none';
               
               // Add click event to search button
               searchBtn.addEventListener('click', searchByTopic);

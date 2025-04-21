@@ -108,48 +108,54 @@ button:disabled {
     color: #7f8c8d;
 }
 
-.papers-list {
+.papers-table {
+    width: 100%;
+    border-collapse: collapse;
     display: none;
-    list-style-type: none;
 }
 
-.papers-list li {
+.papers-table th {
+    background-color: #f2f2f2;
+    padding: 12px;
+    text-align: left;
+    font-weight: bold;
+    color: #444;
+    border-bottom: 2px solid #ddd;
+}
+
+.papers-table th:first-child {
+    width: 15%;
+}
+
+.papers-table th:nth-child(2) {
+    width: 10%;
+}
+
+.papers-list {
+    display: table-row-group;
+}
+
+.papers-list tr {
     border-bottom: 1px solid #eee;
-    padding: 15px;
     transition: background-color 0.2s;
 }
 
-.papers-list li:hover {
+.papers-list tr:hover {
     background-color: #f8f9fa;
 }
 
-.papers-list li:last-child {
+.papers-list tr:last-child {
     border-bottom: none;
 }
 
-.paper-item {
-    border-bottom: 1px solid #eee;
-    padding: 15px;
-    transition: background-color 0.2s;
-}
-
-.paper-item:hover {
-    background-color: #f8f9fa;
-}
-
-.paper-item:last-child {
-    border-bottom: none;
+.papers-list td {
+    padding: 12px;
+    vertical-align: top;
 }
 
 .paper-title {
     font-weight: bold;
     font-size: 16px;
-    margin-bottom: 5px;
-}
-
-.paper-meta {
-    font-size: 14px;
-    color: #7f8c8d;
 }
 
 .conference-badge {
@@ -158,7 +164,7 @@ button:disabled {
     padding: 2px 6px;
     border-radius: 3px;
     font-size: 12px;
-    margin-right: 5px;
+    display: inline-block;
 }
 
 footer {

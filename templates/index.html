@@ -15,16 +15,22 @@
                 <input type="text" id="topic-input" placeholder="Enter topic keywords">
                 <button id="search-btn">Search</button>
             </div>
-            <div class="topic-container">
-                <span>Current Topic: </span>
-                <span id="current-topic" class="topic-badge">Loading...</span>
-            </div>
-            <button id="refresh-btn">Get New Papers</button>
         </header>
         
         <div class="paper-container">
             <div id="loading" class="loading">Loading papers...</div>
-            <ul id="papers-list" class="papers-list"></ul>
+            <table id="papers-table" class="papers-table">
+                <thead>
+                    <tr>
+                        <th>Conference</th>
+                        <th>Year</th>
+                        <th>Title</th>
+                    </tr>
+                </thead>
+                <tbody id="papers-list" class="papers-list">
+                    <!-- Paper rows will be inserted here -->
+                </tbody>
+            </table>
         </div>
     </div>
 
