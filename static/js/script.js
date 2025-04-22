@@ -271,14 +271,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 获取会议信息
     function fetchConferences() {
-        fetch('/get_conferences')
-            .then(response => response.json())
+        fetch('conferences.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to load conferences data');
+                }
+                return response.json();
+            })
             .then(data => {
                 conferencesData = data;
                 initializeDropdowns(data.categories);
             })
             .catch(error => {
                 console.error('Error fetching conferences:', error);
+                // 如果加载失败，尝试使用默认会议数据
+                const defaultCategories = {
+                    "CV": {"cvpr": ["2023", "2024"], "eccv": ["2022", "2024"], "iccv": ["2023"]},
+                    "ML": {"nips": ["2023", "2024"], "icml": ["2023", "2024"], "iclr": ["2023", "2024"]}
+                };
+                conferencesData = {
+                    categories: defaultCategories,
+                    recent_years: ["2020", "2021", "2022", "2023", "2024"]
+                };
+                initializeDropdowns(defaultCategories);
             });
     }
     
