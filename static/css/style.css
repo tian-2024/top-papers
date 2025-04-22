@@ -575,7 +575,8 @@ footer {
     display: flex;
     gap: 10px;
     margin-bottom: 0;
-    justify-content: flex-start;
+    justify-content: flex-end;
+    margin-left: auto; /* Push to the right */
 }
 
 .topic-tag {
@@ -1036,6 +1037,7 @@ footer {
 .fields-container {
     display: flex;
     align-items: center;
+    margin-right: auto; /* Push to the left */
 }
 
 /* Removed select-all-container CSS as we're using field-label styling now */
@@ -1098,17 +1100,17 @@ footer {
     .field-filters-row {
         flex-wrap: wrap;
         width: 100%;
-        justify-content: flex-start;
-        gap: 8px;
-        margin-bottom: 10px;
-    }
-    
-    .field-dropdown {
-        margin-bottom: 5px;
     }
     
     .topic-tags {
+        margin-left: 0;
+        width: 100%;
+        justify-content: flex-start;
         flex-wrap: wrap;
+    }
+    
+    .fields-container {
+        margin-right: 0;
         width: 100%;
     }
 }
