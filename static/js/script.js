@@ -147,21 +147,22 @@ document.addEventListener('DOMContentLoaded', function() {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
-                    }
+                    },
+                    body: JSON.stringify({
+                        topic: searchTerm
+                    })
                 })
                 .then(response => response.json())
                 .then(data => {
                     console.log('Data received:', data);
                     
-                    // Filter papers that match all keywords
-                    const filteredPapers = data.papers.filter(paper => 
-                        paperMatchesAllKeywords(paper, keywords)
-                    );
-                    
-                    console.log('Filtered papers:', filteredPapers);
-                    
-                    // Display papers or show no results message
-                    displayPapers(filteredPapers);
+                    // 检查是否有论文数据
+                    if (data.papers && data.papers.length > 0) {
+                        // 直接显示结果，后端已经基于主题筛选过了
+                        displayPapers(data.papers);
+                    } else {
+                        showNoResultsMessage();
+                    }
                 })
                 .catch(error => {
                     console.error('Error fetching papers:', error);

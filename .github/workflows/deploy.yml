@@ -146,7 +146,9 @@ jobs:
                   
                   // Filter papers by topic
                   const filteredPapers = allPapersData.papers.filter(paper => 
-                      paper.title.toLowerCase().includes(normalizedTopic)
+                      paper.title.toLowerCase().includes(normalizedTopic) ||
+                      paper.conference.toLowerCase().includes(normalizedTopic) ||
+                      paper.year.toLowerCase().includes(normalizedTopic)
                   );
                   
                   // If we have enough papers, shuffle them

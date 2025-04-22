@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, request
 import os
 import subprocess
 import json
@@ -13,35 +13,40 @@ def index():
 
 @app.route('/get_papers', methods=['POST'])
 def get_papers():
-    # Get random topic from a list of common CV/ML topics
-    topics = ["diffusion", "transformer", "attention", "detection", "segmentation", 
-              "reconstruction", "generation", "3d", "video", "gan"]
-    selected_topic = random.choice(topics)
+    # 从请求中获取主题，如果没有则随机选择一个
+    data = request.get_json() if request.is_json else {}
+    topic = data.get('topic', '')
     
-    # Set number of papers to display
+    if not topic:
+        # 如果未提供主题，则从常见主题中随机选择一个
+        topics = ["diffusion", "transformer", "attention", "detection", "segmentation", 
+                "reconstruction", "generation", "3d", "video", "gan"]
+        topic = random.choice(topics)
+    
+    # 设置要显示的论文数量
     num_papers = 20
     
-    # Run the paper selection function
+    # 运行论文选择函数
     papers_dir = "./papers"
     output_dir = "./"
     
-    # Clear any previous selection
+    # 清除之前的选择
     if os.path.exists("selected_papers.txt"):
         os.remove("selected_papers.txt")
     
-    # Generate new selection
-    select_random_papers(papers_dir, output_dir, num_papers=num_papers, topic_pool=[selected_topic])
+    # 生成新的选择
+    select_random_papers(papers_dir, output_dir, num_papers=num_papers, topic_pool=[topic])
     
-    # Read the generated file
+    # 读取生成的文件
     papers = []
     with open("selected_papers.txt", "r", encoding="utf-8") as f:
         for line in f:
             line = line.strip()
             if line and not line.startswith("用 markdown"):
-                # Parse the conference/year and paper title
+                # 解析会议/年份和论文标题
                 if line.startswith("[") and "]" in line:
                     conf_year, title = line.split("] ", 1)
-                    conf_year = conf_year[1:]  # Remove the opening bracket
+                    conf_year = conf_year[1:]  # 移除开头的括号
                     conf, year = conf_year.split("/")
                     papers.append({
                         "title": title,
@@ -51,7 +56,7 @@ def get_papers():
     
     return jsonify({
         "papers": papers,
-        "topic": selected_topic
+        "topic": topic
     })
 
 if __name__ == '__main__':
