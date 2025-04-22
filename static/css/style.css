@@ -228,7 +228,7 @@ button:disabled {
 }
 
 .conference-badge {
-    background-color: #f39c12; /* 默认橙色 */
+    background-color: #999; /* 默认灰色 */
     color: white;
     padding: 4px 8px;
     border-radius: 4px;
@@ -236,24 +236,28 @@ button:disabled {
     font-weight: bold;
 }
 
-/* 根据领域设置会议标签颜色 */
+/* 根据领域设置会议标签颜色 - 匹配领域颜色 */
 .conference-badge.cv-conference {
-    background-color: #3498db; /* CV领域蓝色 */
+    background-color: #a8e6cf; /* CV领域 - 浅绿色 */
+    color: #333;
 }
 
 .conference-badge.ai-conference {
-    background-color: #9b59b6; /* AI领域紫色 */
+    background-color: #ffb3b3; /* AI领域 - 浅红色 */
+    color: #333;
 }
 
 .conference-badge.ml-conference {
-    background-color: #2ecc71; /* ML领域绿色 */
+    background-color: #d9b3ff; /* ML领域 - 浅紫色 */
+    color: #333;
 }
 
 .conference-badge.other-conference {
-    background-color: #e74c3c; /* Other领域红色 */
+    background-color: #d4b796; /* Other领域 - 浅棕色 */
+    color: #333;
 }
 
-/* 根据年份距离设置标签颜色 */
+/* 根据年份距离设置标签颜色 - 调整为更醒目的颜色 */
 .year-badge {
     color: white;
     padding: 4px 8px;
@@ -268,24 +272,24 @@ button:disabled {
 }
 
 .year-badge.year-1 {
-    background-color: #ffab4c; /* 2024 - slightly lighter */
+    background-color: #ff9f45; /* 2024 - slightly lighter */
 }
 
 .year-badge.year-2 {
-    background-color: #ffbc66; /* 2023 - lighter */
+    background-color: #ffa54f; /* 2023 - lighter */
 }
 
 .year-badge.year-3 {
-    background-color: #ffcd80; /* 2022 - even lighter */
+    background-color: #ffaa59; /* 2022 - even lighter */
 }
 
 .year-badge.year-4 {
-    background-color: #ffddaa; /* 2021 - very light */
+    background-color: #ffaf63; /* 2021 - slightly lighter */
 }
 
 .year-badge.year-old {
-    background-color: #ffeed4; /* 2020 and earlier - lightest */
-    color: #d26900; /* Darker text for contrast */
+    background-color: #ffb56d; /* 2020 and earlier - lightest but still visible */
+    color: #333; /* Darker text for contrast */
 }
 
 /* 为不同领域设置不同的颜色 */
@@ -500,7 +504,7 @@ footer {
 }
 
 .conference-badge {
-    background-color: #f39c12;
+    background-color: #999; /* 默认灰色 */
     color: white;
     padding: 4px 8px;
     border-radius: 4px;
