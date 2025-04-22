@@ -851,4 +851,117 @@ footer {
     align-items: center;
 }
 
-/* Removed select-all-container CSS as we're using field-label styling now */ 
+/* Removed select-all-container CSS as we're using field-label styling now */
+
+/* 为移动设备添加响应式样式 */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    header {
+        padding: 15px 10px;
+    }
+    
+    .title-container {
+        flex-direction: column;
+        position: relative;
+        padding-right: 50px;  /* 为主题切换按钮留出空间 */
+    }
+    
+    .title-container .theme-toggle {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .search-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .search-input-container {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .year-range {
+        margin-left: 0;
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .filters-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .field-filters-row {
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: flex-start;
+        gap: 8px;
+        margin-bottom: 10px;
+    }
+    
+    .field-dropdown {
+        margin-bottom: 5px;
+    }
+    
+    .topic-tags {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+}
+
+/* 为更小的屏幕添加样式 */
+@media (max-width: 480px) {
+    .field-label {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+    
+    .year-range select {
+        padding: 6px;
+        font-size: 14px;
+    }
+    
+    .year-range span {
+        font-size: 14px;
+    }
+    
+    .dropdown-content {
+        min-width: 140px;
+    }
+    
+    .topic-tag {
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+    
+    .search-input-container input {
+        font-size: 14px;
+    }
+    
+    .search-input-container button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
+
+/* 修改下拉菜单的定位方式，确保在小屏幕上也能正确显示 */
+@media (max-width: 768px) {
+    .dropdown-content {
+        position: absolute;
+        left: 0;
+        max-width: 100%;
+        width: 200px;
+    }
+    
+    /* 对于屏幕右侧的下拉菜单，防止溢出屏幕 */
+    .field-dropdown:nth-child(n+3) .dropdown-content {
+        left: auto;
+        right: 0;
+    }
+} 
