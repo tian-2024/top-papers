@@ -632,6 +632,30 @@ footer {
     font-weight: bold;
 }
 
+.recent-years-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.recent-years-btn:hover {
+    background-color: #2980b9;
+}
+
+.dark-mode .recent-years-btn {
+    background-color: #2980b9;
+}
+
+.dark-mode .recent-years-btn:hover {
+    background-color: #3498db;
+}
+
 /* 下拉菜单样式 */
 .field-dropdown {
     position: relative;
@@ -904,7 +928,13 @@ footer {
     .year-range {
         margin-left: 0;
         width: 100%;
-        justify-content: space-between;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    
+    .recent-years-btn {
+        margin-top: 8px;
+        margin-left: 0;
     }
     
     .filters-row {
@@ -974,6 +1004,11 @@ footer {
     
     .github-link {
         font-size: 1.2rem;
+    }
+    
+    .recent-years-btn {
+        padding: 4px 8px;
+        font-size: 13px;
     }
 }
 

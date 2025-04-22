@@ -657,4 +657,79 @@ document.addEventListener('DOMContentLoaded', function() {
         // This is just to ensure any potential references to papers-table don't cause errors
         // We're not using tables anymore, but this prevents errors from old code
     });
+
+    // 获取当前年份
+    const currentYear = new Date().getFullYear();
+
+    // 更新年份下拉框选项
+    function updateYearOptions() {
+        // 更新结束年份选项，确保包含当前年份
+        const endYearSelect = document.getElementById('end-year');
+        const options = endYearSelect.options;
+        
+        // 检查是否需要更新选项
+        let maxYear = 0;
+        for (let i = 0; i < options.length; i++) {
+            const yearValue = parseInt(options[i].value);
+            maxYear = Math.max(maxYear, yearValue);
+        }
+        
+        // 如果当前年份大于最大年份，添加新选项
+        if (currentYear > maxYear) {
+            for (let year = maxYear + 1; year <= currentYear; year++) {
+                const option = document.createElement('option');
+                option.value = year.toString();
+                option.textContent = year.toString();
+                endYearSelect.appendChild(option);
+            }
+        }
+        
+        // 默认选择当前年份作为结束年份
+        for (let i = 0; i < options.length; i++) {
+            if (options[i].value === currentYear.toString()) {
+                options[i].selected = true;
+                break;
+            }
+        }
+    }
+
+    // 设置最近三年
+    function setRecentThreeYears() {
+        const startYearSelect = document.getElementById('start-year');
+        const endYearSelect = document.getElementById('end-year');
+        
+        // 设置开始年份为当前年份减2
+        const startYear = currentYear - 2;
+        for (let i = 0; i < startYearSelect.options.length; i++) {
+            if (startYearSelect.options[i].value === startYear.toString()) {
+                startYearSelect.options[i].selected = true;
+                break;
+            }
+        }
+        
+        // 设置结束年份为当前年份
+        for (let i = 0; i < endYearSelect.options.length; i++) {
+            if (endYearSelect.options[i].value === currentYear.toString()) {
+                endYearSelect.options[i].selected = true;
+                break;
+            }
+        }
+        
+        // 触发搜索更新
+        if (typeof updateSearchResults === 'function') {
+            updateSearchResults();
+        }
+    }
+
+    // 更新年份选项
+    updateYearOptions();
+    
+    // 为"recent 3 years"按钮添加点击事件
+    const recentYearsBtn = document.getElementById('recent-years-btn');
+    if (recentYearsBtn) {
+        recentYearsBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            setRecentThreeYears();
+        });
+    }
 }); 
