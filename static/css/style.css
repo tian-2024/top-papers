@@ -708,25 +708,26 @@ footer {
     max-width: 900px;
     margin-bottom: 15px;
     position: relative;
+    justify-content: space-between;
 }
 
-.topic-container {
+.search-input-container {
     display: flex;
     align-items: center;
     gap: 10px;
-    width: 100%;
+    flex: 0 1 auto;
+    margin-left: auto; /* 让搜索框靠右 */
 }
 
-.topic-input-container {
-    display: none; /* 隐藏旧的容器 */
-}
-
-.field-filters-row {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 0;
-    justify-content: flex-start;
+.search-input-container input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: var(--container-bg);
+    color: var(--text-color);
+    min-width: 200px; /* 确保输入框有足够宽度 */
 }
 
 /* 年份过滤器容器样式 */
@@ -734,9 +735,9 @@ footer {
     display: flex;
     align-items: center;
     position: relative;
-    margin-left: 15px;
-    flex: 1 1 auto;
+    flex: 0 1 auto;
     min-width: 0;
+    margin-right: auto; /* 让年份过滤器靠左 */
 }
 
 /* 年份选择样式 */
@@ -761,6 +762,39 @@ footer {
 .year-range span {
     font-size: 16px;
     font-weight: bold;
+}
+
+/* Field filters row */
+.field-filters-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 0;
+    justify-content: flex-start;
+}
+
+/* 修改移动设备上的布局 */
+@media (max-width: 768px) {
+    .search-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+    
+    .search-input-container {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    .search-input-container input {
+        min-width: 0;
+    }
+    
+    .year-filter-container {
+        margin-right: 0;
+        width: 100%;
+        justify-content: space-between;
+    }
 }
 
 .recent-years-btn {
@@ -938,23 +972,6 @@ footer {
     border: none;
 }
 
-.search-input-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex: 1;
-}
-
-.search-input-container input {
-    flex: 1;
-    padding: 8px 12px;
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: var(--container-bg);
-    color: var(--text-color);
-}
-
 .filters-row {
     display: flex;
     flex-direction: row;
@@ -1048,20 +1065,19 @@ footer {
     }
     
     .search-row {
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
+        flex-direction: column;
+        align-items: stretch;
         gap: 15px;
     }
     
     .search-input-container {
-        flex: 1 1 100%;
-        min-width: 0;
+        margin-left: 0;
+        width: 100%;
     }
     
     .year-filter-container {
-        flex: 1 1 100%;
-        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
         justify-content: space-between;
     }
     
