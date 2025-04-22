@@ -13,6 +13,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const endYearSelect = document.getElementById('end-year');
     const fieldMainCheckboxes = document.querySelectorAll('.field-main-checkbox');
     const selectAllCheckbox = document.getElementById('select-all-checkbox');
+    const batchSizeSlider = document.getElementById('batch-size');
+    const batchSizeValue = document.getElementById('batch-size-value');
+    
+    // Update batch size value display when slider moves
+    if (batchSizeSlider && batchSizeValue) {
+        batchSizeSlider.addEventListener('input', function() {
+            batchSizeValue.textContent = this.value;
+        });
+    }
     
     // 存储领域和会议数据
     let conferencesData = {};
@@ -651,7 +660,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     // 随机排序并限制数量
                     const shuffledPapers = [...filteredPapers].sort(() => 0.5 - Math.random());
-                    const limitedPapers = shuffledPapers.slice(0, 15); // 限制为15篇
+                    const batchSizeInput = document.getElementById('batch-size');
+                    const batchSize = batchSizeInput ? parseInt(batchSizeInput.value) || 9 : 9;
+                    const limitedPapers = shuffledPapers.slice(0, batchSize);
                     
                     console.log('Filtered papers:', limitedPapers.length);
                     

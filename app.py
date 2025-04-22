@@ -104,7 +104,7 @@ def get_papers():
         })
     
     # 设置要显示的论文数量
-    num_papers = 15  # 更改为15篇
+    num_papers = 9  # 更改为9篇
     
     # 论文目录路径
     papers_dir = "./papers"

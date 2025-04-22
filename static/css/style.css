@@ -120,31 +120,58 @@ body {
 .title-section {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     position: relative;
-    padding-right: 50px;
 }
 
 .title-section h1 {
     margin: 0;
     font-size: 1.5rem;
-    flex: 1;
+}
+
+.title-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .title-section .github-link {
-    margin-left: 10px;
+    margin-left: 0;
 }
 
 .title-section .theme-toggle {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
+    position: static;
+    transform: none;
 }
 
 /* Year section styling */
 .year-section .year-filter-container {
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
     gap: 10px;
+}
+
+.reset-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    flex-shrink: 0;
+}
+
+.reset-btn:hover {
+    background-color: #2980b9;
+}
+
+.reset-btn i {
+    font-size: 16px;
 }
 
 .year-section .year-range {
@@ -152,13 +179,14 @@ body {
     justify-content: flex-start;
 }
 
-.year-section .recent-years-btn {
-    width: 100%;
-    margin-left: 0;
+/* Combined search and topic section */
+.search-topic-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-/* Topic section styling */
-.topic-section .topic-tags {
+.search-topic-section .topic-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -167,21 +195,45 @@ body {
     width: 100%;
 }
 
-/* Search section styling */
-.search-section .search-input-container {
-    flex-direction: column;
+.search-topic-section .search-input-container {
+    flex-direction: row;
     gap: 10px;
     margin: 0;
     width: 100%;
 }
 
-.search-section input {
-    width: 100%;
-    margin-bottom: 10px;
+.search-topic-section input {
+    flex: 1;
 }
 
-.search-section button {
-    width: 100%;
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .year-section .year-filter-container {
+        flex-direction: row;
+    }
+    
+    .search-topic-section .search-input-container {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-icons {
+        gap: 10px;
+    }
+    
+    .reset-btn {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .reset-btn i {
+        font-size: 14px;
+    }
+    
+    .search-topic-section {
+        gap: 10px;
+    }
 }
 
 /* Fields section styling */
@@ -237,21 +289,14 @@ body {
         width: auto;
     }
     
-    .search-section .search-input-container {
-        flex-direction: row;
-    }
-    
-    .search-section input {
-        margin-bottom: 0;
-    }
-    
-    .search-section button {
-        width: auto;
+    .search-topic-section .topic-tags {
+        flex-wrap: wrap;
     }
     
     .fields-section .field-filters-row {
         flex-direction: row;
         flex-wrap: wrap;
+        gap: 10px;
     }
     
     .fields-section .field-dropdown {
@@ -883,8 +928,7 @@ footer {
     display: flex;
     align-items: center;
     gap: 10px;
-    flex: 0 1 auto;
-    margin-left: auto; /* 让搜索框靠右 */
+    width: 100%;
 }
 
 .search-input-container input {
@@ -895,7 +939,11 @@ footer {
     font-size: 16px;
     background-color: var(--container-bg);
     color: var(--text-color);
-    min-width: 200px; /* 确保输入框有足够宽度 */
+    min-width: 0;
+}
+
+.search-input-container button {
+    white-space: nowrap;
 }
 
 /* 年份过滤器容器样式 */

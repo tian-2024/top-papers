@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Top CVPR Papers</title>
+    <title>Top AI Papers</title>
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -25,20 +25,25 @@
             <div class="sidebar">
                 <!-- Row 1: Title -->
                 <div class="sidebar-section title-section">
-                    <h1>Top AI Papers</h1>
-                    <a href="https://github.com/tian-2024/top-papers" class="github-link"><i class="fab fa-github"></i></a>
-                    <div class="theme-toggle">
-                        <span class="toggle-icon">🌙</span>
-                        <label class="toggle-switch">
-                            <input type="checkbox" id="theme-toggle-input">
-                            <span class="toggle-slider"></span>
-                        </label>
+                    <h1>Top Papers</h1>
+                    <div class="title-icons">
+                        <a href="https://github.com/tian-2024/top-papers" class="github-link"><i class="fab fa-github"></i></a>
+                        <div class="theme-toggle">
+                            <span class="toggle-icon">🌙</span>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="theme-toggle-input">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
                     </div>
                 </div>
                 
                 <!-- Row 2: Year selection -->
                 <div class="sidebar-section year-section">
                     <div class="year-filter-container">
+                        <button id="recent-years-btn" class="reset-btn" title="Reset to recent years">
+                            <i class="fas fa-redo-alt"></i>
+                        </button>
                         <div class="year-range">
                             <span>Year:</span>
                             <select id="start-year">
@@ -61,12 +66,19 @@
                                 <option value="2025" selected>2025</option>
                             </select>
                         </div>
-                        <button id="recent-years-btn" class="recent-years-btn">Recent</button>
                     </div>
                 </div>
                 
-                <!-- Row 3: Topic tags -->
-                <div class="sidebar-section topic-section">
+                <!-- Row 3: Topic tags and Search input combined -->
+                <div class="sidebar-section search-topic-section">
+                    <div class="batch-size-container">
+                        <label for="batch-size" style="font-size: 16px; font-weight: bold;">Batch size: <span id="batch-size-value">9</span></label>
+                        <input type="range" id="batch-size" min="9" max="18" value="9" step="3" style="width: 100%; margin-top: 5px;">
+                    </div>
+                    <div class="search-input-container">
+                        <input type="text" id="topic-input" placeholder="Enter topic keywords">
+                        <button id="search-btn">Batch</button>
+                    </div>
                     <div class="topic-tags">
                         <button class="topic-tag" data-topic="diffusion">diffusion</button>
                         <button class="topic-tag" data-topic="vlm">vlm</button>
@@ -74,15 +86,7 @@
                     </div>
                 </div>
                 
-                <!-- Row 4: Search input -->
-                <div class="sidebar-section search-section">
-                    <div class="search-input-container">
-                        <input type="text" id="topic-input" placeholder="Enter topic keywords">
-                        <button id="search-btn">Batch</button>
-                    </div>
-                </div>
-                
-                <!-- Row 5: Field selection -->
+                <!-- Row 4: Field selection -->
                 <div class="sidebar-section fields-section">
                     <div class="fields-container">
                         <div class="field-filters-row">
