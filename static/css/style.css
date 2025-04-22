@@ -707,7 +707,6 @@ footer {
     align-items: center;
     width: 100%;
     max-width: 900px;
-    margin-bottom: 15px;
     position: relative;
     justify-content: space-between;
 }
@@ -978,7 +977,7 @@ footer {
     flex-direction: row;
     align-items: center;
     gap: 15px;
-    margin-top: 15px;
+    margin-bottom: 15px;
     justify-content: space-between;
 }
 
