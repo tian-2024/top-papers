@@ -575,9 +575,8 @@ footer {
     display: flex;
     gap: 10px;
     margin-bottom: 0;
-    justify-content: flex-start;
-    margin-left: auto;
-    margin-right: 150px;
+    justify-content: flex-end;
+    margin-left: auto; /* Push to the right */
 }
 
 .topic-tag {
@@ -740,9 +739,9 @@ footer {
     flex: 0 1 auto;
     min-width: 0;
     margin-right: auto; /* 让年份过滤器靠左 */
-    padding-left: 75px; /* Match with fields-container to align CV with Year label */
 }
 
+/* 年份选择样式 */
 .year-range {
     display: flex;
     align-items: center;
@@ -793,7 +792,9 @@ footer {
     }
     
     .year-filter-container {
-        padding-left: 0;
+        margin-right: 0;
+        width: 100%;
+        justify-content: space-between;
     }
 }
 
@@ -1036,48 +1037,10 @@ footer {
 .fields-container {
     display: flex;
     align-items: center;
-    margin-right: auto;
-    padding-left: 75px;
-    position: relative;
+    margin-right: auto; /* Push to the left */
 }
 
-/* Position All checkbox to the left of fields-container */
-.field-dropdown[data-field="All"] {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-/* Move topic tags more to the left to position them under the search box */
-.topic-tags {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 0;
-    justify-content: flex-start;
-    margin-left: auto;
-    margin-right: 150px;
-}
-
-/* Adjust mobile layout */
-@media (max-width: 768px) {
-    .fields-container {
-        padding-left: 0;
-        position: static;
-    }
-    
-    .field-dropdown[data-field="All"] {
-        position: static;
-        transform: none;
-    }
-    
-    .topic-tags {
-        margin-right: 0;
-        width: 100%;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-    }
-}
+/* Removed select-all-container CSS as we're using field-label styling now */
 
 /* 为移动设备添加响应式样式 */
 @media (max-width: 768px) {
@@ -1115,7 +1078,6 @@ footer {
     }
     
     .year-filter-container {
-        padding-left: 0;
         margin-right: 0;
         width: 100%;
         justify-content: space-between;
