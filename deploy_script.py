@@ -17,6 +17,11 @@ if not os.path.exists('site/css'):
     os.makedirs('site/css')
     os.system('cp static/css/* site/css/')
 
+# Create js directory and copy JavaScript files for GitHub Pages structure
+if not os.path.exists('site/js'):
+    os.makedirs('site/js')
+    os.system('cp static/js/* site/js/')
+
 # Read selected papers
 papers = []
 topic = 'diffusion'  # Default topic
@@ -175,8 +180,8 @@ script_tag.string = script_content
 
 # Find existing script tags and replace
 for script in soup.find_all('script'):
-    if 'script.js' in str(script):
-        script.decompose()
+    if 'script.js' in str(script) and 'src' in script.attrs:
+        script['src'] = script['src'].replace('static/js', 'js')
 
 # Add our new script
 soup.body.append(script_tag)
@@ -185,6 +190,11 @@ soup.body.append(script_tag)
 for link in soup.find_all('link'):
     if 'href' in link.attrs and 'static/css' in link.get('href'):
         link['href'] = link['href'].replace('static/css', 'css')
+
+# Update JavaScript src attributes
+for script in soup.find_all('script'):
+    if 'src' in script.attrs and 'static/js' in script.get('src'):
+        script['src'] = script['src'].replace('static/js', 'js')
 
 # Write the updated HTML
 with open('site/index.html', 'w') as f:
