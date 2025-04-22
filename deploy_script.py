@@ -12,6 +12,11 @@ if not os.path.exists('site/static'):
 if not os.path.exists('site/index.html'):
     os.system('cp templates/index.html site/index.html')
 
+# Create css directory and copy CSS files for GitHub Pages structure
+if not os.path.exists('site/css'):
+    os.makedirs('site/css')
+    os.system('cp static/css/* site/css/')
+
 # Read selected papers
 papers = []
 topic = 'diffusion'  # Default topic
