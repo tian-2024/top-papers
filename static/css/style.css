@@ -758,6 +758,8 @@ footer {
     display: flex;
     align-items: center;
     white-space: nowrap;
+    flex: 1;
+    justify-content: center;
 }
 
 .title-container .theme-toggle {
@@ -770,7 +772,8 @@ footer {
     padding: 0;
     box-shadow: none;
     border: none;
-    margin-right: 15px;
+    margin-right: 0;
+    margin-left: auto;
 }
 
 .search-input-container {
@@ -988,7 +991,7 @@ footer {
 .github-link {
     color: #3498db;
     font-size: 0.8em;
-    margin-left: 10px;
+    margin-right: 10px;
     transition: color 0.3s ease;
 }
 
