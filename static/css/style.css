@@ -246,27 +246,22 @@ footer {
 
 /* Theme Toggle Button */
 .theme-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    background-color: var(--container-bg);
-    padding: 10px;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     z-index: 1000;
     transition: all 0.3s ease;
-    border: 2px solid #3498db;
     width: 40px;
     height: 40px;
+    background: none;
+    border: none;
+    box-shadow: none;
 }
 
 .theme-toggle:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    transform: scale(1.1);
 }
 
 /* Hide the toggle switch */
@@ -275,7 +270,7 @@ footer {
 }
 
 .toggle-icon {
-    font-size: 20px;
+    font-size: 24px;
     line-height: 1;
 }
 
@@ -644,7 +639,7 @@ footer {
     margin-right: 5px;
 }
 
-.field-label.dropdown-toggle {
+.field-label {
     background-color: #f5f5f5;
     padding: 8px 15px;
     border-radius: 5px;
@@ -659,7 +654,12 @@ footer {
     transition: all 0.2s ease;
 }
 
-.field-label.dropdown-toggle:hover {
+.field-label.dropdown-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.field-label:hover {
     background-color: #e9e9e9;
 }
 
@@ -699,6 +699,16 @@ footer {
 }
 
 /* 暗黑模式样式 */
+.dark-mode .field-label {
+    background-color: #333;
+    color: #e0e0e0;
+    border-color: #444;
+}
+
+.dark-mode .field-label:hover {
+    background-color: #404040;
+}
+
 .dark-mode .field-label.dropdown-toggle {
     background-color: #333;
     color: #e0e0e0;
@@ -749,13 +759,13 @@ footer {
 .title-container .theme-toggle {
     position: absolute;
     right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 0;
     display: flex;
     align-items: center;
     background: none;
     padding: 0;
     box-shadow: none;
+    border: none;
 }
 
 .search-input-container {
@@ -839,4 +849,6 @@ footer {
 .fields-container {
     display: flex;
     align-items: center;
-} 
+}
+
+/* Removed select-all-container CSS as we're using field-label styling now */ 

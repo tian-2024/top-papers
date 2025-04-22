@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const startYearSelect = document.getElementById('start-year');
     const endYearSelect = document.getElementById('end-year');
     const fieldMainCheckboxes = document.querySelectorAll('.field-main-checkbox');
-    const selectAllBtn = document.getElementById('select-all-btn');
+    const selectAllCheckbox = document.getElementById('select-all-checkbox');
     
     // 存储领域和会议数据
     let conferencesData = {};
@@ -25,31 +25,30 @@ document.addEventListener('DOMContentLoaded', function() {
     };
     
     // 全选/全不选功能
-    if (selectAllBtn) {
-        selectAllBtn.addEventListener('click', function() {
-            const isSelected = this.dataset.selected === 'true';
-            const newState = !isSelected;
-            
-            // 更新按钮状态
-            this.dataset.selected = newState.toString();
-            this.textContent = newState ? 'Deselect All' : 'Select All';
+    if (selectAllCheckbox) {
+        selectAllCheckbox.addEventListener('change', function() {
+            const isChecked = this.checked;
             
             // 更新所有领域复选框
             fieldMainCheckboxes.forEach(checkbox => {
-                checkbox.checked = newState;
+                checkbox.checked = isChecked;
+                checkbox.indeterminate = false;
                 const field = checkbox.dataset.field;
-                fieldsSelected[field] = newState;
+                fieldsSelected[field] = isChecked;
                 
                 // 更新该领域下的所有会议复选框
                 const dropdownContent = document.getElementById(`dropdown-${field}`);
                 if (dropdownContent) {
                     const conferenceCheckboxes = dropdownContent.querySelectorAll('.conference-checkbox');
                     conferenceCheckboxes.forEach(confCheckbox => {
-                        confCheckbox.checked = newState;
-                        selectedConferences[confCheckbox.dataset.conference] = newState;
+                        confCheckbox.checked = isChecked;
+                        selectedConferences[confCheckbox.dataset.conference] = isChecked;
                     });
                 }
             });
+            
+            console.log('All checkbox changed:', isChecked);
+            console.log('Selected conferences:', Object.keys(selectedConferences).filter(c => selectedConferences[c]));
         });
     }
     
@@ -57,55 +56,141 @@ document.addEventListener('DOMContentLoaded', function() {
     fieldMainCheckboxes.forEach(checkbox => {
         checkbox.addEventListener('change', function(e) {
             const field = this.dataset.field;
-            fieldsSelected[field] = this.checked;
+            const isChecked = this.checked;
+            this.indeterminate = false; // 手动点击时清除部分选中状态
+            fieldsSelected[field] = isChecked;
             
             // 更新该领域下的所有会议复选框
             const dropdownContent = document.getElementById(`dropdown-${field}`);
             if (dropdownContent) {
                 const conferenceCheckboxes = dropdownContent.querySelectorAll('.conference-checkbox');
                 conferenceCheckboxes.forEach(confCheckbox => {
-                    confCheckbox.checked = this.checked;
-                    selectedConferences[confCheckbox.dataset.conference] = this.checked;
+                    confCheckbox.checked = isChecked;
+                    selectedConferences[confCheckbox.dataset.conference] = isChecked;
                 });
             }
             
             // 防止事件冒泡，避免触发下拉菜单
             e.stopPropagation();
             
-            // 更新全选按钮状态
-            updateSelectAllButton();
+            // 更新所有领域状态
+            updateFieldCheckboxes();
+            
+            console.log('Field checkbox changed:', field, isChecked);
+            console.log('Selected conferences:', Object.keys(selectedConferences).filter(c => selectedConferences[c]));
         });
     });
     
-    // 更新全选按钮状态
-    function updateSelectAllButton() {
-        if (selectAllBtn) {
-            const allSelected = Object.values(fieldsSelected).every(selected => selected);
-            const allDeselected = Object.values(fieldsSelected).every(selected => !selected);
+    // 更新全选复选框状态
+    function updateSelectAllCheckbox() {
+        if (selectAllCheckbox) {
+            const fields = ['CV', 'AI', 'ML', 'Other'];
+            const fieldCheckboxes = fields.map(field => 
+                document.querySelector(`.field-main-checkbox[data-field="${field}"]`)
+            ).filter(checkbox => checkbox !== null);
             
-            if (allSelected) {
-                selectAllBtn.dataset.selected = 'true';
-                selectAllBtn.textContent = 'Deselect All';
-            } else if (allDeselected) {
-                selectAllBtn.dataset.selected = 'false';
-                selectAllBtn.textContent = 'Select All';
+            // 计算选中和部分选中的数量
+            let checkedCount = 0;
+            let indeterminateCount = 0;
+            
+            fieldCheckboxes.forEach(checkbox => {
+                if (checkbox.indeterminate) {
+                    indeterminateCount++;
+                } else if (checkbox.checked) {
+                    checkedCount++;
+                }
+            });
+            
+            // 全部选中
+            if (checkedCount === fieldCheckboxes.length) {
+                selectAllCheckbox.checked = true;
+                selectAllCheckbox.indeterminate = false;
             }
+            // 全部未选中，且没有部分选中
+            else if (checkedCount === 0 && indeterminateCount === 0) {
+                selectAllCheckbox.checked = false;
+                selectAllCheckbox.indeterminate = false;
+            }
+            // 部分选中或至少有一个领域是部分选中
+            else {
+                selectAllCheckbox.indeterminate = true;
+                selectAllCheckbox.checked = false;
+            }
+            
+            console.log('All checkbox state updated:', { 
+                checked: selectAllCheckbox.checked, 
+                indeterminate: selectAllCheckbox.indeterminate,
+                checkedFields: checkedCount,
+                indeterminateFields: indeterminateCount,
+                totalFields: fieldCheckboxes.length
+            });
         }
     }
     
     // 更新会议复选框选择事件
     function updateConferenceCheckboxEvents() {
         document.querySelectorAll('.conference-checkbox').forEach(checkbox => {
-            checkbox.addEventListener('change', function(e) {
-                const conf = this.dataset.conference;
-                selectedConferences[conf] = this.checked;
-                
-                // 防止事件冒泡
-                e.stopPropagation();
-            });
+            checkbox.removeEventListener('change', conferenceCheckboxChangeHandler);
+            checkbox.addEventListener('change', conferenceCheckboxChangeHandler);
         });
     }
     
+    // 更新领域复选框状态
+    function updateFieldCheckboxes() {
+        const fields = ['CV', 'AI', 'ML', 'Other'];
+        
+        // 遍历每个领域
+        fields.forEach(field => {
+            const fieldCheckbox = document.querySelector(`.field-main-checkbox[data-field="${field}"]`);
+            if (!fieldCheckbox) return;
+            
+            const dropdownContent = document.getElementById(`dropdown-${field}`);
+            if (!dropdownContent) return;
+            
+            const conferenceCheckboxes = dropdownContent.querySelectorAll('.conference-checkbox');
+            if (conferenceCheckboxes.length === 0) return;
+            
+            const checkedCount = Array.from(conferenceCheckboxes).filter(cb => cb.checked).length;
+            
+            // 完全选中
+            if (checkedCount === conferenceCheckboxes.length) {
+                fieldCheckbox.checked = true;
+                fieldCheckbox.indeterminate = false;
+                fieldsSelected[field] = true;
+            } 
+            // 完全不选中
+            else if (checkedCount === 0) {
+                fieldCheckbox.checked = false;
+                fieldCheckbox.indeterminate = false;
+                fieldsSelected[field] = false;
+            } 
+            // 部分选中
+            else {
+                fieldCheckbox.indeterminate = true;
+                fieldCheckbox.checked = false;
+                fieldsSelected[field] = true; // 即使部分选中，也视为选中状态
+            }
+        });
+        
+        // 更新全选框状态
+        updateSelectAllCheckbox();
+    }
+
+    // 会议复选框变化处理函数
+    function conferenceCheckboxChangeHandler(e) {
+        const conf = this.dataset.conference;
+        selectedConferences[conf] = this.checked;
+        
+        // 更新相应领域的选中状态
+        updateFieldCheckboxes();
+        
+        // 防止事件冒泡
+        e.stopPropagation();
+        
+        console.log('Conference selection updated:', conf, this.checked);
+        console.log('Current selected conferences:', Object.keys(selectedConferences).filter(c => selectedConferences[c]));
+    }
+
     console.log("Theme toggle loaded:", themeToggle); // 调试信息
 
     // 主题切换功能
@@ -207,10 +292,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 const dropdownContent = document.getElementById(`dropdown-${field}`);
                 if (dropdownContent) {
                     const confs = categories[field];
+                    dropdownContent.innerHTML = ''; // 清空现有内容
                     
                     // 初始化所有会议为选中状态
                     Object.keys(confs).forEach(conf => {
-                        if (!selectedConferences[conf]) {
+                        if (selectedConferences[conf] === undefined) {
                             selectedConferences[conf] = true;
                         }
                     });
@@ -224,13 +310,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         checkbox.type = 'checkbox';
                         checkbox.className = 'conference-checkbox';
                         checkbox.dataset.conference = conf;
-                        checkbox.checked = true; // 默认选中
-                        
-                        checkbox.addEventListener('change', function(e) {
-                            selectedConferences[conf] = this.checked;
-                            // 防止事件冒泡
-                            e.stopPropagation();
-                        });
+                        checkbox.checked = selectedConferences[conf]; // 使用储存的状态
                         
                         option.appendChild(checkbox);
                         option.appendChild(document.createTextNode(conf.toUpperCase()));
@@ -241,6 +321,10 @@ document.addEventListener('DOMContentLoaded', function() {
                             if (e.target !== checkbox) {
                                 checkbox.checked = !checkbox.checked;
                                 selectedConferences[conf] = checkbox.checked;
+                                
+                                // 手动触发change事件
+                                const changeEvent = new Event('change');
+                                checkbox.dispatchEvent(changeEvent);
                                 
                                 // 防止事件冒泡导致下拉菜单关闭
                                 e.stopPropagation();
@@ -288,6 +372,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
         });
+        
+        // 初始化所有复选框状态
+        updateFieldCheckboxes();
     }
 
     // Function to copy text to clipboard
@@ -414,23 +501,23 @@ document.addEventListener('DOMContentLoaded', function() {
     function getSelectedConferences() {
         const selected = [];
         
-        // 获取所有选中的会议
+        // 检查是否有任何会议被选中，无论领域状态
+        let anyConferenceSelected = false;
         for (const conf in selectedConferences) {
-            // 判断该会议是否在选中的领域中
-            let isInSelectedField = false;
-            const fields = ['CV', 'AI', 'ML', 'Other'];
-            
-            for (const field of fields) {
-                // 如果该领域被选中且该会议属于该领域
-                if (fieldsSelected[field] && conferencesData.categories[field] && 
-                    Object.keys(conferencesData.categories[field]).includes(conf)) {
-                    isInSelectedField = true;
-                    break;
-                }
+            if (selectedConferences[conf]) {
+                anyConferenceSelected = true;
+                break;
             }
-            
-            // 只有领域选中且会议选中才添加
-            if (isInSelectedField && selectedConferences[conf]) {
+        }
+        
+        // 如果没有任何会议被选中，返回空数组
+        if (!anyConferenceSelected) {
+            return [];
+        }
+        
+        // 获取所有选中的会议，无需检查领域状态
+        for (const conf in selectedConferences) {
+            if (selectedConferences[conf]) {
                 selected.push(conf);
             }
         }
@@ -447,8 +534,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // 获取过滤条件
                 const conferences = getSelectedConferences();
+                console.log('Selected conferences:', conferences);
+                
                 const startYear = startYearSelect ? startYearSelect.value : '2023';
                 const endYear = endYearSelect ? endYearSelect.value : '2025';
+                
+                // 如果没有选中任何会议，显示提示
+                if (conferences.length === 0) {
+                    showNoResultsMessage();
+                    alert('Please select at least one field or conference to search.');
+                    return;
+                }
                 
                 // Show loading status
                 if (loading) loading.style.display = 'block';
@@ -500,4 +596,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // 初始化页面
     fetchConferences(); // 获取会议数据
     showNoResultsMessage(); // 默认显示无结果消息
+
+    // Fix for references to non-existent elements
+    document.querySelectorAll('.papers-table').forEach(element => {
+        // This is just to ensure any potential references to papers-table don't cause errors
+        // We're not using tables anymore, but this prevents errors from old code
+    });
 }); 

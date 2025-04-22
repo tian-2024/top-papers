@@ -1,17 +1,3 @@
-[iclr/2025] AdvWeb: Controllable Black-box Attacks on VLM-powered Web Agents
-[iclr/2025] Can LVLMs Describe Videos like Humans? A Five-in-One Video Annotations Benchmark for Better Human-Machine Comparison
-[nips/2024] ConMe: Rethinking Evaluation of Compositional Reasoning for Modern VLMs
-[eccv/2024] Cross-Domain Semantic Segmentation on Inconsistent Taxonomy using VLMs
-[iclr/2025] Cross-modal Mitigation of Spurious Correlation for Prompt-tuning in VLMs with Causally Motivated Logic Alignment
-[iclr/2025] Dysca: A Dynamic and Scalable Benchmark for Evaluating Perception Ability of LVLMs
-[cvpr/2025] Ground-V: Teaching VLMs to Ground Complex Instructions in Pixels
-[iclr/2025] Guiding VLM Agents with Process Rewards at Inference Time for GUI Navigation
-[cvpr/2025] InteractVLM: 3D Interaction Reasoning from 2D Foundational Models
-[eccv/2024] MyVLM: Personalizing VLMs for User-Specific Queries
-[iclr/2025] On Inherent 3D Reasoning of VLMs in Indoor Scene Layout Design
-[icml/2024] RL-VLM-F: Reinforcement Learning from Vision Language Foundation Model Feedback
-[iclr/2025] VLMaterial: Procedural Material Generation with Large Vision-Language Models
-[iclr/2025] VLMGuard: Defending VLMs against Malicious Prompts via Unlabeled Data
-[cvpr/2025] VLMs-Guided Representation Distillation for Efficient Vision-Based Reinforcement Learning
+[aistats/2025] A Generalized Theory of Mixup for Structure-Preserving Synthetic Data
 
 用 markdown 表格，列出task，idea，论文标题，会议，年份。回答用中文，不需要搜索。把论文根据应用类型大概分类排序，在同一个表格里，不要分表。

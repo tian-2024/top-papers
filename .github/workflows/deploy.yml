@@ -73,7 +73,7 @@ jobs:
           document.addEventListener('DOMContentLoaded', function() {{
               const searchBtn = document.getElementById('search-btn');
               const topicInput = document.getElementById('topic-input');
-              const papersList = document.getElementById('papers-list');
+              const papersGrid = document.getElementById('papers-grid');
               const loading = document.getElementById('loading');
               
               // Initial paper data
@@ -83,47 +83,39 @@ jobs:
               // Function to display papers
               function displayPapers(papers) {{
                   // Clear previous papers
-                  papersList.innerHTML = '';
+                  const papersGrid = document.getElementById('papers-grid');
+                  if (!papersGrid) return;
                   
-                  // Show/hide table based on results
-                  const papersTable = document.getElementById('papers-table');
+                  papersGrid.innerHTML = '';
                   
-                  // Add papers
+                  // Show/hide container based on results
                   if (papers.length === 0) {{
-                      papersTable.style.display = 'none';
-                      const noResults = document.createElement('div');
-                      noResults.textContent = 'No papers found for this topic';
-                      noResults.style.textAlign = 'center';
-                      noResults.style.padding = '20px';
-                      papersList.parentNode.insertBefore(noResults, papersTable);
+                      papersGrid.style.display = 'none';
+                      const noResults = document.getElementById('no-results');
+                      if (noResults) noResults.style.display = 'block';
                   }} else {{
-                      papersTable.style.display = 'table';
+                      const noResults = document.getElementById('no-results');
+                      if (noResults) noResults.style.display = 'none';
+                      papersGrid.style.display = 'grid';
+                      
                       papers.forEach(paper => {{
-                          const row = document.createElement('tr');
+                          const card = document.createElement('div');
+                          card.className = 'paper-card';
                           
-                          // Conference cell
-                          const confCell = document.createElement('td');
-                          const confBadge = document.createElement('span');
-                          confBadge.className = 'conference-badge';
-                          confBadge.textContent = paper.conference.toUpperCase();
-                          confCell.appendChild(confBadge);
+                          card.innerHTML = `
+                              <div class="paper-title">${{paper.title}}</div>
+                              <div class="paper-info">
+                                  <div class="badges-container">
+                                      <span class="conference-badge">${{paper.conference}}</span>
+                                      <span class="year-badge">${{paper.year}}</span>
+                                  </div>
+                                  <button class="copy-button" title="Copy paper title to clipboard">
+                                      <i class="fas fa-copy"></i> Copy Title
+                                  </button>
+                              </div>
+                          `;
                           
-                          // Year cell
-                          const yearCell = document.createElement('td');
-                          yearCell.textContent = paper.year;
-                          
-                          // Title cell
-                          const titleCell = document.createElement('td');
-                          titleCell.className = 'paper-title';
-                          titleCell.textContent = paper.title;
-                          
-                          // Add cells to row
-                          row.appendChild(confCell);
-                          row.appendChild(yearCell);
-                          row.appendChild(titleCell);
-                          
-                          // Add row to table
-                          papersList.appendChild(row);
+                          papersGrid.appendChild(card);
                       }});
                   }}
               }}
@@ -166,9 +158,12 @@ jobs:
                   if (!topic) return;
                   
                   // Show loading
-                  loading.style.display = 'block';
-                  document.getElementById('papers-table').style.display = 'none';
-                  searchBtn.disabled = true;
+                  if (loading) loading.style.display = 'block';
+                  
+                  const papersGrid = document.getElementById('papers-grid');
+                  if (papersGrid) papersGrid.style.display = 'none';
+                  
+                  if (searchBtn) searchBtn.disabled = true;
                   
                   // Get papers for topic
                   const searchPromise = allPapersData ? 
@@ -182,17 +177,16 @@ jobs:
                       displayPapers(randomFilteredPapers.slice(0, 20));
                       
                       // Reset UI
-                      loading.style.display = 'none';
-                      searchBtn.disabled = false;
+                      if (loading) loading.style.display = 'none';
+                      if (searchBtn) searchBtn.disabled = false;
                   }});
               }}
               
               // Load all papers data on page load
               loadAllPapers();
               
-              // Hide initial loading and table 
-              loading.style.display = 'none';
-              document.getElementById('papers-table').style.display = 'none';
+              // Hide initial loading 
+              if (loading) loading.style.display = 'none';
               
               // Add click event to search button
               searchBtn.addEventListener('click', searchByTopic);
