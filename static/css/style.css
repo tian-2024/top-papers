@@ -228,7 +228,7 @@ button:disabled {
 }
 
 .conference-badge {
-    background-color: #f39c12;
+    background-color: #f39c12; /* 默认橙色 */
     color: white;
     padding: 4px 8px;
     border-radius: 4px;
@@ -236,13 +236,52 @@ button:disabled {
     font-weight: bold;
 }
 
+/* 根据领域设置会议标签颜色 */
+.conference-badge.cv-conference {
+    background-color: #3498db; /* CV领域蓝色 */
+}
+
+.conference-badge.ai-conference {
+    background-color: #9b59b6; /* AI领域紫色 */
+}
+
+.conference-badge.ml-conference {
+    background-color: #2ecc71; /* ML领域绿色 */
+}
+
+.conference-badge.other-conference {
+    background-color: #e74c3c; /* Other领域红色 */
+}
+
+/* 根据年份距离设置标签颜色 */
 .year-badge {
-    background-color: #ff9933; /* 橘黄色 */
     color: white;
     padding: 4px 8px;
     border-radius: 4px;
     font-size: 12px;
     font-weight: bold;
+    background-color: #ff9933; /* 默认橘黄色 */
+}
+
+.year-badge.current-year {
+    background-color: #ff9933; /* 当前年份 - 橘黄色 */
+}
+
+.year-badge.year-1 {
+    background-color: #ffad5c; /* 一年前 - 稍浅橘黄色 */
+}
+
+.year-badge.year-2 {
+    background-color: #ffc285; /* 两年前 - 更浅橘黄色 */
+}
+
+.year-badge.year-3 {
+    background-color: #ffd6ad; /* 三年前 - 非常浅橘黄色 */
+}
+
+.year-badge.year-old {
+    background-color: #ffe6d4; /* 更久远 - 几乎白色的橘黄色 */
+    color: #d26900; /* 文字改为深橙色以提高对比度 */
 }
 
 /* 为不同领域设置不同的颜色 */

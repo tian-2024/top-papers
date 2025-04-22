@@ -473,20 +473,54 @@ document.addEventListener('DOMContentLoaded', function() {
         if (noResults) noResults.style.display = 'none';
         if (papersGrid) papersGrid.style.display = 'grid';
         
+        // 获取当前年份
+        const currentYear = new Date().getFullYear();
+        
+        // 定义会议所属领域的映射
+        const conferenceFieldMap = {
+            // CV领域
+            'cvpr': 'cv', 'iccv': 'cv', 'eccv': 'cv', 
+            // ML领域
+            'icml': 'ml', 'nips': 'ml', 'iclr': 'ml', 'neurips': 'ml',
+            // AI领域 
+            'aaai': 'ai', 'ijcai': 'ai', 'acl': 'ai', 'naacl': 'ai', 'emnlp': 'ai',
+            // 默认为Other
+        };
+        
         papersGrid.innerHTML = '';
         papers.forEach(paper => {
             const card = document.createElement('div');
             card.className = 'paper-card';
             
+            // 确定会议所属领域
+            const confLower = paper.conference.toLowerCase();
+            const field = conferenceFieldMap[confLower] || 'other';
+            const conferenceClass = `${field}-conference`;
+            
+            // 确定年份类别
+            const paperYear = parseInt(paper.year);
+            const yearDiff = currentYear - paperYear;
+            let yearClass = 'current-year';
+            
+            if (yearDiff === 1) {
+                yearClass = 'year-1';
+            } else if (yearDiff === 2) {
+                yearClass = 'year-2';
+            } else if (yearDiff === 3) {
+                yearClass = 'year-3';
+            } else if (yearDiff > 3) {
+                yearClass = 'year-old';
+            }
+            
             card.innerHTML = `
                 <div class="paper-title">${paper.title}</div>
                 <div class="paper-info">
                     <div class="badges-container">
-                        <span class="conference-badge">${paper.conference}</span>
-                        <span class="year-badge">${paper.year}</span>
+                        <span class="conference-badge ${conferenceClass}">${paper.conference}</span>
+                        <span class="year-badge ${yearClass}">${paper.year}</span>
                     </div>
                     <button class="copy-button" title="Copy paper title to clipboard">
-                        <i class="fas fa-copy"></i> Copy Title
+                        <i class="fas fa-copy"></i> Copy
                     </button>
                 </div>
             `;
