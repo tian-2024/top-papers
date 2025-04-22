@@ -103,11 +103,11 @@ jobs:
                           card.className = 'paper-card';
                           
                           card.innerHTML = `
-                              <div class="paper-title">${{paper.title}}</div>
+                              <div class="paper-title">\${ paper.title }</div>
                               <div class="paper-info">
                                   <div class="badges-container">
-                                      <span class="conference-badge">${{paper.conference}}</span>
-                                      <span class="year-badge">${{paper.year}}</span>
+                                      <span class="conference-badge">\${ paper.conference }</span>
+                                      <span class="year-badge">\${ paper.year }</span>
                                   </div>
                                   <button class="copy-button" title="Copy paper title to clipboard">
                                       <i class="fas fa-copy"></i> Copy Title
