@@ -1,52 +1,17 @@
-[cvpr/2024] 3DiffTection: 3D Object Detection with Geometry-Aware Diffusion Features
-[cvpr/2025] 4Real-Video:  Learning Generalizable Photo-realistic 4D Video Diffusion
-[cvpr/2024] ACT-Diffusion: Efficient Adversarial Consistency Training for One-step Diffusion Models
-[cvpr/2025] AffordDP: Generalizable Diffusion Policy with Transferable Affordance
-[cvpr/2025] Align-A-Video: Deterministic Reward Tuning of Image Diffusion Models for Consistent Video Editing
-[cvpr/2025] AR-Diffusion: Asynchronous Video Generation with Auto-Regressive Diffusion
-[cvpr/2025] Autoregressive Distillation of Diffusion Transformers
-[cvpr/2025] BEVDiffuser: Plug-and-Play Diffusion Model for BEV Denoising with Ground-Truth Guidance
-[cvpr/2025] BlockDance: Reuse Structurally Similar Spatio-Temporal Features to Accelerate Diffusion Transformers
-[cvpr/2024] CDFormer: When Degradation Prediction Embraces Diffusion Model for Blind Image Super-Resolution
-[cvpr/2025] Decouple Distortion from Perception: Region Adaptive Diffusion for Extreme-low Bitrate Perception Image Compression
-[cvpr/2025] Decoupling Training-Free Guided Diffusion by ADMM
-[cvpr/2024] Diffusion Models Without Attention
-[cvpr/2025] Diffusion Self-Distillation for Zero-Shot Customized Image Generation
-[cvpr/2024] DiffusionMTL: Learning Multi-Task Denoising Diffusion Model from Partially Annotated Data
-[cvpr/2025] Distribution Prototype Diffusion Learning for Open-set Supervised Anomaly Detection
-[cvpr/2024] DragDiffusion: Harnessing Diffusion Models for Interactive Point-based Image Editing
-[cvpr/2025] Dual Diffusion for Unified Image Generation and Understanding
-[cvpr/2025] EdgeDiff: Edge-aware Diffusion Network for Building Reconstruction from Point Clouds
-[cvpr/2024] Egocentric Whole-Body Motion Capture with FisheyeViT and Diffusion-Based Motion Refinement
-[cvpr/2024] FaceTalk: Audio-Driven Motion Diffusion for Neural Parametric Head Models
-[cvpr/2025] FedBiP: Heterogeneous One-Shot Federated Learning with Personalized Latent Diffusion Models
-[cvpr/2024] Fourier Priors-Guided Diffusion for Zero-Shot Joint Low-Light Enhancement and Deblurring
-[cvpr/2025] FreeScene: Mixed Graph Diffusion for 3D Scene Synthesis from Free Prompts
-[cvpr/2022] Generating High Fidelity Data from Low-density Regions using Diffusion Models
-[cvpr/2025] Harnessing Frequency Spectrum Insights for Image Copyright Protection Against Diffusion Models
-[cvpr/2024] HIR-Diff: Unsupervised Hyperspectral Image Restoration Via Improved Diffusion Models
-[cvpr/2024] Layout-Agnostic Scene Text Image Synthesis with Diffusion Models
-[cvpr/2025] Material Anything: Generating Materials for Any 3D Object via Diffusion
-[cvpr/2024] MedM2G: Unifying Medical Multi-Modal Generation via Cross-Guided Diffusion with Visual Invariant
-[cvpr/2025] Medusa: A Multi-Scale High-order Contrastive Dual-Diffusion Approach for Multi-View Clustering
-[cvpr/2025] MExD: An Expert-Infused Diffusion Model for Whole-Slide Image Classification
-[cvpr/2025] MixerMDM: Learnable Mixing of Human Motion Diffusion Models
-[cvpr/2023] NULL-Text Inversion for Editing Real Images Using Guided Diffusion Models
-[cvpr/2024] Prompting Hard or Hardly Prompting: Prompt Inversion for Text-to-Image Diffusion Models
-[cvpr/2025] Reconciling Stochastic and Deterministic Strategies for Zero-shot Image Restoration using Diffusion Model in Dual
-[cvpr/2025] Rectified Diffusion Guidance for Conditional Generation
-[cvpr/2024] Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation
-[cvpr/2025] S$^3$-Face: SSS-Compliant Facial Reflectance Estimation via Diffusion Priors
-[cvpr/2025] Scaling Down Text Encoders of Text-to-Image Diffusion Models
-[cvpr/2024] SDDGR: Stable Diffusion-based Deep Generative Replay for Class Incremental Object Detection
-[cvpr/2025] Sharp-It: A Multi-view to Multi-view Diffusion Model for 3D Synthesis and Manipulation
-[cvpr/2025] Six-CD: Benchmarking Concept Removals for Benign Text-to-image Diffusion Models
-[cvpr/2024] Structure-Guided Adversarial Training of Diffusion Models
-[cvpr/2025] Towards Better Alignment: Training Diffusion Models with Reinforcement Learning Against Sparse Rewards
-[cvpr/2025] Towards Precise Embodied Dialogue Localization via Causality Guided Diffusion
-[cvpr/2023] Trace and Pace: Controllable Pedestrian Animation via Guided Trajectory Diffusion
-[cvpr/2024] Unmixing Diffusion for Self-Supervised Hyperspectral Image Denoising
-[cvpr/2023] VectorFusion: Text-to-SVG by Abstracting Pixel-Based Diffusion Models
-[cvpr/2025] VLOGGER: Multimodal Diffusion for Embodied Avatar Synthesis
+[iclr/2025] AdvWeb: Controllable Black-box Attacks on VLM-powered Web Agents
+[iclr/2025] Can LVLMs Describe Videos like Humans? A Five-in-One Video Annotations Benchmark for Better Human-Machine Comparison
+[nips/2024] ConMe: Rethinking Evaluation of Compositional Reasoning for Modern VLMs
+[eccv/2024] Cross-Domain Semantic Segmentation on Inconsistent Taxonomy using VLMs
+[iclr/2025] Cross-modal Mitigation of Spurious Correlation for Prompt-tuning in VLMs with Causally Motivated Logic Alignment
+[iclr/2025] Dysca: A Dynamic and Scalable Benchmark for Evaluating Perception Ability of LVLMs
+[cvpr/2025] Ground-V: Teaching VLMs to Ground Complex Instructions in Pixels
+[iclr/2025] Guiding VLM Agents with Process Rewards at Inference Time for GUI Navigation
+[cvpr/2025] InteractVLM: 3D Interaction Reasoning from 2D Foundational Models
+[eccv/2024] MyVLM: Personalizing VLMs for User-Specific Queries
+[iclr/2025] On Inherent 3D Reasoning of VLMs in Indoor Scene Layout Design
+[icml/2024] RL-VLM-F: Reinforcement Learning from Vision Language Foundation Model Feedback
+[iclr/2025] VLMaterial: Procedural Material Generation with Large Vision-Language Models
+[iclr/2025] VLMGuard: Defending VLMs against Malicious Prompts via Unlabeled Data
+[cvpr/2025] VLMs-Guided Representation Distillation for Efficient Vision-Based Reinforcement Learning
 
 用 markdown 表格，列出task，idea，论文标题，会议，年份。回答用中文，不需要搜索。把论文根据应用类型大概分类排序，在同一个表格里，不要分表。

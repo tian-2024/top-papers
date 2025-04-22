@@ -48,7 +48,8 @@ def process_paper_file(input_file, output_file, num_papers=10, topic_pool=None):
         )
 
 
-def select_random_papers(papers_dir, output_dir, num_papers=10, topic_pool=None):
+def select_random_papers(papers_dir, output_dir, num_papers=10, topic_pool=None, 
+                         conference_filter=None, year_range=None):
     """从papers目录下的所有会议和年份文件中总共筛选出N个符合条件的论文
 
     Args:
@@ -56,6 +57,8 @@ def select_random_papers(papers_dir, output_dir, num_papers=10, topic_pool=None)
         output_dir: 输出目录路径
         num_papers: 总共要选择的论文数量
         topic_pool: 主题筛选池
+        conference_filter: 会议过滤列表，只包含列表中的会议
+        year_range: 年份范围列表，如['2023','2024','2025']
     """
     # 确保输出目录存在
     os.makedirs(output_dir, exist_ok=True)
@@ -77,10 +80,19 @@ def select_random_papers(papers_dir, output_dir, num_papers=10, topic_pool=None)
         # 确保是目录而不是文件
         if not os.path.isdir(conf_path):
             continue
+            
+        # 如果有会议过滤器，检查当前会议是否在过滤列表中
+        if conference_filter and conf_dir not in conference_filter:
+            continue
 
         # 遍历会议目录下的所有年份文件
         for year_file in os.listdir(conf_path):
             if not year_file.endswith(".txt"):
+                continue
+                
+            # 获取年份并检查是否符合年份范围要求
+            year = year_file.replace(".txt", "")
+            if year_range and year not in year_range:
                 continue
 
             input_file = os.path.join(conf_path, year_file)
@@ -180,8 +192,14 @@ def select_random_papers(papers_dir, output_dir, num_papers=10, topic_pool=None)
         f.write(f"\n{conclusion}\n")
         
     if topic_pool and len(topic_pool) > 0:
+        filter_message = f"包含主题 {topic_pool} 的"
+        if conference_filter:
+            filter_message += f"，并且在会议 {conference_filter} 中的"
+        if year_range:
+            filter_message += f"，并且在年份 {year_range} 中的"
+        
         print(
-            f"已成功从所有会议和年份中筛选出包含主题 {topic_pool} 的{len(selected_papers)}篇论文并写入{output_file}"
+            f"已成功从所有会议和年份中筛选出{filter_message}{len(selected_papers)}篇论文并写入{output_file}"
         )
         print(f"论文分布统计已写入{statistics_file}")
     else:

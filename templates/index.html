@@ -8,38 +8,113 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="theme-toggle">
-        <span class="toggle-icon">🌙</span>
-        <label class="toggle-switch">
-            <input type="checkbox" id="theme-toggle-input">
-            <span class="toggle-slider"></span>
-        </label>
-    </div>
-
     <div class="container">
         <header>
-            <h1>Top Research Papers</h1>
-            <div class="topic-input-container">
-                <label for="topic-input">Enter Topic:</label>
-                <input type="text" id="topic-input" placeholder="Enter topic keywords">
-                <button id="search-btn">Search</button>
+            <div class="title-container">
+                <h1>Top Research Papers</h1>
+                <div class="theme-toggle">
+                    <span class="toggle-icon">🌙</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="theme-toggle-input">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="search-container">
+                <div class="search-row">
+                    <div class="search-input-container">
+                        <input type="text" id="topic-input" placeholder="Enter topic keywords">
+                        <button id="search-btn">Search</button>
+                    </div>
+                    
+                    <div class="year-range">
+                        <span>Year:</span>
+                        <select id="start-year">
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023" selected>2023</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                        </select>
+                        <span>-</span>
+                        <select id="end-year">
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                            <option value="2025" selected>2025</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="filters-row">
+                    <div class="topic-tags">
+                        <button class="topic-tag" data-topic="diffusion">diffusion</button>
+                        <button class="topic-tag" data-topic="vlm">vlm</button>
+                        <button class="topic-tag" data-topic="mixup">mixup</button>
+                    </div>
+                    
+                    <div class="fields-container">
+                        <div class="field-filters-row">
+                            <div class="field-dropdown">
+                                <div class="field-label dropdown-toggle" data-field="CV">
+                                    <input type="checkbox" class="field-main-checkbox" data-field="CV" checked>
+                                    CV <i class="fas fa-caret-down"></i>
+                                </div>
+                                <div class="dropdown-content" id="dropdown-CV">
+                                    <!-- CV会议选项将动态添加 -->
+                                </div>
+                            </div>
+                            
+                            <div class="field-dropdown">
+                                <div class="field-label dropdown-toggle" data-field="AI">
+                                    <input type="checkbox" class="field-main-checkbox" data-field="AI" checked>
+                                    AI <i class="fas fa-caret-down"></i>
+                                </div>
+                                <div class="dropdown-content" id="dropdown-AI">
+                                    <!-- AI会议选项将动态添加 -->
+                                </div>
+                            </div>
+                            
+                            <div class="field-dropdown">
+                                <div class="field-label dropdown-toggle" data-field="ML">
+                                    <input type="checkbox" class="field-main-checkbox" data-field="ML" checked>
+                                    ML <i class="fas fa-caret-down"></i>
+                                </div>
+                                <div class="dropdown-content" id="dropdown-ML">
+                                    <!-- ML会议选项将动态添加 -->
+                                </div>
+                            </div>
+                            
+                            <div class="field-dropdown">
+                                <div class="field-label dropdown-toggle" data-field="Other">
+                                    <input type="checkbox" class="field-main-checkbox" data-field="Other" checked>
+                                    Other <i class="fas fa-caret-down"></i>
+                                </div>
+                                <div class="dropdown-content" id="dropdown-Other">
+                                    <!-- 其他会议选项将动态添加 -->
+                                </div>
+                            </div>
+                            
+                            <button id="select-all-btn" class="select-all-btn" data-selected="true">Deselect All</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
         
         <div class="paper-container">
-            <div id="loading" class="loading">Loading papers...</div>
-            <table id="papers-table" class="papers-table">
-                <thead>
-                    <tr>
-                        <th>Conference</th>
-                        <th>Year</th>
-                        <th>Title</th>
-                    </tr>
-                </thead>
-                <tbody id="papers-list" class="papers-list">
-                    <!-- Paper rows will be inserted here -->
-                </tbody>
-            </table>
+            <div id="loading" class="loading" style="display: none;">Loading papers...</div>
+            <div id="no-results" class="no-results">
+                Please select a topic and search criteria to find papers.
+            </div>
+            <div id="papers-grid" class="papers-grid">
+                <!-- Paper cards will be inserted here -->
+            </div>
         </div>
     </div>
 
