@@ -260,57 +260,61 @@ button:disabled {
     border-radius: 4px;
     font-size: 12px;
     font-weight: bold;
-    background-color: #ff9933; /* 默认橘黄色 */
+    background-color: #ff9933; /* Default orange */
 }
 
 .year-badge.current-year {
-    background-color: #ff9933; /* 当前年份 - 橘黄色 */
+    background-color: #ff9933; /* 2025 - brightest orange */
 }
 
 .year-badge.year-1 {
-    background-color: #ffad5c; /* 一年前 - 稍浅橘黄色 */
+    background-color: #ffab4c; /* 2024 - slightly lighter */
 }
 
 .year-badge.year-2 {
-    background-color: #ffc285; /* 两年前 - 更浅橘黄色 */
+    background-color: #ffbc66; /* 2023 - lighter */
 }
 
 .year-badge.year-3 {
-    background-color: #ffd6ad; /* 三年前 - 非常浅橘黄色 */
+    background-color: #ffcd80; /* 2022 - even lighter */
+}
+
+.year-badge.year-4 {
+    background-color: #ffddaa; /* 2021 - very light */
 }
 
 .year-badge.year-old {
-    background-color: #ffe6d4; /* 更久远 - 几乎白色的橘黄色 */
-    color: #d26900; /* 文字改为深橙色以提高对比度 */
+    background-color: #ffeed4; /* 2020 and earlier - lightest */
+    color: #d26900; /* Darker text for contrast */
 }
 
 /* 为不同领域设置不同的颜色 */
 .field-dropdown[data-field="CV"] .field-label,
 .dropdown-toggle[data-field="CV"] {
-    background-color: #3498db; /* 蓝色 */
-    border-color: #2980b9;
-    color: white;
+    background-color: #a8e6cf; /* Light green */
+    border-color: #8cd9bd;
+    color: #333;
 }
 
 .field-dropdown[data-field="AI"] .field-label,
 .dropdown-toggle[data-field="AI"] {
-    background-color: #9b59b6; /* 紫色 */
-    border-color: #8e44ad;
-    color: white;
+    background-color: #ffb3b3; /* Light red */
+    border-color: #ff9a9a;
+    color: #333;
 }
 
 .field-dropdown[data-field="ML"] .field-label,
 .dropdown-toggle[data-field="ML"] {
-    background-color: #2ecc71; /* 绿色 */
-    border-color: #27ae60;
-    color: white;
+    background-color: #d9b3ff; /* Light purple */
+    border-color: #c693ff;
+    color: #333;
 }
 
 .field-dropdown[data-field="Other"] .field-label,
 .dropdown-toggle[data-field="Other"] {
-    background-color: #e74c3c; /* 红色 */
-    border-color: #c0392b;
-    color: white;
+    background-color: #d4b796; /* Light brown */
+    border-color: #c1a683;
+    color: #333;
 }
 
 .field-dropdown:hover .field-label {
@@ -333,26 +337,30 @@ button:disabled {
 /* 暗黑模式对应的修改 */
 .dark-mode .field-dropdown[data-field="CV"] .field-label,
 .dark-mode .dropdown-toggle[data-field="CV"] {
-    background-color: #2980b9;
-    border-color: #2472a4;
+    background-color: #7dc6af; /* Darker version of light green */
+    border-color: #68b99e;
+    color: #fff;
 }
 
 .dark-mode .field-dropdown[data-field="AI"] .field-label,
 .dark-mode .dropdown-toggle[data-field="AI"] {
-    background-color: #8e44ad;
-    border-color: #703688;
+    background-color: #e09999; /* Darker version of light red */
+    border-color: #d18585;
+    color: #fff;
 }
 
 .dark-mode .field-dropdown[data-field="ML"] .field-label,
 .dark-mode .dropdown-toggle[data-field="ML"] {
-    background-color: #27ae60;
-    border-color: #228b4c;
+    background-color: #b990e0; /* Darker version of light purple */
+    border-color: #a97ad3;
+    color: #fff;
 }
 
 .dark-mode .field-dropdown[data-field="Other"] .field-label,
 .dark-mode .dropdown-toggle[data-field="Other"] {
-    background-color: #c0392b;
-    border-color: #a33025;
+    background-color: #b69e7f; /* Darker version of light brown */
+    border-color: #a88e6e;
+    color: #fff;
 }
 
 footer {
@@ -579,8 +587,8 @@ footer {
 }
 
 .topic-tag {
-    background-color: #3498db;
-    color: white;
+    background-color: #a8d8ff; /* Light blue */
+    color: #333;
     border: none;
     padding: 6px 12px;
     border-radius: 20px;
@@ -590,7 +598,7 @@ footer {
 }
 
 .topic-tag:hover {
-    background-color: #2980b9;
+    background-color: #8bc4ff; /* Slightly darker on hover */
     transform: translateY(-2px);
 }
 
@@ -693,11 +701,12 @@ footer {
 }
 
 .dark-mode .topic-tag {
-    background-color: #2980b9;
+    background-color: #5a9bd5; /* Darker version of light blue */
+    color: #fff;
 }
 
 .dark-mode .topic-tag:hover {
-    background-color: #3498db;
+    background-color: #4a89c7; /* Darker on hover */
 }
 
 /* 搜索行和领域过滤器布局 */
@@ -752,11 +761,11 @@ footer {
 }
 
 .recent-years-btn {
-    background-color: #3498db;
+    background-color: #3498db; /* Blue - same as search button */
     color: white;
     border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
+    padding: 8px 15px;
+    border-radius: 4px;
     cursor: pointer;
     margin-left: 10px;
     font-size: 14px;
@@ -764,7 +773,7 @@ footer {
 }
 
 .recent-years-btn:hover {
-    background-color: #2980b9;
+    background-color: #2980b9; /* Darker blue on hover */
 }
 
 .dark-mode .recent-years-btn {
@@ -1157,4 +1166,28 @@ footer {
 
 .dark-mode .github-link:hover {
     color: #3498db;
+}
+
+/* Search button styling */
+.search-input-container button {
+    background-color: #3498db; /* Blue */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-input-container button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+.dark-mode .search-input-container button {
+    background-color: #3498db;
+}
+
+.dark-mode .search-input-container button:hover {
+    background-color: #2980b9;
 } 

@@ -464,77 +464,86 @@ document.addEventListener('DOMContentLoaded', function() {
     function displayPapers(papers) {
         if (!papersGrid) return;
         
-        if (papers.length === 0) {
-            showNoResultsMessage();
-            return;
-        }
-        
-        if (loading) loading.style.display = 'none';
-        if (noResults) noResults.style.display = 'none';
-        if (papersGrid) papersGrid.style.display = 'grid';
-        
-        // 获取当前年份
-        const currentYear = new Date().getFullYear();
-        
-        // 定义会议所属领域的映射
-        const conferenceFieldMap = {
-            // CV领域
-            'cvpr': 'cv', 'iccv': 'cv', 'eccv': 'cv', 
-            // ML领域
-            'icml': 'ml', 'nips': 'ml', 'iclr': 'ml', 'neurips': 'ml',
-            // AI领域 
-            'aaai': 'ai', 'ijcai': 'ai', 'acl': 'ai', 'naacl': 'ai', 'emnlp': 'ai',
-            // 默认为Other
-        };
-        
         papersGrid.innerHTML = '';
+        papersGrid.style.display = 'grid';
+        
+        if (noResults) noResults.style.display = 'none';
+        
         papers.forEach(paper => {
             const card = document.createElement('div');
             card.className = 'paper-card';
             
-            // 确定会议所属领域
-            const confLower = paper.conference.toLowerCase();
-            const field = conferenceFieldMap[confLower] || 'other';
-            const conferenceClass = `${field}-conference`;
+            // 创建论文标题
+            const title = document.createElement('div');
+            title.className = 'paper-title';
+            title.textContent = paper.title;
             
-            // 确定年份类别
-            const paperYear = parseInt(paper.year);
-            const yearDiff = currentYear - paperYear;
-            let yearClass = 'current-year';
+            // 创建徽章容器
+            const badgesContainer = document.createElement('div');
+            badgesContainer.className = 'badges-container';
             
-            if (yearDiff === 1) {
-                yearClass = 'year-1';
-            } else if (yearDiff === 2) {
-                yearClass = 'year-2';
-            } else if (yearDiff === 3) {
-                yearClass = 'year-3';
-            } else if (yearDiff > 3) {
-                yearClass = 'year-old';
+            // 会议徽章
+            const conferenceBadge = document.createElement('span');
+            conferenceBadge.className = 'conference-badge';
+            conferenceBadge.textContent = paper.conference;
+            
+            // 根据会议添加特定颜色类
+            if (conferencesData[paper.conference]) {
+                const category = conferencesData[paper.conference].category;
+                conferenceBadge.classList.add(`${category.toLowerCase()}-conference`);
             }
             
-            card.innerHTML = `
-                <div class="paper-title">${paper.title}</div>
-                <div class="paper-info">
-                    <div class="badges-container">
-                        <span class="conference-badge ${conferenceClass}">${paper.conference}</span>
-                        <span class="year-badge ${yearClass}">${paper.year}</span>
-                    </div>
-                    <button class="copy-button" title="Copy paper title to clipboard">
-                        <i class="fas fa-copy"></i> Copy
-                    </button>
-                </div>
-            `;
+            // 年份徽章
+            const yearBadge = document.createElement('span');
+            yearBadge.className = 'year-badge';
+            yearBadge.textContent = paper.year;
             
-            // Add copy functionality
-            const copyButton = card.querySelector('.copy-button');
-            const paperTitle = paper.title; // Store in a local variable for closure
+            // 根据年份添加特定颜色类
+            const currentYear = new Date().getFullYear();
+            const paperYear = parseInt(paper.year);
             
-            copyButton.addEventListener('click', function(e) {
-                e.preventDefault(); // Prevent any default button behavior
-                e.stopPropagation(); // Prevent event bubbling
-                handleCopyButtonClick(this, paperTitle);
+            if (paperYear === currentYear + 1) {
+                yearBadge.classList.add('current-year'); // 2025
+            } else if (paperYear === currentYear) {
+                yearBadge.classList.add('year-1'); // 2024
+            } else if (paperYear === currentYear - 1) {
+                yearBadge.classList.add('year-2'); // 2023
+            } else if (paperYear === currentYear - 2) {
+                yearBadge.classList.add('year-3'); // 2022
+            } else if (paperYear === currentYear - 3) {
+                yearBadge.classList.add('year-4'); // 2021
+            } else {
+                yearBadge.classList.add('year-old'); // 2020 and earlier
+            }
+            
+            // 添加复制按钮容器
+            const copyButtonContainer = document.createElement('div');
+            copyButtonContainer.className = 'copy-button-container';
+            
+            // 添加复制按钮
+            const copyButton = document.createElement('button');
+            copyButton.className = 'copy-button';
+            copyButton.innerHTML = '<i class="fas fa-copy"></i>';
+            copyButton.title = 'Copy Title';
+            
+            // 添加复制功能
+            copyButton.addEventListener('click', function() {
+                handleCopyButtonClick(this, paper.title);
             });
             
+            // 将元素添加到DOM
+            copyButtonContainer.appendChild(copyButton);
+            badgesContainer.appendChild(conferenceBadge);
+            badgesContainer.appendChild(yearBadge);
+            
+            card.appendChild(title);
+            
+            const paperInfo = document.createElement('div');
+            paperInfo.className = 'paper-info';
+            paperInfo.appendChild(badgesContainer);
+            paperInfo.appendChild(copyButtonContainer);
+            
+            card.appendChild(paperInfo);
             papersGrid.appendChild(card);
         });
     }
@@ -753,16 +762,17 @@ document.addEventListener('DOMContentLoaded', function() {
         startYearSelect.dispatchEvent(new Event('change'));
         endYearSelect.dispatchEvent(new Event('change'));
         
+        // 不再自动触发搜索
         // 如果存在搜索按钮，自动触发搜索
-        if (document.getElementById('search-btn')) {
-            document.getElementById('search-btn').click();
-        }
+        // if (document.getElementById('search-btn')) {
+        //     document.getElementById('search-btn').click();
+        // }
     }
 
     // 更新年份选项
     updateYearOptions();
     
-    // 为"recent 3 years"按钮添加点击事件
+    // 为"recent years"按钮添加点击事件
     const recentYearsBtn = document.getElementById('recent-years-btn');
     if (recentYearsBtn) {
         recentYearsBtn.addEventListener('click', function(e) {
