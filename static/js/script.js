@@ -16,6 +16,53 @@ document.addEventListener('DOMContentLoaded', function() {
     const batchSizeSlider = document.getElementById('batch-size');
     const batchSizeValue = document.getElementById('batch-size-value');
     
+    // Initialize sidebar resize functionality
+    const resizeHandle = document.getElementById('resize-handle');
+    const sidebar = document.querySelector('.sidebar');
+    const paperContainer = document.querySelector('.paper-container');
+    let isResizing = false;
+    
+    if (resizeHandle && sidebar) {
+        resizeHandle.addEventListener('mousedown', (e) => {
+            isResizing = true;
+            document.body.style.cursor = 'col-resize';
+            
+            // Prevent text selection during resize
+            document.addEventListener('selectstart', (e) => {
+                e.preventDefault();
+            });
+        });
+        
+        document.addEventListener('mousemove', (e) => {
+            if (!isResizing) return;
+            
+            // Calculate the new width
+            const containerRect = document.querySelector('.main-content').getBoundingClientRect();
+            const newWidth = Math.max(200, containerRect.right - e.clientX);
+            
+            // Apply the new width
+            sidebar.style.width = `${newWidth}px`;
+        });
+        
+        document.addEventListener('mouseup', () => {
+            if (isResizing) {
+                isResizing = false;
+                document.body.style.cursor = 'default';
+                
+                // Save the sidebar width preference in localStorage
+                if (sidebar.style.width) {
+                    localStorage.setItem('sidebarWidth', sidebar.style.width);
+                }
+            }
+        });
+        
+        // Restore sidebar width from localStorage if available
+        const savedWidth = localStorage.getItem('sidebarWidth');
+        if (savedWidth) {
+            sidebar.style.width = savedWidth;
+        }
+    }
+    
     // Update batch size value display when slider moves
     if (batchSizeSlider && batchSizeValue) {
         batchSizeSlider.addEventListener('input', function() {

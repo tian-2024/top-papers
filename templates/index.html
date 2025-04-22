@@ -6,6 +6,30 @@
     <title>Top AI Papers</title>
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .main-content {
+            display: flex;
+            position: relative;
+        }
+        .resize-handle {
+            width: 8px;
+            background-color: #888;
+            cursor: col-resize;
+            opacity: 0.2;
+            transition: opacity 0.3s;
+        }
+        .resize-handle:hover {
+            opacity: 0.5;
+        }
+        .paper-container {
+            flex: 1;
+            overflow: auto;
+        }
+        .sidebar {
+            width: 250px;
+            flex-shrink: 0;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -20,6 +44,9 @@
                     <!-- Paper cards will be inserted here -->
                 </div>
             </div>
+            
+            <!-- Resize handle -->
+            <div id="resize-handle" class="resize-handle"></div>
             
             <!-- Right column: Sidebar with search controls -->
             <div class="sidebar">
