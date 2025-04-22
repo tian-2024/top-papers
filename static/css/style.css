@@ -314,4 +314,23 @@ input:checked + .toggle-slider:before {
 .toggle-icon {
     margin-right: 8px;
     font-size: 18px;
+}
+
+/* No Results Message Styling */
+.no-results {
+    text-align: center;
+    height: 100px;
+}
+
+.no-results td {
+    font-size: 1.2em;
+    color: var(--text-color);
+    background-color: var(--container-bg);
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.dark-mode .no-results td {
+    color: var(--dark-text-color);
+    background-color: var(--dark-container-bg);
 } 

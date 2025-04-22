@@ -1,0 +1,1294 @@
+2.5D Visual Sound
+3D Appearance Super-Resolution With Deep Learning
+3D Guided Fine-Grained Face Manipulation
+3D Hand Shape and Pose Estimation From a Single RGB Image
+3D Hand Shape and Pose From Images in the Wild
+3D Human Pose Estimation in Video With Temporal Convolutions and Semi-Supervised Training
+3D Local Features for Direct Pairwise Registration
+3D Motion Decomposition for RGBD Future Dynamic Scene Synthesis
+3D Point Capsule Networks
+3D Shape Reconstruction From Images in the Frequency Domain
+3D-SIS: 3D Semantic Instance Segmentation of RGB-D Scans
+3DN: 3D Deformation Network
+4D Spatio-Temporal ConvNets: Minkowski Convolutional Neural Networks
+A Bayesian Perspective on the Deep Image Prior
+A Compact Embedding for Facial Expression Similarity
+A Content Transformation Block for Image Style Transfer
+A Convex Relaxation for Multi-Graph Matching
+A Cross-Season Correspondence Dataset for Robust Semantic Segmentation
+A Dataset and Benchmark for Large-Scale Multi-Modal Face Anti-Spoofing
+A Decomposition Algorithm for the Sparse Generalized Eigenvalue Problem
+A Flexible Convolutional Solver for Fast Style Transfers
+A General and Adaptive Robust Loss Function
+A Generative Adversarial Density Estimator
+A Generative Appearance Model for End-To-End Video Object Segmentation
+A Kernelized Manifold Mapping to Diminish the Effect of Adversarial Perturbations
+A Late Fusion CNN for Digital Matting
+A Local Block Coordinate Descent Algorithm for the CSC Model
+A Main/Subsidiary Network Framework for Simplifying Binary Neural Networks
+A Mutual Learning Method for Salient Object Detection With Intertwined Multi-Supervision
+A Neural Network Based on SPD Manifold Learning for Skeleton-Based Hand Gesture Recognition
+A Neural Temporal Model for Human Motion Prediction
+A Neurobiological Evaluation Metric for Neural Network Model Search
+A Parametric Top-View Representation of Complex Road Scenes
+A Perceptual Prediction Framework for Self Supervised Event Segmentation
+A Poisson-Gaussian Denoising Dataset With Real Fluorescence Microscopy Images
+A Relation-Augmented Fully Convolutional Network for Semantic Segmentation in Aerial Scenes
+A Robust Local Spectral Descriptor for Matching Non-Rigid Shapes With Incompatible Shape Structures
+A Simple Baseline for Audio-Visual Scene-Aware Dialog
+A Simple Pooling-Based Design for Real-Time Salient Object Detection
+A Skeleton-Bridged Deep Learning Approach for Generating Meshes of Complex Topologies From Single RGB Images
+A Structured Model for Action Detection
+A Style-Based Generator Architecture for Generative Adversarial Networks
+A Sufficient Condition for Convergences of Adam and RMSProp
+A Theoretically Sound Upper Bound on the Triplet Loss for Improving the Efficiency of Deep Distance Metric Learning
+A Theory of Fermat Paths for Non-Line-Of-Sight Shape Reconstruction
+A Variational Auto-Encoder Model for Stochastic Point Processes
+A Variational EM Framework With Adaptive Edge Selection for Blind Motion Deblurring
+A Variational Pan-Sharpening With Local Gradient Constraints
+A-CNN: Annularly Convolutional Neural Networks on Point Clouds
+AANet: Attribute Attention Network for Person Re-Identifications
+ABC: A Big CAD Model Dataset for Geometric Deep Learning
+ADCrowdNet: An Attention-Injective Deformable Convolutional Network for Crowd Understanding
+ADVENT: Adversarial Entropy Minimization for Domain Adaptation in Semantic Segmentation
+AE2-Nets: Autoencoder in Autoencoder Networks
+AET vs. AED: Unsupervised Representation Learning by Auto-Encoding Transformations Rather Than Data
+AIRD: Adversarial Learning Framework for Image Repurposing Detection
+AOGNets: Compositional Grammatical Architectures for Deep Learning
+APDrawingGAN: Generating Artistic Portrait Drawings From Face Photos With Hierarchical GANs
+ATOM: Accurate Tracking by Overlap Maximization
+Accel: A Corrective Fusion Network for Efficient Semantic Segmentation on Video
+Accelerating Convolutional Neural Networks via Activation Map Compression
+Acoustic Non-Line-Of-Sight Imaging
+Action Recognition From Single Timestamp Supervision in Untrimmed Videos
+Action4D: Online Action Recognition in the Crowd and Clutter
+Actional-Structural Graph Convolutional Networks for Skeleton-Based Action Recognition
+Actively Seeking and Learning From Live Data
+Activity Driven Weakly Supervised Object Detection
+Actor-Critic Instance Segmentation
+AdaCos: Adaptively Scaling Cosine Logits for Effectively Learning Deep Face Representations
+AdaFrame: Adaptive Frame Selection for Fast Video Recognition
+AdaGraph: Unifying Predictive and Continuous Domain Adaptation Through Graphs
+Adapting Object Detectors via Selective Cross-Domain Alignment
+Adaptive Confidence Smoothing for Generalized Zero-Shot Learning
+Adaptive NMS: Refining Pedestrian Detection in a Crowd
+Adaptive Pyramid Context Network for Semantic Segmentation
+Adaptive Transfer Network for Cross-Domain Person Re-Identification
+Adaptive Weighting Multi-Field-Of-View CNN for Semantic Segmentation in Pathology
+AdaptiveFace: Adaptive Margin and Sampling for Face Recognition
+Adaptively Connected Neural Networks
+Additive Adversarial Learning for Unbiased Authentication
+Adversarial Attacks Beyond the Image Space
+Adversarial Defense Through Network Profiling Based Path Extraction
+Adversarial Defense by Stratified Convolutional Sparse Coding
+Adversarial Inference for Multi-Sentence Video Description
+Adversarial Semantic Alignment for Improved Image Captions
+Adversarial Structure Matching for Structured Prediction Tasks
+Aggregation Cross-Entropy for Sequence Recognition
+All About Structure: Adapting Structural Information Across Domains for Boosting Semantic Segmentation
+All You Need Is a Few Shifts: Designing Efficient Convolutional Neural Networks for Image Classification
+All-Weather Deep Outdoor Lighting Estimation
+Amodal Instance Segmentation With KINS Dataset
+An Alternative Deep Feature Approach to Line Level Keyword Spotting
+An Attention Enhanced Graph Convolutional LSTM Network for Skeleton-Based Action Recognition
+An Efficient Schmidt-EKF for 3D Visual-Inertial SLAM
+An End-To-End Network for Generating Social Relationship Graphs
+An End-To-End Network for Panoptic Segmentation
+An Iterative and Cooperative Top-Down and Bottom-Up Inference Network for Salient Object Detection
+Analysis of Feature Visibility in Non-Line-Of-Sight Measurements
+Animating Arbitrary Objects via Deep Motion Transfer
+Answer Them All! Toward Universal Visual Question Answering Models
+ApolloCar3D: A Large 3D Car Instance Understanding Benchmark for Autonomous Driving
+Arbitrary Shape Scene Text Detection With Adaptive Text Region Representation
+Arbitrary Style Transfer With Style-Attentional Networks
+ArcFace: Additive Angular Margin Loss for Deep Face Recognition
+Argoverse: 3D Tracking and Forecasting With Rich Maps
+Art2Real: Unfolding the Reality of Artworks via Semantically-Aware Image-To-Image Translation
+Assessing Personally Perceived Image Quality via Image Features and Collaborative Filtering
+Assessment of Faster R-CNN in Man-Machine Collaborative Search
+Assisted Excitation of Activations: A Learning Technique to Improve Object Detectors
+Associatively Segmenting Instances and Semantics in Point Clouds
+Atlas of Digital Pathology: A Generalized Hierarchical Histological Tissue Type-Annotated Database for Deep Learning
+Attending to Discriminative Certainty for Domain Adaptation
+Attention Based Glaucoma Detection: A Large-Scale Database and CNN Model
+Attention Branch Network: Learning of Attention Mechanism for Visual Explanation
+Attention-Aware Multi-Stroke Style Transfer
+Attention-Based Adaptive Selection of Operations for Image Restoration in the Presence of Unknown Combined Distortions
+Attention-Based Dropout Layer for Weakly Supervised Object Localization
+Attention-Guided Network for Ghost-Free High Dynamic Range Imaging
+Attention-Guided Unified Network for Panoptic Segmentation
+Attentive Feedback Network for Boundary-Aware Salient Object Detection
+Attentive Region Embedding Network for Zero-Shot Learning
+Attentive Relational Networks for Mapping Images to Scene Graphs
+Attentive Single-Tasking of Multiple Tasks
+Attribute-Aware Face Aging With Wavelet-Based Generative Adversarial Networks
+Attribute-Driven Feature Disentangling and Temporal Aggregation for Video Person Re-Identification
+Audio Visual Scene-Aware Dialog
+Auto-DeepLab: Hierarchical Neural Architecture Search for Semantic Image Segmentation
+Auto-Encoding Scene Graphs for Image Captioning
+AutoAugment: Learning Augmentation Strategies From Data
+Automatic Adaptation of Object Detectors to New Domains Using Self-Training
+Automatic Face Aging in Videos via Deep Reinforcement Learning
+BAD SLAM: Bundle Adjusted Direct RGB-D SLAM
+BASNet: Boundary-Aware Salient Object Detection
+Bag of Tricks for Image Classification with Convolutional Neural Networks
+Balanced Self-Paced Learning for Generative Adversarial Clustering Network
+Barrage of Random Transforms for Adversarially Robust Defense
+Bayesian Hierarchical Dynamic Model for Human Action Recognition
+BeautyGlow: On-Demand Makeup Transfer Framework With Reversible Generative Network
+Beyond Gradient Descent for Regularized Segmentation Losses
+Beyond Tracking: Selecting Memory and Refining Poses for Deep Visual Odometry
+Beyond Volumetric Albedo â A Surface Optimization Framework for Non-Line-Of-Sight Imaging
+Bi-Directional Cascade Network for Perceptual Edge Detection
+Bidirectional Learning for Domain Adaptation of Semantic Segmentation
+Bilateral Cyclic Constraint and Adaptive Regularization for Unsupervised Monocular Depth Prediction
+Binary Ensemble Neural Network: More Bits per Network or More Networks per Bit?
+Biologically-Constrained Graphs for Global Connectomics Reconstruction
+Blending-Target Domain Adaptation by Adversarial Meta-Adaptation Networks
+Blind Geometric Distortion Correction on Images Through Deep Learning
+Blind Image Deblurring With Local Maximum Gradient Prior
+Blind Super-Resolution With Iterative Kernel Correction
+Blind Visual Motif Removal From a Single Image
+Boosting Local Shape Matching for Dense 3D Face Correspondence
+Bottom-Up Object Detection by Grouping Extreme and Center Points
+Bounding Box Regression With Uncertainty for Accurate Object Detection
+Box-Driven Class-Wise Region Masking and Filling Rate Guided Loss for Weakly Supervised Semantic Segmentation
+BridgeNet: A Continuity-Aware Probabilistic Network for Age Estimation
+Bridging Stereo Matching and Optical Flow via Spatiotemporal Correspondence
+Bringing Alive Blurred Moments
+Bringing a Blurry Frame Alive at High Frame-Rate With an Event Camera
+BubbleNets: Learning to Select the Guidance Frame in Video Object Segmentation by Deep Sorting Frames
+Building Detail-Sensitive Semantic Segmentation Networks With Polynomial Pooling
+Building Efficient Deep Neural Networks With Unitary Group Convolutions
+C-MIL: Continuation Multiple Instance Learning for Weakly Supervised Object Detection
+C2AE: Class Conditioned Auto-Encoder for Open-Set Recognition
+C3AE: Exploring the Limits of Compact Model for Age Estimation
+CAM-Convs: Camera-Aware Multi-Scale Convolutions for Single-View Depth
+CANet: Class-Agnostic Segmentation Networks With Iterative Refinement and Attentive Few-Shot Learning
+CLEVR-Ref+: Diagnosing Visual Reasoning With Referring Expressions
+COIN: A Large-Scale Dataset for Comprehensive Instructional Video Analysis
+CRAVES: Controlling Robotic Arm With a Vision-Based Economic System
+Camera Lens Super-Resolution
+CapSal: Leveraging Captioning to Boost Semantics for Salient Object Detection
+Capture, Learning, and Synthesis of 3D Speaking Styles
+Cascaded Generative and Discriminative Learning for Microcalcification Detection in Breast Mammograms
+Cascaded Partial Decoder for Fast and Accurate Salient Object Detection
+Cascaded Projection: End-To-End Network Compression and Acceleration
+Catastrophic Child's Play: Easy to Perform, Hard to Defend Adversarial Attacks
+Causes and Corrections for Bimodal Multi-Path Scanning With Structured Light
+Centripetal SGD for Pruning Very Deep Convolutional Networks With Complicated Structure
+ChamNet: Towards Efficient Network Design Through Platform-Aware Model Adaptation
+Character Region Awareness for Text Detection
+Characterizing and Avoiding Negative Transfer
+Circulant Binary Convolutional Networks: Enhancing the Performance of 1-Bit DCNNs With Circulant Back Propagation
+CityFlow: A City-Scale Benchmark for Multi-Target Multi-Camera Vehicle Tracking and Re-Identification
+Class-Balanced Loss Based on Effective Number of Samples
+Classification-Reconstruction Learning for Open-Set Recognition
+ClusterNet: Deep Hierarchical Cluster Network With Rigorously Rotation-Invariant Representation for Point Cloud Analysis
+Co-Occurrence Neural Network
+Co-Occurrent Features in Semantic Segmentation
+Co-Saliency Detection via Mask-Guided Fully Convolutional Networks With Multi-Scale Label Smoothing
+CollaGAN: Collaborative GAN for Missing Image Data Imputation
+Collaborative Global-Local Networks for Memory-Efficient Segmentation of Ultra-High Resolution Images
+Collaborative Learning of Semi-Supervised Segmentation and Classification for Medical Images
+Collaborative Spatiotemporal Feature Learning for Video Action Recognition
+Coloring With Limited Data: Few-Shot Colorization via Memory Augmented Networks
+ComDefend: An Efficient Image Compression Model to Defend Adversarial Examples
+Combinatorial Persistency Criteria for Multicut and Max-Cut
+Combining 3D Morphable Models: A Large Scale Face-And-Head Model
+Compact Feature Learning for Multi-Domain Image Classification
+Competitive Collaboration: Joint Unsupervised Learning of Depth, Camera Motion, Optical Flow and Motion Segmentation
+Complete the Look: Scene-Based Complementary Product Recommendation
+Completeness Modeling and Context Separation for Weakly Supervised Temporal Action Localization
+Composing Text and Image for Image Retrieval - an Empirical Odyssey
+Compressing Convolutional Neural Networks via Factorized Convolutional Filters
+Compressing Unknown Images With Product Quantizer for Efficient Zero-Shot Classification
+Conditional Adversarial Generative Flow for Controllable Image Synthesis
+Conditional Single-View Shape Generation for Multi-View Stereo Reconstruction
+Connecting Touch and Vision via Cross-Modal Prediction
+Connecting the Dots: Learning Representations for Active Monocular Depth Estimation
+Constrained Generative Adversarial Networks for Interactive Image Generation
+ContactDB: Analyzing and Predicting Grasp Contact via Thermal Imaging
+Content Authentication for Neural Imaging Pipelines: End-To-End Optimization of Photo Provenance in Complex Distribution Channels
+Content-Aware Multi-Level Guidance for Interactive Instance Segmentation
+Context and Attribute Grounded Dense Captioning
+Context-Aware Crowd Counting
+Context-Aware Spatio-Recurrent Curvilinear Structure Segmentation
+Context-Aware Visual Compatibility Prediction
+Context-Reinforced Semantic Segmentation
+ContextDesc: Local Descriptor Augmentation With Cross-Modality Context
+Contrast Prior and Fluid Pyramid Integration for RGBD Salient Object Detection
+Contrastive Adaptation Network for Unsupervised Domain Adaptation
+Convolutional Mesh Regression for Single-Image Human Shape Reconstruction
+Convolutional Neural Networks Can Be Deceived by Visual Illusions
+Convolutional Recurrent Network for Road Boundary Extraction
+Convolutional Relational Machine for Group Activity Recognition
+Coordinate-Based Texture Inpainting for Pose-Guided Human Image Generation
+Coordinate-Free Carlsson-Weinshall Duality and Relative Multi-View Geometry
+CrDoCo: Pixel-Level Domain Transfer With Cross-Domain Consistency
+Creative Flow+ Dataset
+Cross Domain Model Compression by Structurally Weight Sharing
+Cross-Atlas Convolution for Parameterization Invariant Learning on Textured Mesh Surface
+Cross-Classification Clustering: An Efficient Multi-Object Tracking Technique for 3-D Instance Segmentation in Connectomics
+Cross-Modal Relationship Inference for Grounding Referring Expressions
+Cross-Modal Self-Attention Network for Referring Image Segmentation
+Cross-Modality Personalization for Retrieval
+Cross-Task Weakly Supervised Learning From Instructional Videos
+CrossInfoNet: Multi-Task Information Sharing Based Hand Pose Estimation
+Crowd Counting and Density Estimation by Trellis Encoder-Decoder Networks
+CrowdPose: Efficient Crowded Scenes Pose Estimation and a New Benchmark
+Curls & Whey: Boosting Black-Box Adversarial Attacks
+Customizable Architecture Search for Semantic Segmentation
+Cycle-Consistency for Robust Visual Question Answering
+Cyclic Guidance for Weakly Supervised Joint Detection and Segmentation
+D2-Net: A Trainable CNN for Joint Description and Detection of Local Features
+D3TW: Discriminative Differentiable Dynamic Time Warping for Weakly Supervised Action Alignment and Segmentation
+DARNet: Deep Active Ray Network for Building Segmentation
+DAVANet: Stereo Deblurring With View Aggregation
+DDLSTM: Dual-Domain LSTM for Cross-Dataset Action Recognition
+DFANet: Deep Feature Aggregation for Real-Time Semantic Segmentation
+DLOW: Domain Flow for Adaptation and Generalization
+DM-GAN: Dynamic Memory Generative Adversarial Networks for Text-To-Image Synthesis
+DMC-Net: Generating Discriminative Motion Cues for Fast Compressed Video Action Recognition
+DSFD: Dual Shot Face Detector
+DVC: An End-To-End Deep Video Compression Framework
+Dance With Flow: Two-In-One Stream Action Detection
+Data Augmentation Using Learned Transformations for One-Shot Medical Image Segmentation
+Data Representation and Learning With Graph Diffusion-Embedding Networks
+Data-Driven Neuron Allocation for Scale Aggregation Networks
+DeFusionNET: Defocus Blur Detection via Recurrently Fusing and Refining Multi-Scale Deep Features
+Decoders Matter for Semantic Segmentation: Data-Dependent Decoding Enables Flexible Feature Aggregation
+Decorrelated Adversarial Learning for Age-Invariant Face Recognition
+Decoupling Direction and Norm for Efficient Gradient-Based L2 Adversarial Attacks and Defenses
+Deep Asymmetric Metric Learning via Rich Relationship Mining
+Deep Blind Video Decaptioning by Temporal Aggregation and Recurrence
+Deep ChArUco: Dark ChArUco Marker Pose Estimation
+Deep Defocus Map Estimation Using Domain Adaptation
+Deep Dual Relation Modeling for Egocentric Interaction Recognition
+Deep Embedding Learning With Discriminative Sampling Policy
+Deep Exemplar-Based Video Colorization
+Deep Fitting Degree Scoring Network for Monocular 3D Object Detection
+Deep Flow-Guided Video Inpainting
+Deep Geometric Prior for Surface Reconstruction
+Deep Global Generalized Gaussian Networks
+Deep High-Resolution Representation Learning for Human Pose Estimation
+Deep Incremental Hashing Network for Efficient Image Retrieval
+Deep Metric Learning Beyond Binary Supervision
+Deep Metric Learning to Rank
+Deep Modular Co-Attention Networks for Visual Question Answering
+Deep Multimodal Clustering for Unsupervised Audiovisual Learning
+Deep Network Interpolation for Continuous Imagery Effect Transition
+Deep Plug-And-Play Super-Resolution for Arbitrary Blur Kernels
+Deep RNN Framework for Visual Sequential Applications
+Deep Reinforcement Learning of Volume-Guided Progressive View Inpainting for 3D Point Scene Completion From a Single Depth Image
+Deep Rigid Instance Scene Flow
+Deep Robust Subjective Visual Property Prediction in Crowdsourcing
+Deep Single Image Camera Calibration With Radial Distortion
+Deep Sketch-Shape Hashing With Segmented 3D Stochastic Viewing
+Deep Sky Modeling for Single Image Outdoor Lighting Estimation
+Deep Spectral Clustering Using Dual Autoencoder Network
+Deep Spherical Quantization for Image Search
+Deep Stacked Hierarchical Multi-Patch Network for Image Deblurring
+Deep Supervised Cross-Modal Retrieval
+Deep Surface Normal Estimation With Hierarchical RGB-D Fusion
+Deep Transfer Learning for Multiple Class Novelty Detection
+Deep Tree Learning for Zero-Shot Face Anti-Spoofing
+Deep Video Inpainting
+Deep Virtual Networks for Memory Efficient Inference of Multiple Tasks
+DeepCO3: Deep Instance Co-Segmentation by Co-Peak Search and Co-Saliency Detection
+DeepCaps: Going Deeper With Capsule Networks
+DeepFashion2: A Versatile Benchmark for Detection, Pose Estimation, Segmentation and Re-Identification of Clothing Images
+DeepFlux for Skeletons in the Wild
+DeepLiDAR: Deep Surface Normal Guided Depth Prediction for Outdoor Scene From Sparse LiDAR Data and Single Color Image
+DeepLight: Learning Illumination for Unconstrained Mobile Mixed Reality
+DeepMapping: Unsupervised Map Estimation From Multiple Point Clouds
+DeepSDF: Learning Continuous Signed Distance Functions for Shape Representation
+DeepView: View Synthesis With Learned Gradient Descent
+DeepVoxels: Learning Persistent 3D Feature Embeddings
+Deeper and Wider Siamese Networks for Real-Time Visual Tracking
+Deeply-Supervised Knowledge Synergy
+Defending Against Adversarial Attacks by Randomized Diversification
+Defense Against Adversarial Images Using Web-Scale Nearest-Neighbor Search
+Deformable ConvNets V2: More Deformable, Better Results
+Dense 3D Face Decoding Over 2500FPS: Joint Texture & Shape Convolutional Mesh Decoders
+Dense Classification and Implanting for Few-Shot Learning
+Dense Depth Posterior (DDP) From Single Image and Sparse Range
+Dense Intrinsic Appearance Flow for Human Pose Transfer
+Dense Relational Captioning: Triple-Stream Networks for Relationship-Based Captioning
+DenseFusion: 6D Object Pose Estimation by Iterative Dense Fusion
+Densely Semantically Aligned Person Re-Identification
+Density Map Regression Guided Detection Network for RGB-D Crowd Counting and Localization
+Depth Coefficients for Depth Completion
+Depth From a Polarisation + RGB Stereo Pair
+Depth-Attentional Features for Single-Image Rain Removal
+Depth-Aware Video Frame Interpolation
+Describing Like Humans: On Diversity in Image Captioning
+Destruction and Construction Learning for Fine-Grained Image Recognition
+Detailed Human Shape Estimation From a Single Image by Hierarchical Mesh Deformation
+Detect-To-Retrieve: Efficient Regional Aggregation for Image Search
+Detecting Overfitting of Deep Generative Networks via Latent Recovery
+Detection Based Defense Against Adversarial Examples From the Steganalysis Point of View
+Devil Is in the Edges: Learning Semantic Boundaries From Noisy Annotations
+Dichromatic Model Based Temporal Color Constancy for AC Light Sources
+Did It Change? Learning to Detect Point-Of-Interest Changes for Proactive Map Updates
+Direct Object Recognition Without Line-Of-Sight Using Optical Coherence
+Discovering Fair Representations in the Data Domain
+Discovering Visual Patterns in Art Collections With Spatially-Consistent Feature Learning
+Disentangled Representation Learning for 3D Face Shape
+Disentangling Adversarial Robustness and Generalization
+Disentangling Latent Hands for Image Synthesis and Pose Estimation
+Disentangling Latent Space for VAE by Label Relevant/Irrelevant Dimensions
+Dissecting Person Re-Identification From the Viewpoint of Viewpoint
+Dissimilarity Coefficient Based Weakly Supervised Object Detection
+Distant Supervised Centroid Shift: A Simple and Efficient Approach to Visual Domain Adaptation
+DistillHash: Unsupervised Deep Hashing by Distilling Data Pairs
+Distilled Person Re-Identification: Towards a More Scalable System
+Distilling Object Detectors With Fine-Grained Feature Imitation
+Distraction-Aware Shadow Detection
+Divergence Prior and Vessel-Tree Reconstruction
+Divergence Triangle for Joint Training of Generator Model, Energy-Based Model, and Inferential Model
+Diverse Generation for Multi-Agent Sports Games
+Diversify and Match: A Domain Adaptive Representation Learning Paradigm for Object Detection
+Divide and Conquer the Embedding Space for Metric Learning
+Do Better ImageNet Models Transfer Better?
+Does Learning Specific Features for Related Parts Help Human Pose Estimation?
+Domain Generalization by Solving Jigsaw Puzzles
+Domain-Specific Batch Normalization for Unsupervised Domain Adaptation
+Domain-Symmetric Networks for Adversarial Domain Adaptation
+Doodle to Search: Practical Zero-Shot Sketch-Based Image Retrieval
+Double Nuclear Norm Based Low Rank Representation on Grassmann Manifolds for Clustering
+Douglas-Rachford Networks: Learning Both the Image Prior and Data Fidelity Terms for Blind Image Deconvolution
+DrivingStereo: A Large-Scale Dataset for Stereo Matching in Autonomous Driving Scenarios
+DuDoNet: Dual Domain Network for CT Metal Artifact Reduction
+DuLa-Net: A Dual-Projection Network for Estimating Room Layouts From a Single RGB Panorama
+Dual Attention Network for Scene Segmentation
+Dual Encoding for Zero-Example Video Retrieval
+Dual Residual Networks Leveraging the Potential of Paired Operations for Image Restoration
+DynTypo: Example-Based Dynamic Text Effects Transfer
+Dynamic Fusion With Intra- and Inter-Modality Attention Flow for Visual Question Answering
+Dynamic Recursive Neural Network
+Dynamic Scene Deblurring With Parameter Selective Sharing and Nested Skip Connections
+Dynamics Are Important for the Recognition of Equine Pain in Video
+ECC: Platform-Independent Energy-Constrained Deep Neural Network Compression via a Bilinear Regression Model
+EIGEN: Ecologically-Inspired GENetic Approach for Neural Network Structure Searching From Scratch
+ELASTIC: Improving CNNs With Dynamic Scaling Policies
+ESIR: End-To-End Scene Text Recognition via Iterative Image Rectification
+ESPNetv2: A Light-Weight, Power Efficient, and General Purpose Convolutional Neural Network
+EV-Gait: Event-Based Robust Gait Recognition Using Dynamic Vision Sensors
+Edge-Labeling Graph Neural Network for Few-Shot Learning
+Effective Aesthetics Prediction With Multi-Level Spatially Pooled Features
+Efficient Decision-Based Black-Box Adversarial Attacks on Face Recognition
+Efficient Featurized Image Pyramid Network for Single Shot Detector
+Efficient Multi-Domain Learning by Covariance Normalization
+Efficient Neural Network Compression
+Efficient Online Multi-Person 2D Pose Tracking With Recurrent Spatio-Temporal Affinity Fields
+Efficient Parameter-Free Clustering Using First Neighbor Relations
+Efficient Video Classification Using Fewer Frames
+Elastic Boundary Projection for 3D Medical Image Segmentation
+Eliminating Exposure Bias and Metric Mismatch in Multiple Object Tracking
+Embedding Complementary Deep Networks for Image Classification
+Embodied Question Answering in Photorealistic Environments With Point Cloud Perception
+Emotion-Aware Human Attention Prediction
+End-To-End Efficient Representation Learning via Cascading Combinatorial Optimization
+End-To-End Interpretable Neural Motion Planner
+End-To-End Learned Random Walker for Seeded Image Segmentation
+End-To-End Multi-Task Learning With Attention
+End-To-End Projector Photometric Compensation
+End-To-End Supervised Product Quantization for Image Search and Retrieval
+End-To-End Time-Lapse Video Synthesis From a Single Outdoor Image
+Engaging Image Captioning via Personality
+Enhanced Bayesian Compression via Deep Reinforcement Learning
+Enhanced Pix2pix Dehazing Network
+Enhancing Diversity of Defocus Blur Detectors via Cross-Ensemble Network
+Enhancing TripleGAN for Semi-Supervised Conditional Instance Synthesis and Classification
+Ensemble Deep Manifold Similarity Learning Using Hard Proxies
+Estimating 3D Motion and Forces of Person-Object Interactions From Monocular Video
+Evading Defenses to Transferable Adversarial Examples by Translation-Invariant Attacks
+Event Cameras, Contrast Maximization and Reward Functions: An Analysis
+Event-Based High Dynamic Range Image and Very High Frame Rate Video Generation Using Conditional Generative Adversarial Networks
+EventNet: Asynchronous Recursive Event Processing
+Events-To-Video: Bringing Modern Computer Vision to Event Cameras
+Exact Adversarial Attack to Image Captioning via Structured Output Learning With Latent Variables
+Example-Guided Style-Consistent Image Synthesis From Semantic Labeling
+Explainability Methods for Graph Convolutional Neural Networks
+Explainable and Explicit Visual Reasoning Over Scene Graphs
+Explicit Bias Discovery in Visual Question Answering Models
+Explicit Spatial Encoding for Deep Local Descriptors
+Exploiting Edge Features for Graph Neural Networks
+Exploiting Kernel Sparsity and Entropy for Interpretable CNN Compression
+Exploiting Temporal Context for 3D Human Pose Estimation in the Wild
+Explore-Exploit Graph Traversal for Image Retrieval
+Exploring Context and Visual Pattern of Relationship for Scene Graph Generation
+Exploring Object Relation in Mean Teacher for Cross-Domain Detection
+Exploring the Bounds of the Utility of Context for Object Detection
+Expressive Body Capture: 3D Hands, Face, and Body From a Single Image
+Extreme Relative Pose Estimation for RGB-D Scans via Scene Completion
+F-VAEGAN-D2: A Feature Generating Framework for Any-Shot Learning
+FA-RPN: Floating Region Proposals for Face Detection
+FBNet: Hardware-Aware Efficient ConvNet Design via Differentiable Neural Architecture Search
+FEELVOS: Fast End-To-End Embedding Learning for Video Object Segmentation
+FML: Face Model Learning From Videos
+FOCNet: A Fractional Optimal Control Network for Image Denoising
+FSA-Net: Learning Fine-Grained Structure Aggregation for Head Pose Estimation From a Single Image
+Face Anti-Spoofing: Model Matters, so Does Data
+Face Parsing With RoI Tanh-Warping
+Face-Focused Cross-Stream Network for Deception Detection in Videos
+Facial Emotion Distribution Learning by Exploiting Low-Rank Label Correlations Locally
+Factor Graph Attention
+Fast Human Pose Estimation
+Fast Interactive Object Annotation With Curve-GCN
+Fast Neural Architecture Search of Compact Semantic Segmentation Models via Auxiliary Cells
+Fast Object Class Labelling via Speech
+Fast Online Object Tracking and Segmentation: A Unifying Approach
+Fast Single Image Reflection Suppression via Convex Optimization
+Fast Spatially-Varying Indoor Lighting Estimation
+Fast Spatio-Temporal Residual Network for Video Super-Resolution
+Fast User-Guided Video Object Segmentation by Interaction-And-Propagation Networks
+Fast and Flexible Indoor Scene Synthesis via Deep Convolutional Generative Models
+Fast and Robust Multi-Person 3D Pose Estimation From Multiple Views
+Fast, Diverse and Accurate Image Captioning Guided by Part-Of-Speech
+FastDraw: Addressing the Long Tail of Lane Detection by Adapting a Sequential Prediction Network
+Feature Denoising for Improving Adversarial Robustness
+Feature Distillation: DNN-Oriented JPEG Compression Against Adversarial Examples
+Feature Selective Anchor-Free Module for Single-Shot Object Detection
+Feature Space Perturbations Yield More Transferable Adversarial Examples
+Feature Transfer Learning for Face Recognition With Under-Represented Data
+Feature-Level Frankenstein: Eliminating Variations for Discriminative Recognition
+Feedback Adversarial Learning: Spatial Feedback for Improving Generative Adversarial Networks
+Feedback Network for Image Super-Resolution
+Few-Shot Adaptive Faster R-CNN
+Few-Shot Learning With Localization in Realistic Settings
+Few-Shot Learning via Saliency-Guided Hallucination of Samples
+FickleNet: Weakly and Semi-Supervised Semantic Image Segmentation Using Stochastic Inference
+Filter Pruning via Geometric Median for Deep Convolutional Neural Networks Acceleration
+FilterReg: Robust and Efficient Probabilistic Point-Set Registration Using Gaussian Filter and Twist Parameterization
+Finding Task-Relevant Features for Few-Shot Learning by Category Traversal
+FineGAN: Unsupervised Hierarchical Disentanglement for Fine-Grained Object Generation and Discovery
+Fitting Multiple Heterogeneous Models by Multi-Class Cascaded T-Linkage
+FlowNet3D: Learning Scene Flow in 3D Point Clouds
+Focus Is All You Need: Loss Functions for Event-Based Vision
+Foreground-Aware Image Inpainting
+Frame-Consistent Recurrent Video Deraining With Dual-Level Flow
+From Coarse to Fine: Robust Hierarchical Localization at Large Scale
+From Recognition to Cognition: Visual Commonsense Reasoning
+Fully Automatic Video Colorization With Self-Regularization and Diversity
+Fully Learnable Group Convolution for Acceleration of Deep Neural Networks
+Fully Quantized Network for Object Detection
+GA-Net: Guided Aggregation Net for End-To-End Stereo Matching
+GANFIT: Generative Adversarial Network Fitting for High Fidelity 3D Face Reconstruction
+GCAN: Graph Convolutional Adversarial Network for Unsupervised Domain Adaptation
+GFrames: Gradient-Based Local Reference Frame for 3D Shape Matching
+GIF2Video: Color Dequantization and Temporal Interpolation of GIF Images
+GPSfM: Global Projective SFM Using Algebraic Constraints on Multi-View Fundamental Matrices
+GQA: A New Dataset for Real-World Visual Reasoning and Compositional Question Answering
+GS3D: An Efficient 3D Object Detection Framework for Autonomous Driving
+GSPN: Generative Shape Proposal Network for 3D Instance Segmentation in Point Cloud
+Gait Recognition via Disentangled Representation Learning
+Gaussian Temporal Awareness Networks for Action Localization
+Generalising Fine-Grained Sketch-Based Image Retrieval
+Generalizable Person Re-Identification by Domain-Invariant Mapping Network
+Generalized Intersection Over Union: A Metric and a Loss for Bounding Box Regression
+Generalized Zero- and Few-Shot Learning via Aligned Variational Autoencoders
+Generalized Zero-Shot Recognition Based on Visually Semantic Embedding
+Generalizing Eye Tracking With Bayesian Adversarial Learning
+Generating 3D Adversarial Point Clouds
+Generating Classification Weights With GNN Denoising Autoencoders for Few-Shot Learning
+Generating Multiple Hypotheses for 3D Human Pose Estimation With Mixture Density Network
+Generative Dual Adversarial Network for Generalized Zero-Shot Learning
+GeoNet: Deep Geodesic Networks for Point Cloud Analysis
+Geometry-Aware Distillation for Indoor Semantic Segmentation
+Geometry-Aware Symmetric Domain Adaptation for Monocular Depth Estimation
+Geometry-Consistent Generative Adversarial Networks for One-Sided Unsupervised Domain Mapping
+Global Second-Order Pooling Convolutional Networks
+Good News, Everyone! Context Driven Entity-Aware Captioning for News Images
+Gotta Adapt 'Em All: Joint Pixel and Feature-Level Domain Adaptation for Recognition in the Wild
+Gradient Matching Generative Networks for Zero-Shot Learning
+Graph Attention Convolution for Point Cloud Semantic Segmentation
+Graph Convolutional Label Noise Cleaner: Train a Plug-And-Play Action Classifier for Anomaly Detection
+Graph Convolutional Tracking
+Graph-Based Global Reasoning Networks
+Graphical Contrastive Losses for Scene Graph Parsing
+Graphonomy: Universal Human Parsing via Graph Transfer Learning
+Greedy Structure Learning of Hierarchical Compositional Models
+Grid R-CNN
+Grounded Video Description
+Grounding Human-To-Vehicle Advice for Self-Driving Vehicles
+Group Sampling for Scale Invariant Face Detection
+Group-Wise Correlation Stereo Network
+Guaranteed Matrix Completion Under Multiple Linear Transformations
+Guided Stereo Matching
+H+O: Unified Egocentric Recognition of 3D Hand-Object Poses and Interactions
+HAQ: Hardware-Aware Automated Quantization With Mixed Precision
+HPLFlowNet: Hierarchical Permutohedral Lattice FlowNet for Scene Flow Estimation on Large-Scale Point Clouds
+Handwriting Recognition in Low-Resource Scripts Using Adversarial Learning
+Hardness-Aware Deep Metric Learning
+Heavy Rain Image Restoration: Integrating Physics Model and Conditional Adversarial Learning
+HetConv: Heterogeneous Kernel-Based Convolutions for Deep CNNs
+Heterogeneous Memory Enhanced Multimodal Attention Model for Video Question Answering
+Hierarchical Cross-Modal Talking Face Generation With Dynamic Pixel-Wise Loss
+Hierarchical Deep Stereo Matching on High-Resolution Images
+Hierarchical Discrete Distribution Decomposition for Match Density Estimation
+Hierarchical Disentanglement of Discriminative Latent Features for Zero-Shot Learning
+Hierarchy Denoising Recursive Autoencoders for 3D Scene Layout Prediction
+High Flux Passive Imaging With Single-Photon Sensors
+High-Level Semantic Feature Detection: A New Perspective for Pedestrian Detection
+High-Quality Face Capture Using Anatomical Muscles
+Holistic and Comprehensive Annotation of Clinically Significant Findings on Diverse CT Images: Learning From Radiology Reports and Label Ontology
+HoloPose: Holistic 3D Human Reconstruction In-The-Wild
+Homomorphic Latent Space Interpolation for Unpaired Image-To-Image Translation
+HorizonNet: Learning Room Layout With 1D Representation and Pano Stretch Data Augmentation
+How to Make a Pizza: Learning a Compositional Layer-Based GAN Model
+Hybrid Scene Compression for Visual Localization
+Hybrid Task Cascade for Instance Segmentation
+Hybrid-Attention Based Decoupled Metric Learning for Zero-Shot Image Retrieval
+Hyperspectral Image Reconstruction Using a Deep Spatial-Spectral Prior
+Hyperspectral Image Super-Resolution With Optimized RGB Guidance
+Hyperspectral Imaging With Random Printed Mask
+IGE-Net: Inverse Graphics Energy Networks for Human Pose Estimation and Single-View Reconstruction
+IM-Net for High Resolution Video Frame Interpolation
+IP102: A Large-Scale Benchmark Dataset for Insect Pest Recognition
+IRLAS: Inverse Reinforcement Learning for Architecture Search
+Im2Pencil: Controllable Pencil Illustration From Photographs
+Image Deformation Meta-Networks for One-Shot Learning
+Image Generation From Layout
+Image Super-Resolution by Neural Texture Transfer
+Image-Question-Answer Synergistic Network for Visual Dialog
+Image-To-Image Translation via Group-Wise Deep Whitening-And-Coloring Transformation
+Importance Estimation for Neural Network Pruning
+Improved Road Connectivity by Joint Learning of Orientation and Segmentation
+Improving Action Localization by Progressive Cross-Stream Cooperation
+Improving Few-Shot User-Specific Gaze Adaptation via Gaze Redirection Synthesis
+Improving Referring Expression Grounding With Cross-Modal Attention-Guided Erasing
+Improving Semantic Segmentation via Video Propagation and Label Relaxation
+Improving Transferability of Adversarial Examples With Input Diversity
+Improving the Performance of Unimodal Dynamic Hand-Gesture Recognition With Multimodal Training
+In Defense of Pre-Trained ImageNet Architectures for Real-Time Semantic Segmentation of Road-Driving Images
+In the Wild Human Pose Estimation Using Explicit 2D Features and Intermediate 3D Representations
+Incremental Object Learning From Contiguous Views
+Information Maximizing Visual Question Generation
+Informative Object Annotations: Tell Me Something I Don't Know
+Inserting Videos Into Videos
+Instance Segmentation by Jointly Optimizing Spatial Embeddings and Clustering Bandwidth
+Instance-Level Meta Normalization
+Intention Oriented Image Captions With Guiding Objects
+Interaction-And-Aggregation Network for Person Re-Identification
+Interactive Full Image Segmentation by Considering All Regions Jointly
+Interactive Image Segmentation via Backpropagating Refinement Scheme
+Interpretable and Fine-Grained Visual Explanations for Convolutional Neural Networks
+Interpreting CNNs via Decision Trees
+Invariance Matters: Exemplar Memory for Domain Adaptive Person Re-Identification
+Inverse Cooking: Recipe Generation From Food Images
+Inverse Discriminative Networks for Handwritten Signature Verification
+Inverse Path Tracing for Joint Material and Lighting Estimation
+Inverse Procedural Modeling of Knitwear
+InverseRenderNet: Learning Single Image Inverse Rendering
+Isospectralization, or How to Hear Shape, Style, and Correspondence
+It's Not About the Journey; It's About the Destination: Following Soft Paths Under Question-Guidance for Visual Reasoning
+Iterative Alignment Network for Continuous Sign Language Recognition
+Iterative Normalization: Beyond Standardization Towards Efficient Whitening
+Iterative Projection and Matching: Finding Structure-Preserving Representatives and Its Application to Computer Vision
+Iterative Reorganization With Weak Spatial Constraints: Solving Arbitrary Jigsaw Puzzles for Unsupervised Representation Learning
+Iterative Residual CNNs for Burst Photography Applications
+Iterative Residual Refinement for Joint Optical Flow and Occlusion Estimation
+JSIS3D: Joint Semantic-Instance Segmentation of 3D Point Clouds With Multi-Task Pointwise Networks and Multi-Value Conditional Random Fields
+Joint Discriminative and Generative Learning for Person Re-Identification
+Joint Face Detection and Facial Motion Retargeting for Multiple Faces
+Joint Manifold Diffusion for Combining Predictions on Decoupled Observations
+Joint Representation and Estimator Learning for Facial Action Unit Intensity Estimation
+Joint Representative Selection and Feature Learning: A Semi-Supervised Approach
+Jumping Manifolds: Geometry Aware Dense Non-Rigid Structure From Motion
+K-Nearest Neighbors Hashing
+KE-GAN: Knowledge Embedded Generative Adversarial Networks for Semi-Supervised Scene Parsing
+Kernel Transformer Networks for Compact Spherical Convolution
+Kervolutional Neural Networks
+Knockoff Nets: Stealing Functionality of Black-Box Models
+Knowing When to Stop: Evaluation and Verification of Conformity to Output-Size Specifications
+Knowledge Adaptation for Efficient Semantic Segmentation
+Knowledge Distillation via Instance Relationship Graph
+Knowledge-Embedded Routing Network for Scene Graph Generation
+L3-Net: Towards Learning Based LiDAR Localization for Autonomous Driving
+LAEO-Net: Revisiting People Looking at Each Other in Videos
+LAF-Net: Locally Adaptive Fusion Networks for Stereo Confidence Estimation
+LBS Autoencoder: Self-Supervised Fitting of Articulated Meshes to Point Clouds
+LO-Net: Deep Real-Time Lidar Odometry
+LP-3DCNN: Unveiling Local Phase in 3D Convolutional Neural Networks
+LSTA: Long Short-Term Attention for Egocentric Action Recognition
+LVIS: A Dataset for Large Vocabulary Instance Segmentation
+LaSO: Label-Set Operations Networks for Multi-Label Few-Shot Learning
+LaSOT: A High-Quality Benchmark for Large-Scale Single Object Tracking
+Label Efficient Semi-Supervised Learning via Graph Filtering
+Label Propagation for Deep Semi-Supervised Learning
+Label-Noise Robust Generative Adversarial Networks
+Language-Driven Temporal Activity Localization: A Semantic Matching Reinforcement Learning Model
+Large Scale High-Resolution Land Cover Mapping With Multi-Resolution Data
+Large Scale Incremental Learning
+Large-Scale Distributed Second-Order Optimization Using Kronecker-Factored Approximate Curvature for Deep Convolutional Neural Networks
+Large-Scale Few-Shot Learning: Knowledge Transfer With Class Hierarchy
+Large-Scale Interactive Object Segmentation With Human Annotators
+Large-Scale Long-Tailed Recognition in an Open World
+Large-Scale Weakly-Supervised Pre-Training for Video Action Recognition
+Large-Scale, Metric Structure From Motion for Unordered Light Fields
+LaserNet: An Efficient Probabilistic 3D Object Detector for Autonomous Driving
+Latent Filter Scaling for Multimodal Unsupervised Image-To-Image Translation
+Latent Space Autoregression for Novelty Detection
+Layout-Graph Reasoning for Fashion Landmark Detection
+Learning 3D Human Dynamics From Video
+Learning Active Contour Models for Medical Image Segmentation
+Learning Actor Relation Graphs for Group Activity Recognition
+Learning Attraction Field Representation for Robust Line Segment Detection
+Learning Binary Code for Personalized Fashion Recommendation
+Learning Channel-Wise Interactions for Binary Convolutional Neural Networks
+Learning Context Graph for Person Search
+Learning Correspondence From the Cycle-Consistency of Time
+Learning Cross-Modal Embeddings With Adversarial Networks for Cooking Recipes and Food Images
+Learning From Noisy Labels by Regularized Estimation of Annotator Confusion
+Learning From Synthetic Data for Crowd Counting in the Wild
+Learning Image and Video Compression Through Spatial-Temporal Energy Compaction
+Learning Implicit Fields for Generative Shape Modeling
+Learning Independent Object Motion From Unlabelled Stereoscopic Videos
+Learning Individual Styles of Conversational Gesture
+Learning Instance Activation Maps for Weakly Supervised Instance Segmentation
+Learning Joint Gait Representation via Quintuplet Loss Minimization
+Learning Joint Reconstruction of Hands and Manipulated Objects
+Learning Linear Transformations for Fast Image and Video Style Transfer
+Learning Loss for Active Learning
+Learning Metrics From Teachers: Compact Networks for Image Embedding
+Learning Monocular Depth Estimation Infusing Traditional Stereo Knowledge
+Learning Multi-Class Segmentations From Single-Class Datasets
+Learning Non-Volumetric Depth Fusion Using Successive Reprojections
+Learning Not to Learn: Training Deep Neural Networks With Biased Data
+Learning Parallax Attention for Stereo Image Super-Resolution
+Learning Personalized Modular Network Guided by Structured Knowledge
+Learning Pyramid-Context Encoder Network for High-Quality Image Inpainting
+Learning Regularity in Skeleton Trajectories for Anomaly Detection in Videos
+Learning RoI Transformer for Oriented Object Detection in Aerial Images
+Learning Semantic Segmentation From Synthetic Data: A Geometrically Guided Input-Output Adaptation Approach
+Learning Shape-Aware Embedding for Scene Text Detection
+Learning Single-Image Depth From Videos Using Quality Assessment Networks
+Learning Spatial Common Sense With Geometry-Aware Recurrent Networks
+Learning Spatio-Temporal Representation With Local and Global Diffusion
+Learning Structure-And-Motion-Aware Rolling Shutter Correction
+Learning Transformation Synchronization
+Learning Unsupervised Video Object Segmentation Through Visual Attention
+Learning Video Representations From Correspondence Proposals
+Learning View Priors for Single-View 3D Reconstruction
+Learning With Batch-Wise Optimal Transport Loss for 3D Shape Recognition
+Learning Without Memorizing
+Learning Words by Drawing Images
+Learning a Deep ConvNet for Multi-Label Classification With Partial Labels
+Learning a Unified Classifier Incrementally via Rebalancing
+Learning for Single-Shot Confidence Calibration in Deep Neural Networks Through Stochastic Inferences
+Learning the Depths of Moving People by Watching Frozen People
+Learning to Adapt for Stereo
+Learning to Calibrate Straight Lines for Fisheye Image Rectification
+Learning to Cluster Faces on an Affinity Graph
+Learning to Compose Dynamic Tree Structures for Visual Contexts
+Learning to Detect Human-Object Interactions With Knowledge
+Learning to Explain With Complemental Examples
+Learning to Explore Intrinsic Saliency for Stereoscopic Video
+Learning to Extract Flawless Slow Motion From Blurry Videos
+Learning to Film From Professional Human Motion Videos
+Learning to Generate Synthetic Data via Compositing
+Learning to Learn From Noisy Labeled Data
+Learning to Learn How to Learn: Self-Adaptive Visual Navigation Using Meta-Learning
+Learning to Learn Image Classifiers With Visual Analogy
+Learning to Learn Relation for Important People Detection in Still Images
+Learning to Localize Through Compressed Binary Maps
+Learning to Minify Photometric Stereo
+Learning to Quantize Deep Networks by Optimizing Quantization Intervals With Task Loss
+Learning to Reconstruct People in Clothing From a Single RGB Camera
+Learning to Reduce Dual-Level Discrepancy for Infrared-Visible Person Re-Identification
+Learning to Regress 3D Face Shape and Expression From an Image Without 3D Supervision
+Learning to Remember: A Synaptic Plasticity Driven Framework for Continual Learning
+Learning to Sample
+Learning to Separate Multiple Illuminants in a Single Image
+Learning to Synthesize Motion Blur
+Learning to Transfer Examples for Partial Domain Adaptation
+Learning-Based Sampling for Natural Image Matting
+Led3D: A Lightweight and Efficient Deep Approach to Recognizing Low-Quality 3D Faces
+Lending Orientation to Neural Networks for Cross-View Geo-Localization
+Less Is More: Learning Highlight Detection From Video Duration
+Leveraging Crowdsourced GPS Data for Road Extraction From Aerial Imagery
+Leveraging Heterogeneous Auxiliary Tasks to Assist Crowd Counting
+Leveraging Shape Completion for 3D Siamese Tracking
+Leveraging the Invariant Side of Generative Zero-Shot Learning
+LiFF: Light Field Features in Scale and Depth
+Libra R-CNN: Towards Balanced Learning for Object Detection
+Lifting Vectorial Variational Problems: A Natural Formulation Based on Geometric Measure Theory and Discrete Exterior Calculus
+Light Field Messaging With Deep Photographic Steganography
+Linkage Based Face Clustering via Graph Convolution Network
+Listen to the Image
+LiveSketch: Query Perturbations for Guided Sketch-Based Visual Search
+Local Detection of Stereo Occlusion Boundaries
+Local Features and Visual Words Emerge in Activations
+Local Relationship Learning With Person-Specific Shape Regularization for Facial Action Unit Detection
+Local Temporal Bilinear Pooling for Fine-Grained Action Parsing
+Local to Global Learning: Gradually Adding Classes for Training Deep Neural Networks
+Locating Objects Without Bounding Boxes
+Long-Term Feature Banks for Detailed Video Understanding
+Look Back and Predict Forward in Image Captioning
+Look More Than Once: An Accurate Detector for Text of Arbitrary Shapes
+Looking for the Devil in the Details: Learning Trilinear Attention Sampling Network for Fine-Grained Image Recognition
+Low-Rank Laplacian-Uniform Mixed Model for Robust Face Recognition
+Low-Rank Tensor Completion With a New Tensor Nuclear Norm Induced by Invertible Linear Transforms
+MAGSAC: Marginalizing Sample Consensus
+MAN: Moment Alignment Network for Natural Language Moment Retrieval via Iterative Graph Adjustment
+MAP Inference via Block-Coordinate Frank-Wolfe Algorithm
+MARS: Motion-Augmented RGB Stream for Action Recognition
+MBS: Macroblock Scaling for CNN Model Reduction
+MFAS: Multimodal Fusion Architecture Search
+MHP-VOS: Multiple Hypotheses Propagation for Video Object Segmentation
+MMFace: A Multi-Metric Regression Network for Unconstrained Face Reconstruction
+MOTS: Multi-Object Tracking and Segmentation
+MS-TCN: Multi-Stage Temporal Convolutional Network for Action Segmentation
+MSCap: Multi-Style Image Captioning With Unpaired Stylized Text
+MUREL: Multimodal Relational Reasoning for Visual Question Answering
+MVF-Net: Multi-View 3D Face Morphable Model Regression
+MVTec AD â A Comprehensive Real-World Dataset for Unsupervised Anomaly Detection
+Machine Vision Guided 3D Medical Image Compression for Efficient Transmission and Accurate Segmentation in the Clouds
+ManTra-Net: Manipulation Tracing Network for Detection and Localization of Image Forgeries With Anomalous Features
+Mapping, Localization and Path Planning for Image-Based Navigation Using Visual Features and Map
+Marginalized Latent Semantic Encoder for Zero-Shot Learning
+Mask Scoring R-CNN
+Mask-Guided Portrait Editing With Conditional GANs
+Max-Sliced Wasserstein Distance and Its Use for GANs
+MaxpoolNMS: Getting Rid of NMS Bottlenecks in Two-Stage Object Detectors
+Memory in Memory: A Predictive Neural Network for Learning Higher-Order Non-Stationarity From Spatiotemporal Dynamics
+Memory-Attended Recurrent Network for Video Captioning
+MeshAdv: Adversarial Meshes for Visual Recognition
+Meta-Learning Convolutional Neural Architectures for Multi-Target Concrete Defect Classification With the COncrete DEfect BRidge IMage Dataset
+Meta-Learning With Differentiable Convex Optimization
+Meta-SR: A Magnification-Arbitrary Network for Super-Resolution
+Meta-Transfer Learning for Few-Shot Learning
+MetaCleaner: Learning to Hallucinate Clean Representations for Noisy-Labeled Visual Recognition
+Metric Learning for Image Registration
+Min-Max Statistical Alignment for Transfer Learning
+Mind Your Neighbours: Image Annotation With Metadata Neighbourhood Graph Co-Attention Networks
+Minimal Solvers for Mini-Loop Closures in 3D Multi-Scan Alignment
+MirrorGAN: Learning Text-To-Image Generation by Redescription
+Mitigating Information Leakage in Image Representations: A Maximum Entropy Approach
+Mixed Effects Neural Networks (MeNets) With Applications to Gaze Estimation
+Mixture Density Generative Adversarial Networks
+MnasNet: Platform-Aware Neural Architecture Search for Mobile
+Mode Seeking Generative Adversarial Networks for Diverse Image Synthesis
+Model-Blind Video Denoising via Frame-To-Frame Training
+Modeling Local Geometric Structure of 3D Point Clouds Using Geo-CNN
+Modeling Point Clouds With Self-Attention and Gumbel Subset Sampling
+Modularized Textual Grounding for Counterfactual Resilience
+Modulating Image Restoration With Continual Levels via Adaptive Feature Modification Layers
+Monocular 3D Object Detection Leveraging Accurate Proposals and Shape Reconstruction
+Monocular Depth Estimation Using Relative Depth Maps
+Monocular Total Capture: Posing Face, Body, and Hands in the Wild
+Motion Estimation of Non-Holonomic Ground Vehicles From a Single Feature Correspondence Measured Over N Views
+Moving Object Detection Under Discontinuous Change in Illumination Using Tensor Low-Rank and Invariant Sparse Decomposition
+Multi-Adversarial Discriminative Deep Domain Generalization for Face Presentation Attack Detection
+Multi-Agent Tensor Fusion for Contextual Trajectory Prediction
+Multi-Channel Attention Selection GAN With Cascaded Semantic Guidance for Cross-View Image Translation
+Multi-Granularity Generator for Temporal Action Proposal
+Multi-Label Image Recognition With Graph Convolutional Networks
+Multi-Level Context Ultra-Aggregation for Stereo Matching
+Multi-Level Multimodal Common Semantic Space for Image-Phrase Grounding
+Multi-Person Articulated Tracking With Spatial and Temporal Embeddings
+Multi-Person Pose Estimation With Enhanced Channel-Wise and Spatial Information
+Multi-Scale Geometric Consistency Guided Multi-View Stereo
+Multi-Similarity Loss With General Pair Weighting for Deep Metric Learning
+Multi-Source Weak Supervision for Saliency Detection
+Multi-Step Prediction of Occupancy Grid Maps With Recurrent Neural Networks
+Multi-Target Embodied Question Answering
+Multi-Task Learning of Hierarchical Vision-Language Representation
+Multi-Task Multi-Sensor Fusion for 3D Object Detection
+Multi-Task Self-Supervised Object Detection via Recycling of Bounding Box Annotations
+Multimodal Explanations by Predicting Counterfactuality in Videos
+Multispectral Imaging for Fine-Grained Recognition of Powders on Complex Backgrounds
+Multispectral and Hyperspectral Image Fusion by MS/HS Fusion Net
+Multiview 2D/3D Rigid Registration via a Point-Of-Interest Network for Tracking and Triangulation
+Mutual Learning of Complementary Networks via Residual Correction for Improving Semi-Supervised Classification
+NAS-FPN: Learning Scalable Feature Pyramid Architecture for Object Detection
+NDDR-CNN: Layerwise Feature Fusing in Multi-Task CNNs by Neural Discriminative Dimensionality Reduction
+NM-Net: Mining Reliable Neighbors for Robust Feature Correspondences
+Natural and Realistic Single Image Super-Resolution With Explicit Natural Manifold Discrimination
+Neighbourhood Watch: Referring Expression Comprehension via Language-Guided Graph Attention Networks
+Nesti-Net: Normal Estimation for Unstructured 3D Point Clouds Using Convolutional Neural Networks
+NetTailor: Tuning the Architecture, Not Just the Weights
+Networks for Joint Affine and Non-Parametric Image Registration
+Neural Illumination: Lighting Prediction for Indoor Environments
+Neural RGBÂ®D Sensing: Depth and Uncertainty From a Video Camera
+Neural Rejuvenation: Improving Deep Network Training by Enhancing Computational Resource Utilization
+Neural Rerendering in the Wild
+Neural Scene Decomposition for Multi-Person Motion Capture
+Neural Sequential Phrase Grounding (SeqGROUND)
+Neural Task Graphs: Generalizing to Unseen Tasks From a Single Video Demonstration
+Neuro-Inspired Eye Tracking With Eye Movement Dynamics
+Noise-Aware Unsupervised Deep Lidar-Stereo Fusion
+Noise-Tolerant Paradigm for Training Face Recognition CNNs
+Noise2Void - Learning Denoising From Single Noisy Images
+Non-Adversarial Image Synthesis With Generative Latent Nearest Neighbors
+Non-Local Meets Global: An Integrated Paradigm for Hyperspectral Denoising
+Normalized Diversification
+Normalized Object Coordinate Space for Category-Level 6D Object Pose and Size Estimation
+Not All Areas Are Equal: Transfer Learning for Semantic Segmentation via Hierarchical Region Selection
+Not All Frames Are Equal: Weakly-Supervised Video Grounding With Contextual Similarity and Visual Clustering Losses
+Not Using the Car to See the Sidewalk â Quantifying and Controlling the Effects of Context in Classification and Segmentation
+OCGAN: One-Class Novelty Detection Using GANs With Constrained Latent Representations
+ODE-Inspired Network Design for Single Image Super-Resolution
+OICSR: Out-In-Channel Sparsity Regularization for Compact Deep Neural Networks
+OK-VQA: A Visual Question Answering Benchmark Requiring External Knowledge
+Object Counting and Instance Segmentation With Image-Level Supervision
+Object Detection With Location-Aware Deformable Convolution and Backward Attention Filtering
+Object Discovery in Videos as Foreground Motion Clustering
+Object Instance Annotation With Deep Extreme Level Set Evolution
+Object Tracking by Reconstruction With View-Specific Discriminative Correlation Filters
+Object-Aware Aggregation With Bidirectional Temporal Graph for Video Captioning
+Object-Centric Auto-Encoders and Dummy Anomalies for Abnormal Event Detection in Video
+Object-Driven Text-To-Image Synthesis via Adversarial Training
+Occlusion-Net: 2D/3D Occluded Keypoint Localization Using Graph Networks
+Occupancy Networks: Learning 3D Reconstruction in Function Space
+Octree Guided CNN With Spherical Kernels for 3D Point Clouds
+On Exploring Undetermined Relationships for Visual Relationship Detection
+On Finding Gray Pixels
+On Implicit Filter Level Sparsity in Convolutional Neural Networks
+On Learning Density Aware Embeddings
+On Stabilizing Generative Adversarial Training With Noise
+On Zero-Shot Recognition of Generic Objects
+On the Continuity of Rotation Representations in Neural Networks
+On the Intrinsic Dimensionality of Image Representations
+On the Structural Sensitivity of Deep Convolutional Networks to the Directions of Fourier Basis Functions
+Online High Rank Matrix Completion
+Orthogonal Decomposition Network for Pixel-Wise Binary Classification
+Out-Of-Distribution Detection for Generalized Zero-Shot Action Recognition
+Overcoming Limitations of Mixture Density Networks: A Sampling and Fitting Framework for Multimodal Future Prediction
+P2SGrad: Refined Gradients for Optimizing Deep Face Models
+P3SGD: Patient Privacy Preserving SGD for Regularizing Deep CNNs in Pathological Image Classification
+PA3D: Pose-Action 3D Machine for Video Recognition
+PCAN: 3D Attention Map Learning Using Contextual Information for Point Cloud Based Retrieval
+PDE Acceleration for Active Contours
+PEPSI : Fast Image Inpainting With Parallel Decoding Network
+PIEs: Pose Invariant Embeddings
+PMS-Net: Robust Haze Removal Based on Patch Map for Single Images
+PPGNet: Learning Point-Pair Graph for Line Segment Detection
+PVNet: Pixel-Wise Voting Network for 6DoF Pose Estimation
+Panoptic Feature Pyramid Networks
+Panoptic Segmentation
+Parallel Optimal Transport GAN
+Parametric Noise Injection: Trainable Randomness to Improve Deep Neural Network Robustness Against Adversarial Attack
+Parsing R-CNN for Instance-Level Human Analysis
+Part-Regularized Near-Duplicate Vehicle Re-Identification
+PartNet: A Large-Scale Benchmark for Fine-Grained and Hierarchical Part-Level 3D Object Understanding
+PartNet: A Recursive Part Decomposition Network for Fine-Grained and Hierarchical Shape Segmentation
+Partial Order Pruning: For Best Speed/Accuracy Trade-Off in Neural Architecture Search
+Patch-Based Discriminative Feature Learning for Unsupervised Person Re-Identification
+Patch-Based Progressive 3D Point Set Upsampling
+Path-Invariant Map Networks
+Pattern-Affinitive Propagation Across Depth, Surface Normal and Semantic Segmentation
+Pay Attention! - Robustifying a Deep Visuomotor Policy Through Task-Focused Visual Attention
+Pedestrian Detection With Autoregressive Network Phases
+Peeking Into the Future: Predicting Future Person Activities and Locations in Videos
+Perceive Where to Focus: Learning Visibility-Aware Part-Level Features for Partial Person Re-Identification
+Perturbation Analysis of the 8-Point Algorithm: A Case Study for Wide FoV Cameras
+Phase-Only Image Based Kernel Estimation for Single Image Blind Deblurring
+Photo Wake-Up: 3D Character Animation From a Single Photo
+Photometric Mesh Optimization for Video-Aligned 3D Object Reconstruction
+Photon-Flooded Single-Photon 3D Cameras
+PifPaf: Composite Fields for Human Pose Estimation
+Pixel-Adaptive Convolutional Neural Networks
+PlaneRCNN: 3D Plane Detection and Reconstruction From a Single Image
+Pluralistic Image Completion
+Point Cloud Oversegmentation With Graph-Structured Deep Metric Learning
+Point in, Box Out: Beyond Counting Persons in Crowds
+Point-To-Pose Voting Based Hand Pose Estimation Using Residual Permutation Equivariant Layer
+PointConv: Deep Convolutional Networks on 3D Point Clouds
+PointFlowNet: Learning Representations for Rigid Motion Estimation From Point Clouds
+PointNetLK: Robust & Efficient Point Cloud Registration Using PointNet
+PointPillars: Fast Encoders for Object Detection From Point Clouds
+PointRCNN: 3D Object Proposal Generation and Detection From Point Cloud
+PointWeb: Enhancing Local Neighborhood Features for Point Cloud Processing
+Pointing Novel Objects in Image Captioning
+Polarimetric Camera Calibration Using an LCD Monitor
+Polynomial Representation for Persistence Diagram
+Polysemous Visual-Semantic Embedding for Cross-Modal Retrieval
+Pose2Seg: Detection Free Human Instance Segmentation
+PoseFix: Model-Agnostic General Human Pose Refinement Network
+Practical Coding Function Design for Time-Of-Flight Imaging
+Practical Full Resolution Learned Lossless Image Compression
+Precise Detection in Densely Packed Scenes
+Predicting Future Frames Using Retrospective Cycle GAN
+Predicting Visible Image Differences Under Varying Display Brightness and Viewing Distance
+Privacy Preserving Image-Based Localization
+Privacy Protection in Street-View Panoramas Using Depth and Multi-View Imagery
+Probabilistic End-To-End Noise Correction for Learning With Noisy Labels
+Probabilistic Permutation Synchronization Using the Riemannian Structure of the Birkhoff Polytope
+Progressive Attention Memory Network for Movie Story Question Answering
+Progressive Ensemble Networks for Zero-Shot Recognition
+Progressive Feature Alignment for Unsupervised Domain Adaptation
+Progressive Image Deraining Networks: A Better and Simpler Baseline
+Progressive Pose Attention Transfer for Person Image Generation
+Progressive Teacher-Student Learning for Early Action Prediction
+Propagation Mechanism for Deep and Wide Neural Networks
+Pseudo-LiDAR From Visual Depth Estimation: Bridging the Gap in 3D Object Detection for Autonomous Driving
+Pushing the Boundaries of View Extrapolation With Multiplane Images
+Pushing the Envelope for RGB-Based Dense 3D Hand Pose Estimation via Neural Rendering
+Putting Humans in a Scene: Learning Affordance in 3D Indoor Environments
+Pyramid Feature Attention Network for Saliency Detection
+Pyramidal Person Re-IDentification via Multi-Loss Dynamic Training
+QATM: Quality-Aware Template Matching for Deep Learning
+Quantization Networks
+Quasi-Unsupervised Color Constancy
+Query-Guided End-To-End Person Search
+RAVEN: A Dataset for Relational and Analogical Visual REasoNing
+RENAS: Reinforced Evolutionary Neural Architecture Search
+REPAIR: Removing Representation Bias by Dataset Resampling
+RES-PCA: A Scalable Approach to Recovering Low-Rank Matrices
+RF-Net: An End-To-End Image Matching Network Based on Receptive Field
+RGBD Based Dimensional Decomposition Residual Network for 3D Semantic Scene Completion
+RL-GAN-Net: A Reinforcement Learning Agent Controlled GAN Network for Real-Time Point Cloud Shape Completion
+ROI Pooled Correlation Filters for Visual Tracking
+ROI-10D: Monocular Lifting of 2D Detection to 6D Pose and Metric Shape
+RVOS: End-To-End Recurrent Network for Video Object Segmentation
+Radial Distortion Triangulation
+Ranked List Loss for Deep Metric Learning
+Rare Event Detection Using Disentangled Representation Learning
+Ray-Space Projection Model for Light Field Camera
+Re-Identification Supervised Texture Generation
+Re-Identification With Consistent Attentive Siamese Networks
+Re-Ranking via Metric Fusion for Object Retrieval and Person Re-Identification
+RePr: Improved Training of Convolutional Filters
+Real-Time Self-Adaptive Deep Stereo
+Reasoning Visual Dialogs With Structural and Partial Observations
+Reasoning-RCNN: Unifying Adaptive Global Reasoning Into Large-Scale Object Detection
+Recurrent Attentive Zooming for Joint Crowd Counting and Precise Localization
+Recurrent Back-Projection Network for Video Super-Resolution
+Recurrent MVSNet for High-Resolution Multi-View Stereo Depth Inference
+Recurrent Neural Network for (Un-)Supervised Learning of Monocular Video Visual Odometry and Depth
+Recurrent Neural Networks With Intra-Frame Iterations for Video Deblurring
+Recursive Visual Attention in Visual Dialog
+Reducing Uncertainty in Undersampled MRI Reconstruction With Active Acquisition
+Refine and Distill: Exploiting Cycle-Inconsistency and Knowledge Distillation for Unsupervised Monocular Depth Estimation
+Reflection Removal Using a Dual-Pixel Sensor
+Reflective and Fluorescent Separation Under Narrow-Band Illumination
+Region Proposal by Guided Anchoring
+RegularFace: Deep Face Recognition via Exclusive Regularization
+Regularizing Activation Distribution for Training Binarized Deep Networks
+Reinforced Cross-Modal Matching and Self-Supervised Imitation Learning for Vision-Language Navigation
+Relation-Shape Convolutional Neural Network for Point Cloud Analysis
+Relational Action Forecasting
+Relational Knowledge Distillation
+Reliable and Efficient Image Cropping: A Grid Anchor Based Approach
+RepMet: Representative-Based Metric Learning for Classification and Few-Shot Object Detection
+RepNet: Weakly Supervised Training of an Adversarial Reprojection Network for 3D Human Pose Estimation
+Representation Flow for Action Recognition
+Representation Similarity Analysis for Efficient Task Taxonomy & Transfer Learning
+Residual Networks for Light Field Image Super-Resolution
+Residual Regression With Semantic Prior for Crowd Counting
+Rethinking Knowledge Graph Propagation for Zero-Shot Learning
+Rethinking the Evaluation of Video Summaries
+Retrieval-Augmented Convolutional Neural Networks Against Adversarial Examples
+Revealing Scenes by Inverting Structure From Motion Reconstructions
+Reversible GANs for Memory-Efficient Image-To-Image Translation
+Revisiting Local Descriptor Based Image-To-Class Measure for Few-Shot Learning
+Revisiting Perspective Information for Efficient Crowd Counting
+Revisiting Self-Supervised Visual Representation Learning
+Rob-GAN: Generator, Discriminator, and Adversarial Attacker
+Robust Facial Landmark Detection via Occlusion-Adaptive Deep Networks
+Robust Histopathology Image Analysis: To Label or to Synthesize?
+Robust Point Cloud Based Reconstruction of Large-Scale Outdoor Scenes
+Robust Subspace Clustering With Independent and Piecewise Identically Distributed Noise Modeling
+Robust Video Stabilization by Optimization in CNN Weight Space
+Robustness Verification of Classification Deep Neural Networks via Linear Programming
+Robustness of 3D Deep Learning in an Adversarial Setting
+Robustness via Curvature Regularization, and Vice Versa
+Rules of the Road: Predicting Driving Behavior With a Convolutional Model of Semantic Interactions
+RÂ²GAN: Cross-Modal Recipe Retrieval With Generative Adversarial Network
+RÂ³ Adversarial Network for Cross Model Face Recognition
+S4Net: Single Stage Salient-Instance Segmentation
+SAIL-VOS: Semantic Amodal Instance Level Video Object Segmentation â A Synthetic Dataset and Baselines
+SCOPS: Self-Supervised Co-Part Segmentation
+SDC â Stacked Dilated Convolution: A Unified Descriptor Network for Dense Matching Tasks
+SDRSAC: Semidefinite-Based Randomized Approach for Robust Point Cloud Registration Without Correspondences
+SFNet: Learning Object-Aware Semantic Correspondence
+SIGNet: Semantic Instance Aided Unsupervised 3D Geometry Perception
+SIXray: A Large-Scale Security Inspection X-Ray Benchmark for Prohibited Item Discovery in Overlapping Images
+SOSNet: Second Order Similarity Regularization for Local Descriptor Learning
+SPM-Tracker: Series-Parallel Matching for Real-Time Visual Object Tracking
+SR-LSTM: State Refinement for LSTM Towards Pedestrian Trajectory Prediction
+SSN: Learning Sparse Switchable Normalization via SparsestMax
+STEP: Spatio-Temporal Progressive Learning for Video Action Detection
+STGAN: A Unified Selective Transfer Network for Arbitrary Image Attribute Editing
+Salient Object Detection With Pyramid Attention and Salient Edges
+Sampling Techniques for Large-Scale Object Detection From Sparsely Annotated Objects
+Scalable Convolutional Neural Network for Image Compressed Sensing
+Scale-Adaptive Neural Dense Features: Learning via Hierarchical Context Aggregation
+Scan2CAD: Learning CAD Model Alignment in RGB-D Scans
+Scan2Mesh: From Unstructured Range Scans to 3D Meshes
+Scene Categorization From Contours: Medial Axis Based Salience Measures
+Scene Graph Generation With External Knowledge and Image Reconstruction
+Scene Memory Transformer for Embodied Agents in Long-Horizon Tasks
+Scene Parsing via Integrated Classification Model and Variance-Based Regularization
+SceneCode: Monocular Dense Semantic Reconstruction Using Learned Encoded Scene Representations
+ScratchDet: Training Single-Shot Object Detectors From Scratch
+Sea-Thru: A Method for Removing Water From Underwater Images
+Seamless Scene Segmentation
+Searching for a Robust Neural Architecture in Four GPU Hours
+Second-Order Attention Network for Single Image Super-Resolution
+See More, Know More: Unsupervised Video Object Segmentation With Co-Attention Siamese Networks
+SeerNet: Predicting Convolutional Neural Network Feature-Map Sparsity Through Low-Bit Quantization
+Segmentation-Driven 6D Object Pose Estimation
+SelFlow: Self-Supervised Learning of Optical Flow
+Selective Kernel Networks
+Selective Sensor Fusion for Neural Visual-Inertial Odometry
+Self-Calibrating Deep Photometric Stereo Networks
+Self-Critical n-Step Training for Image Captioning
+Self-Supervised 3D Hand Pose Estimation Through Training by Fitting
+Self-Supervised Adaptation of High-Fidelity Face Models for Monocular Performance Tracking
+Self-Supervised Convolutional Subspace Clustering Network
+Self-Supervised GANs via Auxiliary Rotation Loss
+Self-Supervised Learning of 3D Human Pose Using Multi-View Geometry
+Self-Supervised Learning via Conditional Motion Propagation
+Self-Supervised Representation Learning From Videos for Facial Action Unit Detection
+Self-Supervised Representation Learning by Rotation Feature Decoupling
+Self-Supervised Spatio-Temporal Representation Learning for Videos by Predicting Motion and Appearance Statistics
+Self-Supervised Spatiotemporal Learning via Video Clip Order Prediction
+Semantic Alignment: Finding Semantically Consistent Ground-Truth for Facial Landmark Detection
+Semantic Attribute Matching Networks
+Semantic Component Decomposition for Face Attribute Manipulation
+Semantic Correlation Promoted Shape-Variant Context for Segmentation
+Semantic Graph Convolutional Networks for 3D Human Pose Regression
+Semantic Image Synthesis With Spatially-Adaptive Normalization
+Semantic Projection Network for Zero- and Few-Label Semantic Segmentation
+Semantically Aligned Bias Reducing Zero Shot Learning
+Semantically Tied Paired Cycle Consistency for Zero-Shot Sketch-Based Image Retrieval
+Semantics Disentangling for Text-To-Image Generation
+Semi-Supervised Learning With Graph Learning-Convolutional Networks
+Semi-Supervised Transfer Learning for Image Rain Removal
+Sensitive-Sample Fingerprinting of Deep Neural Networks
+Separate to Adapt: Open Set Domain Adaptation via Progressive Separation
+Sequence-To-Sequence Domain Adaptation Network for Robust Text Image Recognition
+Shape Robust Text Detection With Progressive Scale Expansion Network
+Shape Unicode: A Unified Shape Representation
+Shape2Motion: Joint Analysis of Motion Parts and Attributes From 3D Shapes
+Shapes and Context: In-The-Wild Image Synthesis & Manipulation
+ShieldNets: Defending Against Adversarial Attacks Using Probabilistic Adversarial Robustness
+Shifting More Attention to Video Salient Object Detection
+Show, Control and Tell: A Framework for Generating Controllable and Grounded Captions
+SiCloPe: Silhouette-Based Clothed People
+SiamRPN++: Evolution of Siamese Visual Tracking With Very Deep Networks
+Siamese Cascaded Region Proposal Networks for Real-Time Visual Tracking
+Side Window Filtering
+Signal-To-Noise Ratio: A Robust Distance Metric for Deep Metric Learning
+Sim-Real Joint Reinforcement Transfer for 3D Indoor Navigation
+Sim-To-Real via Sim-To-Sim: Data-Efficient Robotic Grasping via Randomized-To-Canonical Adaptation Networks
+SimulCap : Single-View Human Performance Capture With Cloth Simulation
+Simultaneously Optimizing Weight and Quantizer of Ternary Neural Network Using Truncated Gaussian Approximation
+Single Image Depth Estimation Trained via Depth From Defocus Cues
+Single Image Deraining: A Comprehensive Benchmark Analysis
+Single Image Reflection Removal Beyond Linearity
+Single Image Reflection Removal Exploiting Misaligned Training Data and Network Enhancements
+Single-Frame Regularization for Temporally Stable CNNs
+Single-Image Piece-Wise Planar 3D Reconstruction via Associative Embedding
+Skeleton-Based Action Recognition With Directed Graph Neural Networks
+SketchGAN: Joint Sketch Completion and Recognition With Generative Adversarial Network
+Skin-Based Identification From Multispectral Image Data Using CNNs
+Sliced Wasserstein Discrepancy for Unsupervised Domain Adaptation
+Sliced Wasserstein Generative Models
+Slim DensePose: Thrifty Learning From Sparse Annotations and Motion Cues
+Snapshot Distillation: Teacher-Student Optimization in One Generation
+SoDeep: A Sorting Deep Net to Learn Ranking Loss Surrogates
+SoPhie: An Attentive GAN for Predicting Paths Compliant to Social and Physical Constraints
+Social Relation Recognition From Videos via Multi-Scale Spatial-Temporal Reasoning
+Social-IQ: A Question Answering Benchmark for Artificial Social Intelligence
+Soft Labels for Ordinal Regression
+SparseFool: A Few Pixels Make a Big Difference
+Spatial Attentive Single-Image Deraining With a High Quality Real Rain Dataset
+Spatial Fusion GAN for Image Synthesis
+Spatial-Aware Graph Relation Network for Large-Scale Object Detection
+Spatially Variant Linear Representation Models for Joint Filtering
+Spatio-Temporal Dynamics and Semantic Attribute Enriched Visual Encoding for Video Captioning
+Spatio-Temporal Video Re-Localization by Warp LSTM
+Spatiotemporal CNN for Video Object Segmentation
+Spectral Metric for Dataset Complexity Assessment
+Spectral Reconstruction From Dispersive Blur: A Novel Light Efficient Spectral Imager
+Speech2Face: Learning the Face Behind a Voice
+Speed Invariant Time Surface for Learning to Detect Corner Points With Event-Based Cameras
+Sphere Generative Adversarial Network Based on Geometric Moment Matching
+SpherePHD: Applying CNNs on a Spherical PolyHeDron Representation of 360Â° Images
+Spherical Fractal Convolutional Neural Networks for Point Cloud Recognition
+Spherical Regression: Learning Viewpoints, Surface Normals and 3D Rotations on N-Spheres
+Spot and Learn: A Maximum-Entropy Patch Sampler for Few-Shot Image Classification
+SpotTune: Transfer Learning Through Adaptive Fine-Tuning
+Steady-State Non-Line-Of-Sight Imaging
+Stereo R-CNN Based 3D Object Detection for Autonomous Driving
+StereoDRNet: Dilated Residual StereoNet
+Stochastic Class-Based Hard Example Mining for Deep Metric Learning
+StoryGAN: A Sequential Conditional GAN for Story Visualization
+Strand-Accurate Multi-View Hair Capture
+Streamlined Dense Video Captioning
+Strike (With) a Pose: Neural Networks Are Easily Fooled by Strange Poses of Familiar Objects
+Striking the Right Balance With Uncertainty
+Strong-Weak Distribution Alignment for Adaptive Object Detection
+Structural Relational Reasoning of Point Clouds
+Structure-Preserving Stereoscopic View Synthesis With Multi-Scale Adversarial Correlation Matching
+Structured Binary Neural Networks for Accurate Image Classification and Semantic Segmentation
+Structured Knowledge Distillation for Semantic Segmentation
+Structured Pruning of Neural Networks With Budget-Aware Regularization
+Student Becoming the Master: Knowledge Amalgamation for Joint Scene Parsing, Depth Estimation, and More
+Style Transfer by Relaxed Optimal Transport and Self-Similarity
+Superquadrics Revisited: Learning 3D Shape Parsing Beyond Cuboids
+Supervised Fitting of Geometric Primitives to 3D Point Clouds
+Surface Reconstruction From Normals: A Robust DGP-Based Discontinuity Preservation Approach
+Synthesizing 3D Shapes From Silhouette Image Collections Using Multi-Projection Generative Adversarial Networks
+Synthesizing Environment-Aware Activities via Activity Sketches
+T-Net: Parametrizing Fully Convolutional Nets With a Single High-Order Tensor
+TACNet: Transition-Aware Context Network for Spatio-Temporal Action Detection
+TAFE-Net: Task-Aware Feature Embeddings for Low Shot Learning
+TOUCHDOWN: Natural Language Navigation and Spatial Reasoning in Visual Street Environments
+Tactical Rewind: Self-Correction via Backtracking in Vision-And-Language Navigation
+Taking a Closer Look at Domain Shift: Category-Level Adversaries for Semantics Consistent Domain Adaptation
+Taking a Deeper Look at the Inverse Compositional Algorithm
+Tangent-Normal Adversarial Regularization for Semi-Supervised Learning
+Target-Aware Deep Tracking
+Task Agnostic Meta-Learning for Few-Shot Learning
+Task-Free Continual Learning
+Tell Me Where I Am: Object-Level Scene Context Prediction
+Temporal Cycle-Consistency Learning
+Temporal Transformer Networks: Joint Learning of Invariant and Discriminative Time Warping
+Text Guided Person Image Synthesis
+Text2Scene: Generating Compositional Scenes From Textual Descriptions
+Texture Mixer: A Network for Controllable Synthesis and Interpolation of Texture
+TextureNet: Consistent Local Parametrizations for Learning From High-Resolution Signals on Meshes
+Textured Neural Avatars
+The Alignment of the Spheres: Globally-Optimal Spherical Mixture Alignment for Camera Pose Estimation
+The Domain Transform Solver
+The Perfect Match: 3D Point Cloud Matching With Smoothed Densities
+The Pros and Cons: Rank-Aware Temporal Attention for Skill Determination in Long Videos
+The Regretful Agent: Heuristic-Aided Navigation Through Progress Estimation
+The Visual Centrifuge: Model-Free Layered Video Representations
+Thinking Outside the Pool: Active Training Image Creation for Relative Attributes
+Tightness-Aware Evaluation Protocol for Scene Text Detection
+Time-Conditioned Action Anticipation in One Shot
+Timeception for Complex Action Recognition
+ToothNet: Automatic Tooth Instance Segmentation and Identification From Cone Beam CT Images
+TopNet: Structural Point Cloud Decoder
+Topology Reconstruction of Tree-Like Structure in Images via Structural Similarity Measure and Dominant Set Clustering
+Toward Convolutional Blind Denoising of Real Photographs
+Toward Realistic Image Compositing With Adversarial Learning
+Towards Accurate One-Stage Object Detection With AP-Loss
+Towards High-Fidelity Nonlinear 3D Face Morphable Model
+Towards Instance-Level Image-To-Image Translation
+Towards Natural and Accurate Future Motion Prediction of Humans and Animals
+Towards Optimal Structured CNN Pruning via Generative Adversarial Learning
+Towards Real Scene Super-Resolution With Raw Images
+Towards Rich Feature Discovery With Class Activation Maps Augmentation for Person Re-Identification
+Towards Robust Curve Text Detection With Conditional Spatial Expansion
+Towards Scene Understanding: Unsupervised Monocular Depth Estimation With Semantic-Aware Representation
+Towards Social Artificial Intelligence: Nonverbal Social Signal Prediction in a Triadic Interaction
+Towards Universal Object Detection by Domain Attention
+Towards VQA Models That Can Read
+Towards Visual Feature Translation
+TraPHic: Trajectory Prediction in Dense and Heterogeneous Traffic Using Weighted Interactions
+TraVeLGAN: Image-To-Image Translation by Transformation Vector Learning
+Tracking by Animation: Unsupervised Learning of Multi-Object Attentive Trackers
+Training Deep Learning Based Image Denoisers From Undersampled Measurements Without Ground Truth and Without Image Prior
+TransGaGa: Geometry-Aware Unsupervised Image-To-Image Translation
+Transfer Learning via Unsupervised Task Discovery for Visual Question Answering
+Transferable AutoML by Model Sharing Over Grouped Datasets
+Transferable Interactiveness Knowledge for Human-Object Interaction Detection
+Transferrable Prototypical Networks for Unsupervised Domain Adaptation
+Translate-to-Recognize Networks for RGB-D Scene Recognition
+Triangulation Learning Network: From Monocular to Stereo 3D Object Detection
+Triply Supervised Decoder Networks for Joint Detection and Segmentation
+Trust Region Based Adversarial Attack on Neural Networks
+Turn a Silicon Camera Into an InGaAs Camera
+Two Body Problem: Collaborative Visual Task Completion
+Two-Stream Adaptive Graph Convolutional Networks for Skeleton-Based Action Recognition
+Typography With Decor: Intelligent Text Style Transfer
+UPSNet: A Unified Panoptic Segmentation Network
+UnOS: Unified Unsupervised Optical-Flow and Stereo-Depth Estimation by Watching Videos
+Uncertainty Guided Multi-Scale Residual Learning-Using a Cycle Spinning CNN for Single Image De-Raining
+Underexposed Photo Enhancement Using Deep Illumination Estimation
+Understanding and Visualizing Deep Visual Saliency Models
+Understanding the Disharmony Between Dropout and Batch Normalization by Variance Shift
+Understanding the Limitations of CNN-Based Absolute Camera Pose Regression
+Unequal-Training for Deep Face Recognition With Long-Tailed Noisy Data
+Unified Visual-Semantic Embeddings: Bridging Vision and Language With Structured Meaning Representations
+UniformFace: Learning Deep Equidistributed Representation for Face Recognition
+Unifying Heterogeneous Classifiers With Distillation
+Universal Domain Adaptation
+Unprocessing Images for Learned Raw Denoising
+Unsupervised 3D Pose Estimation With Geometric Self-Supervision
+Unsupervised Deep Epipolar Flow for Stationary or Dynamic Scenes
+Unsupervised Deep Tracking
+Unsupervised Disentangling of Appearance and Geometry by Deformable Generator Network
+Unsupervised Domain Adaptation Using Feature-Whitening and Consensus Loss
+Unsupervised Domain Adaptation for ToF Data Denoising With Adversarial Learning
+Unsupervised Domain-Specific Deblurring via Disentangled Representations
+Unsupervised Embedding Learning via Invariant and Spreading Instance Feature
+Unsupervised Event-Based Learning of Optical Flow, Depth, and Egomotion
+Unsupervised Face Normalization With Extreme Pose and Expression in the Wild
+Unsupervised Image Captioning
+Unsupervised Image Matching and Object Discovery as Optimization
+Unsupervised Learning of Action Classes With Continuous Temporal Embedding
+Unsupervised Learning of Consensus Maximization for 3D Vision Problems
+Unsupervised Learning of Dense Shape Correspondence
+Unsupervised Moving Object Detection via Contextual Information Separation
+Unsupervised Multi-Modal Neural Machine Translation
+Unsupervised Open Domain Recognition by Semantic Discrepancy Minimization
+Unsupervised Part-Based Disentangling of Object Shape and Appearance
+Unsupervised Person Image Generation With Semantic Parsing Transformation
+Unsupervised Person Re-Identification by Soft Multilabel Learning
+Unsupervised Primitive Discovery for Improved 3D Generative Modeling
+Unsupervised Visual Domain Adaptation: A Deep Max-Margin Gaussian Process Approach
+Using Unknown Occluders to Recover Hidden Scenes
+VERI-Wild: A Large Dataset and a New Method for Vehicle Re-Identification in the Wild
+VITAMIN-E: VIsual Tracking and MappINg With Extremely Dense Feature Points
+VRSTC: Occlusion-Free Video Person Re-Identification
+Variational Autoencoders Pursue PCA Directions (by Accident)
+Variational Bayesian Dropout With a Hierarchical Prior
+Variational Convolutional Neural Network Pruning
+Variational Information Distillation for Knowledge Transfer
+Variational Prototyping-Encoder: One-Shot Learning With Prototypical Images
+Veritatem Dies Aperit - Temporally Consistent Depth Prediction Enabled by a Multi-Task Geometric and Semantic Scene Understanding Approach
+Versatile Multiple Choice Learning and Its Application to Vision Computing
+Video Action Transformer Network
+Video Generation From Single Semantic Label Map
+Video Magnification in the Wild Using Fractional Anisotropy in Temporal Distribution
+Video Relationship Reasoning Using Gated Spatio-Temporal Energy Graph
+Video Summarization by Learning From Unpaired Data
+Viewport Proposal CNN for 360Â° Video Quality Assessment
+Vision-Based Navigation With Language-Based Assistance via Imitation Learning With Indirect Intervention
+Visual Attention Consistency Under Image Transforms for Multi-Label Image Classification
+Visual Localization by Learning Objects-Of-Interest Dense Match Regression
+Visual Query Answering by Entity-Attribute Graph Matching and Reasoning
+Visual Question Answering as Reading Comprehension
+Visual Tracking via Adaptive Spatially-Regularized Correlation Filters
+VizWiz-Priv: A Dataset for Recognizing the Presence and Purpose of Private Visual Information in Images Taken by Blind People
+Volumetric Capture of Humans With a Single RGBD Camera via Semi-Parametric Learning
+WarpGAN: Automatic Caricature Generation
+Weakly Supervised Complementary Parts Models for Fine-Grained Image Classification From the Bottom Up
+Weakly Supervised Deep Image Hashing Through Tag Embeddings
+Weakly Supervised Image Classification Through Noise Regularization
+Weakly Supervised Learning of Instance Segmentation With Inter-Pixel Relations
+Weakly Supervised Open-Set Domain Adaptation by Dual-Domain Collaboration
+Weakly Supervised Person Re-Identification
+Weakly Supervised Video Moment Retrieval From Text Queries
+Weakly-Supervised Discovery of Geometry-Aware Representation for 3D Human Pose Estimation
+What Correspondences Reveal About Unknown Camera and Motion Models?
+What Do Single-View 3D Reconstruction Networks Learn?
+What Does It Mean to Learn in Deep Networks? And, How Does One Detect Adversarial Attacks?
+What Object Should I Use? - Task Driven Object Detection
+What and How Well You Performed? A Multitask Learning Approach to Action Quality Assessment
+What's to Know? Uncertainty as a Guide to Asking Goal-Oriented Questions
+When Color Constancy Goes Wrong: Correcting Improperly White-Balanced Images
+Where's Wally Now? Deep Generative and Discriminative Embeddings for Novelty Detection
+Which Way Are You Going? Imitative Decision Learning for Path Forecasting in Dynamic Scenes
+Why ReLU Networks Yield High-Confidence Predictions Far Away From the Training Data and How to Mitigate the Problem
+Wide-Area Crowd Counting via Ground-Plane Density Maps and Multi-View Fusion CNNs
+Wide-Context Semantic Image Extrapolation
+World From Blur
+X2CT-GAN: Reconstructing CT From Biplanar X-Rays With Generative Adversarial Networks
+You Look Twice: GaterNet for Dynamic Filter Selection in CNNs
+You Reap What You Sow: Using Videos to Generate High Precision Object Proposals for Weakly-Supervised Object Detection
+Zero-Shot Task Transfer
+ZigZagNet: Fusing Top-Down and Bottom-Up Context for Object Segmentation
+Zoom to Learn, Learn to Zoom
+Zoom-In-To-Check: Boosting Video Interpolation via Instance-Level Discrimination
+d-SNE: Domain Adaptation Using Stochastic Neighborhood Embedding
+âDouble-DIPâ: Unsupervised Image Decomposition via Coupled Deep-Image-Priors

@@ -1,0 +1,69 @@
+The return of AdaBoost.MH: multi-class Hamming trees
+Adaptive Feature Ranking for Unsupervised Transfer Learning
+Learning Type-Driven Tensor-Based Meaning Representations
+Auto-Encoding Variational Bayes
+Fast Training of Convolutional Networks through FFTs
+Can recursive neural tensor networks learn logical reasoning?
+Low-Rank Approximations for Conditional Feedforward Computation in Deep Neural Networks
+Zero-Shot Learning by Convex Combination of Semantic Embeddings
+Learning Transformations for Classification Forests
+Learning generative models with visual attention
+Deep Belief Networks for Image Denoising
+Multi-digit Number Recognition from Street View Imagery using Deep Convolutional Neural Networks
+Multi-View Priors for Learning Detectors from Sparse Viewpoint Data
+Efficient Visual Coding: From Retina To V2
+Semistochastic Quadratic Bound Methods
+Spectral Networks and Locally Connected Networks on Graphs
+Learning High-level Image Representation for Image Retrieval via Multi-Task DNN using Clickthrough Data
+Continuous Learning: Engineering Super Features With Feature Algebras
+Deep and Wide Multiscale Recursive Networks for Robust Image Labeling
+OverFeat: Integrated Recognition, Localization and Detection using Convolutional Networks
+Stopping Criteria in Contrastive Divergence: Alternatives to the Reconstruction Error
+Reference Distance Estimator
+How to Construct Deep Recurrent Neural Networks
+Unit Tests for Stochastic Optimization
+Image Representation Learning Using Graph Regularized Auto-Encoders
+A Simple Model for Learning Multilingual Compositional Semantics
+Rate-Distortion Auto-Encoders
+An Architecture for Distinguishing between Predictors and Inhibitors in Reinforcement Learning
+A Generative Product-of-Filters Model of Audio
+Improving Deep Neural Networks with Probabilistic Maxout Units
+On Fast Dropout and its Applicability to Recurrent Networks
+Neuronal Synchrony in Complex-Valued Deep Networks
+Distinction between features extracted using deep belief networks
+Sparse, complex-valued representations of natural sounds learned with phase and amplitude continuity priors
+k-Sparse Autoencoders
+Why does the unsupervised pretraining encourage moderate-sparseness?
+Deep learning for neuroimaging: a validation study
+Feature Graph Architectures
+Understanding Deep Architectures using a Recursive Convolutional Network
+Large-scale Multi-label Text Classification - Revisiting Neural Networks
+Factorial Hidden Markov Models for Learning Representations of Natural Language
+Multimodal Transitions for Generative Stochastic Networks
+An empirical analysis of dropout in piecewise linear networks
+Learning to encode motion using spatio-temporal synchrony
+Exact solutions to the nonlinear dynamics of learning in deep linear neural networks
+On the number of inference regions of deep feed forward networks with piece-wise linear activations
+Approximated Infomax Early Stopping: Revisiting Gaussian RBMs on Natural Images
+Bounding the Test Log-Likelihood of Generative Models
+Learning Paired-associate Images with An Unsupervised Deep Learning Architecture
+EXMOVES: Classifier-based Features for Scalable Action Recognition
+Intriguing properties of neural networks
+Learning Human Pose Estimation Features with Convolutional Networks
+Generative NeuroEvolution for Deep Learning
+Learned versus Hand-Designed Feature Representations for 3d Agglomeration
+Learning Non-Linear Feature Maps, With An Application To Representation Learning
+Sequentially Generated Instance-Dependent Image Representations for Classification
+Zero-Shot Learning and Clustering for Semantic Utterance Classification
+An Empirical Investigation of Catastrophic Forgeting in Gradient-Based Neural Networks
+Nonparametric Weight Initialization of Neural Networks via Integral Representation
+A Primal-Dual Method for Training Recurrent Neural Networks Constrained by the Echo-State Property
+Deep Convolutional Ranking for Multilabel Image Annotation
+Correlation-based construction of neighborhood and edge features
+One-Shot Adaptation of Supervised Deep Convolutional Models
+Sparse similarity-preserving hashing
+Some Improvements on Deep Convolutional Neural Network Based Image Classification
+Revisiting Natural Gradient for Deep Networks
+Group-sparse Embeddings in Collective Matrix Factorization
+Network In Network
+Modeling correlations in spontaneous activity of visual cortex with centered Gaussian-binary deep Boltzmann machines

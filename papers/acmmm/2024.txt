@@ -1,0 +1,1148 @@
+DeepPointMap2: Accurate and Robust LiDAR-Visual SLAM with Neural Descriptors
+DreamBooth++: Boosting Subject-Driven Generation via Region-Level References Packing
+An Inverse Partial Optimal Transport Framework for Music-guided Trailer Generation
+ReCorD: Reasoning and Correcting Diffusion for HOI Generation
+RCA: Region Conditioned Adaptation for Visual Abductive Reasoning
+Cognition-Supervised Saliency Detection: Contrasting EEG Signals and Visual Stimuli
+Class Balance Matters to Active Class-Incremental Learning
+Embracing Adaptation: An Effective Dynamic Defense Strategy Against Adversarial Examples
+Instance-Level Panoramic Audio-Visual Saliency Detection and Ranking
+InNeRF: Learning Interpretable Radiance Fields for Generalizable 3D Scene Representation and Rendering
+Zero-Shot Character Identification and Speaker Prediction in Comics via Iterative Multimodal Fusion
+QNCD: Quantization Noise Correction for Diffusion Models
+Tracing Training Progress: Dynamic Influence Based Selection for Active Learning
+Federated Fuzzy C-means with Schatten-p Norm Minimization
+GaussianTalker: Real-Time Talking Head Synthesis with 3D Gaussian Splatting
+CustomNet: Object Customization with Variable-Viewpoints in Text-to-Image Diffusion Models
+One-shot In-context Part Segmentation
+Decoder-Only LLMs are Better Controllers for Diffusion Models
+PC$^2$: Pseudo-Classification Based Pseudo-Captioning for Noisy Correspondence Learning in Cross-Modal Retrieval
+MaterialSeg3D: Segmenting Dense Materials from 2D Priors for 3D Assets
+Siformer: Feature-isolated Transformer for Efficient Skeleton-based Sign Language Recognition
+Learning in Order! A Sequential Strategy to Learn Invariant Features for Multimodal Sentiment Analysis
+GRFormer: Grouped Residual Self-Attention for Lightweight Single Image Super-Resolution
+Boundary-Aware Periodicity-based Sparsification Strategy for Ultra-Long Time Series Forecasting
+Cross-Modal Coherence-Enhanced Feedback Prompting for News Captioning
+COCO-LC: Colorfulness Controllable Language-based Colorization
+DEITalk: Speech-Driven 3D Facial Animation with Dynamic Emotional Intensity Modeling
+Training Spatial-Frequency Visual Prompts and Probabilistic Clusters for Accurate Black-Box Transfer Learning
+Efficient Perceiving Local Details via Adaptive Spatial-Frequency Information Integration for Multi-focus Image Fusion
+Two in One Go: Single-stage Emotion Recognition with Decoupled Subject-context Transformer
+Accurate and Lightweight Learning for Specific Domain Image-Text Retrieval
+Ada2I: Enhancing Modality Balance for Multimodal Conversational Emotion Recognition
+LOVD: Large Open Vocabulary Object detection
+Towards Multi-view Consistent Graph Diffusion
+PIMT: Physics-Based Interactive Motion Transition for Hybrid Character Animation
+HOGDA: Boosting Semi-supervised Graph Domain Adaptation via High-Order Structure-Guided Adaptive Feature Alignmen
+CoTuning: A Large-Small Model Collaborating Distillation Framework for Better Model Generalization
+Boosting Speech Recognition Robustness to Modality-Distortion with Contrast-Augmented Prompts
+DiffTV: Identity-Preserved Thermal-to-Visible Face Translation via Feature Alignment and Dual-Stage Conditions
+Bridging Gaps in Content and Knowledge for Multimodal Entity Linking
+Weakly Supervised Video Anomaly Detection and Localization with Spatio-Temporal Prompts
+3D Reconstruction and Novel View Synthesis of Indoor Environments based on a Dual Neural Radiance Field
+ECAvatar: 3D Avatar Facial Animation with Controllable Identity and Emotion
+Breaking Modality Gap in RGBT Tracking: Coupled Knowledge Distillation
+Diverse consensuses paired with motion estimation-based multi-model fitting
+RainyScape: Unsupervised Rainy Scene Reconstruction using Decoupled Neural Rendering
+VR-DiagNet: Medical Volumetric and Radiomic Diagnosis Networks with Interpretable Clinician-like Optimizing Visual Inspection
+Hierarchical Debiasing and Noisy Correction for Cross-domain Video Tube Retrieval
+GG-Editor: Locally Editing 3D Avatars with Multimodal Large Language Model Guidance
+Deblurring Neural Radiance Fields with Event-driven Bundle Adjustment
+SpeechEE: A Novel Benchmark for Speech Event Extraction
+TGCA-PVT: Topic-Guided Context-Aware Pyramid Vision Transformer for Sticker Emotion Recognition
+Cross-View Mutual Learning for Semi-Supervised Medical Image Segmentation
+Multi-grained Correspondence Learning of Audio-language Models for Few-shot Audio Recognition
+Information Diffusion Prediction with Graph Neural Ordinary Differential Equation Network
+Predicting the Unseen: A Novel Dataset for Hidden Intention Localization in Pre-abnormal Analysis
+Dig a Hole and Fill in Sand: Adversary and Hiding Decoupled Steganography
+AdaCoder: Adaptive Prompt Compression for Programmatic Visual Question Answering
+SparseInteraction: Sparse Semantic Guidance for Radar and Camera 3D Object Detection
+Customizing Text-to-Image Generation with Inverted Interaction
+Explicit Granularity and Implicit Scale Correspondence Learning for Point-Supervised Video Moment Localization
+Dual-stream Perception-driven Blind Quality Assessment for Stereoscopic Omnidirectional Images
+StableMoFusion: Towards Robust and Efficient Diffusion-based Motion Generation Framework
+On-the-fly Point Feature Representation for Point Clouds Analysis
+SpikeGS: 3D Gaussian Splatting from Spike Streams with High-Speed Camera Motion
+Heterogeneity-Aware Federated Deep Multi-View Clustering towards Diverse Feature Representations
+VR-Mediated Cognitive Defusion: A Comparative Study for Managing Negative Thoughts
+Channel-Spatial Support-Query Cross-Attention for Fine-Grained Few-Shot Image Classification
+ReCoS: A Novel Benchmark for Cross-Modal Image-Text Retrieval in Complex Real-Life Scenarios
+Superpixel-based Efficient Sampling for Learning Neural Fields from Large Input
+Laplacian Matrix Learning for Point Cloud Attribute Compression with Ternary Search-Based Adaptive Block Partition
+Sparse Query Dense: Enhancing 3D Object Detection with Pseudo points
+HazeSpace2M: A Dataset for Haze Aware Single Image Dehazing
+CalibRBEV: Multi-Camera Calibration via Reversed Bird's-eye-view Representations for Autonomous Driving
+Robust Prototype Completion for Incomplete Multi-view Clustering
+HcaNet: Haze-concentration-aware Network for Real-scene Dehazing with Codebook Priors
+CoMO-NAS: Core-Structures-Guided Multi-Objective Neural Architecture Search for Multi-Modal Classification
+An Active Masked Attention Framework for Many-to-Many Cross-Domain Recommendations
+Illumination Distribution Prior for Low-light Image Enhancement
+AraLive: Automatic Reward Adaption for Learning-based Live Video Streaming
+Unleashing the Power of Generic Segmentation Model: A Simple Baseline for Infrared Small Target Detection
+Towards Photorealistic Video Colorization via Gated Color-Guided Image Diffusion Models
+CT2C-QA: Multimodal Question Answering over Chinese Text, Table and Chart
+MAGIC: Rethinking Dynamic Convolution Design for Medical Image Segmentation
+FC-4DFS: Frequency-controlled Flexible 4D Facial Expression Synthesizing
+Cantor: Inspiring Multimodal Chain-of-Thought of MLLM
+Improving Interaction Comfort in Authoring Task in AR-HRI through Dynamic Dual-Layer Interaction Adjustment
+GDR-GMA: Machine Unlearning via Direction-Rectified and Magnitude-Adjusted Gradients
+FedCAFE: Federated Cross-Modal Hashing with Adaptive Feature Enhancement
+LoFormer: Local Frequency Transformer for Image Deblurring
+Learning from Distinction: Mitigating backdoors using a low-capacity model
+Integrating Content-Semantics-World Knowledge to Detect Stress from Videos
+Multi-Modal Diffusion Model for Recommendation
+Sniffing Threatening Open-World Objects in Autonomous Driving by Open-Vocabulary Models
+3D Human Pose Estimation from Multiple Dynamic Views via Single-view Pretraining with Procrustes Alignment
+Conditional Diffusion Model for Open-ended Video Question Answering
+Achieving Resolution-Agnostic DNN-based Image Watermarking: A Novel Perspective of Implicit Neural Representation
+Deep Incomplete Multi-View Network Semi-Supervised Multi-Label Learning with Unbiased Loss
+Task-Adapter: Task-specific Adaptation of Image Models for Few-shot Action Recognition
+TAS: Personalized Text-guided Audio Spatialization
+Generative Text Steganography with Large Language Model
+Affinity3D: Propagating Instance-Level Semantic Affinity for Zero-Shot Point Cloud Semantic Segmentation
+Semantic Aware Just Noticeable Differences for VVC compressed Text Screen Content Images
+AIGCs Confuse AI Too: Investigating and Explaining Synthetic Image-induced Hallucinations in Large Vision-Language Models
+Natural Language Induced Adversarial Images
+GenUDC: High Quality 3D Mesh Generation With Unsigned Dual Contouring Representation
+Bilateral Adaptive Cross-Modal Fusion Prompt Learning for CLIP
+MB2C: Multimodal Bidirectional Cycle Consistency for Learning Robust Visual Neural Representations
+Progressive Local and Non-Local Interactive Networks with Deeply Discriminative Training for Image Deraining
+Adversarial Experts Model for Black-box Domain Adaptation
+Align2Concept: Language Guided Interpretable Image Recognition by Visual Prototype and Textual Concept Alignment
+FSVFG: Towards Immersive Full-Scene Volumetric Video Streaming with Adaptive Feature Grid
+Joint-Motion Mutual Learning for Pose Estimation in Video
+GeoFormer: Learning Point Cloud Completion with Tri-Plane Integrated Transformer
+VoCAPTER: Voting-based Pose Tracking for Category-level Articulated Object via Inter-frame Priors
+Leveraging RGB-Pressure for Whole-body Human-to-Humanoid Motion Imitation
+Reconstructing, Understanding, and Analyzing Relief Type Cultural Heritage from a Single Old Photo
+A Descriptive Basketball Highlight Dataset for Automatic Commentary Generation
+Improving Open-World Classification with Disentangled Foreground and Background Features
+Generating Prompts in Latent Space for Rehearsal-free Continual Learning
+GPT4Video: A Unified Multimodal Large Language Model for lnstruction-Followed Understanding and Safety-Aware Generation
+LiteGfm: A Lightweight Self-supervised Monocular Depth Estimation Framework for Artifacts Reduction via Guided Image Filtering
+MM-LDM: Multi-Modal Latent Diffusion Model for Sounding Video Generation
+Fast and Scalable Incomplete Multi-View Clustering with Duality Optimal Graph Filtering
+GS$^2$-GNeSF: Geometry-Semantics Synergy for Generalizable Neural Semantic Fields
+BrainRAM: Cross-Modality Retrieval-Augmented Image Reconstruction from Human Brain Activity
+Towards Distortion-Debiased Blind Image Quality Assessment
+Self-Supervised Visual Preference Alignment
+Not All Pairs are Equal: Hierarchical Learning for Average-Precision-Oriented Video Retrieval
+Importance-aware Shared Parameter Subspace Learning for Domain Incremental Learning
+Attribute-driven Disentangled Representation Learning for Multimodal Recommendation
+Model X-ray : Detecting Backdoored Models via Decision Boundary
+Enhanced Experts with Uncertainty-Aware Routing for Multimodal Sentiment Analysis
+Large Point-to-Gaussian Model for Image-to-3D Generation
+Translating Motion to Notation: Hand Labanotation for Intuitive and Comprehensive Hand Movement Documentation
+UniStyle: Unified Style Modeling for Speaking Style Captioning and Stylistic Speech Synthesis
+CIRP: Cross-Item Relational Pre-training for Multimodal Product Bundling
+Bridging the Gap: Sketch-Aware Interpolation Network for High-Quality Animation Sketch Inbetweening
+MagicFight: Personalized Martial Arts Combat Video Generation
+PrimeComposer: Faster Progressively Combined Diffusion for Image Composition with Attention Steering
+R2SFD: Improving Single Image Reflection Removal using Semantic Feature Dictionary
+Probabilistic Distillation Transformer: Modelling Uncertainties for Visual Abductive Reasoning
+Make Privacy Renewable! Generating Privacy-Preserving Faces Supporting Cancelable Biometric Recognition
+Event Traffic Forecasting with Sparse Multimodal Data
+LLaVA-Ultra: Large Chinese Language and Vision Assistant for Ultrasound
+GIST: Improving Parameter Efficient Fine-Tuning via Knowledge Interaction
+Image-free Pre-training for Low-Level Vision
+UniQ: Unified Decoder with Task-specific Queries for Efficient Scene Graph Generation
+OpenAVE: Moving towards Open Set Audio-Visual Event Localization
+iControl3D: An Interactive System for Controllable 3D Scene Generation
+Tango 2: Aligning Diffusion-based Text-to-Audio Generative Models through Direct Preference Optimization
+Chain of Visual Perception: Harnessing Multimodal Large Language Models for Zero-shot Camouflaged Object Detection
+Prototype-Guided Dual-Transformer Reasoning for Video Individual Counting
+MovingColor: Seamless Fusion of Fine-grained Video Color Enhancement
+Inferring 3D Occupancy Fields through Implicit Reasoning on Silhouette Images
+Unsupervised Image-to-Video Adaptation via Category-aware Flow Memory Bank and Realistic Video Generation
+It Takes Two: Accurate Gait Recognition in the Wild via Cross-granularity Alignment
+Cover-separable Fixed Neural Network Steganography via Deep Generative Models
+SleepMG: Multimodal Generalizable Sleep Staging with Inter-modal Balance of Classification and Domain Discrimination
+IGSPAD: Inverting 3D Gaussian Splatting for Pose-agnostic Anomaly Detection
+Towards Real-time Video Compressive Sensing on Mobile Devices
+Crossmodal Few-shot 3D Point Cloud Semantic Segmentation via View Synthesis
+Understanding and Tackling Scattering and Reflective Flare for Mobile Camera Systems
+Multi-modal Denoising Diffusion Pretraining for Whole-Slide Image Classification
+SIRLUT: Simulated Infrared Fusion Guided Image-adaptive 3D Lookup Tables for Lightweight Image Enhancement
+RHKH: Relational Hypergraph Neural Network for Link Prediction on N-ary Knowledge Hypergraph
+Hierarchical Multi-label Learning for Incremental Multilingual Text Recognition
+Hybrid Cost Volume for Memory-Efficient Optical Flow
+Learning Dual Enhanced Representation for Contrastive Multi-view Clustering
+OmniStitch: Depth-Aware Stitching Framework for Omnidirectional Vision with Multiple Cameras
+DanceCamAnimator: Keyframe-Based Controllable 3D Dance Camera Synthesis
+In-Context Learning for Zero-shot Medical Report Generation
+Towards Artist-Like Painting Agents with Multi-Granularity Semantic Alignment
+Unpaired Photo-realistic Image Deraining with Energy-informed Diffusion Model
+Context-Aware Indoor Point Cloud Object Generation through User Instructions
+Dual-Hybrid Attention Network for Specular Highlight Removal
+Fast Elastic-Net Multi-view Clustering: A Geometric Interpretation Perspective
+MambaGesture: Enhancing Co-Speech Gesture Generation with Mamba and Disentangled Multi-Modality Fusion
+Perceive before Respond: Improving Sticker Response Selection by Emotion Distillation and Hard Mining
+Multimodal Emotion Recognition Calibration in Conversations
+FKA-Owl: Advancing Multimodal Fake News Detection through Knowledge-Augmented LVLMs
+3D Scene De-occlusion in Neural Radiance Fields: A Framework for Obstacle Removal and Realistic Inpainting
+Regularized Contrastive Partial Multi-view Outlier Detection
+Few-Shot Joint Multimodal Entity-Relation Extraction via Knowledge-Enhanced Cross-modal Prompt Model
+PathUp: Patch-wise Timestep Tracking for Multi-class Large Pathology Image Synthesising Diffusion Model
+DNTextSpotter: Arbitrary-Shaped Scene Text Spotting via Improved Denoising Training
+Temporal Enhancement for Video Affective Content Analysis
+PS-TTL: Prototype-based Soft-labels and Test-Time Learning for Few-shot Object Detection
+Reliable Model Watermarking: Defending Against Theft without Compromising on Evasion
+Modal-Enhanced Semantic Modeling for Fine-Grained 3D Human Motion Retrieval
+TVPR: Text-to-Video Person Retrieval and a New Benchmark
+Event-ID: Intrinsic Decomposition Using an Event Camera
+From Question to Exploration: Can Classic Test-Time Adaptation Strategies Be Effectively Applied in Semantic Segmentation?
+DreamVTON: Customizing 3D Virtual Try-on with Personalized Diffusion Models
+Boosting Semi-supervised Crowd Counting with Scale-based Active Learning
+Adaptive Multi-Modality Prompt Learning
+Product2IMG: Prompt-Free E-commerce Product Background Generation with Diffusion Model and Self-Improved LMM
+CLIP2UDA: Making Frozen CLIP Reward Unsupervised Domain Adaptation in 3D Semantic Segmentation
+ResVR: Joint Rescaling and Viewport Rendering of Omnidirectional Images
+Semantic Codebook Learning for Dynamic Recommendation Models
+Score-Based Image-to-Image Brownian Bridge
+A Sample-driven Selection Framework: Towards Graph Contrastive Networks with Reinforcement Learning
+An Lightweight Anchor-Based Incremental Framework to Multi-view Clustering
+Enhancing Images with Coupled Low-Resolution and Ultra-Dark Degradations: A Tri-level Learning Framework
+Graph based Consistency Learning for Contrastive Multi-View Clustering
+MUSCAT: a Multimodal mUSic Collection for Automatic Transcription of real recordings and image scores
+MAJL: A Model-Agnostic Joint Learning Framework for Music Source Separation and Pitch Estimation
+MappingFormer: Learning cross-modal feature mapping for visible-to-infrared image translation
+Spatiotemporal Graph Guided Multi-modal Network for Livestreaming Product Retrieval
+Multi-modal Auto-regressive Modeling via Visual Tokens
+UVMap-ID: A Controllable and Personalized UV Map Generative Model
+Prompt2Poster: Automatically Artistic Chinese Poster Creation from Prompt Only
+T2VIndexer: A Generative Video Indexer for Efficient Text-Video Retrieval
+A Plug-and-Play Method for Rare Human-Object Interactions Detection by Bridging Domain Gap
+Towards Robustness Prompt Tuning with Fully Test-Time Adaptation for CLIP's Zero-Shot Generalization
+Hallu-PI: Evaluating Hallucination in Multi-modal Large Language Models within Perturbed Inputs
+Are handcrafted filters helpful for attributing AI-generated images?
+Towards High-performance Spiking Transformers from ANN to SNN Conversion
+Enhancing Adaptive Deep Networks for Image Classification via Uncertainty-aware Decision Fusion
+SCREEN: A Benchmark for Situated Conversational Recommendation
+Multi-view Self-Supervised Contrastive Learning for Multivariate Time Series
+AutoM3L: An Automated Multimodal Machine Learning Framework with Large Language Models
+Self-Adaptive Fine-grained Multi-modal Data Augmentation for Semi-supervised Muti-modal Coreference Resolution
+Open-Vocabulary Video Scene Graph Generation via Union-aware Semantic Alignment
+UniGM: Unifying Multiple Pre-trained Graph Models via Adaptive Knowledge Aggregation
+Driving Scene Understanding with Traffic Scene-Assisted Topology Graph Transformer
+DRMF: Degradation-Robust Multi-Modal Image Fusion via Composable Diffusion Prior
+Enhancing Multi-view Graph Neural Network with Cross-view Confluent Message Passing
+ScenePhotographer: Object-Oriented Photography for Residential Scenes
+Harmony Everything! Masked Autoencoders for Video Harmonization
+One-shot-but-not-degraded Federated Learning
+SAT3D: Image-driven Semantic Attribute Transfer in 3D
+Generative Active Learning for Image Synthesis Personalization
+ScanTD: 360° Scanpath Prediction based on Time-Series Diffusion
+DERD: Data-free Adversarial Robustness Distillation through Self-adversarial Teacher Group
+CoIn: A Lightweight and Effective Framework for Story Visualization and Continuation
+Selective Vision-Language Subspace Projection for Few-shot CLIP
+HighlightRemover: Spatially Valid Pixel Learning for Image Specular Highlight Removal
+Scalable Super-Resolution Neural Operator
+Exposure Completing for Temporally Consistent Neural High Dynamic Range Video Rendering
+Generalized News Event Discovery via Dynamic Augmentation and Entropy Optimization
+Align-IQA: Aligning Image Quality Assessment Models with Diverse Human Preferences via Customizable Guidance
+Multi-view Feature Extraction via Tunable Prompts is Enough for Image Manipulation Localization
+Beyond Direct Relationships: Exploring Multi-Order Label Pair Dependencies for Knowledge Distillation
+Beyond the Known: Ambiguity-Aware Multi-view Learning
+Transferable Adversarial Facial Images for Privacy Protection
+Learning Geometry Consistent Neural Radiance Fields from Sparse and Unposed Views
+InMu-Net: Advancing Multi-modal Intent Detection via Information Bottleneck and Multi-sensory Processing
+HeadSetOff: Enabling Photorealistic Video Conferencing on Economical VR Headsets
+CLiF-VQA: Enhancing Video Quality Assessment by Incorporating High-Level Semantic Information related to Human Feelings
+MoS$^2$: Mixture of Scale and Shift Experts for Text-Only Video Captioning
+Part-level Reconstruction for Self-Supervised Category-level 6D Object Pose Estimation with Coarse-to-Fine Correspondence Optimization
+Semantic-Aware and Quality-Aware Interaction Network for Blind Video Quality Assessment
+Bridging Fourier and Spatial-Spectral Domains for Hyperspectral Image Denoising
+SemGIR: Semantic-Guided Image Regeneration based method for AI-generated Image Detection and Attribution
+Devil is in Details: Locality-Aware 3D Abdominal CT Volume Generation for Organ Segmentation
+Point Cloud Reconstruction Is Insufficient to Learn 3D Representations
+CAD Translator: An Effective Drive for Text to 3D Parametric Computer-Aided Design Generative Modeling
+DiffGlue: Diffusion-Aided Image Feature Matching
+VoiceTuner: Self-Supervised Pre-training and Efficient Fine-tuning For Voice Generation
+Q-SNNs: Quantized Spiking Neural Networks
+Rethinking the One-shot Object Detection: Cross-Domain Object Search
+IC-Mapper: Instance-Centric Spatio-Temporal Modeling for Online Vectorized Map Construction
+View Gap Matters: Cross-view Topology and Information Decoupling for Multi-view Clustering
+FARFusion V2: A Geometry-based Radar-Camera Fusion Method on the Ground for Roadside Far-Range 3D Object Detection
+SFP: Spurious Feature-Targeted Pruning for Out-of-Distribution Generalization
+Future Motion Dynamic Modeling via Hybrid Supervision for Multi-Person Motion Prediction Uncertainty Reduction
+Detecting Multimodal Situations with Insufficient Context and Abstaining from Baseless Predictions
+MVPbev: Multi-view Perspective Image Generation from BEV with Test-time Controllability and Generalizability
+SynopGround: A Large-Scale Dataset for Multi-Paragraph Video Grounding from TV Dramas and Synopses
+Multimodal Contextual Interactions of Entities: A Modality Circular Fusion Approach for Link Prediction
+P-BiC: Ultra-High-Definition Image Demoireing via Patch Bilateral Compensation
+UniL: Point Cloud Novelty Detection through Multimodal Pre-training
+Reproducing the Past: A Dataset for Benchmarking Inscription Restoration
+Rethinking the Effect of Uninformative Class Name in Prompt Learning
+Equilibrated Diffusion: Frequency-aware Textual Embedding for Equilibrated Image Customization
+FTF-ER: Feature-Topology Fusion-Based Experience Replay Method for Continual Graph Learning
+Investigating Conceptual Blending of a Diffusion Model for Improving Nonword-to-Image Generation
+D$^3$U-Net: Dual-Domain Collaborative Optimization Deep Unfolding Network for Image Compressive Sensing
+Maximizing Feature Distribution Variance for Robust Neural Networks
+Document Registration: Towards Automated Labeling of Pixel-Level Alignment Between Warped-Flat Documents
+ObjBlur: A Curriculum Learning Approach With Progressive Object-Level Blurring for Improved Layout-to-Image Generation
+Enhancing Transformer-based Semantic Matching for Few-shot Learning through Weakly Contrastive Pre-training
+FSL-QuickBoost: Minimal-Cost Ensemble for Few-Shot Learning
+RefMask3D: Language-Guided Transformer for 3D Referring Segmentation
+Dual-Criterion Quality Loss for Blind Image Quality Assessment
+Dr. CLIP: CLIP-Driven Universal Framework for Zero-Shot Sketch Image Retrieval
+Advancing Multi-grained Alignment for Contrastive Language-Audio Pre-training
+RSNN: Recurrent Spiking Neural Networks for Dynamic Spatial-Temporal Information Processing
+FLIP-80M: 80 Million Visual-Linguistic Pairs for Facial Language-Image Pre-Training
+Domain Shared and Specific Prompt Learning for Incremental Monocular Depth Estimation
+AutoSFX: Automatic Sound Effect Generation for Videos
+DiffHarmony++: Enhancing Image Harmonization with Harmony-VAE and Inverse Harmonization Model
+Advancing Multimodal Large Language Models with Quantization-Aware Scale Learning for Efficient Adaptation
+Multimodal LLM Enhanced Cross-lingual Cross-modal Retrieval
+Heterogeneous Graph Guided Contrastive Learning for Spatially Resolved Transcriptomics Data
+Highly Efficient No-reference 4K Video Quality Assessment with Full-Pixel Covering Sampling and Training Strategy
+Blind Video Bit-Depth Expansion
+Bi-directional Task-Guided Network for Few-Shot Fine-Grained Image Classification
+Foreground Harmonization and Shadow Generation for Composite Image
+3D-GRES: Generalized 3D Referring Expression Segmentation
+QVD: Post-training Quantization for Video Diffusion Models
+WorldGPT: Empowering LLM as Multimodal World Model
+Multi-Scale and Detail-Enhanced Segment Anything Model for Salient Object Detection
+SimpliGuard: Robust Mesh Simplification In the Wild
+Low-rank Prompt Interaction for Continual Vision-Language Retrieval
+Towards Stricter Black-box Integrity Verification of Deep Neural Network Models
+RelScene: A Benchmark and baseline for Spatial Relations in text-driven 3D Scene Generation
+Mitigating Sample Selection Bias with Robust Domain Adaption in Multimedia Recommendation
+Unveiling Structural Memorization: Structural Membership Inference Attack for Text-to-Image Diffusion Models
+Data Generation Scheme for Thermal Modality with Edge-Guided Adversarial Conditional Diffusion Model
+Pick-and-Draw: Training-free Semantic Guidance for Text-to-Image Personalization
+RefScale: Multi-temporal Assisted Image Rescaling in Repetitive Observation Scenarios
+Revisiting Knowledge Tracing: A Simple and Powerful Model
+Enhancing Unsupervised Visible-Infrared Person Re-Identification with Bidirectional-Consistency Gradual Matching
+DySarl: Dynamic Structure-Aware Representation Learning for Multimodal Knowledge Graph Reasoning
+All rivers run into the sea: Unified Modality Brain-Inspired Emotional Central Mechanism
+MagicVFX: Visual Effects Synthesis in Just Minutes
+RDLNet: A Novel and Accurate Real-world Document Localization Method
+FM-CLIP: Flexible Modal CLIP for Face Anti-Spoofing
+Leveraging Knowledge of Modality Experts for Incomplete Multimodal Learning
+MagicCartoon: 3D Pose and Shape Estimation for Bipedal Cartoon Characters
+DragEntity:Trajectory Guided Video Generation using Entity and Positional Relationships
+AMG-Embedding: a Self-Supervised Embedding Approach for Audio Identification
+Learning to Correction: Explainable Feedback Generation for Visual Commonsense Reasoning Distractor
+Let Me Finish My Sentence: Video Temporal Grounding with Holistic Text Understanding
+Making Large Language Models Perform Better in Knowledge Graph Completion
+DualFed: Enjoying both Generalization and Personalization in Federated Learning via Hierachical Representations
+Towards End-to-End Explainable Facial Action Unit Recognition via Vision-Language Joint Learning
+Dissecting Temporal Understanding in Text-to-Audio Retrieval
+Efficient Dual-Confounding Eliminating for Weakly-supervised Temporal Action Localization
+SI-BiViT: Binarizing Vision Transformers with Spatial Interaction
+Ada-iD: Active Domain Adaption for Intrusion Detection
+Learning Spectral-decomposited Tokens for Domain Generalized Semantic Segmentation
+A Progressive Skip Reasoning Fusion Method for Multi-Modal Classification
+SyncTalklip: Highly Synchronized Lip-Readable Speaker Generation with Multi-Task Learning
+HINER: Neural Representation for Hyperspectral Image
+Towards Low-latency Event-based Visual Recognition with Hybrid Step-wise Distillation Spiking Neural Networks
+SemNFT: A Semantically Enhanced Decentralized Middleware for Digital Asset Immortality
+Private Gradient Estimation is Useful for Generative Modeling
+Towards Trustworthy MetaShopping: Studying Manipulative Audiovisual Designs in Virtual-Physical Commercial Platforms
+UniDense: Unleashing Diffusion Models with Meta-Routers for Universal Few-Shot Dense Prediction
+Label Text-aided Hierarchical Semantics Mining for Panoramic Activity Recognition
+Dynamic Mixed-Prototype Model for Incremental Deepfake Detection
+V2A-Mark: Versatile Deep Visual-Audio Watermarking for Manipulation Localization and Copyright Protection
+Exploring the Robustness of Decision-Level Through Adversarial Attacks on LLM-Based Embodied Models
+CAPNet: Cartoon Animal Parsing with Spatial Learning and Structural Modeling
+HideMIA: Hidden Wavelet Mining for Privacy-Enhancing Medical Image Analysis
+ColVO: Colonoscopic Visual Odometry Considering Geometric and Photometric Consistency
+DFMVC: Deep Fair Multi-view Clustering
+Sustainable Self-evolution Adversarial Training
+AesStyler: Aesthetic Guided Universal Style Transfer
+P^2SAM: Probabilistically Prompted SAMs Are Efficient Segmentator for Ambiguous Medical Images
+Information Fusion with Knowledge Distillation for Fine-grained Remote Sensing Object Detection
+Integrating Stickers into Multimodal Dialogue Summarization: A Novel Dataset and Approach for Enhancing Social Media Interaction
+PEAN: A Diffusion-Based Prior-Enhanced Attention Network for Scene Text Image Super-Resolution
+StylizedFacePoint: Facial Landmark Detection for Stylized Characters
+Multimodal Inplace Prompt Tuning for Open-set Object Detection
+Traj2Former: A Local Context-aware Snapshot and Sequential Dual Fusion Transformer for Trajectory Classification
+Diversity Matters: User-Centric Multi-Interest Learning for Conversational Movie Recommendation
+Proactive Deepfake Detection via Training-Free Landmark Perceptual Watermarks
+CRASH: Crash Recognition and Anticipation System Harnessing with Context-Aware and Temporal Focus Attentions
+Deeply Fusing Semantics and Interactions for Item Representation Learning via Topology-driven Pre-training
+MVP-Net: Multi-View Depth Image Guided Cross-Modal Distillation Network for Point Cloud Upsampling
+Hypergraph-guided Intra- and Inter-category Relation Modeling for Fine-grained Visual Recognition
+Engaging Live Video Comments Generation
+TextGaze: Gaze-Controllable Face Generation with Natural Language
+Heterophilic Graph Invariant Learning for Out-of-Distribution of Fraud Detection
+GPD-VVTO: Preserving Garment Details in Video Virtual Try-On
+Multimodal Unlearnable Examples: Protecting Data against Multimodal Contrastive Learning
+Do LLMs Understand Visual Anomalies? Uncovering LLM's Capabilities in Zero-shot Anomaly Detection
+Caterpillar: A Pure-MLP Architecture with Shifted-Pillars-Concatenation
+Transferring to Real-World Layouts: A Depth-aware Framework for Scene Adaptation
+Object-Level Pseudo-3D Lifting for Distance-Aware Tracking
+Training pansharpening networks at full resolution using degenerate invariance
+Neighbor Does Matter: Global Positive-Negative Sampling for Vision-Language Pre-training
+Safe-SD: Safe and Traceable Stable Diffusion with Text Prompt Trigger for Invisible Generative Watermarking
+Group-aware Parameter-efficient Updating for Content-Adaptive Neural Video Compression
+PerFRDiff: Personalised Weight Editing for Multiple Appropriate Facial Reaction Generation
+Adaptive Query Selection for Camouflaged Instance Segmentation
+IF-Garments: Reconstructing Your Intersection-Free Multi-Layered Garments from Monocular Videos
+Vaccine Misinformation Detection in X using Cooperative Multimodal Framework
+MultiHateClip: A Multilingual Benchmark Dataset for Hateful Video Detection on YouTube and Bilibili
+Advancing 3D Object Grounding Beyond a Single 3D Scene
+Cefdet: Cognitive Effectiveness Network Based on Fuzzy Inference for Action Detection
+Thinking Temporal Automatic White Balance: Datasets, Models and Benchmarks
+Self-derived Knowledge Graph Contrastive Learning for Recommendation
+MMHead: Towards Fine-grained Multi-modal 3D Facial Animation
+Prompting to Adapt Foundational Segmentation Models
+Progressive Point Cloud Denoising with Cross-Stage Cross-Coder Adaptive Edge Graph Convolution Network
+F-3DGS: Factorized Coordinates and Representations for 3D Gaussian Splatting
+ListenFormer: Responsive Listening Head Generation with Non-autoregressive Transformers
+WeakSAM: Segment Anything Meets Weakly-supervised Instance-level Recognition
+OneChart: Purify the Chart Structural Extraction via One Auxiliary Token
+R4D-planes: Remapping Planes For Novel View Synthesis and Self-Supervised Decoupling of Monocular Videos
+Perceptual-Distortion Balanced Image Super-Resolution is a Multi-Objective Optimization Problem
+HandRefiner: Refining Malformed Hands in Generated Images by Diffusion-based Conditional Inpainting
+Multi-Granularity Hand Action Detection
+Embracing Domain Gradient Conflicts: Domain Generalization Using Domain Gradient Equilibrium
+Toward Explainable Physical Audiovisual Commonsense Reasoning
+Text-prompt Camouflaged Instance Segmentation with Graduated Camouflage Learning
+TUT4CRS: Time-aware User-preference Tracking for Conversational Recommendation System
+Speech Reconstruction from Silent Lip and Tongue Articulation by Diffusion Models and Text-Guided Pseudo Target Generation
+Semantic Distillation from Neighborhood for Composed Image Retrieval
+FreeEnhance: Tuning-Free Image Enhancement via Content-Consistent Noising-and-Denoising Process
+Learning Optimal Combination Patterns for Lightweight Stereo Image Super-Resolution
+VmambaSCI: Dynamic Deep Unfolding Network with Mamba for Compressive Spectral Imaging
+Visual Question Answering Driven Eye Tracking Paradigm for Identifying Children with Autism Spectrum Disorder
+Building Trust in Decision with Conformalized Multi-view Deep Classification
+DOPRA: Decoding Over-accumulation Penalization and Re-allocation in Specific Weighting Layer
+Towards Flexible Evaluation for Generative Visual Question Answering
+STAR-VP: Improving Long-term Viewport Prediction in 360° Videos via Space-aligned and Time-varying Fusion
+Monocular Human-Object Reconstruction in the Wild
+Advancing Quantization Steps Estimation : A Two-Stream Network Approach for Enhancing Robustness
+PercepLIE: A New Path to Perceptual Low-Light Image Enhancement
+Towards Effective Federated Graph Anomaly Detection via Self-boosted Knowledge Distillation
+GSLAMOT: A Tracklet and Query Graph-based Simultaneous Locating, Mapping, and Multiple Object Tracking System
+Language-Driven Interactive Shadow Detection
+GraphLearner: Graph Node Clustering with Fully Learnable Augmentation
+Hearing the Moment with MetaEcho! From Physical to Virtual in Synchronized Sound Recording
+Probabilistic Vision-Language Representation for Weakly Supervised Temporal Action Localization
+Fractional Correspondence Framework in Detection Transformer
+Introducing Common Null Space of Gradients for Gradient Projection Methods in Continual Learning
+Uncovering Capabilities of Model Pruning in Graph Contrastive Learning
+GOAL: Grounded text-to-image Synthesis with Joint Layout Alignment Tuning
+Scalable Multi-view Unsupervised Feature Selection with Structure Learning and Fusion
+Optical Flow-Guided 6DoF Object Pose Tracking with an Event Camera
+Mitigating World Biases: A Multimodal Multi-View Debiasing Framework for Fake News Video Detection
+Timeline and Boundary Guided Diffusion Network for Video Shadow Detection
+Detached and Interactive Multimodal Learning
+GAN-based Symmetric Embedding Costs Adjustment for Enhancing Image Steganographic Security
+HiVG: Hierarchical Multimodal Fine-grained Modulation for Visual Grounding
+Stay Focused is All You Need for Adversarial Robustness
+Non-uniform Timestep Sampling: Towards Faster Diffusion Model Training
+VeCAF: Vision-language Collaborative Active Finetuning with Training Objective Awareness
+Counterfactually Augmented Event Matching for De-biased Temporal Sentence Grounding
+Emphasizing Semantic Consistency of Salient Posture for Speech-Driven Gesture Generation
+CapS-Adapter: Caption-based MultiModal Adapter in Zero-Shot Classification
+Portrait Shadow Removal via Self-Exemplar Illumination Equalization
+Fine-grained Semantic Alignment with Transferred Person-SAM for Text-based Person Retrieval
+Prompt-Guided Image-Adaptive Neural Implicit Lookup Tables for Interpretable Image Enhancement
+SOIL: Contrastive Second-Order Interest Learning for Multimodal Recommendation
+Multi-Instance Multi-Label Learning for Text-motion Retrieval
+Holistic-CAM: Ultra-lucid and Sanity Preserving Visual Interpretation in Holistic Stage of CNNs
+Imbalanced Multi-instance Multi-label Learning via Coding Ensemble and Adaptive Thresholds
+Generative Motion Stylization of Cross-structure Characters within Canonical Motion Space
+S2TD-Face: Reconstruct a Detailed 3D Face with Controllable Texture from a Single Sketch
+InsVP: Efficient Instance Visual Prompting from Image Itself
+LanEvil: Benchmarking the Robustness of Lane Detection to Environmental Illusions
+EchoAudio: Efficient and High-Quality Text-to-Audio Generation with Minimal Inference Steps
+Parameter-Efficient Complementary Expert Learning for Long-Tailed Visual Recognition
+Dynamic Evidence Decoupling for Trusted Multi-view Learning
+Cross-Task Knowledge Transfer for Semi-supervised Joint 3D Grounding and Captioning
+AxiomVision: Accuracy-Guaranteed Adaptive Visual Model Selection for Perspective-Aware Video Analytics
+ADDG: An Adaptive Domain Generalization Framework for Cross-Plane MRI Segmentation
+New Job, New Gender? Measuring the Social Bias in Image Generation Models
+Generalizing ISP Model by Unsupervised Raw-to-raw Mapping
+Few-shot Semantic Segmentation via Perceptual Attention and Spatial Control
+Effective optimization of root selection towards improved explanation of deep classifiers
+Tracking-forced Referring Video Object Segmentation
+Enhancing Model Interpretability with Local Attribution over Global Exploration
+Decoupling Heterogeneous Features for Robust 3D Interacting Hand Poses Estimation
+Aspect-Based Multimodal Mining: Unveiling Sentiments, Complaints, and Beyond in User-Generated Content
+Prior Knowledge Integration via LLM Encoding and Pseudo Event Regulation for Video Moment Retrieval
+NovaChart: A Large-scale Dataset towards Chart Understanding and Generation of Multimodal Large Language Models
+GOI: Find 3D Gaussians of Interest with an Optimizable Open-vocabulary Semantic-space Hyperplane
+Learnable Negative Proposals Using Dual-Signed Cross-Entropy Loss for Weakly Supervised Video Moment Localization
+Open-Vocabulary Audio-Visual Semantic Segmentation
+VRDistill: Vote Refinement Distillation for Efficient Indoor 3D Object Detection
+Self-Supervised Emotion Representation Disentanglement for Speech-Preserving Facial Expression Manipulation
+Observe before Generate: Emotion-Cause aware Video Caption for Multimodal Emotion Cause Generation in Conversations
+WSEL: EEG feature selection with weighted self-expression learning for incomplete multi-dimensional emotion recognition
+Adaptive Instance-wise Multi-view Clustering
+FlashSpeech: Efficient Zero-Shot Speech Synthesis
+Weakly Supervised Gaussian Contrastive Grounding with Large Multimodal Models for Video Question Answering
+SATO: Stable Text-to-Motion Framework
+Generative Multimodal Data Augmentation for Low-Resource Multimodal Named Entity Recognition
+From Speaker to Dubber: Movie Dubbing with Prosody and Duration Consistency Learning
+Overcoming Spatial-Temporal Catastrophic Forgetting for Federated Class-Incremental Learning
+Sentiment-Oriented Sarcasm Integration: Effective Enhancement of Video Sentiment Analysis with Sarcasm Assistance
+Shapley Value-based Contrastive Alignment for Multimodal Information Extraction
+Reversed in Time: A Novel Temporal-Emphasized Benchmark for Cross-Modal Video-Text Retrieval
+Egocentric Vehicle Dense Video Captioning
+PRISM: PRogressive dependency maxImization for Scale-invariant image Matching
+Deformable NeRF using Recursively Subdivided Tetrahedra
+When ControlNet Meets Inexplicit Masks: A Case Study of ControlNet on its Contour-following Ability
+P-RAG: Progressive Retrieval Augmented Generation For Planning on Embodied Everyday Task
+MegaSurf: Scalable Large Scene Neural Surface Reconstruction
+Contrastive Graph Distribution Alignment for Partially View-Aligned Clustering
+Event-Guided Rolling Shutter Correction with Time-Aware Cross-Attentions
+Resisting Over-Smoothing in Graph Neural Networks via Dual-Dimensional Decoupling
+Learning to Handle Large Obstructions in Video Frame Interpolation
+Anatomical Prior Guided Spatial Contrastive Learning for Few-Shot Medical Image Segmentation
+One-Shot Sequential Federated Learning for Non-IID Data by Enhancing Local Model Diversity
+Decoder Pretraining with only Text for Scene Text Recognition
+Uni-DlLoRA: Style Fine-Tuning for Fashion Image Translation
+CREST: Cross-modal Resonance through Evidential Deep Learning for Enhanced Zero-ShoT Learning
+PEneo: Unifying Line Extraction, Line Grouping, and Entity Linking for End-to-end Document Pair Extraction
+Reason-and-Execute Prompting: Enhancing MultiModal Large Language Models for Solving Geometry Questions
+Controllable Procedural Generation of Landscapes
+Language-Guided Visual Prompt Compensation for Multi-Modal Remote Sensing Image Classification with Modality Absence
+Informative Point cloud Dataset Extraction for Classification via Gradient-based Points Moving
+Mitigate Catastrophic Remembering via Continual Knowledge Purification for Noisy Lifelong Person Re-Identification
+Robust Multimodal Sentiment Analysis of Image-Text Pairs by Distribution-Based Feature Recovery and Fusion
+X-Prompt: Multi-modal Visual Prompt for Video Object Segmentation
+Exploring the Use of Abusive Generative AI Models on Civitai
+PAIR: Pre-denosing Augmented Image Retrieval Model for Defending Adversarial Patches
+Cluster-Phys: Facial Clues Clustering Towards Efficient Remote Physiological Measurement
+Seeing Beyond Words: Multimodal Aspect-Level Complaint Detection in Ecommerce Videos
+LiDAR-NeRF: Novel LiDAR View Synthesis via Neural Radiance Fields
+Suppressing Uncertainties in Degradation Estimation for Blind Super-Resolution
+SEDS: Semantically Enhanced Dual-Stream Encoder for Sign Language Retrieval
+Magic Clothing: Controllable Garment-Driven Image Synthesis
+Dual-view Pyramid Network for Video Frame Interpolation
+mPLUG-PaperOwl: Scientific Diagram Analysis with the Multimodal Large Language Model
+Towards Robust Physical-world Backdoor Attacks on Lane Detection
+White-box Multimodal Jailbreaks Against Large Vision-Language Models
+AdapMTL: Adaptive Pruning Framework for Multitask Learning Model
+PRTGS: Precomputed Radiance Transfer of Gaussian Splats for Real-Time High-Quality Relighting
+RainMamba: Enhanced Locality Learning with State Space Models for Video Deraining
+Two Teachers Are Better Than One: Semi-supervised Elliptical Object Detection by Dual-Teacher Collaborative Guidance
+Hunting Blemishes: Language-guided High-fidelity Face Retouching Transformer with Limited Paired Data
+A Unified Understanding of Adversarial Vulnerability Regarding Unimodal Models and Vision-Language Pre-training Models
+Spatiotemporal Fine-grained Video Description for Short Videos
+MTSNet: Joint Feature Adaptation and Enhancement for Text-Guided Multi-view Martian Terrain Segmentation
+Large Multi-modality Model Assisted AI-Generated Image Quality Assessment
+ReWiTe: Realistic Wide-angle and Telephoto Dual Camera Fusion Dataset via Beam Splitter Camera Rig
+VoxelTrack: Exploring Multi-level Voxel Representation for 3D Point Cloud Object Tracking
+Bridging the Modality Gap: Dimension Information Alignment and Sparse Spatial Constraint for Image-Text Matching
+MetaDragonBoat: Exploring Paddling Techniques of Virtual Dragon Boating in a Metaverse Campus
+IconDM: Text-Guided Icon Set Expansion Using Diffusion Models
+RobustFace: Adaptive Mining of Noise and Hard Samples for Robust Face Recognitions
+Semi-supervised Visible-Infrared Person Re-identification via Modality Unification and Confidence Guidance
+TDSD: Text-Driven Scene-Decoupled Weakly Supervised Video Anomaly Detection
+RoCo: Robust Cooperative Perception By Iterative Object Matching and Pose Adjustment
+PixelFade: Privacy-preserving Person Re-identification with Noise-guided Progressive Replacement
+MiNet: Weakly-Supervised Camouflaged Object Detection through Mutual Interaction between Region and Edge Cues
+Automatic and Aligned Anchor Learning Strategy for Multi-View Clustering
+UrbanCross: Enhancing Satellite Image-Text Retrieval with Cross-Domain Adaptation
+Dual-Modeling Decouple Distillation for Unsupervised Anomaly Detection
+Auto-ACD: A Large-scale Dataset for Audio-Language Representation Learning
+FRADE: Forgery-aware Audio-distilled Multimodal Learning for Deepfake Detection
+CodeSwap: Symmetrically Face Swapping Based on Prior Codebook
+CSO: Constraint-guided Space Optimization for Active Scene Mapping
+Cross-Class Domain Adaptive Semantic Segmentation with Visual Language Models
+Mamba3D: Enhancing Local Features for 3D Point Cloud Analysis via State Space Model
+An In-depth Study of Bandwidth Allocation across Media Sources in Video Conferencing
+SIA-OVD: Shape-Invariant Adapter for Bridging the Image-Region Gap in Open-Vocabulary Detection
+Multimodal Low-light Image Enhancement with Depth Information
+Divide and Conquer: Isolating Normal-Abnormal Attributes in Knowledge Graph-Enhanced Radiology Report Generation
+Restoring Real-World Degraded Events Improves Deblurring Quality
+EMVCC: Enhanced Multi-View Contrastive Clustering for Hyperspectral Images
+Prior Metadata-Driven RAW Reconstruction: Eliminating the Need for Per-Image Metadata
+LinkThief: Combining Generalized Structure Knowledge with Node Similarity for Link Stealing Attack against GNN
+Robust Contrastive Cross-modal Hashing with Noisy Labels
+SpecGaussian with latent features: A high-quality modeling of the view-dependent appearance for 3D Gaussian Splatting
+GalleryGPT: Analyzing Paintings with Large Multimodal Models
+BSBP-RWKV: Background Suppression with Boundary Preservation for Efficient Medical Image Segmentation
+Domain-Conditioned Transformer for Fully Test-time Adaptation
+Universal Frequency Domain Perturbation for Single-Source Domain Generalization
+What's the Real: A Novel Design Philosophy for Robust AI-Synthesized Voice Detection
+PTSBench: A Comprehensive Post-Training Sparsity Benchmark Towards Algorithms and Models
+Collaborative Training of Tiny-Large Vision Language Models
+Streamable Portrait Video Editing with Probabilistic Pixel Correspondence
+LDA-AQU: Adaptive Query-guided Upsampling via Local Deformable Attention
+PlacidDreamer: Advancing Harmony in Text-to-3D Generation
+Multi-Modality Co-Learning for Efficient Skeleton-based Action Recognition
+Federated Morozov Regularization for Shortcut Learning in Privacy Preserving Learning with Watermarked Image Data
+FOCT: Few-shot Industrial Anomaly Detection with Foreground-aware Online Conditional Transport
+UNER: A Unified Prediction Head for Named Entity Recognition in Visually-rich Documents
+BCSCN:Reducing Domain Gap through Bézier Curve basis-based Sparse Coding Network for Single-Image Super-Resolution
+SceneExpander: Real-Time Scene Synthesis for Interactive Floor Plan Editing
+Adaptively Building a Video-language Model for Video Captioning and Retrieval without Massive Video Pretraining
+SAR-SLAM: Self-Attentive Rendering-based SLAM with Neural Point Cloud Encoding
+Hi3D: Pursuing High-Resolution Image-to-3D Generation with Video Diffusion Models
+Towards Medical Vision-Language Contrastive Pre-training via Study-Oriented Semantic Exploration
+AdvQDet: Detecting Query-Based Adversarial Attacks with Adversarial Contrastive Prompt Tuning
+Free Lunch: Frame-level Contrastive Learning with Text Perceiver for Robust Scene Text Recognition in Lightweight Models
+SparseFormer: Detecting Objects in HRW Shots via Sparse Vision Transformer
+KEBR: Knowledge Enhanced Self-Supervised Balanced Representation for Multimodal Sentiment Analysis
+Hierarchical Perceptual and Predictive Analogy-Inference Network for Abstract Visual Reasoning
+Video Bokeh Rendering: Make Casual Videography Cinematic
+Open-Set Video-based Facial Expression Recognition with Human Expression-sensitive Prompting
+Multi-Label Learning with Block Diagonal Labels
+Interactive Segmentation by Considering First-Click Intentional Ambiguity
+SATPose: Improving Monocular 3D Pose Estimation with Spatial-aware Ground Tactility
+An Entailment Tree Generation Approach for Multimodal Multi-Hop Question Answering with Mixture-of-Experts and Iterative Feedback Mechanism
+Enhancing Underwater Images via Asymmetric Multi-Scale Invertible Networks
+Explore Hybrid Modeling for Moving Infrared Small Target Detection
+Disentangled-Multimodal Privileged Knowledge Distillation for Depression Recognition with Incomplete Multimodal Data
+Exploring in Extremely Dark: Low-Light Video Enhancement with Real Events
+DQ-Former: Querying Transformer with Dynamic Modality Priority for Cognitive-aligned Multimodal Emotion Recognition in Conversation
+Frequency-Aware GAN for Imperceptible Transfer Attack on 3D Point Clouds
+$E^{3}$Gen: Efficient, Expressive and Editable Avatars Generation
+Adversarial Example Quality Assessment: A Large-scale Dataset and Strong Baseline
+Embodied Contrastive Learning with Geometric Consistency and Behavioral Awareness for Object Navigation
+Semi-supervised Camouflaged Object Detection from Noisy Data
+Decoding Urban Industrial Complexity: Enhancing Knowledge-Driven Insights via IndustryScopeGPT
+Swarical: An Integrated Hierarchical Approach to Localizing Flying Light Specks
+ClickDiff: Click to Induce Semantic Contact Map for Controllable Grasp Generation with Diffusion Models
+FlexIR: Towards Flexible and Manipulable Image Restoration
+RAVSS: Robust Audio-Visual Speech Separation in Multi-Speaker Scenarios with Missing Visual Cues
+Dual-Resolution Fusion Modeling for Unsupervised Cross-Resolution Person Re-Identification
+CMT: Co-training Mean-Teacher for Unsupervised Domain Adaptation on 3D Object Detection
+Controllable Music Loops Generation with MIDI and Text via Multi-Stage Cross Attention and Instrument-Aware Reinforcement Learning
+MAG-Edit: Localized Image Editing in Complex Scenarios via $\underline{M}$ask-Based $\underline{A}$ttention-Adjusted $\underline{G}$uidance
+Not All Frequencies Are Created Equal: Towards a Dynamic Fusion of Frequencies in Time-Series Forecasting
+Video Anomaly Detection via Progressive Learning of Multiple Proxy Tasks
+Diffusion Posterior Proximal Sampling for Image Restoration
+Point-GCC: Universal Self-supervised 3D Scene Pre-training via Geometry-Color Contrast
+Text-Region Matching for Multi-Label Image Recognition with Missing Labels
+Medical Report Generation via Multimodal Spatio-Temporal Fusion
+Non-Overlapped Multi-View Weak-Label Learning Guided by Multiple Correlations
+GRACE: GRadient-based Active Learning with Curriculum Enhancement for Multimodal Sentiment Analysis
+Towards High-resolution 3D Anomaly Detection via Group-Level Feature Contrastive Learning
+Real-time parameter evaluation of high-speed microfluidic droplets using continuous spike streams
+Audio-Driven Identity Manipulation for Face Inpainting
+When, Where, and What? A Benchmark for Accident Anticipation and Localization with Large Language Models
+Towards Multimodal-augmented Pre-trained Language Models via Self-balanced Expectation-Maximization Iteration
+Frequency Guidance Matters: Skeletal Action Recognition by Frequency-Aware Mixed Transformer
+Visual-linguistic Cross-domain Feature Learning with Group Attention and Gamma-correct Gated Fusion for Extracting Commonsense Knowledge
+Generating Action-conditioned Prompts for Open-vocabulary Video Action Recognition
+Leveraging Weak Cross-Modal Guidance for Coherence Modelling via Iterative Learning
+EGGesture: Entropy-Guided Vector Quantized Variational AutoEncoder for Co-Speech Gesture Generation
+RayFormer: Improving Query-Based Multi-Camera 3D Object Detection via Ray-Centric Strategies
+Mesh-Centric Gaussian Splatting for Human Avatar Modelling with Real-time Dynamic Mesh Reconstruction
+HyperTime: Hyperparameter Optimization for Combating Temporal Distribution Shifts
+Task-Interaction-Free Multi-Task Learning with Efficient Hierarchical Feature Representation
+Estimating the Semantic Density of Visual Media
+HMR-Adapter: A Lightweight Adapter with Dual-Path Cross Augmentation for Expressive Human Mesh Recovery
+Deciphering Perceptual Quality in Colored Point Cloud: Prioritizing Geometry or Texture Distortion?
+SAM-MIL: A Spatial Contextual Aware Multiple Instance Learning Approach for Whole Slide Image Classification
+Adaptive Pruning of Channel Spatial Dependability in Convolutional Neural Networks
+MDDR:Multi-modal Dual-Attention aggregation for Depression Recognition
+DMFourLLIE: Dual-Stage and Multi-Branch Fourier Network for Low-Light Image Enhancement
+Spatial-Temporal Context Model for Remote Sensing Imagery Compression
+AV-Deepfake1M: A Large-Scale LLM-Driven Audio-Visual Deepfake Dataset
+Learning Unknowns from Unknowns: Diversified Negative Prototypes Generator for Few-shot Open-Set Recognition
+Multimodal Physiological Signals Representation Learning via Multiscale Contrasting for Depression Recognition
+Tag Tree-Guided Multi-grained Alignment for Multi-Domain Short Video Recommendation
+Gaussian Splatting With Neural Basis Extension
+Domain Knowledge Enhanced Vision-Language Pretrained Model for Dynamic Facial Expression Recognition
+ERL-MR: Harnessing the Power of Euler Feature Representations for Balanced Multi-modal Learning
+Visual-Semantic Decomposition and Partial Alignment for Document-based Zero-Shot Learning
+Multimodal-aware Multi-intention Learning for Recommendation
+Selection and Reconstruction of Key Locals: A Novel Specific Domain Image-Text Retrieval Method
+SOAP: Enhancing Spatio-Temporal Relation and Motion Information Capturing for Few-Shot Action Recognition
+PFFAA: Prototype-based Feature and Frequency Alteration Attack for Semantic Segmentation
+Hydrodynamics-Informed Neural Network for Simulating Dense Crowd Motion Patterns
+Understanding the Impact of AI-Generated Content on Social Media: The Pixiv Case
+Student-Oriented Teacher Knowledge Refinement for Knowledge Distillation
+A General Framework to Boost 3D GS Initialization for Text-to-3D Generation by Lexical Richness
+TreeReward: Improve Diffusion Model via Tree-Structured Feedback Learning
+Advancing Semantic Edge Detection through Cross-Modal Knowledge Learning
+DisControlFace: Adding Disentangled Control to Diffusion Autoencoder for One-shot Explicit Facial Image Editing
+MultiColor: Image Colorization by Learning from Multiple Color Spaces
+Subjective and Objective Quality-of-Experience Assessment for 3D Talking Heads
+ConsistentAvatar: Learning to Diffuse Fully Consistent Talking Head Avatar with Temporal Guidance
+Efficient Face Super-Resolution via Wavelet-based Feature Enhancement Network
+Learning from Concealed Labels
+Dual-head Genre-instance Transformer Network for Arbitrary Style Transfer
+OSNeRF: On-demand Semantic Neural Radiance Fields for Fast and Robust 3D Object Reconstruction
+Modeling Event-level Causal Representation for Video Classification
+Towards Video-based Activated Muscle Group Estimation in the Wild
+Lumos: Optimizing Live 360-degree Video Upstreaming via Spatial-Temporal Integrated Neural Enhancement
+Zenith: Real-time Identification of DASH Encrypted Video Traffic with Distortion
+Enabling Synergistic Full-Body Control in Prompt-Based Co-Speech Motion Generation
+Harmony in Diversity: Improving All-in-One Image Restoration via Multi-Task Collaboration
+ReToMe-VA: Recursive Token Merging for Video Diffusion-based Unrestricted Adversarial Attack
+Revisiting Unsupervised Temporal Action Localization: The Primacy of High-Quality Actionness and Pseudolabels
+GeNSeg-Net: A General Segmentation Framework for Any Nucleus in Immunohistochemistry Images
+Audio Deepfake Detection with Self-Supervised XLS-R and SLS Classifier
+Distilled Cross-Combination Transformer for Image Captioning with Dual Refined Visual Features
+CoPL:Parameter-Efficient Collaborative Prompt Learning for Audio-Visual Tasks
+Identity-Driven Multimedia Forgery Detection via Reference Assistance
+Convert and Speak: Zero-shot Accent Conversion with Minimum Supervision
+MambaTrack: a simple baseline for multiple object tracking with State Space Model
+Freehand Sketch Generation from Mechanical Components
+IBMEA: Exploring Variational Information Bottleneck for Multi-modal Entity Alignment
+MICM: Rethinking Unsupervised Pretraining for Enhanced Few-shot Learning
+SMART: Self-Weighted Multimodal Fusion for Diagnostics of Neurodegenerative Disorders
+Towards Effective Data-Free Knowledge Distillation via Diverse Diffusion Augmentation
+Enhancing Robustness in Learning with Noisy Labels: An Asymmetric Co-Training Approach
+A Simple and Provable Approach for Learning on Noisy Labeled Multi-modal Medical Images
+Training-Free Feature Reconstruction with Sparse Optimization for Vision-Language Models
+Fuse Your Latents: Video Editing with Multi-source Latent Diffusion Models
+HS-Surf: A Novel High-Frequency Surface Shell Radiance Field to Improve Large-Scale Scene Rendering
+4D Gaussian Splatting with Scale-aware Residual Field and Adaptive Optimization for Real-time rendering of temporally complex dynamic scenes
+Mixed Prototype Correction for Causal Inference in Medical Image Classification
+FIND: Fine-tuning Initial Noise Distribution with Policy Optimization for Diffusion Models
+Masked Snake Attention for Fundus Image Restoration with Vessel Preservation
+PanoSent: A Panoptic Sextuple Extraction Benchmark for Multimodal Conversational Aspect-based Sentiment Analysis
+Boosting Audio Visual Question Answering via Key Semantic-Aware Cues
+TrGa: Reconsidering the Application of Graph Neural Networks in Two-View Correspondence Pruning
+Improving the Training of the GANs with Limited Data via Dual Adaptive Noise Injection
+DQG: Database Question Generation for Exact Text-based Image Retrieval
+HarmonicNeRF: Geometry-Informed Synthetic View Augmentation for 3D Scene Reconstruction in Driving Scenarios
+Interpretable Matching of Optical-SAR Image via Dynamically Conditioned Diffusion Models
+EPL-UFLSID: Efficient Pseudo Labels-Driven Underwater Forward-Looking Sonar Images Object Detection
+Rate-aware Compression for NeRF-based Volumetric Video
+Distribution Consistency Guided Hashing for Cross-Modal Retrieval
+Multimodal Fusion via Hypergraph Autoencoder and Contrastive Learning for Emotion Recognition in Conversation
+Emotion Recognition in HMDs: A Multi-task Approach Using Physiological Signals and Occluded Faces
+Causal-driven Large Language Models with Faithful Reasoning for Knowledge Question Answering
+Exploring Deeper! Segment Anything Model with Depth Perception for Camouflaged Object Detection
+Realistic Full-Body Motion Generation from Sparse Tracking with State Space Model
+Consistent123: One Image to Highly Consistent 3D Asset Using Case-Aware Diffusion Priors
+Relational Diffusion Distillation For Efficient Image Generation
+Triple Alignment Strategies for Zero-shot Phrase Grounding under Weak Supervision
+Calibrating Prompt from History for Continual Vision-Language Retrieval and Grounding
+A Novel Confidence Guided Training Method for Conditional GANs with Auxiliary Classifier
+Incremental Learning via Robust Parameter Posterior Fusion
+Cluster-driven Personalized Federated Recommendation with Interest-aware Graph Convolution Network for Multimedia
+FreePIH: Training-Free Painterly Image Harmonization with Diffusion Model
+AniTalker: Animate Vivid and Diverse Talking Faces through Identity-Decoupled Facial Motion Encoding
+FedEvalFair: A Privacy-Preserving and Statistically Grounded Federated Fairness Evaluation Framework
+LaneCMKT: Boosting Monocular 3D Lane Detection with Cross-Modal Knowledge Transfer
+WaveDN: A Wavelet-based Training-free Zero-shot Enhancement for Vision-Language Models
+MoBA: Mixture of Bi-directional Adapter for Multi-modal Sarcasm Detection
+Generalized Source-free Domain-adaptive Segmentation via Reliable Knowledge Propagation
+256 Metaverse Recording Dataset
+Multi-Modal Inductive Framework for Text-Video Retrieval
+Causal Visual-semantic Correlation for Zero-shot Learning
+Learning with Alignments: Tackling the Inter- and Intra-domain Shifts for Cross-multidomain Facial Expression Recognition
+Virtual Visual-Guided Domain-Shadow Fusion via Modal Exchanging for Domain-Specific Multi-Modal Neural Machine Translation
+DAC: 2D-3D Retrieval with Noisy Labels via Divide-and-Conquer Alignment and Correction
+VL-Reader: Vision and Language Reconstructor is an Effective Scene Text Recognizer
+Eglcr: Edge Structure Guidance and Scale Adaptive Attention for Iterative Stereo Matching
+Generative Expressive Conversational Speech Synthesis
+QueryMatch: A Query-based Contrastive Learning Framework for Weakly Supervised Visual Grounding
+Toward Robust Live Streaming over LEO Satellite Constellations: Measurement, Analysis, and Handover-Aware Adaptation
+Regional Attention For Shadow Removal
+Robust Variational Contrastive Learning for Partially View-unaligned Clustering
+DVF: Advancing Robust and Accurate Fine-Grained Image Retrieval with Retrieval Guidelines
+Attentive Linguistic Tracking in Diffusion Models for Training-free Text-guided Image Editing
+Differential-Perceptive and Retrieval-Augmented MLLM for Change Captioning
+Designing Spatial Visualization and Interactions of Immersive Sankey Diagram in Virtual Reality
+AVHash: Joint Audio-Visual Hashing for Video Retrieval
+DPO: Dual-Perturbation Optimization for Test-time Adaptation in 3D Object Detection
+FacialPulse: An Efficient RNN-based Depression Detection via Temporal Facial Landmarks
+FedSLS: Exploring Federated Aggregation in Saliency Latent Space
+Diffusion Facial Forgery Detection
+Digging into contrastive learning for robust depth estimation with diffusion models
+Balanced Multi-Relational Graph Clustering
+Backdoor Attacks on Bimodal Salient Object Detection with RGB-Thermal Data
+FBSDiff: Plug-and-Play Frequency Band Substitution of Diffusion Features for Highly Controllable Text-Driven Image Translation
+Graph Convolutional Semi-Supervised Cross-Modal Hashing
+Learning Realistic Sketching: A Dual-agent Reinforcement Learning Approach
+Dig into Detailed Structures: Key Context Encoding and Semantic-based Decoding for Point Cloud Completion
+AesExpert: Towards Multi-modality Foundation Model for Image Aesthetics Perception
+Advancing Generalized Deepfake Detector with Forgery Perception Guidance
+Embodied Laser Attack:Leveraging Scene Priors to Achieve Agent-based Robust Non-contact Attacks
+Report-Concept Textual-Prompt Learning for Enhancing X-ray Diagnosis
+Reverse2Complete: Unpaired Multimodal Point Cloud Completion via Guided Diffusion
+Query Augmentation with Brain Signals
+FedDEO: Description-Enhanced One-Shot Federated Learning with Diffusion Models
+Uncertainty-Aware Pseudo-Labeling and Dual Graph Driven Network for Incomplete Multi-View Multi-Label Classification
+A Picture Is Worth a Graph: A Blueprint Debate Paradigm for Multimodal Reasoning
+Similarity Preserving Transformer Cross-Modal Hashing for Video-Text Retrieval
+Learning Exposure Correction in Dynamic Scenes
+MDR: Multi-stage Decoupled Relational Knowledge Distillation with Adaptive Stage Selection
+SkipVSR: Adaptive Patch Routing for Video Super-Resolution with Inter-Frame Mask
+AL-GTD: Deep Active Learning for Gaze Target Detection
+A Multilevel Guidance-Exploration Network and Behavior-Scene Matching Method for Human Behavior Anomaly Detection
+Dual-Branch Fusion with Style Modulation for Cross-Domain Few-Shot Semantic Segmentation
+Subjective-Aligned Dataset and Metric for Text-to-Video Quality Assessment
+Remembering is Not Applying: Interpretable Knowledge Tracing for Problem-solving Processes
+High Fidelity Aggregated Planar Prior Assisted PatchMatch Multi-View Stereo
+Latent Representation Reorganization for Face Privacy Protection
+Point Cloud Upsampling With Geometric Algebra Driven Inverse Heat Dissipation
+EGGen: Image Generation with Multi-entity Prior Learning through Entity Guidance
+SymAttack: Symmetry-aware Imperceptible Adversarial Attacks on 3D Point Clouds
+3D Question Answering for City Scene Understanding
+De-fine: Decomposing and Refining Visual Programs with Auto-Feedback
+Efficiency in Focus: LayerNorm as a Catalyst for Fine-tuning Medical Visual Language Models
+Category-Prompt Refined Feature Learning for Long-Tailed Multi-Label Image Classification
+3D Gaussian Editing with A Single Image
+Cascaded Adversarial Attack: Simultaneously Fooling Rain Removal and Semantic Segmentation Networks
+Connectivity-based Cerebrovascular Segmentation in Time-of-Flight Magnetic Resonance Angiography
+Joint Homophily and Heterophily Relational Knowledge Distillation for Efficient and Compact 3D Object Detection
+PriFU: Capturing Task-Relevant Information Without Adversarial Learning
+Navigating Beyond Instructions: Vision-and-Language Navigation in Obstructed Environments
+Compacter: A Lightweight Transformer for Image Restoration
+RoSe: Rotation-Invariant Sequence-Aware Consensus for Robust Correspondence Pruning
+MiniGPT-3D: Efficiently Aligning 3D Point Clouds with Large Language Models using 2D Priors
+Deconfounded Emotion Guidance Sticker Selection with Causal Inference
+Continual Panoptic Perception: Towards Multi-modal Incremental Interpretation of Remote Sensing Images
+Not All Inputs Are Valid: Towards Open-Set Video Moment Retrieval using Language
+Tangram-Splatting: Optimizing 3D Gaussian Splatting Through Tangram-inspired Shape Priors
+TAVGBench: Benchmarking Text to Audible-Video Generation
+Cross-view Contrastive Unification Guides Generative Pretraining for Molecular Property Prediction
+VoxInstruct: Expressive Human Instruction-to-Speech Generation with Unified Multilingual Codec Language Modelling
+Contrastive Context-Speech Pretraining for Expressive Text-to-Speech Synthesis
+Test-Time Training on Graphs with Large Language Models (LLMs)
+AutoGraph: Enabling Visual Context via Graph Alignment in Open Domain Multi-Modal Dialogue Generation
+LMM-PCQA: Assisting Point Cloud Quality Assessment with LMM
+HmPEAR: A Dataset for Human Pose Estimation and Action Recognition
+Task-Conditional Adapter for Multi-Task Dense Prediction
+DenseTrack: Drone-based Crowd Tracking via Density-aware Motion-appearance Synergy
+T2I-Scorer: Quantitative Evaluation on Text-to-Image Generation via Fine-Tuned Large Multi-Modal Models
+FiLo: Zero-Shot Anomaly Detection by Fine-Grained Description and High-Quality Localization
+Rethinking the Implicit Optimization Paradigm with Dual Alignments for Referring Remote Sensing Image Segmentation
+LiteQUIC: Improving QoE of Video Streams by Reducing CPU Overhead of QUIC
+Unraveling Motion Uncertainty for Local Motion Deblurring
+A Unimodal Valence-Arousal Driven Contrastive Learning Framework for Multimodal Multi-Label Emotion Recognition
+HKDSME: Heterogeneous Knowledge Distillation for Semi-supervised Singing Melody Extraction Using Harmonic Supervision
+In Situ 3D Scene Synthesis for Ubiquitous Embodied Interfaces
+Autogenic Language Embedding for Coherent Point Tracking
+CBNet: Cooperation-Based Weakly Supervised Polyp Detection
+Cross-View Consistency Regularisation for Knowledge Distillation
+EEG-MACS: Manifold Attention and Confidence Stratification for EEG-based Cross-Center Brain Disease Diagnosis under Unreliable Annotations
+A Lightweight Multi-domain Multi-attention Progressive Network for Single Image Deraining
+Uni-YOLO: Vision-Language Model-Guided YOLO for Robust and Fast Universal Detection in the Open World
+FodFoM: Fake Outlier Data by Foundation Models Creates Stronger Visual Out-of-Distribution Detector
+Loc4Plan: Locating Before Planning for Outdoor Vision and Language Navigation
+EvilEdit: Backdooring Text-to-Image Diffusion Models in One Second
+ReForm-Eval: Evaluating Large Vision Language Models via Unified Re-Formulation of Task-Oriented Benchmarks
+Utilizing Speaker Profiles for Impersonation Audio Detection
+Neural Interaction Energy for Multi-Agent Trajectory Prediction
+PrimKD: Primary Modality Guided Multimodal Fusion for RGB-D Semantic Segmentation
+Dual Advancement of Representation Learning and Clustering for Sparse and Noisy Images
+Edit As You Wish: Video Caption Editing with Multi-grained User Control
+Gait Recognition in Large-scale Free Environment via Single LiDAR
+MaskMentor: Unlocking the Potential of Masked Self-Teaching for Missing Modality RGB-D Semantic Segmentation
+VisHanfu: An Interactive System for the Promotion of Hanfu Knowledge via Cross-Shaped Flat Structure
+FreqMamba: Viewing Mamba from a Frequency Perspective for Image Deraining
+CFDiffusion: Controllable Foreground Relighting in Image Compositing via Diffusion Model
+Calibration for Long-tailed Scene Graph Generation
+Consistencies are All You Need for Semi-supervised Vision-Language Tracking
+3DPCP-Net: A Lightweight Progressive 3D Correspondence Pruning Network for Accurate and Efficient Point Cloud Registration
+Overcoming the Pitfalls of Vision-Language Model for Image-Text Retrieval
+Few-Shot Multimodal Explanation for Visual Question Answering
+Cross-modal Observation Hypothesis Inference
+Poisoning for Debiasing: Fair Recognition via Eliminating Bias Uncovered in Data Poisoning
+HeroMaker: Human-centric Video Editing with Motion Priors
+Reference-based Burst Super-resolution
+Modality-Balanced Learning for Multimedia Recommendation
+DisenStudio: Customized Multi-subject Text-to-Video Generation with Disentangled Spatial Control
+Live On the Hump: Self Knowledge Distillation via Virtual Teacher-Students Mutual Learning
+Decoupling General and Personalized Knowledge in Federated Learning via Additive and Low-rank Decomposition
+StealthDiffusion: Towards Evading Diffusion Forensic Detection through Diffusion Model
+PASSION: Towards Effective Incomplete Multi-Modal Medical Image Segmentation with Imbalanced Missing Rates
+GS$^{3}$LAM: Gaussian Semantic Splatting SLAM
+HybridFlow: Infusing Continuity into Masked Codebook for Extreme Low-Bitrate Image Compression
+Vi2ACT:Video-enhanced Cross-modal Co-learning with Representation Conditional Discriminator for Few-shot Human Activity Recognition
+CoAst: Validation-Free Contribution Assessment for Federated Learning based on Cross-Round Valuation
+3D Priors-Guided Diffusion for Blind Face Restoration
+Dual-Optimized Adaptive Graph Reconstruction for Multi-View Graph Clustering
+JoReS-Diff: Joint Retinex and Semantic Priors in Diffusion Model for Low-light Image Enhancement
+Sketch3D: Style-Consistent Guidance for Sketch-to-3D Generation
+LDStega: Practical and Robust Generative Image Steganography based on Latent Diffusion Models
+GLoMo: Global-Local Modal Fusion for Multimodal Sentiment Analysis
+Multi-scale Change-Aware Transformer for Remote Sensing Image Change Detection
+Mesh Denoising Using Filtering Coefficients Jointly Aware of Noise and Geometry
+Lite-Mind: Towards Efficient and Robust Brain Representation Learning
+DGMamba: Domain Generalization via Generalized State Space Model
+MetaRepair: Learning to Repair Deep Neural Networks from Repairing Experiences
+Diffusion Networks with Task-Specific Noise Control for Radiology Report Generation
+Towards Emotion-enriched Text-to-Motion Generation via LLM-guided Limb-level Emotion Manipulating
+rPPG-HiBa:Hierarchical Balanced Framework for Remote Physiological Measurement
+SimCLIP: Refining Image-Text Alignment with Simple Prompts for Zero-/Few-shot Anomaly Detection
+Global Patch-wise Attention is Masterful Facilitator for Masked Image Modeling
+Trust Prophet or Not? Taking a Further Verification Step toward Accurate Scene Text Recognition
+DERO: Diffusion-Model-Erasure Robust Watermarking
+View-consistent Object Removal in Radiance Fields
+DreamLCM: Towards High Quality Text-to-3D Generation Via Latent Consistency Model
+Evolving Storytelling: Benchmarks and Methods for New Character Customization with Diffusion Models
+Serial section microscopy image inpainting guided by axial optical flow
+FedBCGD: Communication-Efficient Accelerated Block Coordinate Gradient Descent for Federated Learning
+Segment Anything with Precise Interaction
+MMDRFuse: Distilled Mini-Model with Dynamic Refresh for Multi-Modality Image Fusion
+Disrupting Diffusion: Token-Level Attention Erasure Attack against Diffusion-based Customization
+Arondight: Red Teaming Large Vision Language Models with Auto-generated Multi-modal Jailbreak Prompts
+Infusion: Preventing Customized Text-to-Image Diffusion from Overfitting
+Ego3DT: Tracking Every 3D Object in Ego-centric Videos
+Unifying Spike Perception and Prediction: A Compact Spike Representation Model using Multi-scale Correlation
+MetaEnzyme: Meta Pan-Enzyme Learning for Task-Adaptive Redesign
+Embedding an Ethical Mind: Aligning Text-to-Image Synthesis via Lightweight Value Optimization
+CompGS: Efficient 3D Scene Representation via Compressed Gaussian Splatting
+Evolution-aware VAriance (EVA) Coreset Selection for Medical Image Classification
+GaussianTalker: Speaker-specific Talking Head Synthesis via 3D Gaussian Splatting
+Rethinking Image Editing Detection in the Era of Generative AI Revolution
+Unseen No More: Unlocking the Potential of CLIP for Generative Zero-shot HOI Detection
+Boosting Non-causal Semantic Elimination: An Unconventional Harnessing of LVM for Open-World Deepfake Interpretation
+QE-BEV: Query Evolution for Bird's Eye View Object Detection in Varied Contexts
+Hypergraph Multi-modal Large Language Model: Exploiting EEG and Eye-tracking Modalities to Evaluate Heterogeneous Responses for Video Understanding
+Prototypical Prompting for Text-to-image Person Re-identification
+Control-Talker: A Rapid-Customization Talking Head Generation Method for Multi-Condition Control and High-Texture Enhancement
+PastNet: Introducing Physical Inductive Biases for Spatio-temporal Video Prediction
+Exploring Stable Meta-optimization Patterns via Differentiable Reinforcement Learning for Few-shot Classification
+Expanded Convolutional Neural Network Based Look-Up Tables for High Efficient Single-Image Super-Resolution
+Virtual Agent Positioning Driven by Personal Characteristics
+SafePaint: Anti-forensic Image Inpainting with Domain Adaptation
+ZePo: Zero-Shot Portrait Stylization with Faster Sampling
+Navigating Weight Prediction with Diet Diary
+MGR-Dark: A Large Multimodal Video Dataset and RGB-IR benchmark for Gesture Recognition in Darkness
+Towards Practical Human Motion Prediction with LiDAR Point Clouds
+EAGLE: Egocentric AGgregated Language-video Engine
+A Principled Approach to Natural Language Watermarking
+StarStream: Live Video Analytics over Space Networking
+Hal-Eval: A Universal and Fine-grained Hallucination Evaluation Framework for Large Vision Language Models
+APP: Adaptive Pose Pooling for 3D Human Pose Estimation from Videos
+A Medical Data-Effective Learning Benchmark for Highly Efficient Pre-training of Foundation Models
+Semantic Alignment for Multimodal Large Language Models
+Eliminate Before Align: A Remote Sensing Image-Text Retrieval Framework with Keyword Explicit Reasoning
+MSFNet: Multi-Scale Fusion Network for Brain-Controlled Speaker Extraction
+Domain-Agnostic Crowd Counting via Uncertainty-Guided Style Diversity Augmentation
+Improving Composed Image Retrieval via Contrastive Learning with Scaling Positives and Negatives
+A Chinese Multimodal Social Video Dataset for Controversy Detection
+Consistency Guided Diffusion Model with Neural Syntax for Perceptual Image Compression
+One-bit Semantic Hashing: Towards Resource-Efficient Hashing Model with Binary Neural Network
+ArtSpeech: Adaptive Text-to-Speech Synthesis with Articulatory Representations
+Gaussian Mutual Information Maximization for Efficient Graph Self-Supervised Learning: Bridging Contrastive-based to Decorrelation-based
+Prior-free Balanced Replay: Uncertainty-guided Reservoir Sampling for Long-Tailed Continual Learning
+TransLinkGuard: Safeguarding Transformer Models Against Model Stealing in Edge Deployment
+Time-Frequency Domain Fusion Enhancement for Audio Super-Resolution
+SM4Depth: Seamless Monocular Metric Depth Estimation across Multiple Cameras and Scenes by One Mode
+ViewPCGC: View-Guided Learned Point Cloud Geometry Compression
+Seeing Text in the Dark: Algorithm and Benchmark
+Seeing Beyond Classes: Zero-Shot Grounded Situation Recognition via Language Explainer
+Benchmarking In-the-wild Multimodal Disease Recognition and A Versatile Baseline
+ProFD: Prompt-Guided Feature Disentangling for Occluded Person Re-Identification
+Once-for-all: Efficient Visual Face Privacy Protection via Person-specific Veils
+Simplifying Cross-modal Interaction via Modality-Shared Features for RGBT Tracking
+2M-AF: A Strong Multi-Modality Framework For Human Action Quality Assessment with Self-supervised Representation Learning
+Simple Yet Effective: Structure Guided Pre-trained Transformer for Multi-modal Knowledge Graph Reasoning
+COMD: Training-free Video Motion Transfer With Camera-Object Motion Disentanglement
+HGOE: Hybrid External and Internal Graph Outlier Exposure for Graph Out-of-Distribution Detection
+Wave-Mamba: Wavelet State Space Model for Ultra-High-Definition Low-Light Image Enhancement
+Label Decoupling and Reconstruction: A Two-Stage Training Framework for Long-tailed Multi-label Medical Image Recognition
+DCAFuse: Dual-Branch Diffusion-CNN Complementary Feature Aggregation Network for Multi-Modality Image Fusion
+AesMamba: Universal Image Aesthetic Assessment with State Space Models
+ROI-Guided Point Cloud Geometry Compression Towards Human and Machine Vision
+ARTS: Semi-Analytical Regressor using Disentangled Skeletal Representations for Human Mesh Recovery from Videos
+LD-BFR: Vector-Quantization-Based Face Restoration Model with Latent Diffusion Enhancement
+SelM: Selective Mechanism based Audio-Visual Segmentation
+Mitigating Social Hazards: Early Detection of Fake News via Diffusion-Guided Propagation Path Generation
+MambaMOS: LiDAR-based 3D Moving Object Segmentation with Motion-aware State Space Model
+Adaptive Hierarchical Aggregation for Federated Object Detection
+Towards Open-vocabulary HOI Detection with Calibrated Vision-language Models and Locality-aware Queries
+Adaptive Vision Transformer for Event-Based Human Pose Estimation
+Linearly-evolved Transformer for Pan-sharpening
+Maskable Retentive Network for Video Moment Retrieval
+SimCEN: Simple Contrast-enhanced Network for CTR Prediction
+Edge-assisted Real-time Dynamic 3D Point Cloud Rendering for Multi-party Mobile Virtual Reality
+FineCLIPER: Multi-modal Fine-grained CLIP for Dynamic Facial Expression Recognition with AdaptERs
+Multi-scale Twin-attention for 3D Instance Segmentation
+Reliable Attribute-missing Multi-view Clustering with Instance-level and feature-level Cooperative Imputation
+Learning Cross-Spectral Prior for Image Super-Resolution
+Frame Interpolation with Consecutive Brownian Bridge Diffusion
+Unveiling and Mitigating Bias in Audio Visual Segmentation
+VrdONE: One-stage Video Visual Relation Detection
+ShiftMorph: A Fast and Robust Convolutional Neural Network for 3D Deformable Medical Image Registration
+An End-to-End Real-World Camera Imaging Pipeline
+TimeNeRF: Building Generalizable Neural Radiance Fields across Time from Few-Shot Input Views
+HPC: Hierarchical Progressive Coding Framework for Volumetric Video
+Agent Aggregator with Mask Denoise Mechanism for Histopathology Whole Slide Image Analysis
+Improved Weighted Tensor Schatten 𝑝-Norm for Fast Multi-view Graph Clustering
+Enhanced Screen Content Image Compression: A Synergistic Approach for Structural Fidelity and Text Integrity Preservation
+Partial Multi-label Learning Based On Near-Far Neighborhood Label Enhancement And Nonlinear Guidance
+Blind Face Video Restoration with Temporal Consistent Generative Prior and Degradation-Aware Prompt
+One-Stage Fair Multi-View Spectral Clustering
+Parameter-efficient is not Sufficient: Exploring Parameter, Memory, and Time Efficient Adapter Tuning for Dense Predictions
+DINO is Also a Semantic Guider: Exploiting Class-aware Affinity for Weakly Supervised Semantic Segmentation
+Focus & Gating: A Multimodal Approach for Unveiling Relations in Noisy Social Media
+Aspects are Anchors: Towards Multimodal Aspect-based Sentiment Analysis via Aspect-driven Alignment and Refinement
+3D Question Answering with Scene Graph Reasoning
+PSM: Learning Probabilistic Embeddings for Multi-scale Zero-shot Soundscape Mapping
+FakingRecipe: Detecting Fake News on Short Video Platforms from the Perspective of Creative Process
+Learning to Transfer Heterogeneous Translucent Materials from a 2D Image to 3D Models
+FewVS: A Vision-Semantics Integration Framework for Few-Shot Image Classification
+CDEA: Context- and Detail-Enhanced Unsupervised Learning for Domain Adaptive Semantic Segmentation
+Stochastic Context Consistency Reasoning for Domain Adaptive Object Detection
+MM-Forecast: A Multimodal Approach to Temporal Event Forecasting with Large Language Models
+LDCNet: Long-Distance Context Modeling for Large-Scale 3D Point Cloud Scene Semantic Segmentation
+Reversing Structural Pattern Learning with Biologically Inspired Knowledge Distillation for Spiking Neural Networks
+Efficient Training for Multilingual Visual Speech Recognition: Pre-training with Discretized Visual Speech Representation
+Efficient Single Image Super-Resolution with Entropy Attention and Receptive Field Augmentation
+Rainmer: Learning Multi-view Representations for Comprehensive Image Deraining and Beyond
+Scalable Multi-Source Pre-training for Graph Neural Networks
+From Covert Hiding To Visual Editing: Robust Generative Video Steganography
+MLP Embedded Inverse Tone Mapping
+Generalize to Fully Unseen Graphs: Learn Transferable Hyper-Relation Structures for Inductive Link Prediction
+RSC-SNN: Exploring the Trade-off Between Adversarial Robustness and Accuracy in Spiking Neural Networks via Randomized Smoothing Coding
+MoTrans: Customized Motion Transfer with Text-driven Video Diffusion Models
+TrafficMOT: A Challenging Dataset for Multi-Object Tracking in Complex Traffic Scenarios
+FD2Talk: Towards Generalized Talking Head Generation with Facial Decoupled Diffusion Model
+SpeechCraft: A Fine-Grained Expressive Speech Dataset with Natural Language Description
+Semantic Editing Increment Benefits Zero-Shot Composed Image Retrieval
+Edit3D: Elevating 3D Scene Editing with Attention-Driven Multi-Turn Interactivity
+Mitigating Social Biases in Text-to-Image Diffusion Models via Linguistic-Aligned Attention Guidance
+A Novel State Space Model with Local Enhancement and State Sharing for Image Fusion
+TagOOD: A Novel Approach to Out-of-Distribution Detection via Vision-Language Representations and Class Center Learning
+Rethinking the Architecture Design for Efficient Generic Event Boundary Detection
+MPT: Multi-grained Prompt Tuning for Text-Video Retrieval
+WisdoM: Improving Multimodal Sentiment Analysis by Fusing Contextual World Knowledge
+Purified Distillation: Bridging Domain Shift and Category Gap in Incremental Object Detection
+G-Refine: A General Refiner for Text-to-Image Generation
+DepthCloak: Projecting Optical Camouflage Patches for Erroneous Monocular Depth Estimation of Vehicles
+Correlation-Driven Multi-Modality Graph Decomposition for Cross-Subject Emotion Recognition
+Semantic-aware Next-Best-View for Multi-DoFs Mobile System in Search-and-Acquisition based Visual Perception
+CP-Prompt: Composition-Based Cross-modal Prompting for Domain-Incremental Continual Learning
+ResVG: Enhancing Relation and Semantic Understanding in Multiple Instances for Visual Grounding
+MMDFND: Multi-modal Multi-Domain Fake News Detection
+MultiDAN: Unsupervised, Multistage, Multisource and Multitarget Domain Adaptation for Semantic Segmentation of Remote Sensing Images
+Fine-Grained Prompt Learning for Face Anti-Spoofing
+Knowledge-Aware Artifact Image Synthesis with LLM-Enhanced Prompting and Multi-Source Supervision
+TS-ILM:Class Incremental Learning for Online Action Detection
+QPT-V2: Masked Image Modeling Advances Visual Scoring
+Caption-Aware Multimodal Relation Extraction with Mutual Information Maximization
+Minerva: Enhancing Quantum Network Performance for High-Fidelity Multimedia Transmission
+A Coarse to Fine Detection Method for Prohibited Object in X-ray Images Based on Progressive Transformer Decoder
+Harmfully Manipulated Images Matter in Multimodal Misinformation Detection
+AerialGait: Bridging Aerial and Ground Views for Gait Recognition
+Dual-path Collaborative Generation Network for Emotional Video Captioning
+Multimodal Multi-turn Conversation Stance Detection: A Challenge Dataset and Effective Model
+The Room: design and embodiment of spaces as social beings
+Multi-view Clustering Based on Deep Non-negative Tensor Factorization
+Disentangling Identity Features from Interference Factors for Cloth-Changing Person Re-identification
+TiVA: Time-Aligned Video-to-Audio Generation
+Animatable 3D Gaussian: Fast and High-Quality Reconstruction of Multiple Human Avatars
+Dual-stream Feature Augmentation for Domain Generalization
+Adaptive Selection based Referring Image Segmentation
+Alleviating the Equilibrium Challenge with Sample Virtual Labeling for Adversarial Domain Adaptation
+PD-Refiner: An Underlying Surface Inheritance Refiner with Adaptive Edge-Aware Supervision for Point Cloud Denoising
+AlignCLIP: Align Multi Domains of Texts Input for CLIP models with Object-IoU Loss
+Learning A Low-Level Vision Generalist via Visual Task Prompt
+SCPSN: Spectral Clustering-based Pyramid Super-resolution Network for Hyperspectral Images
+KNN Transformer with Pyramid Prompts for Few-Shot Learning
+Break the Visual Perception: Adversarial Attacks Targeting Encoded Visual Tokens of Large Vision-Language Models
+Multi-fineness Boundaries and the Shifted Ensemble-aware Encoding for Point Cloud Semantic Segmentation
+Auto DragGAN: Editing the Generative Image Manifold in an Autoregressive Manner
+AbsGS: Recovering fine details in 3D Gaussian Splatting
+Robust Pseudo-label Learning with Neighbor Relation for Unsupervised Visible-Infrared Person Re-Identification
+Motion-aware Latent Diffusion Models for Video Frame Interpolation
+Unsupervised Multi-view Pedestrian Detection
+Saliency-Guided Fine-Grained Temporal Mask Learning for Few-Shot Action Recognition
+MaskBEV: Towards A Unified Framework for BEV Detection and Map Segmentation
+Balancing Generalization and Robustness in Adversarial Training via Steering through Clean and Adversarial Gradient Directions
+Prompting Continual Person Search
+Toward Timeliness-Enhanced Loss Recovery for Large-Scale Live Streaming
+Semantics-Aware Image Aesthetics Assessment using Tag Matching and Contrastive Ranking
+SSAT-Adapter: Enhancing Vision-Language Model Few-shot Learning with Auxiliary Tasks
+Style-conditional Prompt Token Learning for Generalizable Face Anti-spoofing
+ImageBind3D: Image as Binding Step for Controllable 3D Generation
+CACE-Net: Co-guidance Attention and Contrastive Enhancement for Effective Audio-Visual Event Localization
+Group Vision Transformer
+Cross-Modal Meta Consensus for Heterogeneous Federated Learning
+XMeCap: Meme Caption Generation with Sub-Image Adaptability
+See or Guess: Counterfactually Regularized Image Captioning
+Combating Visual Question Answering Hallucinations via Robust Multi-Space Co-Debias Learning
+Spatio-temporal Heterogeneous Federated Learning for Time Series Classification with Multi-view Orthogonal Training
+Synergetic Prototype Learning Network for Unbiased Scene Graph Generation
+ScaleTraversal: Creating Multi-Scale Biomedical Animation with Limited Hardware Resources
+TeRF: Text-driven and Region-aware Flexible Visible and Infrared Image Fusion
+CREAM: Coarse-to-Fine Retrieval and Multi-modal Efficient Tuning for Document VQA
+Shape-Guided Clothing Warping for Virtual Try-On
+LoMOE: Localized Multi-Object Editing via Multi-Diffusion
+ECFCON: Emotion Consequence Forecasting in Conversations
+CIEASR:Contextual Image-Enhanced Automatic Speech Recognition for Improved Homophone Discrimination
+QS-NeRV: Real-Time Quality-Scalable Decoding with Neural Representation for Videos
+Coarse-to-Fine Proposal Refinement Framework For Audio Temporal Forgery Detection and Localization
+Deep Instruction Tuning for Segment Anything Model
+Point Cloud Densification for 3D Gaussian Splatting from Sparse Input Views
+MFRGN: Multi-scale Feature Representation Generalization Network For Ground-to-Aerial Geo-localization
+GuidedNet: Semi-Supervised Multi-Organ Segmentation via Labeled Data Guide Unlabeled Data
+CLIPCleaner: Cleaning Noisy Labels with CLIP
+HICEScore: A Hierarchical Metric for Image Captioning Evaluation
+Bridging Visual Affective Gap: Borrowing Textual Knowledge by Learning from Noisy Image-Text Pairs
+LoopGaussian: Creating 3D Cinemagraph with Multi-view Images via Eulerian Motion Field
+Zero-Shot Controllable Image-to-Video Animation via Motion Decomposition
+Narrowing the Gap between Vision and Action in Navigation
+Diversified Semantic Distribution Matching for Dataset Distillation
+$ANFluid: Animate Natural Fluid Photos base on Physics-Aware Simulation and Dual-Flow Texture Learning$
+Exploring Data Efficiency in Image Restoration: A Gaussian Denoising Case Study
+Fact: Teaching MLLMs with Faithful, Concise and Transferable Rationales
+PROMOTE: Prior-Guided Diffusion Model with Global-Local Contrastive Learning for Exemplar-Based Image Translation
+Neural Boneprint: Person Identification from Bones using Generative Contrastive Deep Learning
+RFFNet: Towards Robust and Flexible Fusion for Low-Light Image Denoising
+GLGait: A Global-Local Temporal Receptive Field Network for Gait Recognition in the Wild
+MIKO: Multimodal Intention Knowledge Distillation from Large Language Models for Social-Media Commonsense Discovery
+U2UData: A Large-scale Cooperative Perception Dataset for Swarm UAVs Autonomous Flight
+"Special Relativity" of Image Aesthetics Assessment: a Preliminary Empirical Perspective
+GROOT: Generating Robust Watermark for Diffusion-Model-Based Audio Synthesis
+Q-MoE: Connector for MLLMs with Text-Driven Routing
+Q-Ground: Image Quality Grounding with Large Multi-modality Models
+Task-Oriented Multi-Bitstream Optimization for Image Compression and Transmission via Optimal Transport
+Towards Labeling-free Fine-grained Animal Pose Estimation
+Visual Grounding with Multi-modal Conditional Adaptation
+Fooling 3D Face Recognition with One Single 2D Image
+Diffusion Domain Teacher: Diffusion Guided Domain Adaptive Object Detector
+DAFT-GAN: Dual Affine Transformation Generative Adversarial Network for Text-Guided Image Inpainting
+Advancing Prompt Learning through an External Layer
+Cloth-aware Augmentation for Cloth-generalized Person Re-identification
+Towards Efficient and Diverse Generative Model for Unconditional Human Motion Synthesis
+Sample Efficiency Matters: Training Multimodal Conversational Recommendation Systems in a Small Data Setting
+Enhancing Pre-trained ViTs for Downstream Task Adaptation: A Locality-Aware Prompt Learning Method
+Masked Random Noise for Communication-Efficient Federated Learning
+Focus, Distinguish, and Prompt: Unleashing CLIP for Efficient and Flexible Scene Text Retrieval
+MDT-A2G: Exploring Masked Diffusion Transformers for Co-Speech Gesture Generation
+Towards Small Object Editing: A Benchmark Dataset and A Training-Free Approach
+NFT1000: A Cross-Modal Dataset For Non-Fungible Token Retrieval
+FusionOcc: Multi-Modal Fusion for 3D Occupancy Prediction
+S$^2$-CSNet: Scale-Aware Scalable Sampling Network for Image Compressive Sensing
+Fine-Grained Side Information Guided Dual-Prompts for Zero-Shot Skeleton Action Recognition
+Exploring Matching Rates: From Key Point Selection to Camera Relocalization
+REmoNet: Reducing Emotional Label Noise via Multi-regularized Self-supervision
+Cons2Plan: Vector Floorplan Generation from Various Conditions via a Learning Framework based on Conditional Diffusion Models
+Semantic-aware Representation Learning for Homography Estimation
+FacialFlowNet: Advancing Facial Optical Flow Estimation with a Diverse Dataset and a Decomposed Model
+DIG: Complex Layout Document Image Generation with Authentic-looking Text for Enhancing Layout Analysis
+Learning Context with Priors for 3D Interacting Hand-Object Pose Estimation
+SDePR: Fine-Grained Leaf Image Retrieval with Structural Deep Patch Representation
+Rethinking Impersonation and Dodging Attacks on Face Recognition Systems
+PSSD-Transformer: Powerful Sparse Spike-Driven Transformer for Image Semantic Segmentation
+Progressive Prototype Evolving for Dual-Forgetting Mitigation in Non-Exemplar Online Continual Learning
+ExpressiveSinger: Multilingual and Multi-Style Score-based Singing Voice Synthesis with Expressive Performance Control
+Highly Transferable Diffusion-based Unrestricted Adversarial Attack on Pre-trained Vision-Language Models
+Scene Diffusion: Text-driven Scene Image Synthesis Conditioning on a Single 3D Model
+Peeling Back the Layers: Interpreting the Storytelling of ViT
+Visual-Language Collaborative Representation Network for Broad-Domain Few-Shot Image Classification
+Addressing Imbalance for Class Incremental Learning in Medical Image Classification
+CartoonNet: Cartoon Parsing with Semantic Consistency and Structure Correlation
+GLATrack: Global and Local Awareness for Open-Vocabulary Multiple Object Tracking
+Can We Debiase Multimodal Large Language Models via Model Editing?
+Enhanced Tensorial Self-representation Subspace Learning for Incomplete Multi-view Clustering
+Multiple Kernel Clustering with Shifted Laplacian on Grassmann Manifold
+Multi-view X-ray Image Synthesis with Multiple Domain Disentanglement from CT Scans
+Tunnel Try-on: Excavating Spatial-temporal Tunnels for High-quality Virtual Try-on in Videos
+Learning Enriched Features via Selective State Spaces Model for Efficient Image Deblurring
+Hawkeye: Discovering and Grounding Implicit Anomalous Sentiment in Recon-videos via Scene-enhanced Video Large Language Model
+SSL: A Self-similarity Loss for Improving Generative Image Super-resolution
+InstantAS: Minimum Coverage Sampling for Arbitrary-Size Image Generation
+SegTalker: Segmentation-based Talking Face Generation with Mask-guided Local Editing
+TALE: Training-free Cross-domain Image Composition via Adaptive Latent Manipulation and Energy-guided Optimization
+Partially Aligned Cross-modal Retrieval via Optimal Transport-based Prototype Alignment Learning
+AdaFPP: Adapt-Focused Bi-Propagating Prototype Learning for Panoramic Activity Recognition
+Geometry-Guided Diffusion Model with Masked Transformer for Robust Multi-View 3D Human Pose Estimation
+Sampling to Distill: Knowledge Transfer from Open-World Data
+Generating Multimodal Metaphorical Features for Meme Understanding
+MMAL: Multi-Modal Analytic Learning for Exemplar-Free Audio-Visual Class Incremental Tasks
+Model-Based Non-Independent Distortion Cost Design for Effective JPEG Steganography
+DP-RAE: A Dual-Phase Merging Reversible Adversarial Example for Image Privacy Protection
+Asymmetric Event-Guided Video Super-Resolution
+Attribute-Driven Multimodal Hierarchical Prompts for Image Aesthetic Quality Assessment
+Color4E: Event Demosaicing for Full-color Event Guided Image Deblurring
+Domain Generalization-Aware Uncertainty Introspective Learning for 3D Point Clouds Segmentation
+PhysReaction: Physically Plausible Real-Time Humanoid Reaction Synthesis via Forward Dynamics Guided 4D Imitation

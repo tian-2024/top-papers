@@ -1,0 +1,67 @@
+What Regularized Auto-Encoders Learn from the Data Generating Distribution
+Information Theoretic Learning with Infinitely Divisible Kernels
+Auto-pooling: Learning to Improve Invariance of Image Features from Image Sequences
+Joint Training Deep Boltzmann Machines for Classification
+Factorized Topic Models
+Herded Gibbs Sampling
+A Geometric Descriptor for Cell-Division Detection
+The Expressive Power of Word Embeddings
+Feature grouping from spatially constrained multiplicative interaction
+Jitter-Adaptive Dictionary Learning - Application to Multi-Trial Neuroelectric Signals
+Hierarchical Data Representation Model - Multi-layer NMF
+An Efficient Sufficient Dimension Reduction Method for Identifying Genetic Variants of Clinical Significance
+Behavior Pattern Recognition using A New Representation Model
+Cutting Recursive Autoencoder Trees
+Adaptive learning rates and parallelization for stochastic, sparse, non-smooth gradients
+Latent Relation Representations for Universal Schemas
+The Neural Representation Benchmark and its Evaluation on Brain and Machine
+Affinity Weighted Embedding
+Gradient Driven Learning for Pooling in Visual Pipeline Feature Extraction Models
+Efficient Learning of Domain-invariant Image Representations
+A Semantic Matching Energy Function for Learning with Multi-relational Data
+Why Size Matters: Feature Coding as Nystrom Sampling
+Block Coordinate Descent for Sparse NMF
+Joint Space Neural Probabilistic Language Model for Statistical Machine Translation
+Deep learning and the renormalization group
+Boltzmann Machines and Denoising Autoencoders for Image Denoising
+Sparse Penalty in Deep Belief Networks: Using the Mixed Norm Constraint
+Kernelized Locality-Sensitive Hashing for Semi-Supervised Agglomerative Clustering
+A Nested HDP for Hierarchical Topic Models
+Pushing Stochastic Gradient towards Second-Order Methods -- Backpropagation Learning with Transformations in Nonlinearities
+Visual Objects Classification with Sliding Spatial Pyramid Matching
+Metric-Free Natural Gradient for Joint-Training of Boltzmann Machines
+Unsupervised Feature Learning for low-level Local Image Descriptors
+Matrix Approximation under Local Low-Rank Assumption
+Knowledge Matters: Importance of Prior Information for Optimization
+Switched linear encoding with rectified linear autoencoders
+Big Neural Networks Waste Capacity
+When Does a Mixture of Products Contain a Product of Mixtures?
+The Manifold of Human Emotions
+Two SVDs produce more focal deep learning representations
+Complexity of Representation and Inference in Compositional Models with Part Sharing
+Discriminative Recurrent Sparse Auto-Encoders
+Learning Stable Group Invariant Representations with Convolutional Networks
+Deep Learning for Detecting Robotic Grasps
+Barnes-Hut-SNE
+Linear-Nonlinear-Poisson Neuron Networks Perform Bayesian Inference On Boltzmann Machines
+Recurrent Online Clustering as a Spatio-Temporal Feature Extractor in DeSTIN
+Clustering Learning for Robotic Vision
+The Diagonalized Newton Algorithm for Nonnegative Matrix Factorization
+Heteroscedastic Conditional Ordinal Random Fields for Pain Intensity Estimation from Facial Images
+Efficient Estimation of Word Representations in Vector Space
+Natural Gradient Revisited
+Feature Learning in Deep Neural Networks - A Study on Speech Recognition Tasks
+Stochastic Pooling for Regularization of Deep Convolutional Neural Networks
+Local Component Analysis
+Learning New Facts From Knowledge Bases With Neural Tensor Networks and Semantic Word Vectors
+Zero-Shot Learning Through Cross-Modal Transfer
+Learnable Pooling Regions for Image Classification
+Tree structured sparse coding on cubes
+Training Neural Networks with Stochastic Hessian-Free Optimization
+Indoor Semantic Segmentation using depth information
+Discrete Restricted Boltzmann Machines
+Saturating Auto-Encoder
+Deep Predictive Coding Networks
+Learning Features with Structure-Adapting Multi-view Exponential Family Harmoniums
+Regularized Discriminant Embedding for Visual Descriptor Learning
+Audio Artist Identification by Deep Neural Network

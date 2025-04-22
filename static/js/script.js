@@ -79,27 +79,98 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Browser does not support matchMedia listener');
     }
 
+    // Function to check if a paper matches all keywords
+    function paperMatchesAllKeywords(paper, keywords) {
+        return keywords.every(keyword => {
+            const lowerKeyword = keyword.toLowerCase();
+            return paper.title.toLowerCase().includes(lowerKeyword) || 
+                   paper.conference.toLowerCase().includes(lowerKeyword) ||
+                   paper.year.toLowerCase().includes(lowerKeyword);
+        });
+    }
+
+    // Function to display no results message
+    function showNoResultsMessage() {
+        if (loading) loading.style.display = 'none';
+        if (papersTable) papersTable.style.display = 'table';
+        
+        if (papersList) {
+            papersList.innerHTML = `
+                <tr class="no-results">
+                    <td colspan="3">No results found for your search. Please try different keywords.</td>
+                </tr>
+            `;
+        }
+    }
+
+    // Function to display papers
+    function displayPapers(papers) {
+        if (!papersList) return;
+        
+        if (papers.length === 0) {
+            showNoResultsMessage();
+            return;
+        }
+        
+        papersList.innerHTML = '';
+        papers.forEach(paper => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${paper.conference}</td>
+                <td>${paper.year}</td>
+                <td>${paper.title}</td>
+            `;
+            papersList.appendChild(row);
+        });
+        
+        if (loading) loading.style.display = 'none';
+        if (papersTable) papersTable.style.display = 'table';
+    }
+
     // Search functionality
     if (searchBtn && topicInput) {
         searchBtn.addEventListener('click', function() {
             const searchTerm = topicInput.value.trim();
             if (searchTerm) {
                 console.log('Searching for:', searchTerm);
-                // 这里实现搜索功能
                 
-                // 示例显示加载状态
+                // Split search term by spaces to get keywords
+                const keywords = searchTerm.split(' ').filter(keyword => keyword.trim() !== '');
+                console.log('Keywords:', keywords);
+                
+                // Show loading status
                 if (loading) loading.style.display = 'block';
                 if (papersTable) papersTable.style.display = 'none';
                 
-                // 模拟搜索完成
-                setTimeout(() => {
-                    if (loading) loading.style.display = 'none';
-                    if (papersTable) papersTable.style.display = 'table';
-                }, 1000);
+                // Fetch papers data
+                fetch('/get_papers', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Data received:', data);
+                    
+                    // Filter papers that match all keywords
+                    const filteredPapers = data.papers.filter(paper => 
+                        paperMatchesAllKeywords(paper, keywords)
+                    );
+                    
+                    console.log('Filtered papers:', filteredPapers);
+                    
+                    // Display papers or show no results message
+                    displayPapers(filteredPapers);
+                })
+                .catch(error => {
+                    console.error('Error fetching papers:', error);
+                    showNoResultsMessage();
+                });
             }
         });
         
-        // 支持按回车键搜索
+        // Support Enter key for search
         topicInput.addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
                 searchBtn.click();
