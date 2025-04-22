@@ -542,6 +542,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Search functionality
     if (searchBtn && topicInput) {
+        // 全局变量存储所有论文数据
+        let allPapersData = null;
+        
+        // 加载所有论文数据
+        function loadAllPapers() {
+            return fetch('papers.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to load papers data');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    allPapersData = data;
+                    return data;
+                });
+        }
+        
+        // 加载所有论文数据
+        loadAllPapers().catch(error => {
+            console.error('Error loading papers data:', error);
+        });
+        
         searchBtn.addEventListener('click', function() {
             const searchTerm = topicInput.value.trim();
             if (searchTerm) {
@@ -566,27 +589,41 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (noResults) noResults.style.display = 'none';
                 if (papersGrid) papersGrid.style.display = 'none';
                 
-                // Fetch papers data
-                fetch('/get_papers', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        topic: searchTerm,
-                        conferences: conferences,
-                        start_year: startYear,
-                        end_year: endYear
-                    })
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Data received:', data);
+                // 检查是否已加载论文数据
+                const papersPromise = allPapersData ? Promise.resolve(allPapersData) : loadAllPapers();
+                
+                papersPromise.then(data => {
+                    // 在客户端过滤论文
+                    const papers = data.papers || [];
                     
-                    // 检查是否有论文数据
-                    if (data.papers && data.papers.length > 0) {
-                        // 直接显示结果，后端已经基于主题筛选过了
-                        displayPapers(data.papers);
+                    // 根据条件过滤论文
+                    const filteredPapers = papers.filter(paper => {
+                        // 检查会议
+                        if (conferences.length > 0 && !conferences.includes(paper.conference)) {
+                            return false;
+                        }
+                        
+                        // 检查年份
+                        const paperYear = parseInt(paper.year);
+                        const startYearInt = parseInt(startYear);
+                        const endYearInt = parseInt(endYear);
+                        if (paperYear < startYearInt || paperYear > endYearInt) {
+                            return false;
+                        }
+                        
+                        // 检查标题
+                        return paper.title.toLowerCase().includes(searchTerm.toLowerCase());
+                    });
+                    
+                    // 随机排序并限制数量
+                    const shuffledPapers = [...filteredPapers].sort(() => 0.5 - Math.random());
+                    const limitedPapers = shuffledPapers.slice(0, 15); // 限制为15篇
+                    
+                    console.log('Filtered papers:', limitedPapers.length);
+                    
+                    // 显示过滤后的论文
+                    if (limitedPapers.length > 0) {
+                        displayPapers(limitedPapers);
                     } else {
                         showNoResultsMessage();
                     }
@@ -594,6 +631,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 .catch(error => {
                     console.error('Error fetching papers:', error);
                     showNoResultsMessage();
+                })
+                .finally(() => {
+                    if (loading) loading.style.display = 'none';
                 });
             } else {
                 showNoResultsMessage();
