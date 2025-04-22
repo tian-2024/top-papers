@@ -745,7 +745,7 @@ footer {
 
 .title-container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     position: relative;
     width: 100%;
@@ -755,16 +755,24 @@ footer {
 
 .title-container h1 {
     margin-bottom: 0;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     white-space: nowrap;
-    justify-content: flex-start;
-    flex: 0 auto;
+    justify-content: center;
+    position: relative;
+}
+
+.github-link {
+    color: #3498db;
+    font-size: 1.5rem;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+    position: relative;
 }
 
 .title-container .theme-toggle {
-    position: relative;
-    right: auto;
+    position: absolute;
+    right: 0;
     top: auto;
     display: flex;
     align-items: center;
@@ -772,8 +780,6 @@ footer {
     padding: 0;
     box-shadow: none;
     border: none;
-    margin-right: 0;
-    margin-left: auto;
 }
 
 .search-input-container {
@@ -874,16 +880,15 @@ footer {
     .title-container {
         flex-direction: row;
         position: relative;
-        padding-right: 0;
-        justify-content: flex-start;
+        padding-right: 50px;
+        justify-content: center;
     }
     
     .title-container .theme-toggle {
-        position: relative;
-        right: auto;
-        top: auto;
-        transform: none;
-        margin-right: 10px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
     }
     
     .search-row {
@@ -986,14 +991,6 @@ footer {
         left: auto;
         right: 0;
     }
-}
-
-.github-link {
-    color: #3498db;
-    font-size: 1.5rem;
-    margin-left: 10px;
-    margin-right: auto;
-    transition: color 0.3s ease;
 }
 
 .github-link:hover {
