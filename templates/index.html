@@ -25,7 +25,7 @@
                 <div class="search-row">
                     <div class="search-input-container">
                         <input type="text" id="topic-input" placeholder="Enter topic keywords">
-                        <button id="search-btn">Search</button>
+                        <button id="search-btn">Batch!</button>
                     </div>
                     
                     <div class="year-range">
@@ -49,7 +49,7 @@
                             <option value="2024">2024</option>
                             <option value="2025" selected>2025</option>
                         </select>
-                        <button id="recent-years-btn" class="recent-years-btn">recently</button>
+                        <button id="recent-years-btn" class="recent-years-btn">Recent!</button>
                     </div>
                 </div>
                 
@@ -62,7 +62,7 @@
                     
                     <div class="fields-container">
                         <div class="field-filters-row">
-                            <div class="field-dropdown">
+                            <div class="field-dropdown" data-field="CV">
                                 <div class="field-label dropdown-toggle" data-field="CV">
                                     <input type="checkbox" class="field-main-checkbox" data-field="CV" checked>
                                     CV <i class="fas fa-caret-down"></i>
@@ -72,7 +72,7 @@
                                 </div>
                             </div>
                             
-                            <div class="field-dropdown">
+                            <div class="field-dropdown" data-field="AI">
                                 <div class="field-label dropdown-toggle" data-field="AI">
                                     <input type="checkbox" class="field-main-checkbox" data-field="AI" checked>
                                     AI <i class="fas fa-caret-down"></i>
@@ -82,7 +82,7 @@
                                 </div>
                             </div>
                             
-                            <div class="field-dropdown">
+                            <div class="field-dropdown" data-field="ML">
                                 <div class="field-label dropdown-toggle" data-field="ML">
                                     <input type="checkbox" class="field-main-checkbox" data-field="ML" checked>
                                     ML <i class="fas fa-caret-down"></i>
@@ -92,7 +92,7 @@
                                 </div>
                             </div>
                             
-                            <div class="field-dropdown">
+                            <div class="field-dropdown" data-field="Other">
                                 <div class="field-label dropdown-toggle" data-field="Other">
                                     <input type="checkbox" class="field-main-checkbox" data-field="Other" checked>
                                     Other <i class="fas fa-caret-down"></i>
@@ -102,7 +102,7 @@
                                 </div>
                             </div>
                             
-                            <div class="field-dropdown">
+                            <div class="field-dropdown" data-field="All">
                                 <div class="field-label" data-field="All">
                                     <input type="checkbox" id="select-all-checkbox" class="field-main-checkbox" checked>
                                     All

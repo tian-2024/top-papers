@@ -230,10 +230,90 @@ button:disabled {
 .conference-badge {
     background-color: #f39c12;
     color: white;
-    padding: 2px 6px;
-    border-radius: 3px;
+    padding: 4px 8px;
+    border-radius: 4px;
     font-size: 12px;
-    display: inline-block;
+    font-weight: bold;
+}
+
+.year-badge {
+    background-color: #ff9933; /* 橘黄色 */
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* 为不同领域设置不同的颜色 */
+.field-dropdown[data-field="CV"] .field-label,
+.dropdown-toggle[data-field="CV"] {
+    background-color: #3498db; /* 蓝色 */
+    border-color: #2980b9;
+    color: white;
+}
+
+.field-dropdown[data-field="AI"] .field-label,
+.dropdown-toggle[data-field="AI"] {
+    background-color: #9b59b6; /* 紫色 */
+    border-color: #8e44ad;
+    color: white;
+}
+
+.field-dropdown[data-field="ML"] .field-label,
+.dropdown-toggle[data-field="ML"] {
+    background-color: #2ecc71; /* 绿色 */
+    border-color: #27ae60;
+    color: white;
+}
+
+.field-dropdown[data-field="Other"] .field-label,
+.dropdown-toggle[data-field="Other"] {
+    background-color: #e74c3c; /* 红色 */
+    border-color: #c0392b;
+    color: white;
+}
+
+.field-dropdown:hover .field-label {
+    filter: brightness(1.1);
+}
+
+/* 确保"All"选项保持原有风格 */
+.field-dropdown[data-field="All"] .field-label {
+    background-color: #f5f5f5;
+    border-color: #ddd;
+    color: #444;
+}
+
+.dark-mode .field-dropdown[data-field="All"] .field-label {
+    background-color: #333;
+    border-color: #444;
+    color: #e0e0e0;
+}
+
+/* 暗黑模式对应的修改 */
+.dark-mode .field-dropdown[data-field="CV"] .field-label,
+.dark-mode .dropdown-toggle[data-field="CV"] {
+    background-color: #2980b9;
+    border-color: #2472a4;
+}
+
+.dark-mode .field-dropdown[data-field="AI"] .field-label,
+.dark-mode .dropdown-toggle[data-field="AI"] {
+    background-color: #8e44ad;
+    border-color: #703688;
+}
+
+.dark-mode .field-dropdown[data-field="ML"] .field-label,
+.dark-mode .dropdown-toggle[data-field="ML"] {
+    background-color: #27ae60;
+    border-color: #228b4c;
+}
+
+.dark-mode .field-dropdown[data-field="Other"] .field-label,
+.dark-mode .dropdown-toggle[data-field="Other"] {
+    background-color: #c0392b;
+    border-color: #a33025;
 }
 
 footer {
@@ -338,7 +418,7 @@ footer {
 }
 
 .copy-button {
-    background-color: #3498db;
+    background-color: #4a4a4a; /* 灰黑色 */
     color: white;
     border: none;
     border-radius: 4px;
@@ -353,7 +433,7 @@ footer {
 }
 
 .copy-button:hover {
-    background-color: #2980b9;
+    background-color: #333333; /* 悬停时更深的灰黑色 */
 }
 
 /* Add success state styling */
@@ -382,7 +462,7 @@ footer {
 }
 
 .year-badge {
-    background-color: #2ecc71;
+    background-color: #ff9933; /* 橘黄色 */
     color: white;
     padding: 4px 8px;
     border-radius: 4px;
@@ -396,11 +476,11 @@ footer {
 }
 
 .dark-mode .copy-button {
-    background-color: #2980b9;
+    background-color: #5a5a5a; /* 暗黑模式下稍微亮一点的灰黑色 */
 }
 
 .dark-mode .copy-button:hover {
-    background-color: #3498db;
+    background-color: #707070; /* 暗黑模式下悬停时更亮的灰黑色 */
 }
 
 .no-results {
