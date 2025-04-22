@@ -750,22 +750,27 @@ footer {
     position: relative;
     width: 100%;
     margin-bottom: 20px;
+    flex-wrap: nowrap;
 }
 
 .title-container h1 {
     margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
 }
 
 .title-container .theme-toggle {
-    position: absolute;
-    right: 0;
-    top: 0;
+    position: relative;
+    right: auto;
+    top: auto;
     display: flex;
     align-items: center;
     background: none;
     padding: 0;
     box-shadow: none;
     border: none;
+    margin-right: 15px;
 }
 
 .search-input-container {
@@ -864,16 +869,18 @@ footer {
     }
     
     .title-container {
-        flex-direction: column;
+        flex-direction: row;
         position: relative;
-        padding-right: 50px;  /* 为主题切换按钮留出空间 */
+        padding-right: 0;
+        justify-content: flex-start;
     }
     
     .title-container .theme-toggle {
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        margin-right: 10px;
     }
     
     .search-row {
@@ -947,6 +954,18 @@ footer {
     .search-input-container button {
         padding: 8px 12px;
         font-size: 14px;
+    }
+    
+    .title-container h1 {
+        font-size: 1.6rem;
+    }
+    
+    .toggle-icon {
+        font-size: 20px;
+    }
+    
+    .github-link {
+        font-size: 0.7em;
     }
 }
 
