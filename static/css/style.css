@@ -238,19 +238,19 @@ button:disabled {
 
 /* 根据领域设置会议标签颜色 */
 .conference-badge.cv-conference {
-    background-color: #3498db; /* CV领域蓝色 */
+    background-color: #8ecf70; /* CV领域浅绿色 */
 }
 
 .conference-badge.ai-conference {
-    background-color: #9b59b6; /* AI领域紫色 */
+    background-color: #ff9a9a; /* AI领域浅红色 */
 }
 
 .conference-badge.ml-conference {
-    background-color: #2ecc71; /* ML领域绿色 */
+    background-color: #d4a5ff; /* ML领域浅紫色 */
 }
 
 .conference-badge.other-conference {
-    background-color: #e74c3c; /* Other领域红色 */
+    background-color: #d4ad7d; /* Other领域浅棕色 */
 }
 
 /* 根据年份距离设置标签颜色 */
@@ -287,29 +287,29 @@ button:disabled {
 /* 为不同领域设置不同的颜色 */
 .field-dropdown[data-field="CV"] .field-label,
 .dropdown-toggle[data-field="CV"] {
-    background-color: #3498db; /* 蓝色 */
-    border-color: #2980b9;
+    background-color: #8ecf70; /* 浅绿色 */
+    border-color: #7ab85e;
     color: white;
 }
 
 .field-dropdown[data-field="AI"] .field-label,
 .dropdown-toggle[data-field="AI"] {
-    background-color: #9b59b6; /* 紫色 */
-    border-color: #8e44ad;
+    background-color: #ff9a9a; /* 浅红色 */
+    border-color: #e88080;
     color: white;
 }
 
 .field-dropdown[data-field="ML"] .field-label,
 .dropdown-toggle[data-field="ML"] {
-    background-color: #2ecc71; /* 绿色 */
-    border-color: #27ae60;
+    background-color: #d4a5ff; /* 浅紫色 */
+    border-color: #be8ee7;
     color: white;
 }
 
 .field-dropdown[data-field="Other"] .field-label,
 .dropdown-toggle[data-field="Other"] {
-    background-color: #e74c3c; /* 红色 */
-    border-color: #c0392b;
+    background-color: #d4ad7d; /* 浅棕色 */
+    border-color: #c49b6d;
     color: white;
 }
 
@@ -333,26 +333,26 @@ button:disabled {
 /* 暗黑模式对应的修改 */
 .dark-mode .field-dropdown[data-field="CV"] .field-label,
 .dark-mode .dropdown-toggle[data-field="CV"] {
-    background-color: #2980b9;
-    border-color: #2472a4;
+    background-color: #7ab85e; /* 深一点的浅绿色 */
+    border-color: #69a14e;
 }
 
 .dark-mode .field-dropdown[data-field="AI"] .field-label,
 .dark-mode .dropdown-toggle[data-field="AI"] {
-    background-color: #8e44ad;
-    border-color: #703688;
+    background-color: #e88080; /* 深一点的浅红色 */
+    border-color: #d76c6c;
 }
 
 .dark-mode .field-dropdown[data-field="ML"] .field-label,
 .dark-mode .dropdown-toggle[data-field="ML"] {
-    background-color: #27ae60;
-    border-color: #228b4c;
+    background-color: #be8ee7; /* 深一点的浅紫色 */
+    border-color: #aa7ad0;
 }
 
 .dark-mode .field-dropdown[data-field="Other"] .field-label,
 .dark-mode .dropdown-toggle[data-field="Other"] {
-    background-color: #c0392b;
-    border-color: #a33025;
+    background-color: #c49b6d; /* 深一点的浅棕色 */
+    border-color: #b3895d;
 }
 
 footer {
@@ -707,6 +707,7 @@ footer {
     width: 100%;
     max-width: 900px;
     margin-bottom: 15px;
+    position: relative;
 }
 
 .topic-container {
@@ -728,13 +729,24 @@ footer {
     justify-content: flex-start;
 }
 
+/* 年份过滤器容器样式 */
+.year-filter-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: 15px;
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
 /* 年份选择样式 */
 .year-range {
     display: flex;
     align-items: center;
     gap: 5px;
-    margin-left: 15px;
     white-space: nowrap;
+    flex: 1;
+    min-width: 0;
 }
 
 .year-range select {
@@ -758,10 +770,10 @@ footer {
     padding: 12px 25px;
     border-radius: 5px;
     cursor: pointer;
-    margin-left: 10px;
     font-size: 16px;
     font-weight: bold;
     transition: background-color 0.3s;
+    margin-left: 15px;
 }
 
 .recent-years-btn:hover {
@@ -1036,25 +1048,30 @@ footer {
     }
     
     .search-row {
-        flex-direction: column;
-        align-items: stretch;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 15px;
     }
     
     .search-input-container {
-        width: 100%;
-        margin-bottom: 10px;
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+    
+    .year-filter-container {
+        flex: 1 1 100%;
+        margin-left: 0;
+        justify-content: space-between;
     }
     
     .year-range {
-        margin-left: 0;
-        width: 100%;
-        justify-content: flex-start;
-        flex-wrap: wrap;
+        flex: 1 0 auto;
     }
     
     .recent-years-btn {
-        margin-top: 8px;
-        margin-left: 0;
+        margin-left: 10px;
+        flex: 0 0 auto;
     }
     
     .filters-row {
