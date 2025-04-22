@@ -1,3 +1,17 @@
-[aistats/2025] A Generalized Theory of Mixup for Structure-Preserving Synthetic Data
+[acmmm/2024] Conditional Diffusion Model for Open-ended Video Question Answering
+[acmmm/2024] Data Generation Scheme for Thermal Modality with Edge-Guided Adversarial Conditional Diffusion Model
+[acmmm/2024] Decoder-Only LLMs are Better Controllers for Diffusion Models
+[acmmm/2024] Diffusion Domain Teacher: Diffusion Guided Domain Adaptive Object Detector
+[acmmm/2024] Equilibrated Diffusion: Frequency-aware Textual Embedding for Equilibrated Image Customization
+[acmmm/2024] Evolving Storytelling: Benchmarks and Methods for New Character Customization with Diffusion Models
+[acmmm/2024] FedDEO: Description-Enhanced One-Shot Federated Learning with Diffusion Models
+[acmmm/2024] Information Diffusion Prediction with Graph Neural Ordinary Differential Equation Network
+[acmmm/2024] Interpretable Matching of Optical-SAR Image via Dynamically Conditioned Diffusion Models
+[acmmm/2024] Investigating Conceptual Blending of a Diffusion Model for Improving Nonword-to-Image Generation
+[acmmm/2024] MoTrans: Customized Motion Transfer with Text-driven Video Diffusion Models
+[acmmm/2024] PrimeComposer: Faster Progressively Combined Diffusion for Image Composition with Attention Steering
+[acmmm/2024] ReToMe-VA: Recursive Token Merging for Video Diffusion-based Unrestricted Adversarial Attack
+[acmmm/2024] TreeReward: Improve Diffusion Model via Tree-Structured Feedback Learning
+[acmmm/2024] Unveiling Structural Memorization: Structural Membership Inference Attack for Text-to-Image Diffusion Models
 
 用 markdown 表格，列出task，idea，论文标题，会议，年份。回答用中文，不需要搜索。把论文根据应用类型大概分类排序，在同一个表格里，不要分表。
