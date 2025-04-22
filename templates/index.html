@@ -9,20 +9,35 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <div class="title-container">
-                <h1>Top AI Papers</h1>
-                <a href="https://github.com/tian-2024/top-papers" class="github-link"><i class="fab fa-github"></i></a>
-                <div class="theme-toggle">
-                    <span class="toggle-icon">🌙</span>
-                    <label class="toggle-switch">
-                        <input type="checkbox" id="theme-toggle-input">
-                        <span class="toggle-slider"></span>
-                    </label>
+        <div class="main-content">
+            <!-- Left column: Paper display area -->
+            <div class="paper-container">
+                <div id="loading" class="loading" style="display: none;">Loading papers...</div>
+                <div id="no-results" class="no-results">
+                    Please select a topic and search criteria to find papers.
+                </div>
+                <div id="papers-grid" class="papers-grid">
+                    <!-- Paper cards will be inserted here -->
                 </div>
             </div>
-            <div class="search-container">
-                <div class="search-row">
+            
+            <!-- Right column: Sidebar with search controls -->
+            <div class="sidebar">
+                <!-- Row 1: Title -->
+                <div class="sidebar-section title-section">
+                    <h1>Top AI Papers</h1>
+                    <a href="https://github.com/tian-2024/top-papers" class="github-link"><i class="fab fa-github"></i></a>
+                    <div class="theme-toggle">
+                        <span class="toggle-icon">🌙</span>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="theme-toggle-input">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Row 2: Year selection -->
+                <div class="sidebar-section year-section">
                     <div class="year-filter-container">
                         <div class="year-range">
                             <span>Year:</span>
@@ -48,14 +63,27 @@
                         </div>
                         <button id="recent-years-btn" class="recent-years-btn">Recent</button>
                     </div>
-                    
+                </div>
+                
+                <!-- Row 3: Topic tags -->
+                <div class="sidebar-section topic-section">
+                    <div class="topic-tags">
+                        <button class="topic-tag" data-topic="diffusion">diffusion</button>
+                        <button class="topic-tag" data-topic="vlm">vlm</button>
+                        <button class="topic-tag" data-topic="mixup">mixup</button>
+                    </div>
+                </div>
+                
+                <!-- Row 4: Search input -->
+                <div class="sidebar-section search-section">
                     <div class="search-input-container">
                         <input type="text" id="topic-input" placeholder="Enter topic keywords">
                         <button id="search-btn">Batch</button>
                     </div>
                 </div>
                 
-                <div class="filters-row">
+                <!-- Row 5: Field selection -->
+                <div class="sidebar-section fields-section">
                     <div class="fields-container">
                         <div class="field-filters-row">
                             <div class="field-dropdown" data-field="All">
@@ -106,23 +134,7 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="topic-tags">
-                        <button class="topic-tag" data-topic="diffusion">diffusion</button>
-                        <button class="topic-tag" data-topic="vlm">vlm</button>
-                        <button class="topic-tag" data-topic="mixup">mixup</button>
-                    </div>
                 </div>
-            </div>
-        </header>
-        
-        <div class="paper-container">
-            <div id="loading" class="loading" style="display: none;">Loading papers...</div>
-            <div id="no-results" class="no-results">
-                Please select a topic and search criteria to find papers.
-            </div>
-            <div id="papers-grid" class="papers-grid">
-                <!-- Paper cards will be inserted here -->
             </div>
         </div>
     </div>
