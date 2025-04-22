@@ -715,9 +715,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         
-        // 触发搜索更新
-        if (typeof updateSearchResults === 'function') {
-            updateSearchResults();
+        // 修复：确保选择框视觉上更新
+        startYearSelect.dispatchEvent(new Event('change'));
+        endYearSelect.dispatchEvent(new Event('change'));
+        
+        // 如果存在搜索按钮，自动触发搜索
+        if (document.getElementById('search-btn')) {
+            document.getElementById('search-btn').click();
         }
     }
 
