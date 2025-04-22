@@ -745,7 +745,7 @@ footer {
 
 .title-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     position: relative;
     width: 100%;
@@ -758,8 +758,8 @@ footer {
     display: flex;
     align-items: center;
     white-space: nowrap;
-    flex: 1;
-    justify-content: center;
+    justify-content: flex-start;
+    flex: 0 auto;
 }
 
 .title-container .theme-toggle {
@@ -968,7 +968,7 @@ footer {
     }
     
     .github-link {
-        font-size: 0.7em;
+        font-size: 1.2rem;
     }
 }
 
@@ -990,8 +990,9 @@ footer {
 
 .github-link {
     color: #3498db;
-    font-size: 0.8em;
-    margin-right: 10px;
+    font-size: 1.5rem;
+    margin-left: 10px;
+    margin-right: auto;
     transition: color 0.3s ease;
 }
 
