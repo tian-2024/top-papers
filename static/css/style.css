@@ -964,4 +964,23 @@ footer {
         left: auto;
         right: 0;
     }
+}
+
+.github-link {
+    color: #3498db;
+    font-size: 0.8em;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+
+.github-link:hover {
+    color: #2980b9;
+}
+
+.dark-mode .github-link {
+    color: #5dade2;
+}
+
+.dark-mode .github-link:hover {
+    color: #3498db;
 } 
