@@ -1,4 +1,4 @@
-# Sample a Batch of Papers of Top Conferences
+# Top Papers
 
 
 https://tian-2024.github.io/top-papers/
