@@ -784,34 +784,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 添加移动端侧边栏切换功能
     function setupSidebarToggle() {
-        const sidebarToggleBtn = document.querySelector('.sidebar-toggle');
+        // 移除侧边栏切换功能，使侧边栏始终显示
         const sidebar = document.querySelector('.sidebar');
         
-        if (sidebarToggleBtn && sidebar) {
-            // 初始化时检查屏幕宽度，默认在小屏幕上收起侧边栏
-            if (window.innerWidth <= 768) {
-                sidebar.classList.add('collapsed');
-            }
-            
-            // 切换侧边栏显示/隐藏
-            sidebarToggleBtn.addEventListener('click', () => {
-                sidebar.classList.toggle('collapsed');
-                
-                // 如果展开了侧边栏，滚动到顶部
-                if (!sidebar.classList.contains('collapsed')) {
-                    window.scrollTo({top: 0, behavior: 'smooth'});
-                }
-            });
-            
-            // 点击搜索按钮或主题标签后，在移动端自动折叠侧边栏
-            const actionButtons = document.querySelectorAll('#search-btn, .topic-tag');
-            actionButtons.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    if (window.innerWidth <= 768) {
-                        sidebar.classList.add('collapsed');
-                    }
-                });
-            });
+        if (sidebar) {
+            // 确保侧边栏不包含折叠类
+            sidebar.classList.remove('collapsed');
         }
     }
 
@@ -852,9 +830,9 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', function() {
         handleResponsiveLayout();
         
-        // 在窗口大小变化时，如果宽度大于768px，确保侧边栏可见
+        // 在窗口大小变化时，确保侧边栏始终可见
         const sidebar = document.querySelector('.sidebar');
-        if (window.innerWidth > 768 && sidebar) {
+        if (sidebar) {
             sidebar.classList.remove('collapsed');
         }
     });
