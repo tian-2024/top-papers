@@ -1,35 +1,22 @@
-Improving Gaussian mixture latent variable model convergence with Optimal Transport
 Convolutional Neural Networks on Non-uniform Geometrical Signals Using Euclidean Spectral Transformation
 Augmented Cyclic Adversarial Learning for Low Resource Domain Adaptation
 Variance Networks: When Expectation Does Not Meet Your Expectations
-PolyCNN: Learning Seed Convolutional Filters
 Initialized Equilibrium Propagation for Backprop-Free Training
-NA
 Explaining Image Classifiers by Counterfactual Generation
 SNIP: SINGLE-SHOT NETWORK PRUNING BASED ON CONNECTION SENSITIVITY
 Diagnosing and Enhancing VAE Models
-IncSQL: Training Incremental Text-to-SQL Parsers with Non-Deterministic Oracles
-One Bit Matters: Understanding Adversarial Examples as the Abuse of Redundancy
 Disjoint Mapping Network for Cross-modal Matching of Voices and Faces
 Automatically Composing Representation Transformations as a Means for Generalization
 Visual Reasoning by Progressive Module Networks
 Bayesian Deep Convolutional Networks with Many Channels are Gaussian Processes
-Object-Contrastive Networks: Unsupervised Object Representations
-From Amortised to Memoised Inference: Combining Wake-Sleep and Variational-Bayes for Unsupervised Few-Shot Program Learning
 Learning to Learn without Forgetting by Maximizing Transfer and Minimizing Interference
-Online abstraction with MDP homomorphisms for Deep Learning
-Exploration in Policy Mirror Descent
 BA-Net: Dense Bundle Adjustment Networks
 Sparse Dictionary Learning by Dynamical Neural Networks
 Deterministic Variational Inference for Robust Bayesian Neural Networks
 Ordered Neurons: Integrating Tree Structures into Recurrent Neural Networks
-Learning and Data Selection in Big Datasets
 Eidetic 3D LSTM: A Model for Video Prediction and Beyond
-How to learn (and how not to learn) multi-hop reasoning with memory networks
-SALSA-TEXT : SELF ATTENTIVE LATENT SPACE BASED ADVERSARIAL TEXT GENERATION
 ALISTA: Analytic Weights Are As Good As Learned Weights in LISTA
 Three Mechanisms of Weight Decay Regularization
-What Is in a Translation Unit? Comparing Character and Subword Representations Beyond Translation
 Learning Multimodal Graph-to-Graph Translation for Molecule Optimization
 A Data-Driven and Distributed Approach to Sparse Signal Representation and Recovery
 On the Minimal Supervision for Training Any Binary Classifier from Only Unlabeled Data
@@ -41,58 +28,39 @@ Woulda, Coulda, Shoulda: Counterfactually-Guided Policy Search
 signSGD via Zeroth-Order Oracle
 Preventing Posterior Collapse with delta-VAEs
 Algorithmic Framework for Model-based Deep Reinforcement Learning with Theoretical Guarantees
-Learning Grounded Sentence Representations by Jointly Using Video and Text Information
 Knowledge Flow: Improve Upon Your Teachers
 Directed-Info GAIL: Learning Hierarchical Policies from Unsegmented Demonstrations using Directed Information
 A Max-Affine Spline Perspective of Recurrent Neural Networks
 Learning to Navigate the Web
-Rotation Equivariant Networks via Conic Convolution and the DFT
-Visualizing and Discovering Behavioural Weaknesses in Deep Reinforcement Learning
 Training for Faster Adversarial Robustness Verification via Inducing ReLU Stability
 Learning to Learn with Conditional Class Dependencies
 Hierarchical Visuomotor Control of Humanoids
 Unsupervised Adversarial Image Reconstruction
 Max-MIG: an Information Theoretic Approach for Joint Learning from Crowds
-Bilingual-GAN: Neural Text Generation and Neural Machine Translation as Two Sides of the Same Coin
-Stacked U-Nets: A No-Frills Approach to Natural Image Segmentation
 AutoLoss: Learning Discrete Schedule for Alternate Optimization
 Learning what and where to attend
 ROBUST ESTIMATION VIA GENERATIVE ADVERSARIAL NETWORKS
-The Body is not a Given: Joint Agent Policy Learning and Morphology Evolution
-Deep clustering based on a mixture of autoencoders
 INVASE: Instance-wise Variable Selection using Neural Networks
 Meta-Learning with Latent Embedding Optimization
 Non-vacuous Generalization Bounds at the ImageNet Scale: a PAC-Bayesian Compression Approach
 Learning to Represent Edits
 Neural Probabilistic Motor Primitives for Humanoid Control
-Deepström Networks
-Geometry of Deep Convolutional Networks
 Differentiable Perturb-and-Parse: Semi-Supervised Parsing with a Structured Variational Autoencoder
-End-to-end Learning of a Convolutional Neural Network via Deep Tensor Decomposition
-Learning to Attend On Essential Terms: An Enhanced Retriever-Reader Model for Open-domain Question Answering
-Label Smoothing and Logit Squeezing: A Replacement for Adversarial Training?
 Janossy Pooling: Learning Deep Permutation-Invariant Functions for Variable-Size Inputs
 An Empirical Study of Example Forgetting during Deep Neural Network Learning
 RNNs implicitly implement tensor-product representations
-Learning Spatio-Temporal Representations Using Spike-Based Backpropagation
 Learning To Solve Circuit-SAT: An Unsupervised Differentiable Approach
 Dynamic Channel Pruning: Feature Boosting and Suppression
 signSGD with Majority Vote is Communication Efficient and Fault Tolerant
 Bounce and Learn: Modeling Scene Dynamics with Real-World Bounces
 K for the Price of 1: Parameter-efficient Multi-task and Transfer Learning
-Tangent-Normal Adversarial Regularization for Semi-supervised Learning
-Evading Defenses to Transferable Adversarial Examples by Mitigating Attention Shift
 Towards Metamerism via Foveated Style Transfer
 Post Selection Inference with Incomplete Maximum Mean Discrepancy Estimator
 Emergent Coordination Through Competition
 Prior Convictions: Black-box Adversarial Attacks with Bandits and Priors
-Improving latent variable descriptiveness by modelling rather than ad-hoc factors
 Sample Efficient Imitation Learning for Continuous Control
-Geometric Operator Convolutional Neural Network
 Generative Code Modeling with Graphs
-Efficient Federated Learning via Variational Dropout
 Critical Learning Periods in Deep Networks
-Combining Global Sparse Gradients with Local Gradients
 CEM-RL: Combining evolutionary and gradient-based methods for policy search
 LanczosNet: Multi-Scale Deep Graph Convolutional Networks
 Excessive Invariance Causes Adversarial Vulnerability
@@ -106,7 +74,6 @@ Neural Graph Evolution: Towards Efficient Automatic Robot Design
 Function Space Particle Optimization for Bayesian Neural Networks
 Structured Adversarial Attack: Towards General Implementation and Better Interpretability
 Spherical CNNs on Unstructured Grids
-Neural Network Bandit Learning by Last Layer Marginalization
 Optimal Transport Maps For Distribution Preserving Operations on Latent Spaces of Generative Models
 Deep Lagrangian Networks: Using Physics as Model Prior for Deep Learning
 Accumulation Bit-Width Scaling For Ultra-Low Precision Training Of Deep Networks
@@ -123,7 +90,6 @@ The Deep Weight Prior
 Efficient Multi-Objective Neural Architecture Search via Lamarckian Evolution
 Quaternion Recurrent Neural Networks
 Adversarial Audio Synthesis
-The Missing Ingredient in Zero-Shot Neural Machine Translation
 Preconditioner on Matrix Lie Group for SGD
 Learning to Screen for Fast Softmax Inference on Large Vocabulary Neural Networks
 Adaptive Posterior Learning: few-shot learning with a surprise-based memory module
@@ -135,23 +101,18 @@ FlowQA: Grasping Flow in History for Conversational Machine Comprehension
 Learning to Design RNA
 Robust Conditional Generative Adversarial Networks
 Learning Protein Structure with a Differentiable Simulator
-Generative Model For Material Irradiation Experiments Based On Prior Knowledge And Attention Mechanism
 Top-Down Neural Model For Formulae
 Cost-Sensitive Robustness against Adversarial Examples
 The role of over-parametrization in generalization of neural networks
 ImageNet-trained CNNs are biased towards texture; increasing shape bias improves accuracy and robustness
 Diffusion Scattering Transforms on Graphs
 Capsule Graph Neural Network
-Found by NEMO: Unsupervised Object Detection from Negative Examples and Motion
 Energy-Constrained Compression for Deep Neural Networks via Weighted Sparse Projection and Layer Input Masking
 Emerging Disentanglement in Auto-Encoder Based Unsupervised Image Content Transfer
 SGD Converges to Global Minimum in Deep Learning via Star-convex Path
 Toward Understanding the Impact of Staleness in Distributed Machine Learning
-Isolating effects of age with fair representation learning when assessing dementia
-Low-Rank Matrix Factorization of LSTM as Effective Model Compression
 Transfer Learning for Sequences via Learning to Collocate
 Learning Procedural Abstractions and Evaluating Discrete Latent Temporal Structure
-Logit Regularization Methods for Adversarial Robustness
 Unsupervised Speech Recognition via Segmental Empirical Output Distribution Matching
 Adversarial Attacks on Graph Neural Networks via Meta Learning
 Maximal Divergence Sequential Autoencoder for Binary Software Vulnerability Detection
@@ -164,14 +125,9 @@ Adaptive Input Representations for Neural Language Modeling
 Neural Persistence: A Complexity Measure for Deep Neural Networks Using Algebraic Topology
 Efficient Augmentation via Data Subsampling
 Neural TTS Stylization with Adversarial and Collaborative Games
-Transfer Learning for Estimating Causal Effects Using Neural Networks
-A Teacher Student Network For Faster Video Classification
-Hiding Objects from Detectors: Exploring Transferrable Adversarial Patterns
 Optimal Control Via Neural Networks: A Convex Approach
 CBOW Is Not All You Need: Combining CBOW with the Compositional Matrix Space Model
-Low-Cost Parameterizations of Deep Convolutional Neural Networks
 Stochastic Optimization of Sorting Networks via Continuous Relaxations
-Variational Autoencoders for Text Modeling without Weakening the Decoder
 Adaptivity of deep ReLU network for learning in Besov and mixed smooth Besov spaces: optimal rate and curse of dimensionality
 Generating Multiple Objects at Spatially Distinct Locations
 Near-Optimal Representation Learning for Hierarchical Reinforcement Learning
@@ -179,7 +135,6 @@ Understanding Composition of Word Embeddings via Tensor Decomposition
 Structured Neural Summarization
 Graph Wavelet Neural Network
 A rotation-equivariant convolutional neural network model of primary visual cortex
-UNSUPERVISED MONOCULAR DEPTH ESTIMATION WITH CLEAR BOUNDARIES
 Supervised Community Detection with Line Graph Neural Networks
 Multiple-Attribute Text Rewriting
 Wasserstein Barycenter Model Ensembling
@@ -197,8 +152,6 @@ Exploration by random network distillation
 Unsupervised Learning of the Set of Local Maxima
 On the Convergence of A Class of Adam-Type Algorithms for Non-Convex Optimization
 Minimum Divergence vs. Maximum Margin: an Empirical Comparison on Seq2Seq Models
-GradMix: Multi-source Transfer across Domains and Tasks
-Robust Text Classifier on Test-Time Budgets
 GANSynth: Adversarial Neural Audio Synthesis
 Smoothing the Geometry of Probabilistic Box Embeddings
 Sliced Wasserstein Auto-Encoders
@@ -206,58 +159,43 @@ Learning Two-layer Neural Networks with Symmetric Inputs
 Learning to Understand Goal Specifications by Modelling Reward
 Do Deep Generative Models Know What They Don't Know?
 Identifying and Controlling Important Neurons in Neural Machine Translation
-Bamboo: Ball-Shape Data Augmentation Against Adversarial Attacks from All Directions
 Representing Formal Languages: A Comparison Between Finite Automata and Recurrent Neural Networks
 Visual Explanation by Interpretation: Improving Visual Feedback Capabilities of Deep Neural Networks
 Don't let your Discriminator be fooled
-Encoder Discriminator Networks for Unsupervised Representation Learning
 Latent Convolutional Models
 A Universal Music Translation Network
 How to train your MAML
-SpaMHMM: Sparse Mixture of Hidden Markov Models for Graph Connected Entities
 Learning a SAT Solver from Single-Bit Supervision
 Learning Representations of Sets through Optimized Permutations
 Big-Little Net: An Efficient Multi-Scale Feature Representation for Visual and Speech Recognition
-Nesterov's method is the discretization of a differential equation with Hessian damping
-Engaging Image Captioning Via Personality
 Unsupervised Hyper-alignment for Multilingual Word Embeddings
-Scaling up Deep Learning for PDE-based Models
 Visual Semantic Navigation using Scene Priors
-Unsupervised Latent Tree Induction with Deep Inside-Outside Recursive Auto-Encoders
 NOODL: Provable Online Dictionary Learning and Sparse Coding
 Stochastic Gradient/Mirror Descent: Minimax Optimality and Implicit Regularization
 Active Learning with Partial Feedback
 Gradient descent aligns the layers of deep linear networks
 Data-Dependent Coresets for Compressing Neural Networks with Applications to Generalization Bounds
-NA
 On the loss landscape of a class of deep neural networks with no bad local valleys
 DOM-Q-NET: Grounded RL on Structured Language
 Boosting Robustness Certification of Neural Networks
 Learning To Simulate
 Towards Understanding Regularization in Batch Normalization
 The Laplacian in RL: Learning Representations with Efficient Approximations
-ISONETRY : GEOMETRY OF CRITICAL INITIALIZATIONS AND TRAINING
 Predicting the Generalization Gap in Deep Networks with Margin Distributions
 Adversarial Imitation via Variational Inverse Reinforcement Learning
 On Random Deep Weight-Tied Autoencoders: Exact Asymptotic Analysis, Phase Transitions, and Implications to Training
 Reasoning About Physical Interactions with Object-Oriented Prediction and Planning
 LayoutGAN: Generating Graphic Layouts with Wireframe Discriminators
-Self-Binarizing Networks
-Iterative Binary Decisions
 Learning Mixed-Curvature Representations in Product Spaces
 StrokeNet: A Neural Painting Environment
 Harmonizing Maximum Likelihood with GANs for Multimodal Conditional Generation
 Measuring Compositionality in Representation Learning
-Confidence Calibration in Deep Neural Networks through Stochastic Inferences
-Hierarchical Deep Reinforcement Learning Agent with Counter Self-play on Competitive Games
 Benchmarking Neural Network Robustness to Common Corruptions and Perturbations
 ADef: an Iterative Algorithm to Construct Adversarial Deformations
 Discriminator-Actor-Critic: Addressing Sample Inefficiency and Reward Bias in Adversarial Imitation Learning
 Doubly Reparameterized Gradient Estimators for Monte Carlo Objectives
-withdrawn
 Meta-Learning Update Rules for Unsupervised Representation Learning
 Learning Recurrent Binary/Ternary Weights
-Associate Normalization
 Learning concise representations for regression by evolving networks of trees
 Efficient Training on Very Large Corpora via Gramian Estimation
 MAE: Mutual Posterior-Divergence Regularization for Variational AutoEncoders
@@ -276,17 +214,13 @@ Marginal Policy Gradients: A Unified Family of Estimators for Bounded Action Spa
 On Self Modulation for Generative Adversarial Networks
 Off-Policy Evaluation and Learning from Logged Bandit Feedback: Error Reduction via Surrogate Policy
 Subgradient Descent Learns Orthogonal Dictionaries
-Confidence-based Graph Convolutional Networks for Semi-Supervised Learning
 ClariNet: Parallel Wave Generation in End-to-End Text-to-Speech
 MARGINALIZED AVERAGE ATTENTIONAL NETWORK FOR WEAKLY-SUPERVISED LEARNING
-UNSUPERVISED CONVOLUTIONAL NEURAL NETWORKS FOR ACCURATE VIDEO FRAME INTERPOLATION WITH INTEGRATION OF MOTION COMPONENTS
 Towards GAN Benchmarks Which Require Generalization
 A Closer Look at Few-shot Classification
 Meta-Learning Probabilistic Inference for Prediction
 Deep reinforcement learning with relational inductive biases
 Relaxed Quantization for Discretized Neural Networks
-Classification of Building Noise Type/Position via Supervised Learning
-Shaping representations through communication
 Tree-Structured Recurrent Switching Linear Dynamical Systems for Multi-Scale Modeling
 STCN: Stochastic Temporal Convolutional Networks
 Soft Q-Learning with Mutual-Information Regularization
@@ -303,7 +237,6 @@ Verification of Non-Linear Specifications for Neural Networks
 Generating Liquid Simulations with Deformation-aware Neural Networks
 DyRep: Learning Representations over Dynamic Graphs
 Trellis Networks for Sequence Modeling
-Bridging HMMs and RNNs through Architectural Transformations
 Scalable Unbalanced Optimal Transport using Generative Adversarial Networks
 Solving the Rubik's Cube with Approximate Policy Iteration
 Variance Reduction for Reinforcement Learning in Input-Driven Environments
@@ -314,24 +247,19 @@ Improving MMD-GAN Training with Repulsive Loss Function
 Deterministic PAC-Bayesian generalization bounds for deep networks via generalizing noise-resilience
 Recall Traces: Backtracking Models for Efficient Reinforcement Learning
 Stable Recurrent Models
-Capacity of Deep Neural Networks under Parameter Quantization
 The Limitations of Adversarial Training and the Blind-Spot Attack
 Efficiently testing local optimality and escaping saddles for ReLU networks
 ProxylessNAS: Direct Neural Architecture Search on Target Task and Hardware
-Statistical Characterization of Deep Neural Networks and their Sensitivity
 Hierarchical Reinforcement Learning via Advantage-Weighted Information Maximization
-D2KE: From Distance to Kernel and Embedding via Random Features For Structured Inputs
 GENERATING HIGH FIDELITY IMAGES WITH SUBSCALE PIXEL NETWORKS AND MULTIDIMENSIONAL UPSCALING
 Generalizable Adversarial Training via Spectral Normalization
 Adversarial Domain Adaptation for Stable Brain-Machine Interfaces
 Deep Online Learning Via Meta-Learning: Continual Adaptation for Model-Based RL
 Deep Anomaly Detection with Outlier Exposure
 Contingency-Aware Exploration in Reinforcement Learning
-Domain Adaptive Transfer Learning
 Context-adaptive Entropy Model for End-to-end Optimized Image Compression
 Variational Discriminator Bottleneck: Improving Imitation Learning, Inverse RL, and GANs by Constraining Information Flow
 Meta-learning with differentiable closed-form solvers
-Data Poisoning Attack against Unsupervised Node Embedding Methods
 Learning Self-Imitating Diverse Policies
 ProxQuant: Quantized Neural Networks via Proximal Operators
 Universal Transformers
@@ -342,22 +270,16 @@ Towards the first adversarially robust neural network model on MNIST
 Discriminator Rejection Sampling
 Harmonic Unpaired Image-to-image Translation
 Universal Successor Features Approximators
-Teaching Machine How to Think by Natural Language: A study on Machine Reading Comprehension
 Gradient Descent Provably Optimizes Over-parameterized Neural Networks
-Answer-based Adversarial Training for Generating Clarification Questions
-Cosine similarity-based Adversarial process
 Opportunistic Learning: Budgeted Cost-Sensitive Learning from Data Streams
 DARTS: Differentiable Architecture Search
 Feature-Wise Bias Amplification
 The relativistic discriminator: a key element missing from standard GAN
-Exploration using Distributional RL and UCB
 Understanding and Improving Interpolation in Autoencoders via an Adversarial Regularizer
 Quasi-hyperbolic momentum and Adam for deep learning
 Local SGD Converges Fast and Communicates Little
-Latent Transformations for Object View Points Synthesis
 Learning Finite State Representations of Recurrent Policy Networks
 Multilingual Neural Machine Translation with Knowledge Distillation
-Structured Content Preservation for Unsupervised Text Style Transfer
 MisGAN: Learning from Incomplete Data with Generative Adversarial Networks
 A Direct Approach to Robust Deep Learning Using Adversarial Networks
 Combinatorial Attacks on Binarized Neural Networks
@@ -381,42 +303,29 @@ Bayesian Policy Optimization for Model Uncertainty
 Variational Bayesian Phylogenetic Inference
 LEARNING FACTORIZED REPRESENTATIONS FOR OPEN-SET DOMAIN ADAPTATION
 On the Universal Approximability and Complexity Bounds of Quantized ReLU Neural Networks
-EXPLORING DEEP LEARNING USING INFORMATION THEORY TOOLS AND PATCH ORDERING
 Learning Localized Generative Models for 3D Point Clouds via Graph Convolution
-PASS: Phased Attentive State Space Modeling of Disease Progression Trajectories
 ACCELERATING NONCONVEX LEARNING VIA REPLICA EXCHANGE LANGEVIN DIFFUSION
-Explaining Neural Networks Semantically and Quantitatively
 Dynamically Unfolding Recurrent Restorer: A Moving Endpoint Control Method for Image Restoration
 Bias-Reduced Uncertainty Estimation for Deep Neural Classifiers
-Realistic Adversarial Examples in 3D Meshes
 CAMOU: Learning Physical Vehicle Camouflages to Adversarially Attack Detectors in the Wild
 Learning Latent Superstructures in Variational Autoencoders for Deep Multidimensional Clustering
 Learning Programmatically Structured Representations with Perceptor Gradients
 Variational Autoencoders with Jointly Optimized Latent Dependency Structure
 The Unusual Effectiveness of Averaging in GAN Training
-A SINGLE SHOT PCA-DRIVEN ANALYSIS OF NETWORK STRUCTURE TO REMOVE REDUNDANCY
-TFGAN: Improving Conditioning for Text-to-Video Synthesis
 Beyond Pixel Norm-Balls: Parametric Adversaries using an Analytically Differentiable Renderer
-KNOWLEDGE DISTILL VIA LEARNING NEURON MANIFOLD
-An Efficient Network for Predicting Time-Varying Distributions
 Diversity is All You Need: Learning Skills without a Reward Function
 Supervised Policy Update for Deep Reinforcement Learning
-Empirical observations on the instability of aligning word vector spaces with GANs
-MCTSBug: Generating Adversarial Text Sequences via Monte Carlo Tree Search and Homoglyph Attack
 Learning sparse relational transition models
 Learning to Schedule Communication in Multi-agent Reinforcement Learning
 Hierarchical RL Using an Ensemble of Proprioceptive Periodic Policies
 Multi-class classification without multi-class labels
 What do you learn from context? Probing for sentence structure in contextualized word representations
 Spectral Inference Networks: Unifying Deep and Spectral Learning
-Adversarial Decomposition of Text Representation
 PeerNets: Exploiting Peer Wisdom Against Adversarial Attacks
 Attentive Neural Processes
 Representation Degeneration Problem in Training Natural Language Generation Models
 Hierarchical interpretations for neural network predictions
-Generating Text through Adversarial Training using Skip-Thought Vectors
 Spreading vectors for similarity search
-Linearizing Visual Processes with Deep Generative Models
 A Convergence Analysis of Gradient Descent for Deep Linear Neural Networks
 Feed-forward Propagation in Probabilistic Neural Networks with Categorical and Max Layers
 Measuring and regularizing networks in function space
@@ -426,18 +335,12 @@ Poincare Glove: Hyperbolic Word Embeddings
 Episodic Curiosity through Reachability
 Phase-Aware Speech Enhancement with Deep Complex U-Net
 Generative predecessor models for sample-efficient imitation learning
-Learning Graph Decomposition
 Adaptive Estimators Show Information Compression in Deep Neural Networks
-NA
 Multilingual Neural Machine Translation With Soft Decoupled Encoding
-A Unified View of Deep Metric Learning via Gradient Analysis
 Approximating CNNs with Bag-of-local-Features models works surprisingly well on ImageNet
-In search of theoretically grounded pruning
 Reward Constrained Policy Optimization
-NA
 On the Relation Between the Sharpest Directions of DNN Loss and the SGD Step Length
 Modeling the Long Term Future in Model-Based Reinforcement Learning
-N/A
 Understanding Straight-Through Estimator in Training Activation Quantized Neural Nets
 DISTRIBUTIONAL CONCAVITY REGULARIZATION FOR GANS
 LeMoNADe: Learned Motif and Neuronal Assembly Detection in calcium imaging videos
@@ -445,10 +348,6 @@ Competitive experience replay
 Multi-Domain Adversarial Learning
 ProMP: Proximal Meta-Policy Search
 Don't Settle for Average, Go for the Max: Fuzzy Sets and Max-Pooled Word Vectors
-Online Bellman Residue Minimization via Saddle Point Optimization
-N/A
-CrystalGAN: Learning to Discover Crystallographic Structures with Generative Adversarial Networks
-Towards Resisting Large Data Variations via Introspective Learning
 Stable Opponent Shaping in Differentiable Games
 A Mean Field Theory of Batch Normalization
 Learning Exploration Policies for Navigation
@@ -457,15 +356,10 @@ Learning to Describe Scenes with Programs
 Visceral Machines: Risk-Aversion in Reinforcement Learning with Intrinsic Physiological Rewards
 Deep Frank-Wolfe For Neural Network Optimization
 LEARNING TO PROPAGATE LABELS: TRANSDUCTIVE PROPAGATION NETWORK FOR FEW-SHOT LEARNING
-Learning Robust, Transferable Sentence Representations for Text Classification
 Improving the Generalization of Adversarial Training with Domain Adaptation
-Live Face De-Identification in Video
-Parametrizing Fully Convolutional Nets with a Single High-Order Tensor
 Dimensionality Reduction for Representing the Knowledge of Probabilistic Models
 Learning protein sequence embeddings using information from structure
 Variational Smoothing in Recurrent Neural Network Language Models
-Data Interpretation and Reasoning Over Scientific Plots
-Generalized Label Propagation Methods for Semi-Supervised Learning
 Biologically-Plausible Learning Algorithms Can Scale to Large Datasets
 Coarse-grain Fine-grain Coattention Network for Multi-evidence Question Answering
 Learning a Meta-Solver for Syntax-Guided Program Synthesis
@@ -473,15 +367,12 @@ Towards Robust, Locally Linear Deep Networks
 How Important is a Neuron
 Learning to Make Analogies by Contrasting Abstract Relational Structure
 Learning what you can do before doing anything
-Program Synthesis with Learned Code Idioms
-IMAGE DEFORMATION META-NETWORK FOR ONE-SHOT LEARNING
 Learning Grid Cells as Vector Representation of Self-Position Coupled with Matrix Representation of Self-Motion
 Universal Stagewise Learning for Non-Convex Problems with Convergence on Averaged Solutions
 Invariant and Equivariant Graph Networks
 Robustness May Be at Odds with Accuracy
 Feature Intertwiner for Object Detection
 Adversarial Reprogramming of Neural Networks
-HANDLING CONCEPT DRIFT IN WIFI-BASED INDOOR LOCALIZATION USING REPRESENTATION LEARNING
 G-SGD: Optimizing ReLU Neural Networks in its Positively Scale-Invariant Space
 From Hard to Soft: Understanding Deep Network Nonlinearities via Vector Quantization and Statistical Inference
 Aggregated Momentum: Stability Through Passive Damping
@@ -489,29 +380,19 @@ Variational Autoencoder with Arbitrary Conditioning
 Time-Agnostic Prediction: Predicting Predictable Video Frames
 A Closer Look at Deep Learning Heuristics: Learning rate restarts, Warmup and Distillation
 Self-Monitoring Navigation Agent via Auxiliary Progress Estimation
-Differentiable Greedy Networks
 Kernel Change-point Detection with Auxiliary Deep Generative Models
-MAJOR-MINOR LSTMS FOR WORD-LEVEL LANGUAGE MODEL
-NA
 Unsupervised Learning via Meta-Learning
 Auxiliary Variational MCMC
-Is PGD-Adversarial Training Necessary? Alternative Training via a Soft-Quantization Network with Noisy-Natural Samples Only
-Evolving intrinsic motivations for altruistic behavior
 Neural network gradient-based learning of black-box function interfaces
 Self-Tuning Networks: Bilevel Optimization of Hyperparameters using Structured Best-Response Functions
 Unsupervised Control Through Non-Parametric Discriminative Rewards
-PointGrow: Autoregressively Learned Point Cloud Generation with Self-Attention
 Interpolation-Prediction Networks for Irregularly Sampled Time Series
 Riemannian Adaptive Optimization Methods
-Representation Flow for Action Recognition
 Minimal Random Code Learning: Getting Bits Back from Compressed Model Parameters
-Neural Collobrative Networks
 Characterizing Audio Adversarial Examples Using Temporal Dependency
-Advanced Neuroevolution: A gradient-free algorithm to train Deep Neural Networks
 Equi-normalization of Neural Networks
 Generalized Tensor Models for Recurrent Neural Networks
 Wizard of Wikipedia: Knowledge-Powered Conversational Agents
-Quantile Regression Reinforcement Learning with State Aligned Vector Rewards
 Are adversarial examples inevitable?
 Enabling Factorized Piano Music Modeling and Generation with the MAESTRO Dataset
 A Variational Inequality Perspective on Generative Adversarial Networks
@@ -522,27 +403,20 @@ Recurrent Experience Replay in Distributed Reinforcement Learning
 A Generative Model For Electron Paths
 Modeling Uncertainty with Hedged Instance Embeddings
 Beyond Greedy Ranking: Slate Optimization via List-CVAE
-N/A
 Stochastic Prediction of Multi-Agent Interactions from Partial Observations
 Learning to Remember More with Less Memorization
 GamePad: A Learning Environment for Theorem Proving
-Adversarial Defense Via Data Dependent Activation Function and Total Variation Minimization
 GLUE: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding
-An Attention-Based Model for Learning Dynamic Interaction Networks
 Learning Robust Representations by Projecting Superficial Statistics Out
-Explaining AlphaGo: Interpreting Contextual Effects in Neural Networks
 On Computation and Generalization of Generative Adversarial Networks under Spectrum Control
 Large-Scale Study of Curiosity-Driven Learning
 Slalom: Fast, Verifiable and Private Execution of Neural Networks in Trusted Hardware
-Exponentially Decaying Flows for Optimization in Deep Learning
 Unsupervised Discovery of Parts, Structure, and Dynamics
 Music Transformer: Generating Music with Long-Term Structure
 BabyAI: A Platform to Study the Sample Efficiency of Grounded Language Learning
 Analyzing Inverse Problems with Invertible Neural Networks
 RelGAN: Relational Generative Adversarial Networks for Text Generation
-Feature Matters: A Stage-by-Stage Approach for Task Independent Knowledge Transfer
 The Singular Values of Convolutional Layers
-Network Reparameterization for Unseen Class Categorization
 An Empirical study of Binary Neural Networks' Optimisation
 Approximability of Discriminators Implies Diversity in GANs
 Learning Embeddings into Entropic Wasserstein Spaces
@@ -552,32 +426,23 @@ The Neuro-Symbolic Concept Learner: Interpreting Scenes, Words, and Sentences Fr
 The Comparative Power of ReLU Networks and Polynomial Kernels in the Presence of Sparse Latent Structure
 Learning Implicitly Recurrent CNNs Through Parameter Sharing
 Learning Particle Dynamics for Manipulating Rigid Bodies, Deformable Objects, and Fluids
-Nonlinear Channels Aggregation Networks for Deep Action Recognition
 The Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks
 Regularized Learning for Domain Adaptation under Label Shifts
 Von Mises-Fisher Loss for Training Sequence to Sequence Models with Continuous Outputs
 Relational Forward Models for Multi-Agent Learning
-Learning of Sophisticated Curriculums by viewing them as Graphs over Tasks
 Imposing Category Trees Onto Word-Embeddings Using A Geometric Construction
 Two-Timescale Networks for Nonlinear Value Function Approximation
-Distributed Deep Policy Gradient for Competitive Adversarial Environment
 Diversity-Sensitive Conditional Generative Adversarial Networks
 Query-Efficient Hard-label Black-box Attack: An Optimization-based Approach
 Rethinking the Value of Network Pruning
-Inhibited Softmax for Uncertainty Estimation in Neural Networks
 Hyperbolic Attention Networks
-A Forensic Representation to Detect Non-Trivial Image Duplicates, and How it Applies to Semantic Segmentation
 FFJORD: Free-Form Continuous Dynamics for Scalable Reversible Generative Models
 Learning from Positive and Unlabeled Data with a Selection Bias
 Adv-BNN: Improved Adversarial Defense through Robust Bayesian Neural Network
-ODIN: Outlier Detection In Neural Networks
 Optimal Completion Distillation for Sequence Learning
-Explainable Adversarial Learning: Implicit Generative Modeling of Random Noise during Training for Adversarial Robustness
-Mitigating Bias in Natural Language Inference Using Adversarial Learning
 Caveats for information bottleneck in deterministic scenarios
 Deep Learning 3D Shapes Using Alt-az Anisotropic 2-Sphere Convolution
 Small nonlinearities in activation functions create bad local minima in neural networks
-Transfer Learning via Unsupervised Task Discovery for Visual Question Answering
 Information Theoretic lower bounds on negative log likelihood
 Preferences Implicit in the State of the World
 A Kernel Random Matrix-Based Approach for Sparse PCA
@@ -585,31 +450,23 @@ Bayesian Prediction of Future Street Scenes using Synthetic Likelihoods
 There Are Many Consistent Explanations of Unlabeled Data: Why You Should Average
 Large-Scale Answerer in Questioner's Mind for Visual Dialog Question Generation
 Graph HyperNetworks for Neural Architecture Search
-Multi-Modal Generative Adversarial Networks for Diverse Datasets
 DELTA: DEEP LEARNING TRANSFER USING FEATURE MAP WITH ATTENTION FOR CONVOLUTIONAL NETWORKS
 textTOvec: DEEP CONTEXTUALIZED NEURAL AUTOREGRESSIVE TOPIC MODELS OF LANGUAGE WITH DISTRIBUTED COMPOSITIONAL PRIOR
 Amortized Bayesian Meta-Learning
-Rethinking Knowledge Graph Propagation for Zero-Shot Learning
 Probabilistic Recursive Reasoning for Multi-Agent Reinforcement Learning
-Exploiting Invariant Structures for Compression in Neural Networks
-Understanding and Improving Sequence-Labeling NER with Self-Attentive LSTMs
 Learning Neural PDE Solvers with Convergence Guarantees
 A new dog learns old tricks: RL finds classic optimization algorithms
-A PRIVACY-PRESERVING IMAGE CLASSIFICATION FRAMEWORK WITH A LEARNABLE OBFUSCATOR
 Deep Graph Infomax
 Theoretical Analysis of Auto Rate-Tuning by Batch Normalization
 Per-Tensor Fixed-Point Quantization of the Back-Propagation Algorithm
 FUNCTIONAL VARIATIONAL BAYESIAN NEURAL NETWORKS
 NADPEx: An on-policy temporally consistent exploration method for deep reinforcement learning
-Diagnosing Language Inconsistency in Cross-Lingual Word Embeddings
 SPIGAN: Privileged Adversarial Learning from Simulation
 Generating Multi-Agent Trajectories using Programmatic Weak Supervision
 Label super-resolution networks
 ANYTIME MINIBATCH: EXPLOITING STRAGGLERS IN ONLINE DISTRIBUTED OPTIMIZATION
-Few-Shot Learning by Exploiting Object Relation
 Sample Efficient Adaptive Text-to-Speech
 Practical lossless compression with latent variables using bits back coding
-Applications of Gaussian Processes in Finance
 Kernel RNN Learning (KeRNL)
 Deep, Skinny Neural Networks are not Universal Approximators
 Large Scale Graph Learning From Smooth Signals
@@ -624,35 +481,22 @@ Conditional Network Embeddings
 Defensive Quantization: When Efficiency Meets Robustness
 GO Gradient for Expectation-Based Objectives
 h-detach: Modifying the LSTM Gradient Towards Better Optimization
-Fatty and Skinny: A Joint Training Method of Watermark Encoder and Decoder
 An analytic theory of generalization dynamics and transfer learning in deep linear networks
-Compositional GAN: Learning Conditional Image Composition
 Differentiable Learning-to-Normalize via Switchable Normalization
 SOM-VAE: Interpretable Discrete Representation Learning on Time Series
 Hierarchical Generative Modeling for Controllable Speech Synthesis
 Learning Factorized Multimodal Representations
 Composing Complex Skills by Learning Transition Policies
-Knowledge Representation for Reinforcement Learning using General Value Functions
-Show, Attend and Translate: Unsupervised Image Translation with Self-Regularization and Attention
 Human-level Protein Localization with Convolutional Neural Networks
 Environment Probing Interaction Policies
-Modeling Evolution of Language Through Time with Neural Networks
 Lagging Inference Networks and Posterior Collapse in Variational Autoencoders
 A2BCD: Asynchronous Acceleration with Optimal Complexity
 Learning to Infer and Execute 3D Shape Programs
-NA
-Learning with Little Data: Evaluation of Deep Learning Algorithms
 Deep Decoder: Concise Image Representations from Untrained Non-convolutional Networks
 SNAS: stochastic neural architecture search
-Neuron Hierarchical Networks
-Logically-Constrained Neural Fitted Q-iteration
 Revealing interpretable object representations from human behavior
 AntisymmetricRNN: A Dynamical System View on Recurrent Neural Networks
-A Main/Subsidiary Network Framework for Simplifying Binary Neural Networks
-Estimating Heterogeneous Treatment Effects Using Neural Networks With The Y-Learner
 Global-to-local Memory Pointer Networks for Task-Oriented Dialogue
-Spectral Convolutional Networks on Hierarchical Multigraphs
-From Adversarial Training to Generative Adversarial Networks
 InstaGAN: Instance-aware Image-to-Image Translation
 Deep Layers as Stochastic Solvers
 Learning Multi-Level Hierarchies with Hindsight
