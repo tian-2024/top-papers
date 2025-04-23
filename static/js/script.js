@@ -1030,22 +1030,49 @@ document.addEventListener('DOMContentLoaded', function() {
         // 修复：确保选择框视觉上更新
         startYearSelect.dispatchEvent(new Event('change'));
         endYearSelect.dispatchEvent(new Event('change'));
+    }
+
+    // 设置全部年份
+    function setAllYears() {
+        const startYearSelect = document.getElementById('start-year');
+        const endYearSelect = document.getElementById('end-year');
         
-        // 移除自动触发搜索的功能
-        // if (document.getElementById('search-btn')) {
-        //    document.getElementById('search-btn').click();
-        // }
+        // 设置开始年份为最早的年份选项
+        if (startYearSelect.options.length > 0) {
+            startYearSelect.options[0].selected = true;
+        }
+        
+        // 设置结束年份为当前年份
+        for (let i = 0; i < endYearSelect.options.length; i++) {
+            if (endYearSelect.options[i].value === currentYear.toString()) {
+                endYearSelect.options[i].selected = true;
+                break;
+            }
+        }
+        
+        // 确保选择框视觉上更新
+        startYearSelect.dispatchEvent(new Event('change'));
+        endYearSelect.dispatchEvent(new Event('change'));
     }
 
     // 更新年份选项
     updateYearOptions();
     
-    // 为"recent 3 years"按钮添加点击事件
+    // 为"Recent Years"按钮添加点击事件
     const recentYearsBtn = document.getElementById('recent-years-btn');
     if (recentYearsBtn) {
         recentYearsBtn.addEventListener('click', function(e) {
             e.preventDefault();
             setRecentThreeYears();
+        });
+    }
+    
+    // 为"All Years"按钮添加点击事件
+    const allYearsBtn = document.getElementById('all-years-btn');
+    if (allYearsBtn) {
+        allYearsBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            setAllYears();
         });
     }
 

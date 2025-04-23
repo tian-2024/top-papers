@@ -280,9 +280,14 @@
                 <!-- Row 2: Year selection -->
                 <div class="sidebar-section year-section">
                     <div class="year-filter-container" style="display: flex; flex-direction: column; gap: 8px; width: 100%;">
-                        <button id="recent-years-btn" class="reset-btn" title="Reset to recent years" style="width: 100%; padding: 4px; margin-bottom: 5px; background-color: #4a4a4a;">
-                            Recent 3 Years
-                        </button>
+                        <div style="display: flex; gap: 10px; width: 100%;">
+                            <button id="all-years-btn" class="reset-btn" title="Show all years" style="width: 50%; padding: 4px; margin-bottom: 5px; background-color: #4a4a4a;">
+                                All Years
+                            </button>
+                            <button id="recent-years-btn" class="reset-btn" title="Reset to recent years" style="width: 50%; padding: 4px; margin-bottom: 5px; background-color: #3498db;">
+                                Recent Years
+                            </button>
+                        </div>
                         <div style="display: flex; width: 100%; align-items: center; justify-content: space-between;">
                             <div style="width: 45%;">
                                 <select id="start-year" style="width: 100%;">
