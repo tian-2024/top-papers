@@ -1928,4 +1928,147 @@ footer {
     margin: 0;
     padding: 0;
     text-align: center;
+}
+
+.year-filter-container select {
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    background-color: var(--container-bg);
+    color: var(--text-color);
+    font-size: 14px;
+    height: 38px;
+    appearance: menulist;
+    -webkit-appearance: menulist;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .year-filter-container select {
+    background-color: #2d2d2d;
+    border-color: #444;
+    color: #e0e0e0;
+}
+
+.view-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--container-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.view-toggle:hover {
+    background-color: #f5f5f5;
+}
+
+.dark-mode .view-toggle {
+    background-color: #2d2d2d;
+    border-color: #444;
+}
+
+.dark-mode .view-toggle:hover {
+    background-color: #3a3a3a;
+}
+
+.view-toggle i {
+    font-size: 18px;
+    color: #666;
+}
+
+.dark-mode .view-toggle i {
+    color: #aaa;
+}
+
+/* 列表视图样式 */
+.papers-list-view {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    display: none;
+}
+
+.papers-list-view th {
+    background-color: var(--container-bg);
+    border-bottom: 2px solid var(--border-color);
+    padding: 10px;
+    text-align: left;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.papers-list-view td {
+    padding: 12px 10px;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+}
+
+.papers-list-view tr:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.dark-mode .papers-list-view th {
+    background-color: #2d2d2d;
+    border-color: #444;
+}
+
+.dark-mode .papers-list-view td {
+    border-color: #444;
+}
+
+.dark-mode .papers-list-view tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.papers-list-view .list-paper-title {
+    max-width: 500px;
+    font-weight: 500;
+}
+
+.papers-list-view .list-copy-button {
+    background-color: #4a4a4a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+}
+
+.papers-list-view .list-copy-button:hover {
+    background-color: #333333;
+}
+
+/* 显示的视图 */
+.view-active {
+    display: block !important;
+}
+
+.grid-view-icon, .list-view-icon {
+    display: none;
+}
+
+.grid-view-active .list-view-icon {
+    display: inline;
+}
+
+.list-view-active .grid-view-icon {
+    display: inline;
+}
+
+.list-view-active .list-view-icon {
+    display: none;
 } 

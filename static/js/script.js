@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const papersGrid = document.getElementById('papers-grid');
+    const papersList = document.getElementById('papers-list-view');
     const loading = document.getElementById('loading');
     const noResults = document.getElementById('no-results');
     const themeToggle = document.getElementById('theme-toggle-input');
@@ -15,6 +16,33 @@ document.addEventListener('DOMContentLoaded', function() {
     const selectAllCheckbox = document.getElementById('select-all-checkbox');
     const batchSizeSlider = document.getElementById('batch-size');
     const batchSizeValue = document.getElementById('batch-size-value');
+    const viewToggleBtn = document.getElementById('view-toggle');
+    
+    // 视图模式：默认为网格视图
+    let currentView = 'grid';
+    
+    // 视图切换功能
+    if (viewToggleBtn) {
+        viewToggleBtn.classList.add('grid-view-active');
+        
+        viewToggleBtn.addEventListener('click', function() {
+            if (currentView === 'grid') {
+                // 切换到列表视图
+                currentView = 'list';
+                papersGrid.classList.remove('view-active');
+                papersList.classList.add('view-active');
+                viewToggleBtn.classList.remove('grid-view-active');
+                viewToggleBtn.classList.add('list-view-active');
+            } else {
+                // 切换到网格视图
+                currentView = 'grid';
+                papersList.classList.remove('view-active');
+                papersGrid.classList.add('view-active');
+                viewToggleBtn.classList.remove('list-view-active');
+                viewToggleBtn.classList.add('grid-view-active');
+            }
+        });
+    }
     
     // Update batch size value display when slider moves
     if (batchSizeSlider && batchSizeValue) {
@@ -467,11 +495,12 @@ document.addEventListener('DOMContentLoaded', function() {
         if (loading) loading.style.display = 'none';
         if (noResults) noResults.style.display = 'block';
         if (papersGrid) papersGrid.style.display = 'none';
+        if (papersList) papersList.style.display = 'none';
     }
 
-    // Function to display papers as cards
+    // Function to display papers as cards and list
     function displayPapers(papers) {
-        if (!papersGrid) return;
+        if (!papersGrid || !papersList) return;
         
         if (papers.length === 0) {
             showNoResultsMessage();
@@ -481,6 +510,13 @@ document.addEventListener('DOMContentLoaded', function() {
         if (loading) loading.style.display = 'none';
         if (noResults) noResults.style.display = 'none';
         if (papersGrid) papersGrid.style.display = 'grid';
+        if (currentView === 'grid') {
+            papersGrid.classList.add('view-active');
+            papersList.classList.remove('view-active');
+        } else {
+            papersList.classList.add('view-active');
+            papersGrid.classList.remove('view-active');
+        }
         
         // 获取当前年份
         const currentYear = new Date().getFullYear();
@@ -499,8 +535,13 @@ document.addEventListener('DOMContentLoaded', function() {
         // Sort papers by title length
         papers.sort((a, b) => a.title.length - b.title.length);
         
+        // 清空现有内容
         papersGrid.innerHTML = '';
+        const listTbody = papersList.querySelector('tbody');
+        if (listTbody) listTbody.innerHTML = '';
+        
         papers.forEach(paper => {
+            // 卡片视图
             const card = document.createElement('div');
             card.className = 'paper-card';
             
@@ -548,6 +589,26 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             
             papersGrid.appendChild(card);
+            
+            // 列表视图
+            if (listTbody) {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td><span class="conference-badge ${conferenceClass}">${paper.conference}</span></td>
+                    <td><span class="year-badge ${yearClass}">${paper.year}</span></td>
+                    <td class="list-paper-title">${paper.title}</td>
+                    <td><button class="list-copy-button"><i class="fas fa-copy"></i> Copy</button></td>
+                `;
+                
+                const listCopyButton = row.querySelector('.list-copy-button');
+                listCopyButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    handleCopyButtonClick(this, paperTitle);
+                });
+                
+                listTbody.appendChild(row);
+            }
         });
     }
 
