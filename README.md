@@ -9,11 +9,12 @@ https://tian-2024.github.io/top-papers/
 
 
 **Feature:**
-- [x] search papers by topic
-- [x] sample 9 to 18 papers at a time
+- [x] search papers by topic. try "diffusion"
+- [x] support multi keywords! try "face gan"
+- [x] control the batch size of sample papers at a time
 - [x] filter papers by conference, field, year
 - [x] dark mode to protect your eyes
-- [x] click to copy a title and even a title list
+- [x] conveniently copy a title or title list
 - [x] support mobile
 
 Supported conferences:
