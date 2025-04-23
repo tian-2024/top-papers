@@ -359,6 +359,7 @@ body {
     .container {
         padding: 0;
         overflow-x: hidden;
+        width: 100vw;
     }
     
     .field-label {
@@ -404,20 +405,29 @@ body {
     .sidebar-section {
         margin-bottom: 8px;
         padding: 10px;
+        width: 100vw;
+        margin-left: calc(-1 * (100vw - 100%) / 2);
+        border-radius: 0;
     }
     
     .paper-container {
         padding: 8px;
+        width: 100vw;
+        margin-left: calc(-1 * (100vw - 100%) / 2);
+        border-radius: 0;
     }
     
     .papers-grid {
         gap: 8px;
+        width: 100vw;
+        padding: 0;
     }
     
     .paper-card {
-        width: 100vw; /* 确保在小屏幕上也有全宽 */
-        margin-left: calc(-1 * (100vw - 100%) / 2);
+        width: 100vw;
+        margin-left: 0;
         border-radius: 0;
+        box-sizing: border-box;
     }
 }
 
@@ -1822,5 +1832,40 @@ footer {
         padding: 10px !important;
         width: 100% !important;
         box-sizing: border-box !important;
+    }
+}
+
+/* 添加全宽移动样式 */
+@media screen and (max-width: 480px) {
+    body, html {
+        overflow-x: hidden;
+    }
+    
+    .container, 
+    .paper-container, 
+    .sidebar-section,
+    .papers-grid,
+    .paper-card,
+    header {
+        width: 100vw !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        border-radius: 0 !important;
+        box-sizing: border-box !important;
+    }
+    
+    .paper-title,
+    .paper-info {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    
+    header,
+    .paper-container,
+    .sidebar-section {
+        margin-bottom: 0 !important;
+        border-radius: 0 !important;
     }
 } 
