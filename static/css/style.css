@@ -226,10 +226,10 @@ body {
         margin-top: 20px;
     }
     .sidebar {
-        width: calc(100% - 20px);
-        max-width: calc(100% - 20px);
+        width: 100%;
+        max-width: 100%;
         flex: 1 1 auto;
-        margin: 0 10px;
+        margin: 0;
         padding: 0;
     }
     .sidebar-section {
@@ -266,40 +266,34 @@ body {
 /* 增强移动端适配 */
 @media (max-width: 768px) {
     .container {
-        padding: 0 10px;
+        padding: 0;
         overflow-x: hidden; /* 防止水平滚动 */
     }
     
     .paper-container {
         width: 100%;
-        padding: 0;
-        margin: 0;
-        overflow-x: hidden;
+        padding: 10px;
+        box-sizing: border-box;
     }
     
     .sidebar {
-        width: calc(100% - 20px);
-        max-width: calc(100% - 20px);
+        width: 100%;
+        max-width: 100%;
         padding: 0;
-        margin: 0 10px 15px 10px;
+        margin: 0 0 15px 0;
     }
     
     .papers-grid {
-        width: 100%;
-        margin: 20px 0 0 0;
         padding: 0;
-        grid-template-columns: 1fr !important; /* 强制每行只显示一个卡片 */
-        gap: 15px;
+        width: 100%;
     }
     
     .paper-card {
         width: 100%;
-        margin: 0 0 15px 0;
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 8px;
         box-sizing: border-box;
-        max-width: 100vw; /* 确保卡片宽度不超过视口宽度 */
-        width: 100vw; /* 设置卡片宽度与屏幕宽度相同 */
-        margin-left: calc(-1 * (100vw - 100%) / 2); /* 负边距使卡片延伸到屏幕两侧 */
-        border-radius: 0; /* 移除圆角以匹配全宽效果 */
     }
     
     header {
@@ -1747,6 +1741,8 @@ footer {
     .paper-card {
         margin-bottom: 12px;
         border-radius: 8px;
+        width: 100%;
+        margin-left: 0;
     }
     
     .paper-title {
@@ -1810,6 +1806,7 @@ footer {
     .papers-grid {
         grid-template-columns: 1fr !important;
         max-width: 100% !important;
+        padding: 0 !important;
     }
     
     .paper-card {
@@ -1817,5 +1814,13 @@ footer {
         max-width: 100% !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
+        box-sizing: border-box !important;
+    }
+    
+    .paper-container,
+    .sidebar-section {
+        padding: 10px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 } 
