@@ -18,52 +18,34 @@ document.addEventListener('DOMContentLoaded', function() {
     const batchSizeValue = document.getElementById('batch-size-value');
     const viewToggleBtn = document.getElementById('view-toggle');
     
-    // 视图模式：默认为网格视图
-    let currentView = 'grid';
+    // 视图模式：默认为列表视图
+    let currentView = 'list';
     
     // Hide view toggle button initially - it will be shown after search
     if (viewToggleBtn) {
         viewToggleBtn.style.display = 'none';
     }
     
-    // Ensure grid view is properly set as default
+    // 设置列表视图为默认视图
     if (papersGrid) {
-        papersGrid.classList.add('view-active');
+        papersGrid.classList.remove('view-active');
+        papersGrid.style.display = 'none';
     }
     if (papersList) {
-        papersList.classList.remove('view-active');
+        papersList.classList.add('view-active');
+        papersList.style.display = 'table';
     }
     
     // 视图切换功能
     if (viewToggleBtn) {
-        viewToggleBtn.classList.add('grid-view-active');
+        viewToggleBtn.classList.add('list-view-active');
         
         viewToggleBtn.addEventListener('click', function() {
-            if (currentView === 'grid') {
-                // 切换到列表视图
-                currentView = 'list';
-                if (papersGrid.childNodes.length === 0) {
-                    // 如果当前没有内容，不显示空表格
-                    papersGrid.classList.remove('view-active');
-                    papersList.classList.remove('view-active');
-                    papersGrid.style.display = 'none';
-                    papersList.style.display = 'none';
-                    noResults.style.display = 'block';
-                } else {
-                    // 有内容则显示表格
-                    papersGrid.classList.remove('view-active');
-                    papersList.classList.add('view-active');
-                    papersGrid.style.display = 'none';
-                    papersList.style.display = 'table';
-                    noResults.style.display = 'none';
-                }
-                viewToggleBtn.classList.remove('grid-view-active');
-                viewToggleBtn.classList.add('list-view-active');
-            } else {
+            if (currentView === 'list') {
                 // 切换到网格视图
                 currentView = 'grid';
                 if (papersGrid.childNodes.length === 0) {
-                    // 如果当前没有内容，继续显示提示
+                    // 如果当前没有内容，不显示空表格
                     papersGrid.classList.remove('view-active');
                     papersList.classList.remove('view-active');
                     papersGrid.style.display = 'none';
@@ -79,6 +61,26 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 viewToggleBtn.classList.remove('list-view-active');
                 viewToggleBtn.classList.add('grid-view-active');
+            } else {
+                // 切换到列表视图
+                currentView = 'list';
+                if (papersGrid.childNodes.length === 0) {
+                    // 如果当前没有内容，继续显示提示
+                    papersGrid.classList.remove('view-active');
+                    papersList.classList.remove('view-active');
+                    papersGrid.style.display = 'none';
+                    papersList.style.display = 'none';
+                    noResults.style.display = 'block';
+                } else {
+                    // 有内容则显示列表视图
+                    papersGrid.classList.remove('view-active');
+                    papersList.classList.add('view-active');
+                    papersGrid.style.display = 'none';
+                    papersList.style.display = 'table';
+                    noResults.style.display = 'none';
+                }
+                viewToggleBtn.classList.remove('grid-view-active');
+                viewToggleBtn.classList.add('list-view-active');
             }
         });
     }
@@ -565,6 +567,7 @@ document.addEventListener('DOMContentLoaded', function() {
             papersList.classList.remove('view-active');
             // Explicitly set display properties
             papersGrid.style.display = 'grid';
+            papersGrid.style.gridTemplateColumns = 'repeat(3, 1fr)';
             papersList.style.display = 'none';
         } else {
             papersList.classList.add('view-active');

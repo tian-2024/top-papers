@@ -828,7 +828,7 @@ footer {
 /* Card Layout Styles */
 .papers-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 固定一行显示3个卡片 */
+    grid-template-columns: repeat(3, 1fr) !important; /* 强制固定一行显示3个卡片 */
     gap: 20px;
     width: 100%;
     padding: 10px 0;
@@ -837,7 +837,7 @@ footer {
 /* 中等屏幕设备 */
 @media screen and (max-width: 1200px) {
     .papers-grid {
-        grid-template-columns: repeat(2, 1fr); /* 中等屏幕显示2个卡片 */
+        grid-template-columns: repeat(2, 1fr) !important; /* 中等屏幕显示2个卡片 */
     }
 }
 
