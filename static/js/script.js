@@ -47,9 +47,9 @@ document.addEventListener('DOMContentLoaded', function() {
             noResults.style.display = 'flex';
             // 根据是否进行了搜索来显示不同的消息
             if (isSearchPerformed) {
-                noResults.innerHTML = "No papers found for your search criteria. Please try different keywords or filters.";
+                noResults.innerHTML = "No papers found. Please try different keywords or filters.";
             } else {
-                noResults.innerHTML = "Please select a topic and search criteria to find papers.";
+                noResults.innerHTML = "Please select a topic and sample a batch of papers.";
             }
         }
         if (papersList) {

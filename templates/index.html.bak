@@ -115,7 +115,7 @@
             <div class="paper-container">
                 <div id="loading" class="loading" style="display: none;">Loading papers...</div>
                 <div id="no-results" class="no-results">
-                    Please select a topic and search criteria to find papers.
+                    Please select a topic and sample a batch of papers.
                 </div>
                 <div id="papers-grid" class="papers-grid">
                     <!-- Paper cards will be inserted here -->

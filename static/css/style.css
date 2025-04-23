@@ -2250,4 +2250,18 @@ footer {
     padding: 0 2px;
     border-radius: 2px;
     font-weight: 500;
+}
+
+.year-separator {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--heading-color);
+    margin: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dark-mode .year-separator {
+    color: var(--dark-text-color);
 } 
