@@ -410,7 +410,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 yearClass = 'year-2';
             } else if (yearDiff === 3) {
                 yearClass = 'year-3';
-            } else if (yearDiff > 3) {
+            } else if (yearDiff === 4) {
+                yearClass = 'year-4';
+            } else if (yearDiff === 5) {
+                yearClass = 'year-5';
+            } else if (yearDiff === 6) {
+                yearClass = 'year-6';
+            } else if (yearDiff === 7) {
+                yearClass = 'year-7';
+            } else if (yearDiff === 8) {
+                yearClass = 'year-8';
+            } else if (yearDiff === 9) {
+                yearClass = 'year-9';
+            } else if (yearDiff > 9) {
                 yearClass = 'year-old';
             }
             

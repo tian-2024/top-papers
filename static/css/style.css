@@ -677,24 +677,48 @@ button:disabled {
 }
 
 .year-badge.current-year {
-    background-color: #ff9933; /* 当前年份 - 橘黄色 */
+    background-color: #cc5200; /* 最深橙色 - 当前年份 */
 }
 
 .year-badge.year-1 {
-    background-color: #ffad5c; /* 一年前 - 稍浅橘黄色 */
+    background-color: #e65c00; /* 次深橙色 - 1年前 */
 }
 
 .year-badge.year-2 {
-    background-color: #ffc285; /* 两年前 - 更浅橘黄色 */
+    background-color: #ff6600; /* 第3深橙色 - 2年前 */
 }
 
 .year-badge.year-3 {
-    background-color: #ffd6ad; /* 三年前 - 非常浅橘黄色 */
+    background-color: #ff751a; /* 第4深橙色 - 3年前 */
+}
+
+.year-badge.year-4 {
+    background-color: #ff8533; /* 第5深橙色 - 4年前 */
+}
+
+.year-badge.year-5 {
+    background-color: #ff944d; /* 第6深橙色 - 5年前 */
+}
+
+.year-badge.year-6 {
+    background-color: #ffa366; /* 第7深橙色 - 6年前 */
+}
+
+.year-badge.year-7 {
+    background-color: #ffb380; /* 第8深橙色 - 7年前 */
+}
+
+.year-badge.year-8 {
+    background-color: #ffc299; /* 第9深橙色 - 8年前 */
+}
+
+.year-badge.year-9 {
+    background-color: #ffd1b3; /* 第10深橙色 - 9年前 */
 }
 
 .year-badge.year-old {
-    background-color: #ffe6d4; /* 更久远 - 几乎白色的橘黄色 */
-    color: #d26900; /* 文字改为深橙色以提高对比度 */
+    background-color: #ffd1b3; /* 超过10年的用最浅的橙色 */
+    color: #a3500d; /* 文字改为深橙色以提高对比度 */
 }
 
 /* 为不同领域设置不同的颜色 */
