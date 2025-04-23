@@ -1,22 +1,19 @@
 # Sample a Batch of Papers of Top Conferences
 
-![image](image.png)
-
-### Usage
 
 https://tian-2024.github.io/top-papers/
 
-steps:
-1. input a topic, e.g. "diffusion"
-2. click "Batch"
-3. see 9 papers
-4. click "Batch" again to sample another batch
+**Usage:** input a topic and click "Get a Batch".
 
-Feature:
+![image](image.png)
+
+
+**Feature:**
 - [x] search papers by topic
 - [x] sample 9 to 18 papers at a time
 - [x] filter papers by conference, field, year
 - [x] dark mode to protect your eyes
+- [x] click to copy a title and even a title list
 - [x] support mobile
 
 Supported conferences:
