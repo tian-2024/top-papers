@@ -207,7 +207,6 @@ IEKG: A Commonsense Knowledge Graph for Idiomatic Expressions
 Open-world Semi-supervised Generalized Relation Discovery Aligned in a Real-world Setting
 An Empirical Investigation of Implicit and Explicit Knowledge-Enhanced Methods for Ad Hoc Dataset Retrieval
 Towards a Deep Understanding of Multilingual End-to-End Speech Translation
-A Survey on Out-of-Distribution Detection in NLP
 The Locality and Symmetry of Positional Encodings
 BotPercent: Estimating Bot Populations in Twitter Communities
 Mitigating Temporal Misalignment by Discarding Outdated Facts
@@ -339,7 +338,6 @@ ViStruct: Visual Structural Knowledge Extraction via Curriculum Guided Code-Visi
 Systematic Assessment of Factual Knowledge in Large Language Models
 PALS: Personalized Active Learning for Subjective Tasks in NLP
 Conditioning on Dialog Acts improves Empathy Style Transfer
-Visually Guided Generative Text-Layout Pre-training for Document Intelligence
 IMU2CLIP: Language-grounded Motion Sensor Translation with Multimodal Contrastive Learning
 Learn From One Specialized Sub-Teacher: One-to-One Mapping for Feature-Based Knowledge Distillation
 To Build Our Future, We Must Know Our Past: Contextualizing Paradigm Shifts in Natural Language Processing
@@ -618,7 +616,6 @@ Explaining with Contrastive Phrasal Highlighting: A Case Study in Assisting Huma
 Mitigating Framing Bias with Polarity Minimization Loss
 Semantic Parsing by Large Language Models for Intricate Updating Strategies of Zero-Shot Dialogue State Tracking
 Treepiece: Faster Semantic Parsing via Tree Tokenization
-Out-of-Domain Intent Detection Considering Multi-turn Dialogue Contexts
 clembench: Using Game Play to Evaluate Chat-Optimized Language Models as Conversational Agents
 Explicit Planning Helps Language Models in Logical Reasoning
 Architectural Sweet Spots for Modeling Human Label Variation by the Example of Argument Quality: It’s Best to Relate Perspectives!
@@ -729,7 +726,6 @@ Using Artificial French Data to Understand the Emergence of Gender Bias in Trans
 The ACL OCL Corpus: Advancing Open Science in Computational Linguistics
 Pointwise Mutual Information Based Metric and Decoding Strategy for Faithful Generation in Document Grounded Dialogs
 MixEdit: Revisiting Data Augmentation and Beyond for Grammatical Error Correction
-PartialFormer: Modeling Part Instead of Whole for Machine Translation
 Simple and Effective Input Reformulations for Translation
 The Distributional Hypothesis Does Not Fully Explain the Benefits of Masked Language Model Pretraining
 C2D2 Dataset: A Resource for the Cognitive Distortion Analysis and Its Impact on Mental Health
@@ -793,7 +789,6 @@ A Video Is Worth 4096 Tokens: Verbalize Story Videos To Understand Them In Zero 
 CRoW: Benchmarking Commonsense Reasoning in Real-World Tasks
 CASSI: Contextual and Semantic Structure-based Interpolation Augmentation for Low-Resource NER
 How Well Do Text Embedding Models Understand Syntax?
-Quality > Quantity: Synthetic Corpora from Foundation Models for Closed-Domain Extractive Question Answering
 A Black-Box Attack on Code Models via Representation Nearest Neighbor Search
 Are Personalized Stochastic Parrots More Dangerous? Evaluating Persona Biases in Dialogue Systems
 Quantifying the redundancy between prosody and text
@@ -854,7 +849,6 @@ Enhancing Retrieval-Augmented Large Language Models with Iterative Retrieval-Gen
 When and Why Does Bias Mitigation Work?
 Centering the Margins: Outlier-Based Identification of Harmed Populations in Toxicity Detection
 The language of prompting: What linguistic properties make a prompt successful?
-Large language models effectively leverage document-level context for literary translation, but critical errors persist
 Epsilon Sampling Rocks: Investigating Sampling Strategies for Minimum Bayes Risk Decoding for Machine Translation
 Knowledge Corpus Error in Question Answering
 WordNet Is All You Need: A Surprisingly Effective Unsupervised Method for Graded Lexical Entailment
@@ -1464,7 +1458,6 @@ Can Large Language Models Capture Dissenting Human Voices?
 Exploiting Emotion-Semantic Correlations for Empathetic Response Generation
 Complex Event Schema Induction with Knowledge-Enriched Diffusion Model
 Noisy Exemplars Make Large Language Models More Robust: A Domain-Agnostic Behavioral Analysis
-InstructCoder: Empowering Language Models to Edit Code
 Out-of-Distribution Generalization in Natural Language Processing: Past, Present, and Future
 On the Zero-Shot Generalization of Machine-Generated Text Detectors
 Standardizing Distress Analysis: Emotion-Driven Distress Identification and Cause Extraction (DICE) in Multimodal Online Posts
@@ -1581,7 +1574,6 @@ Adaptive Gating in Mixture-of-Experts based Language Models
 INFORM : Information eNtropy based multi-step reasoning FOR large language Models
 InstructExcel: A Benchmark for Natural Language Instruction in Excel
 Sociocultural Norm Similarities and Differences via Situational Alignment and Explainable Textual Entailment
-Are we biased on bias? Characterizing social bias research in the ACL community
 Comparing the Evaluation and Production of Loophole Behavior in Humans and Large Language Models
 KAPALM: Knowledge grAPh enhAnced Language Models for Fake News Detection
 GROVE: A Retrieval-augmented Complex Story Generation Framework with A Forest of Evidence
@@ -2010,7 +2002,6 @@ Holistic Inter-Annotator Agreement and Corpus Coherence Estimation in a Large-sc
 Fine-grained Conversational Decoding via Isotropic and Proximal Search
 Approximating Two-Layer Feedforward Networks for Efficient Transformers
 Decoding the Silent Majority: Inducing Belief Augmented Social Graph with Large Language Model for Response Forecasting
-EIT: Enhanced Interactive Transformer
 ReFSQL: A Retrieval-Augmentation Framework for Text-to-SQL Generation
 Chinese Lexical Substitution: Dataset and Method
 Zero-Shot-BERT-Adapters: a Zero-Shot Pipeline for Unknown Intent Detection
