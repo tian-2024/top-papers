@@ -48,6 +48,71 @@
         .dropdown-toggle i {
             font-size: 0.85em;
         }
+        
+        /* 移动端侧边栏切换按钮 */
+        .sidebar-toggle {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                max-width: 100%;
+                flex: 1 1 auto;
+                margin-bottom: 20px;
+                box-sizing: border-box;
+                margin-left: 0;
+                margin-right: 0;
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .sidebar-section {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+            }
+            .papers-grid {
+                grid-template-columns: 1fr;
+            }
+            .field-dropdown {
+                flex-basis: 47%;
+            }
+            .sidebar-toggle {
+                display: block;
+            }
+            /* 移动端侧边栏折叠状态 */
+            .sidebar.collapsed {
+                display: none;
+            }
+        }
+        
+        /* 小屏幕手机适配 */
+        @media (max-width: 480px) {
+            .field-filters-row {
+                flex-direction: column;
+            }
+            .field-dropdown {
+                flex-basis: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -183,6 +248,11 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- 移动端侧边栏切换按钮 -->
+    <div class="sidebar-toggle">
+        <i class="fas fa-sliders-h"></i>
     </div>
 
     <footer>

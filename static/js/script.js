@@ -658,11 +658,13 @@ document.addEventListener('DOMContentLoaded', function() {
                         return paper.title.toLowerCase().includes(searchTerm.toLowerCase());
                     });
                     
-                    // 随机排序并限制数量
-                    const shuffledPapers = [...filteredPapers].sort(() => 0.5 - Math.random());
+                    // 按照标题长度排序（从短到长）
+                    filteredPapers.sort((a, b) => a.title.length - b.title.length);
+                    
+                    // 限制数量
                     const batchSizeInput = document.getElementById('batch-size');
                     const batchSize = batchSizeInput ? parseInt(batchSizeInput.value) || 9 : 9;
-                    const limitedPapers = shuffledPapers.slice(0, batchSize);
+                    const limitedPapers = filteredPapers.slice(0, batchSize);
                     
                     console.log('Filtered papers:', limitedPapers.length);
                     
@@ -781,4 +783,81 @@ document.addEventListener('DOMContentLoaded', function() {
             setRecentThreeYears();
         });
     }
+
+    // 添加移动端侧边栏切换功能
+    function setupSidebarToggle() {
+        const sidebarToggleBtn = document.querySelector('.sidebar-toggle');
+        const sidebar = document.querySelector('.sidebar');
+        
+        if (sidebarToggleBtn && sidebar) {
+            // 初始化时检查屏幕宽度，默认在小屏幕上收起侧边栏
+            if (window.innerWidth <= 768) {
+                sidebar.classList.add('collapsed');
+            }
+            
+            // 切换侧边栏显示/隐藏
+            sidebarToggleBtn.addEventListener('click', () => {
+                sidebar.classList.toggle('collapsed');
+                
+                // 如果展开了侧边栏，滚动到顶部
+                if (!sidebar.classList.contains('collapsed')) {
+                    window.scrollTo({top: 0, behavior: 'smooth'});
+                }
+            });
+            
+            // 点击搜索按钮或主题标签后，在移动端自动折叠侧边栏
+            const actionButtons = document.querySelectorAll('#search-btn, .topic-tag');
+            actionButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    if (window.innerWidth <= 768) {
+                        sidebar.classList.add('collapsed');
+                    }
+                });
+            });
+        }
+    }
+
+    // 添加移动端适配支持
+    function handleResponsiveLayout() {
+        const isMobile = window.innerWidth <= 768;
+        const isSmallMobile = window.innerWidth <= 480;
+        
+        // 可以在这里添加针对移动端的特定逻辑
+        // 例如：调整卡片尺寸、简化UI等
+        
+        // 当在移动端时，点击侧边栏选项后滚动到卡片区域
+        if(isMobile) {
+            const topicTags = document.querySelectorAll('.topic-tag');
+            const searchBtn = document.getElementById('search-btn');
+            
+            const scrollToPapers = () => {
+                setTimeout(() => {
+                    document.getElementById('papers-grid').scrollIntoView({ behavior: 'smooth' });
+                }, 300);
+            };
+            
+            topicTags.forEach(tag => {
+                tag.addEventListener('click', scrollToPapers);
+            });
+            
+            if(searchBtn) {
+                searchBtn.addEventListener('click', scrollToPapers);
+            }
+        }
+    }
+
+    // 初始化时调用
+    setupSidebarToggle();
+    handleResponsiveLayout();
+
+    // 监听窗口大小变化
+    window.addEventListener('resize', function() {
+        handleResponsiveLayout();
+        
+        // 在窗口大小变化时，如果宽度大于768px，确保侧边栏可见
+        const sidebar = document.querySelector('.sidebar');
+        if (window.innerWidth > 768 && sidebar) {
+            sidebar.classList.remove('collapsed');
+        }
+    });
 }); 

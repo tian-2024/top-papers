@@ -116,6 +116,16 @@ body {
     padding: 15px;
 }
 
+@media (max-width: 768px) {
+    .sidebar-section {
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+}
+
 /* Title section styling */
 .title-section {
     display: flex;
@@ -208,31 +218,154 @@ body {
 
 /* Responsive adjustments */
 @media (max-width: 992px) {
+    .main-content {
+        flex-direction: column;
+    }
+    .paper-container {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .sidebar {
+        width: 100%;
+        max-width: 100%;
+        flex: 1 1 auto;
+        margin: 0;
+        padding: 0;
+    }
+    .sidebar-section {
+        width: 100%;
+        box-sizing: border-box;
+        margin-left: 0;
+        margin-right: 0;
+    }
     .year-section .year-filter-container {
-        flex-direction: row;
+        flex-direction: column;
+    }
+    .year-section .year-range {
+        width: 100%;
+    }
+    .year-section .recent-years-btn {
+        width: 100%;
+    }
+    .search-topic-section .topic-tags {
+        justify-content: center;
+    }
+    .fields-section .field-filters-row {
+        justify-content: space-between;
+    }
+    .fields-section .field-dropdown {
+        flex-basis: 48%;
     }
     
-    .search-topic-section .search-input-container {
-        flex-direction: row;
+    /* 论文卡片在平板上为两列 */
+    .papers-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
+@media (max-width: 768px) {
+    .container {
+        padding: 5px;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    header {
+        padding: 10px;
+    }
+    .title-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .title-container .theme-toggle {
+        position: static;
+        margin-top: 10px;
+    }
+    .search-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .search-input-container {
+        flex-direction: column;
+        width: 100%;
+    }
+    .year-filter-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .year-range {
+        width: 100%;
+    }
+    .recent-years-btn {
+        width: 100%;
+    }
+    .filters-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .field-filters-row {
+        justify-content: space-between;
+    }
+    .topic-tags {
+        justify-content: flex-start;
+        gap: 5px;
+    }
+    .fields-container {
+        margin-top: 10px;
+    }
+    
+    /* 论文卡片在手机上为单列 */
+    .papers-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}
+
+/* 小屏幕手机的额外优化 */
 @media (max-width: 480px) {
-    .title-icons {
-        gap: 10px;
+    .field-label {
+        font-size: 0.75em;
+        padding: 3px;
+    }
+    .year-range select {
+        font-size: 0.85em;
+        padding: 5px;
+    }
+    .year-range span {
+        font-size: 0.85em;
+    }
+    .dropdown-content {
+        max-width: 200px;
+    }
+    .topic-tag {
+        font-size: 0.75em;
+    }
+    .search-input-container input {
+        padding: 8px;
+    }
+    .search-input-container button {
+        padding: 8px;
+    }
+    .title-container h1 {
+        font-size: 1.5em;
+    }
+    .toggle-icon {
+        font-size: 1em;
+    }
+    .github-link {
+        font-size: 1.2em;
+    }
+    .recent-years-btn {
+        font-size: 0.85em;
+        height: auto;
+        padding: 6px;
     }
     
-    .reset-btn {
-        width: 32px;
-        height: 32px;
-    }
-    
-    .reset-btn i {
-        font-size: 14px;
-    }
-    
-    .search-topic-section {
-        gap: 10px;
+    /* 论文卡片样式优化 */
+    .paper-card {
+        padding: 12px;
     }
 }
 
@@ -262,7 +395,7 @@ body {
     border: 1px solid var(--border-color);
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for sidebar */
 @media (max-width: 992px) {
     .main-content {
         flex-direction: column-reverse;
@@ -275,6 +408,10 @@ body {
     .sidebar {
         flex: 1 1 auto;
         width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
     
     .year-section .year-filter-container {
@@ -745,29 +882,60 @@ footer {
 /* Media query for responsive layout - not needed since we're using fixed width */
 @media (max-width: 1200px) {
     .papers-grid {
-        grid-template-columns: repeat(auto-fill, 280px);
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        justify-content: center;
     }
 }
 
 @media (max-width: 900px) {
     .papers-grid {
-        grid-template-columns: repeat(auto-fill, 280px);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .paper-card {
+        width: 100%;
     }
 }
 
 @media (max-width: 600px) {
     .papers-grid {
-        grid-template-columns: repeat(auto-fill, 280px);
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .paper-card {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .paper-title {
+        font-size: 15px;
+        padding: 12px;
+    }
+    
+    .paper-info {
+        padding: 10px 12px;
     }
 }
 
 @media (max-width: 320px) {
     .papers-grid {
-        grid-template-columns: repeat(auto-fill, 250px);
+        grid-template-columns: 1fr;
     }
     
     .paper-card {
-        width: 250px;
+        width: 100%;
+    }
+    
+    .paper-title {
+        font-size: 14px;
+        padding: 10px;
+    }
+    
+    .badges-container {
+        flex-wrap: wrap;
+        gap: 5px;
     }
 }
 
