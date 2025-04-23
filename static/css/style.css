@@ -263,14 +263,43 @@ body {
     }
 }
 
+/* 增强移动端适配 */
 @media (max-width: 768px) {
     .container {
-        padding: 5px;
         width: 100%;
+        padding: 10px;
         max-width: 100%;
         margin: 0;
         box-sizing: border-box;
     }
+    
+    .paper-container {
+        width: 100%;
+        padding: 10px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    .sidebar {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        margin: 0 0 15px 0;
+    }
+    
+    .papers-grid {
+        width: 100%;
+        margin: 20px 0 0 0;
+        padding: 0;
+        grid-template-columns: 1fr;
+    }
+    
+    .paper-card {
+        width: 100%;
+        margin: 0 0 15px 0;
+        box-sizing: border-box;
+    }
+    
     header {
         padding: 10px;
     }
@@ -326,46 +355,64 @@ body {
 /* 小屏幕手机的额外优化 */
 @media (max-width: 480px) {
     .field-label {
-        font-size: 0.75em;
-        padding: 3px;
+        font-size: 0.7em;
+        padding: 1px;
     }
     .year-range select {
-        font-size: 0.85em;
-        padding: 5px;
+        font-size: 0.8em;
+        padding: 4px;
     }
     .year-range span {
-        font-size: 0.85em;
+        font-size: 0.8em;
     }
     .dropdown-content {
-        max-width: 200px;
+        width: 160px;
     }
     .topic-tag {
-        font-size: 0.75em;
+        font-size: 0.8em;
+        padding: 4px 8px;
     }
     .search-input-container input {
-        padding: 8px;
+        font-size: 0.8em;
     }
     .search-input-container button {
-        padding: 8px;
+        font-size: 0.8em;
+        padding: 6px 10px;
     }
     .title-container h1 {
-        font-size: 1.5em;
-    }
-    .toggle-icon {
-        font-size: 1em;
-    }
-    .github-link {
         font-size: 1.2em;
     }
+    .toggle-icon {
+        font-size: 0.8em;
+    }
+    .github-link {
+        font-size: 0.8em;
+    }
     .recent-years-btn {
-        font-size: 0.85em;
-        height: auto;
-        padding: 6px;
+        font-size: 0.8em;
+        padding: 6px 12px;
     }
     
-    /* 论文卡片样式优化 */
+    /* 额外增加的移动端优化 */
+    .container {
+        padding: 8px;
+    }
+    
+    .sidebar-section {
+        margin-bottom: 8px;
+        padding: 10px;
+    }
+    
+    .paper-container {
+        padding: 8px;
+    }
+    
+    .papers-grid {
+        gap: 8px;
+    }
+    
     .paper-card {
-        padding: 12px;
+        border-radius: 8px;
     }
 }
 
@@ -772,37 +819,37 @@ footer {
 }
 
 .paper-card {
+    background-color: var(--container-bg);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    background-color: var(--container-bg);
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    padding: 0;
     border: 1px solid var(--border-color);
-    width: 280px;
+    height: 100%;
 }
 
 .paper-title {
-    font-weight: bold;
+    font-weight: 500;
     font-size: 16px;
-    line-height: 1.4;
-    padding: 15px;
     flex-grow: 1;
+    padding: 15px;
     border-bottom: 1px solid var(--border-color);
 }
 
 .paper-info {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 12px 15px;
-    justify-content: space-between;
+    gap: 10px;
 }
 
 .badges-container {
     display: flex;
     gap: 8px;
+    flex-wrap: wrap;
 }
 
 .copy-button {
@@ -900,22 +947,25 @@ footer {
 
 @media (max-width: 600px) {
     .papers-grid {
+        display: grid;
         grid-template-columns: 1fr;
-        gap: 15px;
+        gap: 10px;
+        margin-top: 15px;
     }
-    
     .paper-card {
         width: 100%;
-        margin: 0 auto;
+        margin: 0;
+        box-sizing: border-box;
     }
-    
     .paper-title {
-        font-size: 15px;
-        padding: 12px;
+        font-size: 16px;
+        line-height: 1.4;
+        margin-bottom: 8px;
     }
-    
     .paper-info {
-        padding: 10px 12px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
     }
 }
 
@@ -1679,4 +1729,58 @@ footer {
     cursor: pointer;
     width: 16px;
     height: 16px;
+}
+
+/* 移动端卡片样式优化 */
+@media (max-width: 768px) {
+    .paper-card {
+        margin-bottom: 12px;
+        border-radius: 8px;
+    }
+    
+    .paper-title {
+        padding: 12px;
+        font-size: 15px;
+    }
+    
+    .paper-info {
+        padding: 10px 12px;
+    }
+    
+    .badges-container {
+        gap: 6px;
+    }
+    
+    .copy-button {
+        padding: 4px 8px;
+        font-size: 0.8em;
+    }
+}
+
+/* 小屏幕设备上的额外优化 */
+@media (max-width: 480px) {
+    .paper-card {
+        margin-bottom: 10px;
+    }
+    
+    .paper-title {
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    .paper-info {
+        padding: 8px 10px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .badges-container {
+        flex: 1;
+        min-width: 0;
+    }
+    
+    .conference-badge, .year-badge {
+        font-size: 0.7em;
+        padding: 2px 6px;
+    }
 } 
