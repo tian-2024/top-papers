@@ -41,9 +41,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Function to display no results message
-    function showNoResultsMessage() {
+    function showNoResultsMessage(isSearchPerformed = false) {
         if (loading) loading.style.display = 'none';
-        if (noResults) noResults.style.display = 'flex';
+        if (noResults) {
+            noResults.style.display = 'flex';
+            // 根据是否进行了搜索来显示不同的消息
+            if (isSearchPerformed) {
+                noResults.innerHTML = "No papers found for your search criteria. Please try different keywords or filters.";
+            } else {
+                noResults.innerHTML = "Please select a topic and search criteria to find papers.";
+            }
+        }
         if (papersList) {
             papersList.style.display = 'none';
             papersList.classList.remove('view-active');
@@ -172,7 +180,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // 如果没有选中任何会议，显示提示
                 if (conferences.length === 0) {
-                    showNoResultsMessage();
+                    showNoResultsMessage(true);
                     alert('Please select at least one field or conference to search.');
                     return;
                 }
@@ -225,18 +233,18 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (limitedPapers.length > 0) {
                         displayPapers(limitedPapers);
                     } else {
-                        showNoResultsMessage();
+                        showNoResultsMessage(true);
                     }
                 })
                 .catch(error => {
                     console.error('Error fetching papers:', error);
-                    showNoResultsMessage();
+                    showNoResultsMessage(true);
                 })
                 .finally(() => {
                     if (loading) loading.style.display = 'none';
                 });
             } else {
-                showNoResultsMessage();
+                showNoResultsMessage(true);
             }
         });
         
@@ -962,7 +970,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 初始化页面
     fetchConferences(); // 获取会议数据
-    showNoResultsMessage(); // 默认显示无结果消息
+    showNoResultsMessage(false); // 默认显示无结果消息
 
     // Fix for references to non-existent elements
     document.querySelectorAll('.papers-table').forEach(element => {
