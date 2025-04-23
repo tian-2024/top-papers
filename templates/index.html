@@ -330,12 +330,6 @@
                 
                 <!-- Row 3: Topic tags and Search input combined -->
                 <div class="sidebar-section search-topic-section">
-                    <div class="batch-size-container" style="position: relative;">
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
-                            <label for="batch-size" style="font-size: 16px; font-weight: bold;">Batch size: <span id="batch-size-value">9</span></label>
-                        </div>
-                        <input type="range" id="batch-size" min="9" max="18" value="9" step="3" style="width: 100%; margin-top: 5px;">
-                    </div>
                     <div class="search-input-container" style="display: flex; flex-direction: column; gap: 8px;">
                         <input type="text" id="topic-input" placeholder="Enter topic keywords" style="width: 100%;">
                         <button id="search-btn" style="width: 100%; text-align: center; display: flex; justify-content: center; align-items: center;">Get a Batch</button>
@@ -343,6 +337,12 @@
                     <div class="topic-tags">
                         <button class="topic-tag" data-topic="diffusion">diffusion</button>
                         <button class="topic-tag" data-topic="face gan">face gan</button>                   
+                    </div>
+                    <div class="batch-size-container" style="position: relative; margin-top: 15px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                            <label for="batch-size" style="font-size: 16px; font-weight: bold;">Batch size: <span id="batch-size-value">9</span></label>
+                        </div>
+                        <input type="range" id="batch-size" min="9" max="18" value="9" step="3" style="width: 100%; margin-top: 5px;">
                     </div>
                 </div>
                 
