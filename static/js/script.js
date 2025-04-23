@@ -237,36 +237,82 @@ document.addEventListener('DOMContentLoaded', function() {
             const copyAllCell = headerRow.querySelector('th:last-child');
             if (copyAllCell) {
                 // 创建Copy All按钮
-                if (!copyAllCell.querySelector('.copy-all-button')) {
-                    const copyAllBtn = document.createElement('button');
-                    copyAllBtn.className = 'list-copy-button copy-all-button';
-                    copyAllBtn.innerHTML = '<i class="fas fa-copy"></i> Copy All';
-                    copyAllBtn.addEventListener('click', function() {
-                        // 格式化所有论文标题为要求的格式
-                        const formattedText = papers.map(paper => 
-                            `- ${paper.conference} ${paper.year} ${paper.title}`
-                        ).join('\n');
-                        
-                        // 直接调用复制函数，复制格式化的文本
-                        copyToClipboard(formattedText);
-                        
-                        // 显示复制成功反馈
-                        this.classList.add('copy-success');
-                        const originalHTML = this.innerHTML;
-                        this.innerHTML = '<i class="fas fa-check"></i> Copied!';
-                        
-                        // 重置按钮状态
-                        setTimeout(() => {
-                            this.innerHTML = originalHTML;
-                            this.classList.remove('copy-success');
-                        }, 2000);
-                    });
-                    
-                    // 清除单元格内容并添加按钮
-                    copyAllCell.textContent = '';
-                    copyAllCell.appendChild(copyAllBtn);
+                while (copyAllCell.firstChild) {
+                    copyAllCell.removeChild(copyAllCell.firstChild);
                 }
+                
+                const copyAllBtn = document.createElement('button');
+                copyAllBtn.className = 'list-copy-button copy-all-button';
+                copyAllBtn.innerHTML = '<i class="fas fa-copy"></i> Copy All';
+                copyAllBtn.addEventListener('click', function() {
+                    // 格式化所有论文标题为要求的格式
+                    const formattedText = papers.map(paper => 
+                        `- ${paper.conference} ${paper.year} ${paper.title}`
+                    ).join('\n');
+                    
+                    console.log("Copying text:", formattedText);
+                    
+                    // 使用现代Clipboard API复制
+                    if (navigator.clipboard && navigator.clipboard.writeText) {
+                        navigator.clipboard.writeText(formattedText)
+                            .then(() => {
+                                console.log('Text copied successfully using Clipboard API');
+                                showCopySuccess(this);
+                            })
+                            .catch(err => {
+                                console.error('Failed to copy using Clipboard API:', err);
+                                // 尝试备用方法
+                                copyUsingFallback(formattedText, this);
+                            });
+                    } else {
+                        // 使用备用方法
+                        copyUsingFallback(formattedText, this);
+                    }
+                });
+                
+                // 添加按钮到表头
+                copyAllCell.appendChild(copyAllBtn);
             }
+        }
+        
+        // 显示复制成功的UI反馈
+        function showCopySuccess(button) {
+            button.classList.add('copy-success');
+            const originalHTML = button.innerHTML;
+            button.innerHTML = '<i class="fas fa-check"></i> Copied!';
+            
+            setTimeout(() => {
+                button.innerHTML = originalHTML;
+                button.classList.remove('copy-success');
+            }, 2000);
+        }
+        
+        // 备用复制方法
+        function copyUsingFallback(text, button) {
+            const textArea = document.createElement('textarea');
+            textArea.value = text;
+            textArea.style.position = 'fixed';
+            textArea.style.left = '-9999px';
+            textArea.style.top = '0';
+            document.body.appendChild(textArea);
+            
+            try {
+                textArea.select();
+                textArea.setSelectionRange(0, 99999);
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    console.log('Text copied successfully using fallback method');
+                    showCopySuccess(button);
+                } else {
+                    console.error('Fallback copy failed');
+                    alert('复制失败，请手动复制');
+                }
+            } catch (err) {
+                console.error('Fallback copy error:', err);
+                alert('复制失败，请手动复制');
+            }
+            
+            document.body.removeChild(textArea);
         }
         
         papers.forEach(paper => {
