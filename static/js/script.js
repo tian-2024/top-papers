@@ -658,13 +658,11 @@ document.addEventListener('DOMContentLoaded', function() {
                         return paper.title.toLowerCase().includes(searchTerm.toLowerCase());
                     });
                     
-                    // 按照标题长度排序（从短到长）
-                    filteredPapers.sort((a, b) => a.title.length - b.title.length);
-                    
-                    // 限制数量
+                    // 随机排序并限制数量
+                    const shuffledPapers = [...filteredPapers].sort(() => 0.5 - Math.random());
                     const batchSizeInput = document.getElementById('batch-size');
                     const batchSize = batchSizeInput ? parseInt(batchSizeInput.value) || 9 : 9;
-                    const limitedPapers = filteredPapers.slice(0, batchSize);
+                    const limitedPapers = shuffledPapers.slice(0, batchSize);
                     
                     console.log('Filtered papers:', limitedPapers.length);
                     
