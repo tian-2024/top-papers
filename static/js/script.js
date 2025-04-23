@@ -550,9 +550,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 处理主题标签点击
     topicTags.forEach(tag => {
-        tag.addEventListener('click', function() {
-            topicInput.value = this.dataset.topic;
+        tag.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent default behavior
+            e.stopPropagation(); // Stop event propagation
+            
+            const topic = tag.dataset.topic;
+            topicInput.value = topic;
+            filterPapers();
         });
+        
+        // Prevent touch scrolling issues on mobile
+        tag.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+        }, { passive: false });
+        
+        tag.addEventListener('touchend', (e) => {
+            e.preventDefault();
+            const topic = tag.dataset.topic;
+            topicInput.value = topic;
+            filterPapers();
+        }, { passive: false });
     });
 
     // 获取所有选择的会议

@@ -1033,6 +1033,18 @@ footer {
     font-size: 14px;
     cursor: pointer;
     transition: all 0.2s ease;
+    touch-action: manipulation; /* Prevents browser handling of touch gestures */
+    -webkit-tap-highlight-color: transparent; /* Removes tap highlight on iOS */
+    -webkit-touch-callout: none; /* Prevents callout display on iOS */
+    -webkit-user-select: none;
+    user-select: none; /* Prevents text selection */
+    position: relative; /* Enables z-index */
+    z-index: 1; /* Ensures it's above other elements */
+}
+
+.topic-tag:active {
+    transform: scale(0.95); /* Slight scale effect when pressed */
+    background-color: #59b3ff; /* Darker color when pressed */
 }
 
 .topic-tag:hover {
