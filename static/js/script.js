@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const papersGrid = document.getElementById('papers-grid');
     const papersList = document.getElementById('papers-list-view');
     const loading = document.getElementById('loading');
     const noResults = document.getElementById('no-results');
@@ -16,82 +15,135 @@ document.addEventListener('DOMContentLoaded', function() {
     const selectAllCheckbox = document.getElementById('select-all-checkbox');
     const batchSizeSlider = document.getElementById('batch-size');
     const batchSizeValue = document.getElementById('batch-size-value');
-    const viewToggleBtn = document.getElementById('view-toggle');
-    
-    // 视图模式：默认为列表视图
-    let currentView = 'list';
-    
-    // Hide view toggle button initially - it will be shown after search
-    if (viewToggleBtn) {
-        viewToggleBtn.style.display = 'none';
-    }
     
     // 设置列表视图为默认视图
-    if (papersGrid) {
-        papersGrid.classList.remove('view-active');
-        papersGrid.style.display = 'none';
-    }
     if (papersList) {
         papersList.classList.add('view-active');
         papersList.style.display = 'table';
     }
-    
-    // 视图切换功能
-    if (viewToggleBtn) {
-        viewToggleBtn.classList.add('list-view-active');
+
+    // Function to check if a paper matches all keywords
+    function paperMatchesAllKeywords(paper, keywords) {
+        return keywords.every(keyword => {
+            const lowerKeyword = keyword.toLowerCase();
+            return paper.title.toLowerCase().includes(lowerKeyword) || 
+                   paper.conference.toLowerCase().includes(lowerKeyword) ||
+                   paper.year.toLowerCase().includes(lowerKeyword);
+        });
+    }
+
+    // Function to display no results message
+    function showNoResultsMessage() {
+        if (loading) loading.style.display = 'none';
+        if (noResults) noResults.style.display = 'block';
+        if (papersList) papersList.style.display = 'none';
+    }
+
+    // Function to display papers
+    function displayPapers(papers) {
+        if (!papersList) return;
         
-        viewToggleBtn.addEventListener('click', function() {
-            if (currentView === 'list') {
-                // 切换到网格视图
-                currentView = 'grid';
-                if (papersGrid.childNodes.length === 0) {
-                    // 如果当前没有内容，不显示空表格
-                    papersGrid.classList.remove('view-active');
-                    papersList.classList.remove('view-active');
-                    papersGrid.style.display = 'none';
-                    papersList.style.display = 'none';
-                    noResults.style.display = 'block';
-                } else {
-                    // 有内容则显示网格视图
-                    papersList.classList.remove('view-active');
-                    papersGrid.classList.add('view-active');
-                    papersList.style.display = 'none';
-                    papersGrid.style.display = 'grid';
-                    noResults.style.display = 'none';
-                }
-                viewToggleBtn.classList.remove('list-view-active');
-                viewToggleBtn.classList.add('grid-view-active');
-            } else {
-                // 切换到列表视图
-                currentView = 'list';
-                if (papersGrid.childNodes.length === 0) {
-                    // 如果当前没有内容，继续显示提示
-                    papersGrid.classList.remove('view-active');
-                    papersList.classList.remove('view-active');
-                    papersGrid.style.display = 'none';
-                    papersList.style.display = 'none';
-                    noResults.style.display = 'block';
-                } else {
-                    // 有内容则显示列表视图
-                    papersGrid.classList.remove('view-active');
-                    papersList.classList.add('view-active');
-                    papersGrid.style.display = 'none';
-                    papersList.style.display = 'table';
-                    noResults.style.display = 'none';
-                }
-                viewToggleBtn.classList.remove('grid-view-active');
-                viewToggleBtn.classList.add('list-view-active');
+        if (papers.length === 0) {
+            showNoResultsMessage();
+            return;
+        }
+        
+        if (loading) loading.style.display = 'none';
+        if (noResults) noResults.style.display = 'none';
+        
+        // 设置列表视图为活动视图
+        papersList.classList.add('view-active');
+        papersList.style.display = 'table';
+        
+        // 获取当前年份
+        const currentYear = new Date().getFullYear();
+        
+        // 定义会议所属领域的映射
+        const conferenceFieldMap = {
+            // CV领域
+            'cvpr': 'cv', 'iccv': 'cv', 'eccv': 'cv', 
+            // ML领域
+            'icml': 'ml', 'nips': 'ml', 'iclr': 'ml', 'neurips': 'ml',
+            // AI领域 
+            'aaai': 'ai', 'ijcai': 'ai', 'acl': 'ai', 'naacl': 'ai', 'emnlp': 'ai',
+            // 默认为Other
+        };
+        
+        // Sort papers by title length
+        papers.sort((a, b) => a.title.length - b.title.length);
+        
+        // 清空现有内容
+        const listTbody = papersList.querySelector('tbody');
+        if (listTbody) listTbody.innerHTML = '';
+        
+        papers.forEach(paper => {
+            // 确定会议所属领域
+            const confLower = paper.conference.toLowerCase();
+            const field = conferenceFieldMap[confLower] || 'other';
+            const conferenceClass = `${field}-conference`;
+            
+            // 确定年份类别
+            const paperYear = parseInt(paper.year);
+            const yearDiff = currentYear - paperYear;
+            let yearClass = 'current-year';
+            
+            if (yearDiff === 1) {
+                yearClass = 'year-1';
+            } else if (yearDiff === 2) {
+                yearClass = 'year-2';
+            } else if (yearDiff === 3) {
+                yearClass = 'year-3';
+            } else if (yearDiff > 3) {
+                yearClass = 'year-old';
+            }
+            
+            // 列表视图
+            if (listTbody) {
+                const row = document.createElement('tr');
+                
+                // 创建会议单元格
+                const confCell = document.createElement('td');
+                const confBadge = document.createElement('span');
+                confBadge.className = `conference-badge ${conferenceClass}`;
+                confBadge.textContent = paper.conference;
+                confCell.appendChild(confBadge);
+                
+                // 创建年份单元格
+                const yearCell = document.createElement('td');
+                const yearBadge = document.createElement('span');
+                yearBadge.className = `year-badge ${yearClass}`;
+                yearBadge.textContent = paper.year;
+                yearCell.appendChild(yearBadge);
+                
+                // 创建标题单元格
+                const titleCell = document.createElement('td');
+                titleCell.className = 'list-paper-title';
+                titleCell.title = paper.title;
+                titleCell.textContent = paper.title;
+                
+                // 创建操作单元格
+                const actionCell = document.createElement('td');
+                const copyBtn = document.createElement('button');
+                copyBtn.className = 'list-copy-button';
+                copyBtn.innerHTML = '<i class="fas fa-copy"></i> Copy';
+                copyBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    handleCopyButtonClick(this, paper.title);
+                });
+                actionCell.appendChild(copyBtn);
+                
+                // 将所有单元格添加到行
+                row.appendChild(confCell);
+                row.appendChild(yearCell);
+                row.appendChild(titleCell);
+                row.appendChild(actionCell);
+                
+                listTbody.appendChild(row);
             }
         });
     }
-    
-    // Update batch size value display when slider moves
-    if (batchSizeSlider && batchSizeValue) {
-        batchSizeSlider.addEventListener('input', function() {
-            batchSizeValue.textContent = this.value;
-        });
-    }
-    
+
     // 存储领域和会议数据
     let conferencesData = {};
     let selectedConferences = {};
@@ -521,181 +573,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 2000);
     }
 
-    // Function to check if a paper matches all keywords
-    function paperMatchesAllKeywords(paper, keywords) {
-        return keywords.every(keyword => {
-            const lowerKeyword = keyword.toLowerCase();
-            return paper.title.toLowerCase().includes(lowerKeyword) || 
-                   paper.conference.toLowerCase().includes(lowerKeyword) ||
-                   paper.year.toLowerCase().includes(lowerKeyword);
-        });
-    }
-
-    // Function to display no results message
-    function showNoResultsMessage() {
-        if (loading) loading.style.display = 'none';
-        if (noResults) noResults.style.display = 'block';
-        if (papersGrid) papersGrid.style.display = 'none';
-        if (papersList) papersList.style.display = 'none';
-        
-        // Hide view toggle button when no results
-        if (viewToggleBtn) {
-            viewToggleBtn.style.display = 'none';
-        }
-    }
-
-    // Function to display papers as cards and list
-    function displayPapers(papers) {
-        if (!papersGrid || !papersList) return;
-        
-        if (papers.length === 0) {
-            showNoResultsMessage();
-            return;
-        }
-        
-        // Show the view toggle button after a successful search
-        if (viewToggleBtn) {
-            viewToggleBtn.style.display = 'inline-block';
-        }
-        
-        if (loading) loading.style.display = 'none';
-        if (noResults) noResults.style.display = 'none';
-        
-        // Only set the appropriate view to be active based on currentView
-        if (currentView === 'grid') {
-            papersGrid.classList.add('view-active');
-            papersList.classList.remove('view-active');
-            // Explicitly set display properties
-            papersGrid.style.display = 'grid';
-            papersGrid.style.gridTemplateColumns = 'repeat(3, 1fr)';
-            papersList.style.display = 'none';
-        } else {
-            papersList.classList.add('view-active');
-            papersGrid.classList.remove('view-active');
-            // Explicitly set display properties
-            papersGrid.style.display = 'none';
-            papersList.style.display = 'table';
-        }
-        
-        // 获取当前年份
-        const currentYear = new Date().getFullYear();
-        
-        // 定义会议所属领域的映射
-        const conferenceFieldMap = {
-            // CV领域
-            'cvpr': 'cv', 'iccv': 'cv', 'eccv': 'cv', 
-            // ML领域
-            'icml': 'ml', 'nips': 'ml', 'iclr': 'ml', 'neurips': 'ml',
-            // AI领域 
-            'aaai': 'ai', 'ijcai': 'ai', 'acl': 'ai', 'naacl': 'ai', 'emnlp': 'ai',
-            // 默认为Other
-        };
-        
-        // Sort papers by title length
-        papers.sort((a, b) => a.title.length - b.title.length);
-        
-        // 清空现有内容
-        papersGrid.innerHTML = '';
-        const listTbody = papersList.querySelector('tbody');
-        if (listTbody) listTbody.innerHTML = '';
-        
-        papers.forEach(paper => {
-            // 卡片视图
-            const card = document.createElement('div');
-            card.className = 'paper-card';
-            
-            // 确定会议所属领域
-            const confLower = paper.conference.toLowerCase();
-            const field = conferenceFieldMap[confLower] || 'other';
-            const conferenceClass = `${field}-conference`;
-            
-            // 确定年份类别
-            const paperYear = parseInt(paper.year);
-            const yearDiff = currentYear - paperYear;
-            let yearClass = 'current-year';
-            
-            if (yearDiff === 1) {
-                yearClass = 'year-1';
-            } else if (yearDiff === 2) {
-                yearClass = 'year-2';
-            } else if (yearDiff === 3) {
-                yearClass = 'year-3';
-            } else if (yearDiff > 3) {
-                yearClass = 'year-old';
-            }
-            
-            card.innerHTML = `
-                <div class="paper-title">${paper.title}</div>
-                <div class="paper-info">
-                    <div class="badges-container">
-                        <span class="conference-badge ${conferenceClass}">${paper.conference}</span>
-                        <span class="year-badge ${yearClass}">${paper.year}</span>
-                    </div>
-                    <button class="copy-button" title="Copy paper title to clipboard">
-                        <i class="fas fa-copy"></i> Copy
-                    </button>
-                </div>
-            `;
-            
-            // Add copy functionality
-            const copyButton = card.querySelector('.copy-button');
-            const paperTitle = paper.title; // Store in a local variable for closure
-            
-            copyButton.addEventListener('click', function(e) {
-                e.preventDefault(); // Prevent any default button behavior
-                e.stopPropagation(); // Prevent event bubbling
-                handleCopyButtonClick(this, paperTitle);
-            });
-            
-            papersGrid.appendChild(card);
-            
-            // 列表视图
-            if (listTbody) {
-                const row = document.createElement('tr');
-                
-                // 创建会议单元格
-                const confCell = document.createElement('td');
-                const confBadge = document.createElement('span');
-                confBadge.className = `conference-badge ${conferenceClass}`;
-                confBadge.textContent = paper.conference;
-                confCell.appendChild(confBadge);
-                
-                // 创建年份单元格
-                const yearCell = document.createElement('td');
-                const yearBadge = document.createElement('span');
-                yearBadge.className = `year-badge ${yearClass}`;
-                yearBadge.textContent = paper.year;
-                yearCell.appendChild(yearBadge);
-                
-                // 创建标题单元格
-                const titleCell = document.createElement('td');
-                titleCell.className = 'list-paper-title';
-                titleCell.title = paper.title;
-                titleCell.textContent = paper.title;
-                
-                // 创建操作单元格
-                const actionCell = document.createElement('td');
-                const copyBtn = document.createElement('button');
-                copyBtn.className = 'list-copy-button';
-                copyBtn.innerHTML = '<i class="fas fa-copy"></i> Copy';
-                copyBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    handleCopyButtonClick(this, paperTitle);
-                });
-                actionCell.appendChild(copyBtn);
-                
-                // 将所有单元格添加到行
-                row.appendChild(confCell);
-                row.appendChild(yearCell);
-                row.appendChild(titleCell);
-                row.appendChild(actionCell);
-                
-                listTbody.appendChild(row);
-            }
-        });
-    }
-
     // 处理主题标签点击
     topicTags.forEach(tag => {
         tag.addEventListener('click', (e) => {
@@ -795,7 +672,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Show loading status
                 if (loading) loading.style.display = 'block';
                 if (noResults) noResults.style.display = 'none';
-                if (papersGrid) papersGrid.style.display = 'none';
                 
                 // 检查是否已加载论文数据
                 const papersPromise = allPapersData ? Promise.resolve(allPapersData) : loadAllPapers();
@@ -1001,4 +877,11 @@ document.addEventListener('DOMContentLoaded', function() {
             sidebar.classList.remove('collapsed');
         }
     });
+
+    // Update batch size value display when slider moves
+    if (batchSizeSlider && batchSizeValue) {
+        batchSizeSlider.addEventListener('input', function() {
+            batchSizeValue.textContent = this.value;
+        });
+    }
 }); 

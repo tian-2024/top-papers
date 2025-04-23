@@ -1940,7 +1940,7 @@ footer {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
-    display: none;
+    display: table;
     table-layout: fixed;
 }
 
@@ -2105,39 +2105,17 @@ footer {
     }
 }
 
-/* 添加全宽移动样式 */
-@media screen and (max-width: 480px) {
-    body, html {
-        overflow-x: hidden;
-    }
-    
-    .container, 
-    .paper-container, 
-    .sidebar-section,
-    .papers-grid,
-    .paper-card,
-    header {
-        width: 100% !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        border-radius: 0 !important;
-        box-sizing: border-box !important;
-        padding-left: 8px !important;
-        padding-right: 8px !important;
-    }
-    
-    .paper-title,
-    .paper-info {
-        padding-left: 12px !important;
-        padding-right: 12px !important;
-    }
-    
-    header,
-    .paper-container,
-    .sidebar-section {
-        margin-bottom: 5px !important;
-        border-radius: 0 !important;
-    }
+.dark-mode .papers-list-view th {
+    background-color: #2d2d2d;
+    border-color: #444;
+}
+
+.dark-mode .papers-list-view td {
+    border-color: #444;
+}
+
+.dark-mode .papers-list-view tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 .dark-mode .batch-size-container div {
@@ -2191,4 +2169,31 @@ footer {
     background-color: #2d2d2d;
     border-color: #444;
     color: #e0e0e0;
+}
+
+/* 添加全宽移动样式 */
+@media screen and (max-width: 480px) {
+    body, html {
+        overflow-x: hidden;
+    }
+    
+    .container, 
+    .paper-container, 
+    .sidebar-section,
+    header {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        border-radius: 0 !important;
+        box-sizing: border-box !important;
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+    
+    header,
+    .paper-container,
+    .sidebar-section {
+        margin-bottom: 5px !important;
+        border-radius: 0 !important;
+    }
 } 

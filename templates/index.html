@@ -311,10 +311,6 @@
                     <div class="batch-size-container" style="position: relative;">
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
                             <label for="batch-size" style="font-size: 16px; font-weight: bold;">Batch size: <span id="batch-size-value">9</span></label>
-                            <button id="view-toggle" class="view-toggle" title="Switch between grid and list view" style="position: static; transform: none; margin-left: 10px; display: none;">
-                                <i class="fas fa-th-large grid-view-icon"></i>
-                                <i class="fas fa-list list-view-icon"></i>
-                            </button>
                         </div>
                         <input type="range" id="batch-size" min="9" max="18" value="9" step="3" style="width: 100%; margin-top: 5px;">
                     </div>
@@ -389,9 +385,6 @@
                 <div id="loading" class="loading" style="display: none;">Loading papers...</div>
                 <div id="no-results" class="no-results">
                     Please select a topic and search criteria to find papers.
-                </div>
-                <div id="papers-grid" class="papers-grid view-active">
-                    <!-- Paper cards will be inserted here -->
                 </div>
                 <table id="papers-list-view" class="papers-list-view">
                     <thead>
