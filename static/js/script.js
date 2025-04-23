@@ -496,6 +496,9 @@ document.addEventListener('DOMContentLoaded', function() {
             // 默认为Other
         };
         
+        // Sort papers by title length
+        papers.sort((a, b) => a.title.length - b.title.length);
+        
         papersGrid.innerHTML = '';
         papers.forEach(paper => {
             const card = document.createElement('div');

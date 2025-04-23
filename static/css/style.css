@@ -1880,4 +1880,8 @@ footer {
         margin-bottom: 5px !important;
         border-radius: 0 !important;
     }
+}
+
+.dark-mode .batch-size-container div {
+    color: #aaa !important;
 } 
