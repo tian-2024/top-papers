@@ -55,6 +55,81 @@
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
         }
         
+        /* List view styles */
+        .papers-list-view {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            display: none;
+        }
+        
+        .papers-list-view.view-active {
+            display: table;
+        }
+        
+        .papers-list-view th, 
+        .papers-list-view td {
+            padding: 8px 12px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .papers-list-view tr {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+        
+        .papers-list-view th:first-child,
+        .papers-list-view td:first-child {
+            width: 80px;
+        }
+        
+        .papers-list-view th:nth-child(2),
+        .papers-list-view td:nth-child(2) {
+            width: 60px;
+        }
+        
+        .papers-list-view th:nth-child(3),
+        .papers-list-view td:nth-child(3) {
+            flex: 1;
+        }
+        
+        .papers-list-view th:last-child,
+        .papers-list-view td:last-child {
+            width: 80px;
+            text-align: right;
+        }
+        
+        .list-paper-title {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 100%;
+        }
+        
+        .list-copy-button {
+            padding: 3px 8px;
+            background-color: #4a4a4a;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+        
+        .list-copy-button i {
+            font-size: 0.85em;
+        }
+        
+        .list-copy-button:hover {
+            background-color: #333;
+        }
+        
         /* 移动端适配 */
         @media (max-width: 768px) {
             .main-content {
@@ -82,6 +157,27 @@
             .field-dropdown {
                 flex-basis: 47%;
             }
+            
+            /* 列表视图移动端适配 */
+            .papers-list-view th:first-child,
+            .papers-list-view td:first-child {
+                width: 60px;
+            }
+            
+            .papers-list-view th:nth-child(2),
+            .papers-list-view td:nth-child(2) {
+                width: 50px;
+            }
+            
+            .papers-list-view th:last-child,
+            .papers-list-view td:last-child {
+                width: 70px;
+            }
+            
+            .list-copy-button {
+                padding: 2px 6px;
+                font-size: 0.8em;
+            }
         }
         
         /* 小屏幕手机适配 */
@@ -91,6 +187,37 @@
             }
             .field-dropdown {
                 flex-basis: 100%;
+            }
+            
+            /* 小屏幕列表视图适配 */
+            .papers-list-view tr {
+                padding: 6px 0;
+            }
+            
+            .papers-list-view th:first-child,
+            .papers-list-view td:first-child {
+                width: 50px;
+                font-size: 0.9em;
+            }
+            
+            .papers-list-view th:nth-child(2),
+            .papers-list-view td:nth-child(2) {
+                width: 40px;
+                font-size: 0.9em;
+            }
+            
+            .papers-list-view th:last-child,
+            .papers-list-view td:last-child {
+                width: 60px;
+            }
+            
+            .list-copy-button {
+                padding: 2px 4px;
+                font-size: 0.75em;
+            }
+            
+            .list-paper-title {
+                font-size: 0.9em;
             }
         }
     </style>
