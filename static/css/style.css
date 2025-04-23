@@ -101,7 +101,7 @@ body {
     overflow: auto;
 }
 
-/* Right column - Sidebar with controls */
+/* Left sidebar with controls */
 .sidebar {
     flex: 0 0 300px;
     display: flex;
@@ -221,45 +221,44 @@ body {
     .main-content {
         flex-direction: column;
     }
+    
     .paper-container {
-        width: 100%;
-        margin-top: 20px;
+        flex: 1 1 auto;
     }
+    
     .sidebar {
+        flex: 1 1 auto;
         width: 100%;
         max-width: 100%;
-        flex: 1 1 auto;
         margin: 0;
         padding: 0;
-    }
-    .sidebar-section {
-        width: 100%;
         box-sizing: border-box;
-        margin-left: 0;
-        margin-right: 0;
     }
+    
     .year-section .year-filter-container {
         flex-direction: column;
     }
+    
     .year-section .year-range {
         width: 100%;
     }
+    
     .year-section .recent-years-btn {
-        width: 100%;
-    }
-    .search-topic-section .topic-tags {
-        justify-content: center;
-    }
-    .fields-section .field-filters-row {
-        justify-content: space-between;
-    }
-    .fields-section .field-dropdown {
-        flex-basis: 48%;
+        width: auto;
     }
     
-    /* 平板上显示两列论文卡片 */
-    .papers-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .search-topic-section .topic-tags {
+        flex-wrap: wrap;
+    }
+    
+    .fields-section .field-filters-row {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .fields-section .field-dropdown {
+        width: auto;
     }
 }
 

@@ -49,6 +49,7 @@
             font-size: 0.85em;
         }
         
+        .dropdown-content {
             cursor: pointer;
             z-index: 1000;
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
@@ -122,18 +123,7 @@
 <body>
     <div class="container">
         <div class="main-content">
-            <!-- Left column: Paper display area -->
-            <div class="paper-container">
-                <div id="loading" class="loading" style="display: none;">Loading papers...</div>
-                <div id="no-results" class="no-results">
-                    Please select a topic and search criteria to find papers.
-                </div>
-                <div id="papers-grid" class="papers-grid">
-                    <!-- Paper cards will be inserted here -->
-                </div>
-            </div>
-            
-            <!-- Right column: Sidebar with search controls -->
+            <!-- Left column: Sidebar with search controls -->
             <div class="sidebar">
                 <!-- Row 1: Title -->
                 <div class="sidebar-section title-section">
@@ -249,6 +239,17 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            
+            <!-- Right column: Paper display area -->
+            <div class="paper-container">
+                <div id="loading" class="loading" style="display: none;">Loading papers...</div>
+                <div id="no-results" class="no-results">
+                    Please select a topic and search criteria to find papers.
+                </div>
+                <div id="papers-grid" class="papers-grid">
+                    <!-- Paper cards will be inserted here -->
                 </div>
             </div>
         </div>
