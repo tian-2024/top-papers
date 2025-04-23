@@ -257,7 +257,7 @@ body {
         flex-basis: 48%;
     }
     
-    /* 论文卡片在平板上为两列 */
+    /* 平板上显示两列论文卡片 */
     .papers-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -291,7 +291,8 @@ body {
         width: 100%;
         margin: 20px 0 0 0;
         padding: 0;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important; /* 强制每行只显示一个卡片 */
+        gap: 15px;
     }
     
     .paper-card {
@@ -936,7 +937,7 @@ footer {
 
 @media (max-width: 900px) {
     .papers-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr !important; /* 强制每行只显示一个卡片 */
         gap: 15px;
     }
     
@@ -948,7 +949,7 @@ footer {
 @media (max-width: 600px) {
     .papers-grid {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important; /* 强制单列 */
         gap: 10px;
         margin-top: 15px;
     }
@@ -971,7 +972,7 @@ footer {
 
 @media (max-width: 320px) {
     .papers-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important; /* 强制单列 */
     }
     
     .paper-card {
@@ -1676,7 +1677,7 @@ footer {
     }
     
     .papers-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important; /* 强制单列 */
     }
     
     .paper-card {
@@ -1782,5 +1783,29 @@ footer {
     .conference-badge, .year-badge {
         font-size: 0.7em;
         padding: 2px 6px;
+    }
+}
+
+/* 卡片网格布局基本样式 */
+.papers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    width: 100%;
+    padding: 10px 0;
+}
+
+/* 移动设备单列卡片布局 - 高优先级 */
+@media screen and (max-width: 900px) {
+    .papers-grid {
+        grid-template-columns: 1fr !important;
+        max-width: 100% !important;
+    }
+    
+    .paper-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
 } 
