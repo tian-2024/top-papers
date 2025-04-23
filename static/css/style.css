@@ -828,11 +828,41 @@ footer {
 /* Card Layout Styles */
 .papers-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* 固定一行显示3个卡片 */
     gap: 20px;
     width: 100%;
-    padding: 5px 0;
-    margin-top: 5px;
+    padding: 10px 0;
+}
+
+/* 中等屏幕设备 */
+@media screen and (max-width: 1200px) {
+    .papers-grid {
+        grid-template-columns: repeat(2, 1fr); /* 中等屏幕显示2个卡片 */
+    }
+}
+
+/* 移动设备单列卡片布局 */
+@media screen and (max-width: 768px) {
+    .papers-grid {
+        grid-template-columns: 1fr !important; /* 小屏幕设备显示1个卡片 */
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+    
+    .paper-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        box-sizing: border-box !important;
+    }
+    
+    .paper-container,
+    .sidebar-section {
+        padding: 10px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
 }
 
 .paper-card {
@@ -1828,125 +1858,42 @@ footer {
     }
 }
 
-/* 卡片网格布局基本样式 */
-.papers-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
-    width: 100%;
-    padding: 10px 0;
+/* 显示的视图 */
+.view-active {
+    display: block !important;
 }
 
-/* 移动设备单列卡片布局 - 高优先级 */
-@media screen and (max-width: 900px) {
-    .papers-grid {
-        grid-template-columns: 1fr !important;
-        max-width: 100% !important;
-        padding: 0 !important;
-    }
-    
-    .paper-card {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        box-sizing: border-box !important;
-    }
-    
-    .paper-container,
-    .sidebar-section {
-        padding: 10px !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-    }
+.grid-view-icon, .list-view-icon {
+    display: none;
 }
 
-/* 添加全宽移动样式 */
-@media screen and (max-width: 480px) {
-    body, html {
-        overflow-x: hidden;
-    }
-    
-    .container, 
-    .paper-container, 
-    .sidebar-section,
-    .papers-grid,
-    .paper-card,
-    header {
-        width: 100% !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        border-radius: 0 !important;
-        box-sizing: border-box !important;
-        padding-left: 8px !important;
-        padding-right: 8px !important;
-    }
-    
-    .paper-title,
-    .paper-info {
-        padding-left: 12px !important;
-        padding-right: 12px !important;
-    }
-    
-    header,
-    .paper-container,
-    .sidebar-section {
-        margin-bottom: 5px !important;
-        border-radius: 0 !important;
-    }
+.grid-view-active .list-view-icon {
+    display: inline;
 }
 
-.dark-mode .batch-size-container div {
-    color: #aaa !important;
+.grid-view-active .grid-view-icon {
+    display: none;
 }
 
-.dark-mode .reset-btn {
-    background-color: #333333;
+.list-view-active .grid-view-icon {
+    display: inline;
 }
 
-.dark-mode .reset-btn:hover {
-    background-color: #4a4a4a;
+.list-view-active .list-view-icon {
+    display: none;
 }
 
-.year-container {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-}
-
-.year-container select {
-    width: 45% !important;
-}
-
-.year-container .year-separator {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-.year-filter-container select {
-    padding: 6px 12px;
-    border-radius: 4px;
-    border: 1px solid var(--border-color);
-    background-color: var(--container-bg);
-    color: var(--text-color);
-    font-size: 14px;
-    height: 38px;
-    appearance: menulist;
-    -webkit-appearance: menulist;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.dark-mode .year-filter-container select {
+.dark-mode .papers-list-view th {
     background-color: #2d2d2d;
     border-color: #444;
-    color: #e0e0e0;
+}
+
+.dark-mode .papers-list-view td {
+    border-color: #444;
+}
+
+.dark-mode .papers-list-view tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 .view-toggle {
@@ -2158,40 +2105,90 @@ footer {
     }
 }
 
-/* 显示的视图 */
-.view-active {
-    display: block !important;
+/* 添加全宽移动样式 */
+@media screen and (max-width: 480px) {
+    body, html {
+        overflow-x: hidden;
+    }
+    
+    .container, 
+    .paper-container, 
+    .sidebar-section,
+    .papers-grid,
+    .paper-card,
+    header {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        border-radius: 0 !important;
+        box-sizing: border-box !important;
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+    
+    .paper-title,
+    .paper-info {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+    }
+    
+    header,
+    .paper-container,
+    .sidebar-section {
+        margin-bottom: 5px !important;
+        border-radius: 0 !important;
+    }
 }
 
-.grid-view-icon, .list-view-icon {
-    display: none;
+.dark-mode .batch-size-container div {
+    color: #aaa !important;
 }
 
-.grid-view-active .list-view-icon {
-    display: inline;
+.dark-mode .reset-btn {
+    background-color: #333333;
 }
 
-.grid-view-active .grid-view-icon {
-    display: none;
+.dark-mode .reset-btn:hover {
+    background-color: #4a4a4a;
 }
 
-.list-view-active .grid-view-icon {
-    display: inline;
+.year-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
 }
 
-.list-view-active .list-view-icon {
-    display: none;
+.year-container select {
+    width: 45% !important;
 }
 
-.dark-mode .papers-list-view th {
+.year-container .year-separator {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.year-filter-container select {
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    background-color: var(--container-bg);
+    color: var(--text-color);
+    font-size: 14px;
+    height: 38px;
+    appearance: menulist;
+    -webkit-appearance: menulist;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .year-filter-container select {
     background-color: #2d2d2d;
     border-color: #444;
-}
-
-.dark-mode .papers-list-view td {
-    border-color: #444;
-}
-
-.dark-mode .papers-list-view tr:hover {
-    background-color: rgba(255, 255, 255, 0.05);
+    color: #e0e0e0;
 } 
