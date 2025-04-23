@@ -278,8 +278,32 @@ document.addEventListener('DOMContentLoaded', function() {
             // 默认为Other
         };
         
-        // Sort papers by title length
-        papers.sort((a, b) => a.title.length - b.title.length);
+        // 计算标题的单词数（考虑连字符）
+        function countWords(title) {
+            // 将标题按空格分割成单词
+            const words = title.split(/\s+/);
+            // 计算总单词数，包括连字符分隔的部分
+            let wordCount = 0;
+            words.forEach(word => {
+                // 检查单词中是否包含连字符
+                if (word.includes('-')) {
+                    // 按连字符分割并计算分割后的单词数
+                    const hyphenatedParts = word.split('-').filter(part => part.length > 0);
+                    wordCount += hyphenatedParts.length;
+                } else {
+                    // 普通单词计为1个
+                    wordCount += 1;
+                }
+            });
+            return wordCount;
+        }
+        
+        // Sort papers by word count instead of character length
+        papers.sort((a, b) => {
+            const aWordCount = countWords(a.title);
+            const bWordCount = countWords(b.title);
+            return aWordCount - bWordCount;
+        });
         
         // 清空现有内容
         const listTbody = papersList.querySelector('tbody');
