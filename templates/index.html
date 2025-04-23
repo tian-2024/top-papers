@@ -280,16 +280,11 @@
                 <!-- Row 2: Year selection -->
                 <div class="sidebar-section year-section">
                     <div class="year-filter-container" style="display: flex; flex-direction: column; gap: 8px; width: 100%;">
-                        <div style="display: flex; gap: 10px; width: 100%;">
-                            <button id="all-years-btn" class="reset-btn" title="Show all years" style="width: 40%; padding: 4px; margin-bottom: 5px; background-color: #4a4a4ad7;">
-                                All
-                            </button>
-                            <button id="recent-years-btn" class="reset-btn" title="Reset to recent years" style="width: 40%; padding: 4px; margin-bottom: 5px; background-color: #4a4a4a96;">
-                                Recent
-                            </button>
-                        </div>
                         <div style="display: flex; width: 100%; align-items: center; justify-content: space-between;">
-                            <div style="width: 45%;">
+                            <div style="width: 45%; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                                <button id="all-years-btn" class="reset-btn" title="Show all years" style="width: 100%; padding: 4px; margin-bottom: 5px; background-color: #4a4a4ad7;">
+                                    All
+                                </button>
                                 <select id="start-year" style="width: 100%;">
                                     <option value="2019">2019</option>
                                     <option value="2020">2020</option>
@@ -303,7 +298,10 @@
                             <div style="text-align: center;">
                                 <span style="font-size: 16px;">~</span>
                             </div>
-                            <div style="width: 45%;">
+                            <div style="width: 45%; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                                <button id="recent-years-btn" class="reset-btn" title="Reset to recent years" style="width: 100%; padding: 4px; margin-bottom: 5px; background-color: #4a4a4a96;">
+                                    Recent
+                                </button>
                                 <select id="end-year" style="width: 100%;">
                                     <option value="2019">2019</option>
                                     <option value="2020">2020</option>
