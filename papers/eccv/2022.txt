@@ -1,27 +1,27 @@
-"A Simple Approach and Benchmark for 21,000-Category Object Detection"
-"BodySLAM: Joint Camera Localisation, Mapping, and Human Motion Tracking"
-"CHORE: Contact, Human and Object REconstruction from a Single RGB Image"
-"Capturing, Reconstructing, and Simulating: The UrbanScene3D Dataset"
-"Contributions of Shape, Texture, and Color in Visual Recognition"
-"Delving into Universal Lesion Segmentation: Method, Dataset, and Benchmark"
-"FEAR: Fast, Efficient, Accurate and Robust Visual Tracker"
-"Fashionformer: A Simple, Effective and Unified Baseline for Human Fashion Segmentation and Recognition"
-"Fine-Grained Egocentric Hand-Object Segmentation: Dataset, Model, and Applications"
-"GEB+: A Benchmark for Generic Event Boundary Captioning, Grounding and Retrieval"
-"HVC-Net: Unifying Homography, Visibility, and Confidence Learning for Planar Object Tracking"
-"JPerceiver: Joint Perception Network for Depth, Pose and Layout Estimation in Driving Scenes"
-"L3: Accelerator-Friendly Lossless Image Format for High-Resolution, High-Throughput DNN Training"
-"On Multi-Domain Long-Tailed Recognition, Imbalanced Domain Generalization and Beyond"
-"PartImageNet: A Large, High-Quality Dataset of Parts"
-"Restore Globally, Refine Locally: A Mask-Guided Scheme to Accelerate Super-Resolution Networks"
-"ShAPO: Implicit Representations for Multi-Object Shape, Appearance, and Pose Optimization"
-"Spotting Temporally Precise, Fine-Grained Events in Video"
-"Towards Scale-Aware, Robust, and Generalizable Unsupervised Monocular Depth Estimation by Integrating IMU Motion Dynamics"
-"Translation, Scale and Rotation: Cross-Modal Alignment Meets RGB-Infrared Vehicle Detection"
-"Trust, but Verify: Using Self-Supervised Probing to Improve Trustworthiness"
-"UniNet: Unified Architecture Search with Convolution, Transformer, and MLP"
-"Unitail: Detecting, Reading, and Matching in Retail Scene"
-"“This Is My Unicorn, Fluffy”: Personalizing Frozen Vision-Language Representations"
+A Simple Approach and Benchmark for 21,000-Category Object Detection
+BodySLAM: Joint Camera Localisation, Mapping, and Human Motion Tracking
+CHORE: Contact, Human and Object REconstruction from a Single RGB Image
+Capturing, Reconstructing, and Simulating: The UrbanScene3D Dataset
+Contributions of Shape, Texture, and Color in Visual Recognition
+Delving into Universal Lesion Segmentation: Method, Dataset, and Benchmark
+FEAR: Fast, Efficient, Accurate and Robust Visual Tracker
+Fashionformer: A Simple, Effective and Unified Baseline for Human Fashion Segmentation and Recognition
+Fine-Grained Egocentric Hand-Object Segmentation: Dataset, Model, and Applications
+GEB+: A Benchmark for Generic Event Boundary Captioning, Grounding and Retrieval
+HVC-Net: Unifying Homography, Visibility, and Confidence Learning for Planar Object Tracking
+JPerceiver: Joint Perception Network for Depth, Pose and Layout Estimation in Driving Scenes
+L3: Accelerator-Friendly Lossless Image Format for High-Resolution, High-Throughput DNN Training
+On Multi-Domain Long-Tailed Recognition, Imbalanced Domain Generalization and Beyond
+PartImageNet: A Large, High-Quality Dataset of Parts
+Restore Globally, Refine Locally: A Mask-Guided Scheme to Accelerate Super-Resolution Networks
+ShAPO: Implicit Representations for Multi-Object Shape, Appearance, and Pose Optimization
+Spotting Temporally Precise, Fine-Grained Events in Video
+Towards Scale-Aware, Robust, and Generalizable Unsupervised Monocular Depth Estimation by Integrating IMU Motion Dynamics
+Translation, Scale and Rotation: Cross-Modal Alignment Meets RGB-Infrared Vehicle Detection
+Trust, but Verify: Using Self-Supervised Probing to Improve Trustworthiness
+UniNet: Unified Architecture Search with Convolution, Transformer, and MLP
+Unitail: Detecting, Reading, and Matching in Retail Scene
+“This Is My Unicorn, Fluffy”: Personalizing Frozen Vision-Language Representations
 2D Amodal Instance Segmentation Guided by 3D Shape Prior
 2D GANs Meet Unsupervised Single-View 3D Reconstruction
 2DPASS: 2D Priors Assisted Semantic Segmentation on LiDAR Point Clouds
