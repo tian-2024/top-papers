@@ -1980,7 +1980,7 @@ footer {
 
 .papers-list-view td {
     padding: 10px;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: none;
     vertical-align: middle;
     line-height: 1.5;
 }
@@ -1989,6 +1989,7 @@ footer {
     width: 100%;
     display: flex;
     align-items: center;
+    border-bottom: none;
 }
 
 .papers-list-view tr:hover {
@@ -2202,4 +2203,11 @@ footer {
         margin-bottom: 5px !important;
         border-radius: 0 !important;
     }
+}
+
+/* 为Copy All按钮添加样式 */
+.copy-all-button {
+    margin: 0 auto;
+    display: block !important;
+    padding: 5px 10px !important;
 } 

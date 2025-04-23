@@ -84,6 +84,33 @@ document.addEventListener('DOMContentLoaded', function() {
         const listTbody = papersList.querySelector('tbody');
         if (listTbody) listTbody.innerHTML = '';
         
+        // 为Copy All按钮添加功能
+        const headerRow = papersList.querySelector('thead tr');
+        if (headerRow) {
+            const copyAllCell = headerRow.querySelector('th:last-child');
+            if (copyAllCell) {
+                // 创建Copy All按钮
+                if (!copyAllCell.querySelector('.copy-all-button')) {
+                    const copyAllBtn = document.createElement('button');
+                    copyAllBtn.className = 'list-copy-button copy-all-button';
+                    copyAllBtn.innerHTML = '<i class="fas fa-copy"></i> Copy All';
+                    copyAllBtn.addEventListener('click', function() {
+                        // 格式化所有论文标题为要求的格式
+                        const formattedText = papers.map(paper => 
+                            `- ${paper.conference} ${paper.year} ${paper.title}`
+                        ).join('\n');
+                        
+                        copyToClipboard(formattedText);
+                        handleCopyButtonClick(this, "all papers");
+                    });
+                    
+                    // 清除单元格内容并添加按钮
+                    copyAllCell.textContent = '';
+                    copyAllCell.appendChild(copyAllBtn);
+                }
+            }
+        }
+        
         papers.forEach(paper => {
             // 确定会议所属领域
             const confLower = paper.conference.toLowerCase();
