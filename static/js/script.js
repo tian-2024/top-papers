@@ -27,6 +27,9 @@ document.addEventListener('DOMContentLoaded', function() {
         noResults.style.display = 'flex';
     }
     
+    // 全局变量：当前搜索词
+    let currentSearchTerm = '';
+
     // Function to check if a paper matches all keywords
     function paperMatchesAllKeywords(paper, keywords) {
         return keywords.every(keyword => {
@@ -45,6 +48,150 @@ document.addEventListener('DOMContentLoaded', function() {
             papersList.style.display = 'none';
             papersList.classList.remove('view-active');
         }
+    }
+
+    // Search functionality
+    if (searchBtn && topicInput) {
+        // 全局变量存储所有论文数据
+        let allPapersData = null;
+        
+        // 加载所有论文数据
+        function loadAllPapers() {
+            return fetch('papers.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to load papers data');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    allPapersData = data;
+                    return data;
+                });
+        }
+        
+        // 加载所有论文数据
+        loadAllPapers().catch(error => {
+            console.error('Error loading papers data:', error);
+        });
+        
+        searchBtn.addEventListener('click', function() {
+            const searchTerm = topicInput.value.trim();
+            currentSearchTerm = searchTerm; // 保存当前搜索词
+            if (searchTerm) {
+                console.log('Searching for:', searchTerm);
+                
+                // 获取过滤条件
+                const conferences = getSelectedConferences();
+                console.log('Selected conferences:', conferences);
+                
+                const startYear = startYearSelect ? startYearSelect.value : '2023';
+                const endYear = endYearSelect ? endYearSelect.value : '2025';
+                
+                // 如果没有选中任何会议，显示提示
+                if (conferences.length === 0) {
+                    showNoResultsMessage();
+                    alert('Please select at least one field or conference to search.');
+                    return;
+                }
+                
+                // Show loading status
+                if (loading) loading.style.display = 'block';
+                if (noResults) noResults.style.display = 'none';
+                
+                // 检查是否已加载论文数据
+                const papersPromise = allPapersData ? Promise.resolve(allPapersData) : loadAllPapers();
+                
+                papersPromise.then(data => {
+                    // 在客户端过滤论文
+                    const papers = data.papers || [];
+                    
+                    // 根据条件过滤论文
+                    const filteredPapers = papers.filter(paper => {
+                        // 检查会议
+                        if (conferences.length > 0 && !conferences.includes(paper.conference)) {
+                            return false;
+                        }
+                        
+                        // 检查年份
+                        const paperYear = parseInt(paper.year);
+                        const startYearInt = parseInt(startYear);
+                        const endYearInt = parseInt(endYear);
+                        if (paperYear < startYearInt || paperYear > endYearInt) {
+                            return false;
+                        }
+                        
+                        // 检查标题
+                        return paper.title.toLowerCase().includes(searchTerm.toLowerCase());
+                    });
+                    
+                    // 随机排序并限制数量
+                    const shuffledPapers = [...filteredPapers].sort(() => 0.5 - Math.random());
+                    const batchSizeInput = document.getElementById('batch-size');
+                    const batchSize = batchSizeInput ? parseInt(batchSizeInput.value) || 9 : 9;
+                    const limitedPapers = shuffledPapers.slice(0, batchSize);
+                    
+                    console.log('Filtered papers:', limitedPapers.length);
+                    
+                    // 显示过滤后的论文
+                    if (limitedPapers.length > 0) {
+                        displayPapers(limitedPapers);
+                    } else {
+                        showNoResultsMessage();
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching papers:', error);
+                    showNoResultsMessage();
+                })
+                .finally(() => {
+                    if (loading) loading.style.display = 'none';
+                });
+            } else {
+                showNoResultsMessage();
+            }
+        });
+        
+        // Support Enter key for search
+        topicInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchBtn.click();
+            }
+        });
+    }
+
+    // 高亮文本的辅助函数
+    function highlightText(text, searchTerm) {
+        if (!searchTerm || searchTerm.trim() === '') return text;
+        
+        const searchTermLower = searchTerm.toLowerCase();
+        const textLower = text.toLowerCase();
+        
+        // 如果没有找到匹配项，直接返回原文本
+        if (textLower.indexOf(searchTermLower) === -1) return text;
+        
+        // 创建包含高亮的HTML
+        let result = '';
+        let lastIndex = 0;
+        let index = textLower.indexOf(searchTermLower);
+        
+        while (index !== -1) {
+            // 添加前面不匹配的部分
+            result += text.substring(lastIndex, index);
+            
+            // 添加高亮的匹配部分（使用原始大小写）
+            const matchedText = text.substring(index, index + searchTerm.length);
+            result += `<span class="highlight">${matchedText}</span>`;
+            
+            // 更新索引位置
+            lastIndex = index + searchTerm.length;
+            index = textLower.indexOf(searchTermLower, lastIndex);
+        }
+        
+        // 添加最后剩余的文本
+        result += text.substring(lastIndex);
+        
+        return result;
     }
 
     // Function to display papers
@@ -150,11 +297,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 yearBadge.textContent = paper.year;
                 yearCell.appendChild(yearBadge);
                 
-                // 创建标题单元格
+                // 创建标题单元格并高亮搜索词
                 const titleCell = document.createElement('td');
                 titleCell.className = 'list-paper-title';
                 titleCell.title = paper.title;
-                titleCell.textContent = paper.title;
+                
+                // 高亮显示搜索词
+                if (currentSearchTerm && currentSearchTerm.trim() !== '') {
+                    titleCell.innerHTML = highlightText(paper.title, currentSearchTerm);
+                } else {
+                    titleCell.textContent = paper.title;
+                }
                 
                 // 创建操作单元格
                 const actionCell = document.createElement('td');
@@ -658,115 +811,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         return selected;
-    }
-
-    // Search functionality
-    if (searchBtn && topicInput) {
-        // 全局变量存储所有论文数据
-        let allPapersData = null;
-        
-        // 加载所有论文数据
-        function loadAllPapers() {
-            return fetch('papers.json')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Failed to load papers data');
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    allPapersData = data;
-                    return data;
-                });
-        }
-        
-        // 加载所有论文数据
-        loadAllPapers().catch(error => {
-            console.error('Error loading papers data:', error);
-        });
-        
-        searchBtn.addEventListener('click', function() {
-            const searchTerm = topicInput.value.trim();
-            if (searchTerm) {
-                console.log('Searching for:', searchTerm);
-                
-                // 获取过滤条件
-                const conferences = getSelectedConferences();
-                console.log('Selected conferences:', conferences);
-                
-                const startYear = startYearSelect ? startYearSelect.value : '2023';
-                const endYear = endYearSelect ? endYearSelect.value : '2025';
-                
-                // 如果没有选中任何会议，显示提示
-                if (conferences.length === 0) {
-                    showNoResultsMessage();
-                    alert('Please select at least one field or conference to search.');
-                    return;
-                }
-                
-                // Show loading status
-                if (loading) loading.style.display = 'block';
-                if (noResults) noResults.style.display = 'none';
-                
-                // 检查是否已加载论文数据
-                const papersPromise = allPapersData ? Promise.resolve(allPapersData) : loadAllPapers();
-                
-                papersPromise.then(data => {
-                    // 在客户端过滤论文
-                    const papers = data.papers || [];
-                    
-                    // 根据条件过滤论文
-                    const filteredPapers = papers.filter(paper => {
-                        // 检查会议
-                        if (conferences.length > 0 && !conferences.includes(paper.conference)) {
-                            return false;
-                        }
-                        
-                        // 检查年份
-                        const paperYear = parseInt(paper.year);
-                        const startYearInt = parseInt(startYear);
-                        const endYearInt = parseInt(endYear);
-                        if (paperYear < startYearInt || paperYear > endYearInt) {
-                            return false;
-                        }
-                        
-                        // 检查标题
-                        return paper.title.toLowerCase().includes(searchTerm.toLowerCase());
-                    });
-                    
-                    // 随机排序并限制数量
-                    const shuffledPapers = [...filteredPapers].sort(() => 0.5 - Math.random());
-                    const batchSizeInput = document.getElementById('batch-size');
-                    const batchSize = batchSizeInput ? parseInt(batchSizeInput.value) || 9 : 9;
-                    const limitedPapers = shuffledPapers.slice(0, batchSize);
-                    
-                    console.log('Filtered papers:', limitedPapers.length);
-                    
-                    // 显示过滤后的论文
-                    if (limitedPapers.length > 0) {
-                        displayPapers(limitedPapers);
-                    } else {
-                        showNoResultsMessage();
-                    }
-                })
-                .catch(error => {
-                    console.error('Error fetching papers:', error);
-                    showNoResultsMessage();
-                })
-                .finally(() => {
-                    if (loading) loading.style.display = 'none';
-                });
-            } else {
-                showNoResultsMessage();
-            }
-        });
-        
-        // Support Enter key for search
-        topicInput.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                searchBtn.click();
-            }
-        });
     }
 
     // 初始化页面
