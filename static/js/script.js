@@ -16,12 +16,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const batchSizeSlider = document.getElementById('batch-size');
     const batchSizeValue = document.getElementById('batch-size-value');
     
-    // 设置列表视图为默认视图
+    // 设置列表视图初始状态为隐藏
     if (papersList) {
-        papersList.classList.add('view-active');
-        papersList.style.display = 'table';
+        papersList.classList.remove('view-active');
+        papersList.style.display = 'none';
     }
-
+    
+    // 确保初始显示提示信息
+    if (noResults) {
+        noResults.style.display = 'flex';
+    }
+    
     // Function to check if a paper matches all keywords
     function paperMatchesAllKeywords(paper, keywords) {
         return keywords.every(keyword => {
@@ -35,8 +40,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to display no results message
     function showNoResultsMessage() {
         if (loading) loading.style.display = 'none';
-        if (noResults) noResults.style.display = 'block';
-        if (papersList) papersList.style.display = 'none';
+        if (noResults) noResults.style.display = 'flex';
+        if (papersList) {
+            papersList.style.display = 'none';
+            papersList.classList.remove('view-active');
+        }
     }
 
     // Function to display papers
