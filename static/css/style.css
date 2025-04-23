@@ -2007,15 +2007,18 @@ footer {
 }
 
 .papers-list-view th:nth-child(1) { /* Conference */
-    width: 110px;
+    width: 100px;
+    min-width: 100px;
 }
 
 .papers-list-view th:nth-child(2) { /* Year */
-    width: 80px;
+    width: 70px;
+    min-width: 70px;
 }
 
 .papers-list-view th:nth-child(4) { /* Action */
-    width: 90px;
+    width: 80px;
+    min-width: 80px;
 }
 
 .papers-list-view th:nth-child(3) { /* Title */
@@ -2031,6 +2034,8 @@ footer {
 
 .papers-list-view tr {
     width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .papers-list-view tr:hover {
@@ -2047,11 +2052,34 @@ footer {
 
 .papers-list-view .list-paper-title {
     font-weight: 500;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100%;
-    display: block;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow: visible;
+    line-height: 1.4;
+    padding-right: 10px;
+}
+
+.papers-list-view td:nth-child(1) {
+    width: 100px;
+    min-width: 100px;
+    flex-shrink: 0;
+}
+
+.papers-list-view td:nth-child(2) {
+    width: 70px;
+    min-width: 70px;
+    flex-shrink: 0;
+}
+
+.papers-list-view td:nth-child(3) {
+    flex: 1;
+    min-width: 0;
+}
+
+.papers-list-view td:nth-child(4) {
+    width: 80px;
+    min-width: 80px;
+    flex-shrink: 0;
 }
 
 .papers-list-view .list-copy-button {
@@ -2072,6 +2100,62 @@ footer {
 
 .papers-list-view .list-copy-button:hover {
     background-color: #333333;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .papers-list-view th:nth-child(1),
+    .papers-list-view td:nth-child(1) {
+        width: 90px;
+        min-width: 90px;
+    }
+    
+    .papers-list-view th:nth-child(2),
+    .papers-list-view td:nth-child(2) {
+        width: 60px;
+        min-width: 60px;
+    }
+    
+    .papers-list-view th:nth-child(4),
+    .papers-list-view td:nth-child(4) {
+        width: 70px;
+        min-width: 70px;
+    }
+    
+    .papers-list-view .list-copy-button {
+        padding: 4px 8px;
+        font-size: 11px;
+    }
+}
+
+/* 小屏幕适配 */
+@media (max-width: 480px) {
+    .papers-list-view th:nth-child(1),
+    .papers-list-view td:nth-child(1) {
+        width: 80px;
+        min-width: 80px;
+    }
+    
+    .papers-list-view th:nth-child(2),
+    .papers-list-view td:nth-child(2) {
+        width: 50px;
+        min-width: 50px;
+    }
+    
+    .papers-list-view th:nth-child(4),
+    .papers-list-view td:nth-child(4) {
+        width: 60px;
+        min-width: 60px;
+    }
+    
+    .papers-list-view .list-copy-button {
+        padding: 3px 6px;
+        font-size: 10px;
+    }
+    
+    .papers-list-view .list-paper-title {
+        font-size: 13px;
+    }
 }
 
 /* 显示的视图 */
