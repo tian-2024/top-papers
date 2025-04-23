@@ -21,14 +21,13 @@
             max-width: 240px;
         }
         .papers-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            display: none; /* Hidden by default */
             gap: 16px;
             margin-top: 5px;
-            display: none;
         }
         .papers-grid.view-active {
             display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns when active */
         }
         .field-filters-row {
             display: flex;
@@ -312,7 +311,7 @@
                     <div class="batch-size-container" style="position: relative;">
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
                             <label for="batch-size" style="font-size: 16px; font-weight: bold;">Batch size: <span id="batch-size-value">9</span></label>
-                            <button id="view-toggle" class="view-toggle" title="Switch between grid and list view" style="position: static; transform: none; margin-left: 10px;">
+                            <button id="view-toggle" class="view-toggle" title="Switch between grid and list view" style="position: static; transform: none; margin-left: 10px; display: none;">
                                 <i class="fas fa-th-large grid-view-icon"></i>
                                 <i class="fas fa-list list-view-icon"></i>
                             </button>

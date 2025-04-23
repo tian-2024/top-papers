@@ -21,6 +21,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // 视图模式：默认为网格视图
     let currentView = 'grid';
     
+    // Hide view toggle button initially - it will be shown after search
+    if (viewToggleBtn) {
+        viewToggleBtn.style.display = 'none';
+    }
+    
+    // Ensure grid view is properly set as default
+    if (papersGrid) {
+        papersGrid.classList.add('view-active');
+    }
+    if (papersList) {
+        papersList.classList.remove('view-active');
+    }
+    
     // 视图切换功能
     if (viewToggleBtn) {
         viewToggleBtn.classList.add('grid-view-active');
@@ -522,11 +535,11 @@ document.addEventListener('DOMContentLoaded', function() {
         if (noResults) noResults.style.display = 'block';
         if (papersGrid) papersGrid.style.display = 'none';
         if (papersList) papersList.style.display = 'none';
-    }
-
-    // 初始化页面时隐藏表格视图
-    if (papersList) {
-        papersList.classList.remove('view-active');
+        
+        // Hide view toggle button when no results
+        if (viewToggleBtn) {
+            viewToggleBtn.style.display = 'none';
+        }
     }
 
     // Function to display papers as cards and list
@@ -538,11 +551,13 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         
+        // Show the view toggle button after a successful search
+        if (viewToggleBtn) {
+            viewToggleBtn.style.display = 'inline-block';
+        }
+        
         if (loading) loading.style.display = 'none';
         if (noResults) noResults.style.display = 'none';
-        
-        // Fix: Remove the unconditional display setting for grid view
-        // if (papersGrid) papersGrid.style.display = 'grid';
         
         // Only set the appropriate view to be active based on currentView
         if (currentView === 'grid') {
