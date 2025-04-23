@@ -247,8 +247,19 @@ document.addEventListener('DOMContentLoaded', function() {
                             `- ${paper.conference} ${paper.year} ${paper.title}`
                         ).join('\n');
                         
+                        // 直接调用复制函数，复制格式化的文本
                         copyToClipboard(formattedText);
-                        handleCopyButtonClick(this, "all papers");
+                        
+                        // 显示复制成功反馈
+                        this.classList.add('copy-success');
+                        const originalHTML = this.innerHTML;
+                        this.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                        
+                        // 重置按钮状态
+                        setTimeout(() => {
+                            this.innerHTML = originalHTML;
+                            this.classList.remove('copy-success');
+                        }, 2000);
                     });
                     
                     // 清除单元格内容并添加按钮
