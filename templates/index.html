@@ -280,11 +280,24 @@
                 <!-- Row 2: Year selection -->
                 <div class="sidebar-section year-section">
                     <div class="year-filter-container" style="display: flex; flex-direction: column; gap: 8px; width: 100%;">
+                        <!-- 按钮行 -->
                         <div style="display: flex; width: 100%; align-items: center; justify-content: space-between;">
-                            <div style="width: 45%; display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                            <div style="width: 45%;">
                                 <button id="all-years-btn" class="reset-btn" title="Show all years" style="width: 100%; padding: 4px; margin-bottom: 5px; background-color: #4a4a4ad7;">
                                     All
                                 </button>
+                            </div>
+                            <div style="width: 10%; display: flex; justify-content: center;"></div> <!-- 占位 -->
+                            <div style="width: 45%;">
+                                <button id="recent-years-btn" class="reset-btn" title="Reset to recent years" style="width: 100%; padding: 4px; margin-bottom: 5px; background-color: #4a4a4a96;">
+                                    Recent
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- 年份选择行 -->
+                        <div style="display: flex; width: 100%; align-items: center; justify-content: space-between;">
+                            <div style="width: 45%;">
                                 <select id="start-year" style="width: 100%;">
                                     <option value="2019">2019</option>
                                     <option value="2020">2020</option>
@@ -295,13 +308,12 @@
                                     <option value="2025">2025</option>
                                 </select>
                             </div>
-                            <div class="year-separator">
-                                <span>to</span>
+                            <div style="width: 10%; display: flex; justify-content: center;">
+                                <div class="year-separator">
+                                    <span>to</span>
+                                </div>
                             </div>
-                            <div style="width: 45%; display: flex; flex-direction: column; align-items: center; gap: 8px;">
-                                <button id="recent-years-btn" class="reset-btn" title="Reset to recent years" style="width: 100%; padding: 4px; margin-bottom: 5px; background-color: #4a4a4a96;">
-                                    Recent
-                                </button>
+                            <div style="width: 45%;">
                                 <select id="end-year" style="width: 100%;">
                                     <option value="2019">2019</option>
                                     <option value="2020">2020</option>

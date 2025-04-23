@@ -2256,10 +2256,12 @@ footer {
     font-size: 16px;
     font-weight: bold;
     color: var(--heading-color);
-    margin: 0 8px;
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    text-align: center;
 }
 
 .dark-mode .year-separator {
