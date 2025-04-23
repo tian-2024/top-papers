@@ -50,6 +50,88 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // 高亮文本的辅助函数
+    function highlightText(text, searchTerm) {
+        if (!searchTerm || searchTerm.trim() === '') return text;
+        
+        // 将搜索词按空格分割成数组
+        const searchTerms = searchTerm.split(' ').filter(term => term.trim() !== '');
+        if (searchTerms.length === 0) return text;
+        
+        // 初始结果为原文本
+        let result = text;
+        
+        // 对每个搜索词进行高亮处理
+        searchTerms.forEach(term => {
+            const termLower = term.toLowerCase();
+            
+            // 创建一个临时的HTML元素来处理
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = result;
+            const textNodes = getTextNodes(tempDiv);
+            
+            // 遍历所有文本节点并替换匹配项
+            textNodes.forEach(node => {
+                const nodeText = node.nodeValue;
+                const nodeLower = nodeText.toLowerCase();
+                let lastIndex = 0;
+                let newHtml = '';
+                let index = nodeLower.indexOf(termLower);
+                
+                while (index !== -1) {
+                    // 添加前面不匹配的部分
+                    newHtml += nodeText.substring(lastIndex, index);
+                    
+                    // 添加高亮的匹配部分（使用原始大小写）
+                    const matchedText = nodeText.substring(index, index + term.length);
+                    newHtml += `<span class="highlight">${matchedText}</span>`;
+                    
+                    // 更新索引位置
+                    lastIndex = index + term.length;
+                    index = nodeLower.indexOf(termLower, lastIndex);
+                }
+                
+                // 添加最后剩余的文本
+                newHtml += nodeText.substring(lastIndex);
+                
+                // 创建一个新的包装元素
+                const wrapper = document.createElement('span');
+                wrapper.innerHTML = newHtml;
+                
+                // 替换原节点
+                if (node.parentNode) {
+                    while (wrapper.firstChild) {
+                        node.parentNode.insertBefore(wrapper.firstChild, node);
+                    }
+                    node.parentNode.removeChild(node);
+                }
+            });
+            
+            // 更新结果
+            result = tempDiv.innerHTML;
+        });
+        
+        return result;
+    }
+    
+    // 获取元素内的所有文本节点
+    function getTextNodes(node) {
+        const textNodes = [];
+        const walker = document.createTreeWalker(
+            node, 
+            NodeFilter.SHOW_TEXT, 
+            null, 
+            false
+        );
+        
+        let currentNode;
+        while (currentNode = walker.nextNode()) {
+            textNodes.push(currentNode);
+        }
+        
+        return textNodes;
+    }
+
     // Search functionality
     if (searchBtn && topicInput) {
         // 全局变量存储所有论文数据
@@ -106,6 +188,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     // 在客户端过滤论文
                     const papers = data.papers || [];
                     
+                    // 将搜索词分割成关键词数组
+                    const keywords = searchTerm.split(' ').filter(k => k.trim() !== '');
+                    
                     // 根据条件过滤论文
                     const filteredPapers = papers.filter(paper => {
                         // 检查会议
@@ -121,8 +206,11 @@ document.addEventListener('DOMContentLoaded', function() {
                             return false;
                         }
                         
-                        // 检查标题
-                        return paper.title.toLowerCase().includes(searchTerm.toLowerCase());
+                        // 检查标题是否包含所有关键词
+                        const titleLower = paper.title.toLowerCase();
+                        return keywords.every(keyword => 
+                            titleLower.includes(keyword.toLowerCase())
+                        );
                     });
                     
                     // 随机排序并限制数量
@@ -158,40 +246,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 searchBtn.click();
             }
         });
-    }
-
-    // 高亮文本的辅助函数
-    function highlightText(text, searchTerm) {
-        if (!searchTerm || searchTerm.trim() === '') return text;
-        
-        const searchTermLower = searchTerm.toLowerCase();
-        const textLower = text.toLowerCase();
-        
-        // 如果没有找到匹配项，直接返回原文本
-        if (textLower.indexOf(searchTermLower) === -1) return text;
-        
-        // 创建包含高亮的HTML
-        let result = '';
-        let lastIndex = 0;
-        let index = textLower.indexOf(searchTermLower);
-        
-        while (index !== -1) {
-            // 添加前面不匹配的部分
-            result += text.substring(lastIndex, index);
-            
-            // 添加高亮的匹配部分（使用原始大小写）
-            const matchedText = text.substring(index, index + searchTerm.length);
-            result += `<span class="highlight">${matchedText}</span>`;
-            
-            // 更新索引位置
-            lastIndex = index + searchTerm.length;
-            index = textLower.indexOf(searchTermLower, lastIndex);
-        }
-        
-        // 添加最后剩余的文本
-        result += text.substring(lastIndex);
-        
-        return result;
     }
 
     // Function to display papers
