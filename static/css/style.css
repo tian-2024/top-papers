@@ -718,7 +718,7 @@ button:disabled {
 
 .year-badge.year-old {
     background-color: #ffd1b3; /* 超过10年的用最浅的橙色 */
-    color: #a3500d; /* 文字改为深橙色以提高对比度 */
+    color: white; /* 使用白色文字保持一致性 */
 }
 
 /* 为不同领域设置不同的颜色 */
