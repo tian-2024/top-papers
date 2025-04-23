@@ -1950,9 +1950,6 @@ footer {
 }
 
 .view-toggle {
-    position: absolute;
-    top: 10px;
-    right: 10px;
     background-color: var(--container-bg);
     border: 1px solid var(--border-color);
     border-radius: 4px;
@@ -1965,6 +1962,8 @@ footer {
     height: 36px;
     transition: all 0.2s ease;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    position: static;
+    margin: 0;
 }
 
 .view-toggle:hover {
@@ -1995,6 +1994,7 @@ footer {
     border-collapse: collapse;
     margin-top: 10px;
     display: none;
+    table-layout: fixed;
 }
 
 .papers-list-view th {
@@ -2006,10 +2006,27 @@ footer {
     color: var(--text-color);
 }
 
+.papers-list-view th:nth-child(1), /* Conference */
+.papers-list-view th:nth-child(2) { /* Year */
+    width: 100px;
+}
+
+.papers-list-view th:nth-child(4) { /* Action */
+    width: 80px;
+}
+
+.papers-list-view th:nth-child(3) { /* Title */
+    width: auto;
+}
+
 .papers-list-view td {
     padding: 12px 10px;
     border-bottom: 1px solid var(--border-color);
     vertical-align: middle;
+}
+
+.papers-list-view tr {
+    width: 100%;
 }
 
 .papers-list-view tr:hover {
@@ -2030,8 +2047,10 @@ footer {
 }
 
 .papers-list-view .list-paper-title {
-    max-width: 500px;
     font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .papers-list-view .list-copy-button {
@@ -2046,6 +2065,7 @@ footer {
     align-items: center;
     gap: 5px;
     transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
 .papers-list-view .list-copy-button:hover {
@@ -2063,6 +2083,10 @@ footer {
 
 .grid-view-active .list-view-icon {
     display: inline;
+}
+
+.grid-view-active .grid-view-icon {
+    display: none;
 }
 
 .list-view-active .grid-view-icon {

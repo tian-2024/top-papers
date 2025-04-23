@@ -594,9 +594,9 @@ document.addEventListener('DOMContentLoaded', function() {
             if (listTbody) {
                 const row = document.createElement('tr');
                 row.innerHTML = `
-                    <td><span class="conference-badge ${conferenceClass}">${paper.conference}</span></td>
-                    <td><span class="year-badge ${yearClass}">${paper.year}</span></td>
-                    <td class="list-paper-title">${paper.title}</td>
+                    <td><span class="conference-badge ${conferenceClass}" style="display: inline-block; text-align: center;">${paper.conference}</span></td>
+                    <td><span class="year-badge ${yearClass}" style="display: inline-block; text-align: center;">${paper.year}</span></td>
+                    <td class="list-paper-title" title="${paper.title}">${paper.title}</td>
                     <td><button class="list-copy-button"><i class="fas fa-copy"></i> Copy</button></td>
                 `;
                 

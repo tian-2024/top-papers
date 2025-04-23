@@ -179,11 +179,13 @@
                 <!-- Row 3: Topic tags and Search input combined -->
                 <div class="sidebar-section search-topic-section">
                     <div class="batch-size-container" style="position: relative;">
-                        <label for="batch-size" style="font-size: 16px; font-weight: bold;">Batch size: <span id="batch-size-value">9</span></label>
-                        <button id="view-toggle" class="view-toggle" title="Switch between grid and list view">
-                            <i class="fas fa-list list-view-icon"></i>
-                            <i class="fas fa-th-large grid-view-icon"></i>
-                        </button>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                            <label for="batch-size" style="font-size: 16px; font-weight: bold;">Batch size: <span id="batch-size-value">9</span></label>
+                            <button id="view-toggle" class="view-toggle" title="Switch between grid and list view" style="position: static; transform: none; margin-left: 10px;">
+                                <i class="fas fa-th-large grid-view-icon"></i>
+                                <i class="fas fa-list list-view-icon"></i>
+                            </button>
+                        </div>
                         <input type="range" id="batch-size" min="9" max="18" value="9" step="3" style="width: 100%; margin-top: 5px;">
                     </div>
                     <div class="search-input-container" style="display: flex; flex-direction: column; gap: 8px;">
