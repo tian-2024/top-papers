@@ -341,6 +341,10 @@
                     <div class="batch-size-container" style="position: relative; margin-top: 15px;">
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
                             <label for="batch-size" style="font-size: 16px; font-weight: bold;">Batch size: <span id="batch-size-value">9</span></label>
+                            <div style="background-color: #f5f5f5; border-radius: 4px; border: 1px solid #ddd; display: flex; align-items: center; padding: 8px 16px; cursor: pointer; box-shadow: 0 1px 3px rgba(0,0,0,0.1);" title="Select All Fields">
+                                <input type="checkbox" id="select-all-checkbox" class="field-main-checkbox" checked style="margin: 0; cursor: pointer; margin-right: 8px;">
+                                <span style="font-weight: bold;">All</span>
+                            </div>
                         </div>
                         <input type="range" id="batch-size" min="9" max="18" value="9" step="3" style="width: 100%; margin-top: 5px;">
                     </div>
@@ -350,13 +354,6 @@
                 <div class="sidebar-section fields-section">
                     <div class="fields-container">
                         <div class="field-filters-row">
-                            <div class="field-dropdown" data-field="All">
-                                <div class="field-label" data-field="All">
-                                    <input type="checkbox" id="select-all-checkbox" class="field-main-checkbox" checked>
-                                    <span>All</span>
-                                </div>
-                            </div>
-                            
                             <div class="field-dropdown" data-field="CV">
                                 <div class="field-label dropdown-toggle" data-field="CV">
                                     <input type="checkbox" class="field-main-checkbox" data-field="CV" checked>
