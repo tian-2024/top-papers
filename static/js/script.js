@@ -33,11 +33,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     // 如果当前没有内容，不显示空表格
                     papersGrid.classList.remove('view-active');
                     papersList.classList.remove('view-active');
+                    papersGrid.style.display = 'none';
+                    papersList.style.display = 'none';
                     noResults.style.display = 'block';
                 } else {
                     // 有内容则显示表格
                     papersGrid.classList.remove('view-active');
                     papersList.classList.add('view-active');
+                    papersGrid.style.display = 'none';
+                    papersList.style.display = 'table';
                     noResults.style.display = 'none';
                 }
                 viewToggleBtn.classList.remove('grid-view-active');
@@ -49,11 +53,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     // 如果当前没有内容，继续显示提示
                     papersGrid.classList.remove('view-active');
                     papersList.classList.remove('view-active');
+                    papersGrid.style.display = 'none';
+                    papersList.style.display = 'none';
                     noResults.style.display = 'block';
                 } else {
                     // 有内容则显示网格视图
                     papersList.classList.remove('view-active');
                     papersGrid.classList.add('view-active');
+                    papersList.style.display = 'none';
+                    papersGrid.style.display = 'grid';
                     noResults.style.display = 'none';
                 }
                 viewToggleBtn.classList.remove('list-view-active');
@@ -532,13 +540,23 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (loading) loading.style.display = 'none';
         if (noResults) noResults.style.display = 'none';
-        if (papersGrid) papersGrid.style.display = 'grid';
+        
+        // Fix: Remove the unconditional display setting for grid view
+        // if (papersGrid) papersGrid.style.display = 'grid';
+        
+        // Only set the appropriate view to be active based on currentView
         if (currentView === 'grid') {
             papersGrid.classList.add('view-active');
             papersList.classList.remove('view-active');
+            // Explicitly set display properties
+            papersGrid.style.display = 'grid';
+            papersList.style.display = 'none';
         } else {
             papersList.classList.add('view-active');
             papersGrid.classList.remove('view-active');
+            // Explicitly set display properties
+            papersGrid.style.display = 'none';
+            papersList.style.display = 'table';
         }
         
         // 获取当前年份
