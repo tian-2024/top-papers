@@ -53,9 +53,43 @@
         }
         
         .dropdown-content {
+            position: absolute;
+            display: none;
+            background-color: #fff;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 5px;
+            padding: 10px;
+            width: 100%;
+            left: 0;
+            margin-top: 5px;
+            flex-direction: row !important;
+            flex-wrap: wrap !important;
+        }
+        
+        .dropdown-content.show {
+            display: flex !important;
+        }
+        
+        .conference-option {
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            padding: 5px 10px;
+            margin: 3px;
+            display: flex;
+            align-items: center;
             cursor: pointer;
-            z-index: 1000;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            flex: 0 0 auto;
+            color: #333;
+        }
+        
+        .conference-option:hover {
+            background-color: #f1f1f1;
+        }
+        
+        .field-dropdown {
+            position: relative;
         }
         
         /* List view styles */
@@ -373,10 +407,6 @@
                     <div class="batch-size-container" style="position: relative; margin-top: 15px;">
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
                             <label for="batch-size" style="font-size: 16px; font-weight: bold;">Batch size: <span id="batch-size-value">9</span></label>
-                            <div style="background-color: #f5f5f5; border-radius: 4px; border: 1px solid #ddd; display: flex; align-items: center; padding: 8px 16px; cursor: pointer; box-shadow: 0 1px 3px rgba(0,0,0,0.1);" title="Select All Fields">
-                                <input type="checkbox" id="select-all-checkbox" class="field-main-checkbox" checked style="margin: 0; cursor: pointer; margin-right: 8px;">
-                                <span style="font-weight: bold;">All</span>
-                            </div>
                         </div>
                         <input type="range" id="batch-size" min="9" max="18" value="9" step="3" style="width: 100%; margin-top: 5px;">
                     </div>
@@ -389,6 +419,19 @@
                 <div class="sidebar-section fields-section" style="margin-bottom: 15px; padding: 10px; background-color: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
                     <div class="fields-container">
                         <div class="field-filters-row" style="display: flex; flex-direction: row; justify-content: space-between; gap: 10px;">
+                            <div class="field-dropdown" data-field="All" style="flex: 1; background-color: #f5f5f5; padding: 8px 10px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">
+                                <div class="field-label dropdown-toggle" data-field="All" style="color: #333; font-weight: bold; display: flex; justify-content: space-between; align-items: center;">
+                                    <div>
+                                        <input type="checkbox" id="select-all-checkbox" class="field-main-checkbox" data-field="All" checked>
+                                        <span>All</span>
+                                    </div>
+                                    <i class="fas fa-caret-down"></i>
+                                </div>
+                                <div class="dropdown-content" id="dropdown-All">
+                                    <!-- All会议选项将动态添加 -->
+                                </div>
+                            </div>
+
                             <div class="field-dropdown" data-field="CV" style="flex: 1; background-color: #8bc34a; padding: 8px 10px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">
                                 <div class="field-label dropdown-toggle" data-field="CV" style="color: white; font-weight: bold; display: flex; justify-content: space-between; align-items: center;">
                                     <div>
@@ -397,7 +440,7 @@
                                     </div>
                                     <i class="fas fa-caret-down"></i>
                                 </div>
-                                <div class="dropdown-content" id="dropdown-CV">
+                                <div class="dropdown-content" id="dropdown-CV" style="display: none; position: absolute; left: 0; right: 0; flex-wrap: wrap; flex-direction: row; justify-content: start; gap: 10px; padding: 10px; z-index: 100;">
                                     <!-- CV会议选项将动态添加 -->
                                 </div>
                             </div>
@@ -410,7 +453,7 @@
                                     </div>
                                     <i class="fas fa-caret-down"></i>
                                 </div>
-                                <div class="dropdown-content" id="dropdown-AI">
+                                <div class="dropdown-content" id="dropdown-AI" style="display: none; position: absolute; left: 0; right: 0; flex-wrap: wrap; flex-direction: row; justify-content: start; gap: 10px; padding: 10px; z-index: 100;">
                                     <!-- AI会议选项将动态添加 -->
                                 </div>
                             </div>
@@ -423,7 +466,7 @@
                                     </div>
                                     <i class="fas fa-caret-down"></i>
                                 </div>
-                                <div class="dropdown-content" id="dropdown-ML">
+                                <div class="dropdown-content" id="dropdown-ML" style="display: none; position: absolute; left: 0; right: 0; flex-wrap: wrap; flex-direction: row; justify-content: start; gap: 10px; padding: 10px; z-index: 100;">
                                     <!-- ML会议选项将动态添加 -->
                                 </div>
                             </div>
@@ -436,7 +479,7 @@
                                     </div>
                                     <i class="fas fa-caret-down"></i>
                                 </div>
-                                <div class="dropdown-content" id="dropdown-Other">
+                                <div class="dropdown-content" id="dropdown-Other" style="display: none; position: absolute; left: 0; right: 0; flex-wrap: wrap; flex-direction: row; justify-content: start; gap: 10px; padding: 10px; z-index: 100;">
                                     <!-- 其他会议选项将动态添加 -->
                                 </div>
                             </div>
