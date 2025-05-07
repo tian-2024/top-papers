@@ -188,15 +188,29 @@
                 padding: 2px 6px;
                 font-size: 0.8em;
             }
+            
+            /* 字段选择响应式样式 */
+            .field-filters-row {
+                flex-wrap: wrap !important;
+                gap: 8px !important;
+            }
+            
+            .field-dropdown {
+                flex: 1 1 45% !important;  /* 在中等屏幕上每行显示两个 */
+                min-width: calc(50% - 8px);
+            }
         }
         
         /* 小屏幕手机适配 */
         @media (max-width: 480px) {
             .field-filters-row {
-                flex-direction: column;
+                flex-direction: column !important;
             }
             .field-dropdown {
-                flex-basis: 100%;
+                flex: 1 1 100% !important;  /* 在小屏幕上每行显示一个 */
+                width: 100% !important;
+                min-width: 100%;
+                margin-bottom: 5px;
             }
             
             /* 小屏幕列表视图适配 */
@@ -372,43 +386,55 @@
             <!-- Right column: Paper display area -->
             <div class="paper-container">
                 <!-- Field selection moved to top of right sidebar -->
-                <div class="sidebar-section fields-section" style="margin-bottom: 15px; padding: 8px; background-color: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <div class="sidebar-section fields-section" style="margin-bottom: 15px; padding: 10px; background-color: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
                     <div class="fields-container">
-                        <div class="field-filters-row" style="justify-content: center; gap: 10px;">
-                            <div class="field-dropdown" data-field="CV" style="flex-basis: auto; background-color: #8bc34a; padding: 8px 16px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">
-                                <div class="field-label dropdown-toggle" data-field="CV" style="color: white; font-weight: bold;">
-                                    <input type="checkbox" class="field-main-checkbox" data-field="CV" checked>
-                                    <span>CV</span> <i class="fas fa-caret-down"></i>
+                        <div class="field-filters-row" style="display: flex; flex-direction: row; justify-content: space-between; gap: 10px;">
+                            <div class="field-dropdown" data-field="CV" style="flex: 1; background-color: #8bc34a; padding: 8px 10px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">
+                                <div class="field-label dropdown-toggle" data-field="CV" style="color: white; font-weight: bold; display: flex; justify-content: space-between; align-items: center;">
+                                    <div>
+                                        <input type="checkbox" class="field-main-checkbox" data-field="CV" checked>
+                                        <span>CV</span>
+                                    </div>
+                                    <i class="fas fa-caret-down"></i>
                                 </div>
                                 <div class="dropdown-content" id="dropdown-CV">
                                     <!-- CV会议选项将动态添加 -->
                                 </div>
                             </div>
                             
-                            <div class="field-dropdown" data-field="AI" style="flex-basis: auto; background-color: #ff9a9a; padding: 8px 16px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">
-                                <div class="field-label dropdown-toggle" data-field="AI" style="color: white; font-weight: bold;">
-                                    <input type="checkbox" class="field-main-checkbox" data-field="AI" checked>
-                                    <span>AI</span> <i class="fas fa-caret-down"></i>
+                            <div class="field-dropdown" data-field="AI" style="flex: 1; background-color: #ff9a9a; padding: 8px 10px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">
+                                <div class="field-label dropdown-toggle" data-field="AI" style="color: white; font-weight: bold; display: flex; justify-content: space-between; align-items: center;">
+                                    <div>
+                                        <input type="checkbox" class="field-main-checkbox" data-field="AI" checked>
+                                        <span>AI</span>
+                                    </div>
+                                    <i class="fas fa-caret-down"></i>
                                 </div>
                                 <div class="dropdown-content" id="dropdown-AI">
                                     <!-- AI会议选项将动态添加 -->
                                 </div>
                             </div>
                             
-                            <div class="field-dropdown" data-field="ML" style="flex-basis: auto; background-color: #ce93d8; padding: 8px 16px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">
-                                <div class="field-label dropdown-toggle" data-field="ML" style="color: white; font-weight: bold;">
-                                    <input type="checkbox" class="field-main-checkbox" data-field="ML" checked>
-                                    <span>ML</span> <i class="fas fa-caret-down"></i>
+                            <div class="field-dropdown" data-field="ML" style="flex: 1; background-color: #ce93d8; padding: 8px 10px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">
+                                <div class="field-label dropdown-toggle" data-field="ML" style="color: white; font-weight: bold; display: flex; justify-content: space-between; align-items: center;">
+                                    <div>
+                                        <input type="checkbox" class="field-main-checkbox" data-field="ML" checked>
+                                        <span>ML</span>
+                                    </div>
+                                    <i class="fas fa-caret-down"></i>
                                 </div>
                                 <div class="dropdown-content" id="dropdown-ML">
                                     <!-- ML会议选项将动态添加 -->
                                 </div>
                             </div>
                             
-                            <div class="field-dropdown" data-field="Other" style="flex-basis: auto; background-color: #d4a76a; padding: 8px 16px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">
-                                <div class="field-label dropdown-toggle" data-field="Other" style="color: white; font-weight: bold;">
-                                    <input type="checkbox" class="field-main-checkbox" data-field="Other" checked>
-                                    <span>Other</span> <i class="fas fa-caret-down"></i>
+                            <div class="field-dropdown" data-field="Other" style="flex: 1; background-color: #d4a76a; padding: 8px 10px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">
+                                <div class="field-label dropdown-toggle" data-field="Other" style="color: white; font-weight: bold; display: flex; justify-content: space-between; align-items: center;">
+                                    <div>
+                                        <input type="checkbox" class="field-main-checkbox" data-field="Other" checked>
+                                        <span>Other</span>
+                                    </div>
+                                    <i class="fas fa-caret-down"></i>
                                 </div>
                                 <div class="dropdown-content" id="dropdown-Other">
                                     <!-- 其他会议选项将动态添加 -->
