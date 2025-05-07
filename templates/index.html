@@ -254,6 +254,24 @@
                 padding: 0 10px;
                 box-sizing: border-box;
             }
+            
+            /* Field selection responsive styling */
+            .field-filters-row {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .field-dropdown {
+                margin-bottom: 8px;
+            }
+        }
+        
+        /* Small screens */
+        @media (max-width: 480px) {
+            .field-dropdown {
+                flex-basis: calc(50% - 10px) !important;
+                margin-bottom: 10px;
+            }
         }
     </style>
 </head>
@@ -349,13 +367,16 @@
                         <input type="range" id="batch-size" min="9" max="18" value="9" step="3" style="width: 100%; margin-top: 5px;">
                     </div>
                 </div>
-                
-                <!-- Row 4: Field selection -->
-                <div class="sidebar-section fields-section">
+            </div>
+            
+            <!-- Right column: Paper display area -->
+            <div class="paper-container">
+                <!-- Field selection moved to top of right sidebar -->
+                <div class="sidebar-section fields-section" style="margin-bottom: 15px; padding: 8px; background-color: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
                     <div class="fields-container">
-                        <div class="field-filters-row">
-                            <div class="field-dropdown" data-field="CV">
-                                <div class="field-label dropdown-toggle" data-field="CV">
+                        <div class="field-filters-row" style="justify-content: center; gap: 10px;">
+                            <div class="field-dropdown" data-field="CV" style="flex-basis: auto; background-color: #8bc34a; padding: 8px 16px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">
+                                <div class="field-label dropdown-toggle" data-field="CV" style="color: white; font-weight: bold;">
                                     <input type="checkbox" class="field-main-checkbox" data-field="CV" checked>
                                     <span>CV</span> <i class="fas fa-caret-down"></i>
                                 </div>
@@ -364,8 +385,8 @@
                                 </div>
                             </div>
                             
-                            <div class="field-dropdown" data-field="AI">
-                                <div class="field-label dropdown-toggle" data-field="AI">
+                            <div class="field-dropdown" data-field="AI" style="flex-basis: auto; background-color: #ff9a9a; padding: 8px 16px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">
+                                <div class="field-label dropdown-toggle" data-field="AI" style="color: white; font-weight: bold;">
                                     <input type="checkbox" class="field-main-checkbox" data-field="AI" checked>
                                     <span>AI</span> <i class="fas fa-caret-down"></i>
                                 </div>
@@ -374,8 +395,8 @@
                                 </div>
                             </div>
                             
-                            <div class="field-dropdown" data-field="ML">
-                                <div class="field-label dropdown-toggle" data-field="ML">
+                            <div class="field-dropdown" data-field="ML" style="flex-basis: auto; background-color: #ce93d8; padding: 8px 16px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">
+                                <div class="field-label dropdown-toggle" data-field="ML" style="color: white; font-weight: bold;">
                                     <input type="checkbox" class="field-main-checkbox" data-field="ML" checked>
                                     <span>ML</span> <i class="fas fa-caret-down"></i>
                                 </div>
@@ -384,8 +405,8 @@
                                 </div>
                             </div>
                             
-                            <div class="field-dropdown" data-field="Other">
-                                <div class="field-label dropdown-toggle" data-field="Other">
+                            <div class="field-dropdown" data-field="Other" style="flex-basis: auto; background-color: #d4a76a; padding: 8px 16px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">
+                                <div class="field-label dropdown-toggle" data-field="Other" style="color: white; font-weight: bold;">
                                     <input type="checkbox" class="field-main-checkbox" data-field="Other" checked>
                                     <span>Other</span> <i class="fas fa-caret-down"></i>
                                 </div>
@@ -396,10 +417,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Right column: Paper display area -->
-            <div class="paper-container">
+                
                 <div id="loading" class="loading" style="display: none;">Loading papers...</div>
                 <div id="no-results" class="no-results">
                     Please select a topic and sample a batch of papers..
