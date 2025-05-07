@@ -33,7 +33,7 @@ But I think the basic search function for related topics is already quite useful
 
 ### Acknowledgement
 
-The data source is borrowed from [papercopilot](https://github.com/papercopilot/paperlists).
+The data source is borrowed from [papercopilot](https://github.com/papercopilot/paperlists) and [dblp](https://dblp.org/).
 
 
 
