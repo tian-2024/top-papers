@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top AI Papers</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .main-content {
+            display: flex;
+            position: relative;
+        }
+        .paper-container {
+            flex: 1;
+            overflow: auto;
+        }
+        .sidebar {
+            width: 240px;
+            flex-shrink: 0;
+            max-width: 240px;
+        }
+        .papers-grid {
+            display: none; /* Hidden by default */
+            gap: 16px;
+            margin-top: 5px;
+        }
+        .papers-grid.view-active {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns when active */
+        }
+        .field-filters-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 3px;
+        }
+        .field-dropdown {
+            flex-basis: 47%;
+            margin-bottom: 5px;
+            font-size: 0.85em;
+        }
+        .field-label {
+            white-space: nowrap;
+            font-size: 0.85em;
+            padding: 2px;
+        }
+        .sidebar-section {
+            padding: 8px;
+        }
+        .dropdown-toggle i {
+            font-size: 0.85em;
+        }
+        
+        .dropdown-content {
+            position: absolute;
+            display: none;
+            background-color: #fff;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 5px;
+            padding: 10px;
+            width: 100%;
+            left: 0;
+            margin-top: 5px;
+            flex-direction: row !important;
+            flex-wrap: wrap !important;
+        }
+        
+        .dropdown-content.show {
+            display: flex !important;
+        }
+        
+        .conference-option {
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            padding: 5px 10px;
+            margin: 3px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            flex: 0 0 auto;
+            color: #333;
+        }
+        
+        .conference-option:hover {
+            background-color: #f1f1f1;
+        }
+        
+        .field-dropdown {
+            position: relative;
+        }
+        
+        /* List view styles */
+        .papers-list-view {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            display: none;
+        }
+        
+        .papers-list-view.view-active {
+            display: table;
+        }
+        
+        .papers-list-view th, 
+        .papers-list-view td {
+            padding: 8px 12px;
+            text-align: left;
+        }
+        
+        .papers-list-view th {
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .papers-list-view td {
+            border-bottom: none;
+        }
+        
+        .papers-list-view tr {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+        
+        .papers-list-view th:first-child,
+        .papers-list-view td:first-child {
+            width: 80px;
+        }
+        
+        .papers-list-view th:nth-child(2),
+        .papers-list-view td:nth-child(2) {
+            width: 60px;
+        }
+        
+        .papers-list-view th:nth-child(3),
+        .papers-list-view td:nth-child(3) {
+            flex: 1;
+        }
+        
+        .papers-list-view th:last-child,
+        .papers-list-view td:last-child {
+            width: 80px;
+            text-align: right;
+        }
+        
+        .list-paper-title {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 100%;
+        }
+        
+        .list-copy-button {
+            padding: 3px 8px;
+            background-color: #4a4a4a;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+        
+        .list-copy-button i {
+            font-size: 0.85em;
+        }
+        
+        .list-copy-button:hover {
+            background-color: #333;
+        }
+        
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                max-width: 100%;
+                flex: 1 1 auto;
+                margin-bottom: 20px;
+                box-sizing: border-box;
+                margin-left: 0;
+                margin-right: 0;
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .sidebar-section {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+            }
+            .papers-grid {
+                grid-template-columns: 1fr;
+            }
+            .field-dropdown {
+                flex-basis: 47%;
+            }
+            
+            /* 列表视图移动端适配 */
+            .papers-list-view th:first-child,
+            .papers-list-view td:first-child {
+                width: 60px;
+            }
+            
+            .papers-list-view th:nth-child(2),
+            .papers-list-view td:nth-child(2) {
+                width: 50px;
+            }
+            
+            .papers-list-view th:last-child,
+            .papers-list-view td:last-child {
+                width: 70px;
+            }
+            
+            .list-copy-button {
+                padding: 2px 6px;
+                font-size: 0.8em;
+            }
+            
+            /* 字段选择响应式样式 */
+            .field-filters-row {
+                flex-wrap: wrap !important;
+                gap: 8px !important;
+            }
+            
+            .field-dropdown {
+                flex: 1 1 45% !important;  /* 在中等屏幕上每行显示两个 */
+                min-width: calc(50% - 8px);
+            }
+        }
+        
+        /* 小屏幕手机适配 */
+        @media (max-width: 480px) {
+            .field-filters-row {
+                flex-direction: column !important;
+            }
+            .field-dropdown {
+                flex: 1 1 100% !important;  /* 在小屏幕上每行显示一个 */
+                width: 100% !important;
+                min-width: 100%;
+                margin-bottom: 5px;
+            }
+            
+            /* 小屏幕列表视图适配 */
+            .papers-list-view tr {
+                padding: 6px 0;
+            }
+            
+            .papers-list-view th:first-child,
+            .papers-list-view td:first-child {
+                width: 50px;
+                font-size: 0.9em;
+            }
+            
+            .papers-list-view th:nth-child(2),
+            .papers-list-view td:nth-child(2) {
+                width: 40px;
+                font-size: 0.9em;
+            }
+            
+            .papers-list-view th:last-child,
+            .papers-list-view td:last-child {
+                width: 60px;
+            }
+            
+            .list-copy-button {
+                padding: 2px 4px;
+                font-size: 0.75em;
+            }
+            
+            .list-paper-title {
+                font-size: 0.9em;
+            }
+        }
+        
+        /* 无限滚动加载指示器样式 */
+        .load-more-indicator {
+            border-top: 1px solid #e0e0e0;
+            margin-top: 20px;
+        }
+        
+        .loading-more {
+            color: #666;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .loading-more i {
+            color: #4a4a4a;
+        }
+        
+        .no-more-papers {
+            font-size: 14px;
+            font-style: italic;
+            color: #666;
+        }
+        
+        /* 夜间模式下的加载指示器样式 */
+        .dark-mode .load-more-indicator {
+            border-top-color: #444;
+        }
+        
+        .dark-mode .loading-more {
+            color: #bdc3c7;
+        }
+        
+        .dark-mode .loading-more i {
+            color: #3498db;
+        }
+        
+        .dark-mode .no-more-papers {
+            color: #bdc3c7;
+        }
+        
+        /* 移动端加载指示器样式调整 */
+        @media (max-width: 768px) {
+            .load-more-indicator {
+                padding: 15px;
+                margin: 15px 0;
+            }
+            
+            .loading-more, .no-more-papers {
+                font-size: 13px;
+            }
+        }
+        
+        /* 论文统计信息样式 */
+        .papers-stats {
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+        
+        .papers-stats:hover {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .stats-content {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .stats-text strong {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        
+        .stats-progress {
+            background-color: #fff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        
+        /* 移动端统计信息样式调整 */
+        @media (max-width: 768px) {
+            .papers-stats {
+                margin-bottom: 10px;
+                padding: 8px;
+            }
+            
+            .stats-content {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+            
+            .stats-text {
+                font-size: 13px;
+            }
+            
+            .stats-progress {
+                font-size: 11px;
+                align-self: flex-end;
+            }
+        }
+        
+        /* 暗色主题下的统计信息样式 */
+        .dark-mode .papers-stats {
+            background-color: #2c3e50;
+            border-left-color: #3498db;
+            border-color: #34495e;
+        }
+        
+        .dark-mode .papers-stats:hover {
+            box-shadow: 0 2px 8px rgba(255,255,255,0.1);
+        }
+        
+        .dark-mode .stats-text {
+            color: #ecf0f1;
+        }
+        
+        .dark-mode .stats-text strong {
+            color: #3498db;
+        }
+        
+        .dark-mode .stats-progress {
+            background-color: #34495e;
+            color: #bdc3c7;
+            border-color: #4a5568;
+        }
+        
+        /* 夜间模式下的侧边栏样式修复 */
+        .dark-mode .sidebar-section {
+            background-color: #2d2d2d;
+            border: 1px solid #444;
+        }
+        
+        .dark-mode .container {
+            background-color: #1a1a1a;
+        }
+        
+        .dark-mode .paper-container {
+            background-color: #2d2d2d !important;
+            border: 1px solid #444 !important;
+        }
+        
+        /* 修复All选项在夜间模式下的显示问题 */
+        .dark-mode .field-dropdown[data-field="All"] .field-label {
+            background-color: #34495e !important;
+            color: #ecf0f1 !important;
+            border-color: #4a5568 !important;
+        }
+        
+        .dark-mode .field-dropdown[data-field="All"] .field-label:hover {
+            background-color: #4a5568 !important;
+        }
+        
+        /* 夜间模式下的按钮样式修复 */
+        .dark-mode button {
+            background-color: #34495e;
+            color: #ecf0f1;
+            border-color: #4a5568;
+        }
+        
+        .dark-mode button:hover {
+            background-color: #4a5568;
+        }
+        
+        .dark-mode .reset-btn {
+            background-color: #34495e;
+            color: #ecf0f1;
+        }
+        
+        .dark-mode .reset-btn:hover {
+            background-color: #4a5568;
+        }
+        
+        /* 夜间模式下的输入框样式修复 */
+        .dark-mode input[type="text"],
+        .dark-mode input[type="range"],
+        .dark-mode select {
+            background-color: #2d2d2d;
+            color: #ecf0f1;
+            border-color: #444;
+        }
+        
+        .dark-mode input[type="text"]:focus,
+        .dark-mode select:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+        }
+        
+        /* 夜间模式下的主题切换按钮修复 */
+        .dark-mode .toggle-switch {
+            background-color: #34495e;
+        }
+        
+        .dark-mode .toggle-switch input:checked + .toggle-slider {
+            background-color: #3498db;
+        }
+        
+        /* 夜间模式下的no-results样式修复 */
+        .dark-mode .no-results {
+            color: #bdc3c7;
+            background-color: #2d2d2d;
+        }
+        
+        /* 夜间模式下的字段选择区域背景修复 */
+        .dark-mode .fields-section {
+            background-color: #2d2d2d !important;
+            border: 1px solid #444 !important;
+        }
+        
+        /* 夜间模式下的主体背景修复 */
+        .dark-mode body {
+            background-color: #1a1a1a !important;
+        }
+        
+        /* 夜间模式下的下拉菜单背景修复 */
+        .dark-mode .dropdown-content {
+            background-color: #2d2d2d !important;
+            border-color: #444 !important;
+        }
+        
+        .dark-mode .conference-option {
+            background-color: #2d2d2d !important;
+            color: #ecf0f1 !important;
+        }
+        
+        .dark-mode .conference-option:hover {
+            background-color: #3a3a3a !important;
+        }
+        
+        /* 返回顶部按钮样式 */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            font-size: 18px;
+        }
+        
+        .back-to-top:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(52, 152, 219, 0.4);
+        }
+        
+        .dark-mode .back-to-top {
+            background-color: #34495e;
+            box-shadow: 0 4px 12px rgba(52, 73, 94, 0.3);
+        }
+        
+        .dark-mode .back-to-top:hover {
+            background-color: #4a5568;
+            box-shadow: 0 6px 16px rgba(74, 85, 104, 0.4);
+        }
+        
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+                font-size: 16px;
+            }
+        }
+        
+        /* 内联统计信息的夜间模式样式 */
+        .dark-mode .stats-progress {
+            color: #bdc3c7 !important;
+        }
+        
+        /* 夜间模式下的侧边栏和按钮样式完整修复 */
+        .dark-mode .sidebar-section {
+            background-color: #2d2d2d !important;
+            border: 1px solid #444 !important;
+            color: #ecf0f1 !important;
+        }
+        
+        .dark-mode .title-section {
+            background-color: #2d2d2d !important;
+            border-color: #444 !important;
+        }
+        
+        .dark-mode .title-section h1 {
+            color: #ecf0f1 !important;
+        }
+        
+        .dark-mode .year-section {
+            background-color: #2d2d2d !important;
+            border-color: #444 !important;
+        }
+        
+        .dark-mode .search-topic-section {
+            background-color: #2d2d2d !important;
+            border-color: #444 !important;
+        }
+        
+        .dark-mode .fields-section {
+            background-color: #2d2d2d !important;
+            border: 1px solid #444 !important;
+        }
+        
+        /* 夜间模式下的按钮样式修复 */
+        .dark-mode #all-years-btn,
+        .dark-mode #recent-years-btn,
+        .dark-mode .reset-btn {
+            background-color: #34495e !important;
+            color: #ecf0f1 !important;
+            border: 1px solid #4a5568 !important;
+        }
+        
+        .dark-mode #all-years-btn:hover,
+        .dark-mode #recent-years-btn:hover,
+        .dark-mode .reset-btn:hover {
+            background-color: #4a5568 !important;
+        }
+        
+        .dark-mode #search-btn {
+            background-color: #3498db !important;
+            color: #ecf0f1 !important;
+            border: 1px solid #2980b9 !important;
+        }
+        
+        .dark-mode #search-btn:hover {
+            background-color: #2980b9 !important;
+        }
+        
+        /* 夜间模式下的输入框和选择框样式修复 */
+        .dark-mode #topic-input,
+        .dark-mode #start-year,
+        .dark-mode #end-year {
+            background-color: #2d2d2d !important;
+            color: #ecf0f1 !important;
+            border: 1px solid #444 !important;
+        }
+        
+        .dark-mode #topic-input:focus,
+        .dark-mode #start-year:focus,
+        .dark-mode #end-year:focus {
+            border-color: #3498db !important;
+            box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2) !important;
+        }
+        
+        /* 夜间模式下的年份分隔符样式 */
+        .dark-mode .year-separator span {
+            color: #ecf0f1 !important;
+        }
+        
+        /* 夜间模式下的主题切换按钮样式 */
+        .dark-mode .toggle-switch {
+            background-color: #34495e !important;
+        }
+        
+        .dark-mode .toggle-switch input:checked + .toggle-slider {
+            background-color: #3498db !important;
+        }
+        
+        .dark-mode .toggle-slider {
+            background-color: #444 !important;
+        }
+        
+        .dark-mode .toggle-slider:before {
+            background-color: #ecf0f1 !important;
+        }
+        
+        /* 夜间模式下的topic标签样式 */
+        .dark-mode .topic-tag {
+            background-color: #34495e !important;
+            color: #ecf0f1 !important;
+            border: 1px solid #4a5568 !important;
+        }
+        
+        .dark-mode .topic-tag:hover {
+            background-color: #4a5568 !important;
+        }
+        
+        .dark-mode .topic-tag.active {
+            background-color: #3498db !important;
+            color: #ecf0f1 !important;
+        }
+        
+        /* 夜间模式下的字段选择区域样式 */
+        .dark-mode .field-dropdown {
+            border: 1px solid #444 !important;
+        }
+        
+        .dark-mode .field-dropdown[data-field="All"] {
+            background-color: #34495e !important;
+        }
+        
+        .dark-mode .field-dropdown[data-field="All"] .field-label {
+            color: #ecf0f1 !important;
+        }
+        
+        .dark-mode .field-dropdown[data-field="ML"] {
+            background-color: #8e44ad !important;
+        }
+        
+        .dark-mode .field-dropdown[data-field="CV"] {
+            background-color: #27ae60 !important;
+        }
+        
+        .dark-mode .field-dropdown[data-field="AI"] {
+            background-color: #e74c3c !important;
+        }
+        
+        .dark-mode .field-dropdown[data-field="Other"] {
+            background-color: #d68910 !important;
+        }
+        
+        /* 夜间模式下的复选框样式 */
+        .dark-mode .field-main-checkbox {
+            background-color: #2d2d2d !important;
+            border: 1px solid #444 !important;
+        }
+        
+        .dark-mode .field-main-checkbox:checked {
+            background-color: #3498db !important;
+            border-color: #3498db !important;
+        }
+        
+        /* 夜间模式下的下拉菜单样式 */
+        .dark-mode .dropdown-content {
+            background-color: #2d2d2d !important;
+            border: 1px solid #444 !important;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5) !important;
+        }
+        
+        .dark-mode .conference-option {
+            background-color: #34495e !important;
+            color: #ecf0f1 !important;
+        }
+        
+        .dark-mode .conference-option:hover {
+            background-color: #4a5568 !important;
+        }
+        
+        /* 夜间模式下的表格样式 */
+        .dark-mode .papers-list-view {
+            background-color: #2d2d2d !important;
+            color: #ecf0f1 !important;
+        }
+        
+        .dark-mode .papers-list-view th {
+            background-color: #34495e !important;
+            color: #ecf0f1 !important;
+            border-bottom-color: #4a5568 !important;
+        }
+        
+        .dark-mode .papers-list-view td {
+            color: #ecf0f1 !important;
+        }
+        
+        .dark-mode .papers-list-view tr:hover {
+            background-color: rgba(255, 255, 255, 0.05) !important;
+        }
+        
+        /* 夜间模式下的复制按钮样式 */
+        .dark-mode .list-copy-button {
+            background-color: #34495e !important;
+            color: #ecf0f1 !important;
+        }
+        
+        .dark-mode .list-copy-button:hover {
+            background-color: #4a5568 !important;
+        }
+        
+        /* 夜间模式下的GitHub链接样式 */
+        .dark-mode .github-link {
+            color: #5dade2 !important;
+        }
+        
+        .dark-mode .github-link:hover {
+            color: #3498db !important;
+        }
+    </style>
+    <style>
+        /* 额外的移动端适配样式 */
+        @media (max-width: 768px) {
+            .paper-container {
+                width: 100%;
+                padding: 0;
+                margin: 0;
+            }
+            .papers-grid {
+                width: 100%;
+                padding: 0;
+                margin: 5px 0 0 0;
+            }
+            .paper-card {
+                width: 100%;
+                margin: 0 0 16px 0;
+                box-sizing: border-box;
+            }
+            .container {
+                width: 100%;
+                padding: 0 10px;
+                box-sizing: border-box;
+            }
+            
+            /* Field selection responsive styling */
+            .field-filters-row {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .field-dropdown {
+                margin-bottom: 8px;
+            }
+        }
+        
+        /* Small screens */
+        @media (max-width: 480px) {
+            .field-dropdown {
+                flex-basis: calc(50% - 10px) !important;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <!-- Left column: Sidebar with search controls -->
+            <div class="sidebar">
+                <!-- Row 1: Title -->
+                <div class="sidebar-section title-section">
+                    <h1>Top Con Papers</h1>
+                    <div class="title-icons">
+                        <!-- <a href="https://github.com/tian-2024/top-papers" class="github-link"><i class="fab fa-github"></i></a> -->
+                        <div class="theme-toggle">
+                            <span class="toggle-icon">🌙</span>
+                            <!-- <label class="toggle-switch">
+                                <input type="checkbox" id="theme-toggle-input">
+                                <span class="toggle-slider"></span>
+                            </label> -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Row 2: Year selection -->
+                <div class="sidebar-section year-section">
+                    <div class="year-filter-container" style="display: flex; flex-direction: column; gap: 8px; width: 100%;">
+                        <!-- 按钮行 -->
+                        <div style="display: flex; width: 100%; align-items: center; justify-content: space-between;">
+                            <div style="width: 45%;">
+                                <button id="all-years-btn" class="reset-btn" title="Show all years" style="width: 100%; padding: 4px; margin-bottom: 5px; background-color: #4a4a4ad7;">
+                                    All
+                                </button>
+                            </div>
+                            <div style="width: 10%; display: flex; justify-content: center;"></div> <!-- 占位 -->
+                            <div style="width: 45%;">
+                                <button id="recent-years-btn" class="reset-btn" title="Reset to recent years" style="width: 100%; padding: 4px; margin-bottom: 5px; background-color: #4a4a4a96;">
+                                    Recent
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- 年份选择行 -->
+                        <div style="display: flex; width: 100%; align-items: center; justify-content: space-between;">
+                            <div style="width: 45%;">
+                                <select id="start-year" style="width: 100%;">
+                                    <option value="2019">2019</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023" selected>2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                </select>
+                            </div>
+                            <div style="width: 10%; display: flex; justify-content: center;">
+                                <div class="year-separator">
+                                    <span>to</span>
+                                </div>
+                            </div>
+                            <div style="width: 45%;">
+                                <select id="end-year" style="width: 100%;">
+                                    <option value="2019">2019</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025" selected>2025</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Row 3: Topic tags and Search input combined -->
+                <div class="sidebar-section search-topic-section">
+                    <div class="search-input-container" style="display: flex; flex-direction: column; gap: 8px;">
+                        <input type="text" id="topic-input" placeholder="Enter topic keywords" style="width: 100%;">
+                        <button id="search-btn" style="width: 100%; text-align: center; display: flex; justify-content: center; align-items: center;">Get Papers</button>
+                    </div>
+                    <div class="topic-tags">
+                        <button class="topic-tag" data-topic="flow matching">flow matching</button>
+                        <button class="topic-tag" data-topic="diffusion">diffusion</button>    
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right column: Paper display area -->
+            <div class="paper-container">
+                <!-- Field selection moved to top of right sidebar -->
+                <div class="sidebar-section fields-section" style="margin-bottom: 15px; padding: 10px; background-color: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <div class="fields-container">
+                        <div class="field-filters-row" style="display: flex; flex-direction: row; justify-content: space-between; gap: 10px; align-items: center;">
+                            <!-- 统计信息显示在All按钮左边 -->
+                            <div class="stats-progress" style="font-size: 12px; color: #777; white-space: nowrap;">
+                                <span id="displayed-count-inline">0</span> / <span id="total-count-inline">0</span> 已显示
+                            </div>
+                            
+                            <div class="field-dropdown" data-field="All" style="flex: 0 0 60px; background-color: #333; padding: 8px 10px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">
+                                <div class="field-label" data-field="All" style="color: white; font-weight: bold; display: flex; justify-content: center; align-items: center;">
+                                    <div>
+                                        <input type="checkbox" id="select-all-checkbox" class="field-main-checkbox" data-field="All" checked>
+                                        <span>All</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field-dropdown" data-field="ML" style="flex: 1; background-color: #ce93d8; padding: 8px 10px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">
+                                <div class="field-label dropdown-toggle" data-field="ML" style="color: white; font-weight: bold; display: flex; justify-content: space-between; align-items: center;">
+                                    <div>
+                                        <input type="checkbox" class="field-main-checkbox" data-field="ML" checked>
+                                        <span>ML</span>
+                                    </div>
+                                    <i class="fas fa-caret-down"></i>
+                                </div>
+                                <div class="dropdown-content" id="dropdown-ML" style="display: none; position: absolute; left: 0; right: 0; flex-wrap: wrap; flex-direction: row; justify-content: start; gap: 10px; padding: 10px; z-index: 100;">
+                                    <!-- ML会议选项将动态添加 -->
+                                </div>
+                            </div>
+                            
+                            <div class="field-dropdown" data-field="CV" style="flex: 1; background-color: #8bc34a; padding: 8px 10px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">
+                                <div class="field-label dropdown-toggle" data-field="CV" style="color: white; font-weight: bold; display: flex; justify-content: space-between; align-items: center;">
+                                    <div>
+                                        <input type="checkbox" class="field-main-checkbox" data-field="CV" checked>
+                                        <span>CV</span>
+                                    </div>
+                                    <i class="fas fa-caret-down"></i>
+                                </div>
+                                <div class="dropdown-content" id="dropdown-CV" style="display: none; position: absolute; left: 0; right: 0; flex-wrap: wrap; flex-direction: row; justify-content: start; gap: 10px; padding: 10px; z-index: 100;">
+                                    <!-- CV会议选项将动态添加 -->
+                                </div>
+                            </div>
+                            
+                            <div class="field-dropdown" data-field="AI" style="flex: 1; background-color: #ff9a9a; padding: 8px 10px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">
+                                <div class="field-label dropdown-toggle" data-field="AI" style="color: white; font-weight: bold; display: flex; justify-content: space-between; align-items: center;">
+                                    <div>
+                                        <input type="checkbox" class="field-main-checkbox" data-field="AI" checked>
+                                        <span>AI</span>
+                                    </div>
+                                    <i class="fas fa-caret-down"></i>
+                                </div>
+                                <div class="dropdown-content" id="dropdown-AI" style="display: none; position: absolute; left: 0; right: 0; flex-wrap: wrap; flex-direction: row; justify-content: start; gap: 10px; padding: 10px; z-index: 100;">
+                                    <!-- AI会议选项将动态添加 -->
+                                </div>
+                            </div>
+                            
+                            <div class="field-dropdown" data-field="Other" style="flex: 1; background-color: #d4a76a; padding: 8px 10px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">
+                                <div class="field-label dropdown-toggle" data-field="Other" style="color: white; font-weight: bold; display: flex; justify-content: space-between; align-items: center;">
+                                    <div>
+                                        <input type="checkbox" class="field-main-checkbox" data-field="Other" checked>
+                                        <span>Other</span>
+                                    </div>
+                                    <i class="fas fa-caret-down"></i>
+                                </div>
+                                <div class="dropdown-content" id="dropdown-Other" style="display: none; position: absolute; left: 0; right: 0; flex-wrap: wrap; flex-direction: row; justify-content: start; gap: 10px; padding: 10px; z-index: 100;">
+                                    <!-- 其他会议选项将动态添加 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="loading" class="loading" style="display: none;">Loading papers...</div>
+                <div id="no-results" class="no-results">
+                    Please select a topic and sample a batch of papers..
+                </div>
+                
+                <!-- 论文统计信息 - 简化版本，只显示总数 -->
+                <div id="papers-stats" class="papers-stats" style="display: none !important; margin-bottom: 15px; padding: 10px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #4a4a4a;">
+                    <div class="stats-content" style="display: flex; justify-content: center; align-items: center;">
+                        <div class="stats-text" style="font-size: 14px; color: #555;">
+                            <span id="papers-count-text">找到 <strong id="total-papers-count">0</strong> 篇符合要求的论文</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <table id="papers-list-view" class="papers-list-view">
+                    <thead>
+                        <tr>
+                            <th>Conference</th>
+                            <th>Year</th>
+                            <th>Title</th>
+                            <th>Copy All</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Paper list items will be inserted here -->
+                    </tbody>
+                </table>
+                
+                <!-- 无限滚动加载指示器 -->
+                <div id="load-more-indicator" class="load-more-indicator" style="display: none; text-align: center; padding: 20px; margin: 20px 0;">
+                    <div id="loading-more" class="loading-more" style="display: none;">
+                        <i class="fas fa-spinner fa-spin"></i> Loading more papers...
+                    </div>
+                    <div id="no-more-papers" class="no-more-papers" style="display: none; color: #666;">
+                        No more papers to load
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 移动端侧边栏切换按钮 -->
+
+    <!-- 返回顶部按钮 -->
+    <div id="back-to-top" class="back-to-top" style="display: none;">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <footer>
+        <p>Generated with Python and GitHub Actions</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 
